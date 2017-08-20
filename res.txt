@@ -37,7 +37,7 @@ Classifica finale
 4 Aronian
 5 So
 
-20.00
+20: ['X', 'X', 'X', 'X', '1', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', '1', 'X', '1', '1', '2', 'X', 'X']
 --------------------------------
 --------------------------------
 bryterlayter335
@@ -53,7 +53,7 @@ Maxime Vachier-Lagrave – Anish Giri  1 – 0
 Fabiano Caruana – Viswanathan Anand  ½ – ½
 Vladimir Kramnik – Veselin Topalov  ½ – ½
 
-5.00
+5: ['X', '2', '1', 'X', 'X']
 --------------------------------
 --------------------------------
 megalovic
@@ -69,7 +69,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1/2
 Vladimir Kramnik – Veselin Topalov 1-0
 
-5.00
+5: ['1', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 dusdron
@@ -85,7 +85,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1/2
 Vladimir Kramnik – Veselin Topalov 1-0
 
-5.00
+5: ['1', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 paolo58
@@ -102,7 +102,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1/2
 Vladimir Kramnik – Veselin Topalov 1-0
 
-5.00
+5: ['1', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 elvan
@@ -117,7 +117,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1/2
 Vladimir Kramnik – Veselin Topalov 1/2
 
-5.00
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 pappolo
@@ -133,7 +133,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1/2
 Vladimir Kramnik – Veselin Topalov 1-0
 
-5.00
+5: ['1', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 irishgambit
@@ -149,7 +149,7 @@ Maxime Vachier-Lagrave – Anish Giri ½ – ½
 Fabiano Caruana – Viswanathan Anand 1 – 0
 Vladimir Kramnik – Veselin Topalov ½ – ½
 
-5.00
+5: ['X', 'X', 'X', '1', 'X']
 --------------------------------
 --------------------------------
 sanchopanza
@@ -165,7 +165,7 @@ Maxime Vachier-Lagrave – Anish Giri ½ – ½
 Fabiano Caruana – Viswanathan Anand 1 – 0
 Vladimir Kramnik – Veselin Topalov 1 – 0
 
-5.00
+5: ['1', '1', 'X', '1', '1']
 --------------------------------
 --------------------------------
 zed
@@ -182,7 +182,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1-0
 Vladimir Kramnik – Veselin Topalov 1/2
 
-5.00
+5: ['1', 'X', 'X', '1', 'X']
 --------------------------------
 --------------------------------
 luciano-nucci
@@ -198,7 +198,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1/2
 Vladimir Kramnik – Veselin Topalov 1-0
 
-5.00
+5: ['X', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 spettacoloso
@@ -239,7 +239,7 @@ Classifica finale
 4 Anand
 5 So
 
-20.00
+20: ['1', 'X', 'X', 'X', '1', 'X', '2', 'X', 'X', '1', '1', 'X', 'X', '1', 'X', 'X', 'X', '2', 'X', 'X']
 --------------------------------
 --------------------------------
 mike
@@ -274,7 +274,7 @@ Veselin Topalov – Hikaru Nakamura 1/2
 Viswanathan Anand – Michael Adams 1-0
 Anish Giri – Wesley So 1/2
 
-20.00
+20: ['1', 'X', 'X', '1', 'X', 'X', '2', '1', 'X', 'X', 'X', 'X', 'X', '1', 'X', 'X', 'X', 'X', '1', 'X']
 --------------------------------
 --------------------------------
 tromat
@@ -290,7 +290,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1-0
 Vladimir Kramnik – Veselin Topalov 1/2
 
-5.00
+5: ['X', 'X', 'X', '1', 'X']
 --------------------------------
 --------------------------------
 francy29
@@ -306,7 +306,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1/2
 Vladimir Kramnik – Veselin Topalov 1-0
 
-5.00
+5: ['X', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 angelo1999
@@ -322,7 +322,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1/2
 Vladimir Kramnik – Veselin Topalov 1-0
 
-5.00
+5: ['1', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 paulbar
@@ -338,7 +338,7 @@ Maxime Vachier-Lagrave – Anish Giri  ½ – ½
 Fabiano Caruana – Viswanathan Anand  ½ – ½
 Vladimir Kramnik – Veselin Topalov  ½ – ½
 
-5.00
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 tocqueville
@@ -354,7 +354,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1/2
 Vladimir Kramnik – Veselin Topalov 1/2
 
-5.00
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 zugzwang
@@ -371,7 +371,7 @@ Fabiano Caruana – Viswanathan Anand 1-0
 Vladimir Kramnik – Veselin Topalov x
 (Anticipo: nel caso non dovessi dare risultato, patta su tutte le scacchiere)
 
-5.00
+5: ['X', 'X', 'X', '1', 'X']
 --------------------------------
 --------------------------------
 renabucodonosor
@@ -387,7 +387,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1/2
 Vladimir Kramnik – Veselin Topalov 1-0
 
-5.00
+5: ['1', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 ziggymoon
@@ -403,7 +403,7 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1-0
 Vladimir Kramnik – Veselin Topalov 1/2
 
-5.00
+5: ['1', 'X', 'X', '1', 'X']
 --------------------------------
 --------------------------------
 seitan
@@ -421,7 +421,7 @@ Vladimir Kramnik – Veselin Topalov 1-0
 Il timer del blog è un’ora avanti quindi attualmente sono le 16:34, non sono ancora fuori tempo massimo
 Mi raccomando, non facciamo scherzi 😀
 
-5.00
+5: ['X', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 lightknight
@@ -432,7 +432,7 @@ LightKnight
             18:06          
 OK, tempo scaduto. Ovviamente, finché il problema dell’orario del blog non sarà risolto, accetteremo commenti con orario “apparente” fino a un’ora dopo il limite 
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 magnons
@@ -473,7 +473,7 @@ Classifica finale
 4 Aronian
 5 Anand
 
-20.00
+20: ['X', 'X', 'X', 'X', '1', 'X', 'X', 'X', 'X', '1', 'X', 'X', 'X', '1', '1', 'X', 'X', '2', 'X', 'X']
 --------------------------------
 --------------------------------
 lightknight
@@ -484,7 +484,7 @@ LightKnight
             18:10          
 Purtroppo sei arrivato appena in ritardo per il primo turno; restano validi gli altri pronostici.
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 tocqueville
@@ -512,7 +512,7 @@ Veselin Topalov – Hikaru Nakamura 1/2
 Viswanathan Anand – Michael Adams 1-0
 Anish Giri – Wesley So 1/2
 
-15.00
+15: ['2', '2', 'X', 'X', '1', 'X', '1', 'X', 'X', 'X', 'X', '1', 'X', '1', 'X']
 --------------------------------
 --------------------------------
 megalovic
@@ -528,7 +528,7 @@ Viswanathan Anand – Maxime Vachier-Lagrave 1/2
 Anish Giri – Hikaru Nakamura 1/2
 Wesley So – Michael Adams 1-0
 
-5.00
+5: ['X', '2', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 pappolo
@@ -544,7 +544,7 @@ Viswanathan Anand – Maxime Vachier-Lagrave 1/2
 Anish Giri – Hikaru Nakamura 0/1
 Wesley So – Michael Adams 1-0
 
-5.00
+5: ['1', 'X', 'X', '2', '1']
 --------------------------------
 --------------------------------
 seitan
@@ -560,7 +560,7 @@ Turno 2
  Anish Giri – Hikaru Nakamura 1/2
  Wesley So – Michael Adams 1-0
 
-5.00
+5: ['1', '2', '1', 'X', '1']
 --------------------------------
 --------------------------------
 francy29
@@ -576,7 +576,7 @@ Viswanathan Anand – Maxime Vachier-Lagrave 1/2
 Anish Giri – Hikaru Nakamura 1/2
 Wesley So – Michael Adams 1-0
 
-5.00
+5: ['1', '2', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 elvan
@@ -592,7 +592,7 @@ Viswanathan Anand – Maxime Vachier-Lagrave 1/2
 Anish Giri – Hikaru Nakamura 1/2
 Wesley So – Michael Adams 1/2
 
-5.00
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 luciano-nucci
@@ -608,7 +608,7 @@ Anand –  Vachier-Lagrave 1/2
 Giri – Nakamura 1/2
 So – Adams 1/2
 
-4.75
+5: ['X', '2', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 zugzwang
@@ -624,7 +624,7 @@ Anand – Vachier-Lagrave 1-0
 Giri – Nakamura x
 So – Adams 1-0
 
-4.75
+5: ['X', 'X', '1', 'X', '1']
 --------------------------------
 --------------------------------
 zed
@@ -641,7 +641,7 @@ Viswanathan Anand – Maxime Vachier-Lagrave 1-0
 Anish Giri – Hikaru Nakamura 1/2
 Wesley So – Michael Adams 1-0
 
-5.00
+5: ['X', 'X', '1', 'X', '1']
 --------------------------------
 --------------------------------
 dusdron
@@ -657,7 +657,7 @@ Viswanathan Anand – Maxime Vachier-Lagrave 1/2
 Anish Giri – Hikaru Nakamura 1/2
 Wesley So – Michael Adams 1-0
 
-5.00
+5: ['X', '2', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 irishgambit
@@ -673,7 +673,7 @@ Viswanathan Anand – Maxime Vachier-Lagrave ½ –  ½
 Anish Giri – Hikaru Nakamura ½ –  ½
 Wesley So – Michael Adams ½ –  ½
 
-5.00
+5: ['X', '2', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 angelo1999
@@ -689,7 +689,7 @@ Viswanathan Anand – Maxime Vachier-Lagrave 1/2
 Anish Giri – Hikaru Nakamura 1/2
 Wesley So – Michael Adams 1-0
 
-5.00
+5: ['X', '2', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 megalovic
@@ -705,7 +705,7 @@ Hikaru Nakamura	–	Viswanathan Anand 1-0
 Vachier-Lagrave	–	Veselin Topalov 1-0
 Fabiano Caruana	–	Vladimir Kramnik 1/2
 
-4.95
+5: ['X', 'X', '1', '1', 'X']
 --------------------------------
 --------------------------------
 lightknight
@@ -740,7 +740,7 @@ Tromat	1
 Zugzwang	1
 magnons	0
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 lightknight
@@ -775,7 +775,7 @@ sanchopanza	0
 Tromat	0
 ZiggyMoon	0
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 lightknight
@@ -809,7 +809,7 @@ ZiggyMoon	3
 Paulbar	2
 Tromat	1
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 paolo58
@@ -838,7 +838,7 @@ CLASSIFICA FINALE
 4. KRAMNIK
 5. ANAND
 
-10.00
+10: ['X', 'X', '1', 'X', '1', 'X', '1', 'X', '1', 'X']
 --------------------------------
 --------------------------------
 seitan
@@ -854,7 +854,7 @@ Turno 3
  Vachier-Lagrave – Veselin Topalov 1/2
  Fabiano Caruana – Vladimir Kramnik 1/2
 
-4.95
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 francy29
@@ -870,7 +870,7 @@ Hikaru Nakamura – Viswanathan Anand 1/2
 Vachier-Lagrave – Veselin Topalov 1/2
 Fabiano Caruana – Vladimir Kramnik 1/2
 
-4.95
+5: ['2', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 luciano-nucci
@@ -892,7 +892,7 @@ Classifica finale
 4. Kramnik
 5. Anand
 
-4.95
+5: ['X', 'X', 'X', '1', 'X']
 --------------------------------
 --------------------------------
 bryterlayter335
@@ -951,7 +951,7 @@ Classifica finale
 4. Caruana
 5. Anand
 
-34.65
+35: ['X', 'X', '2', '1', '2', 'X', '1', '2', '1', 'X', '1', 'X', 'X', '2', '1', 'X', 'X', '1', '2', '1', 'X', '1', 'X', '2', 'X', '2', 'X', 'X', '1', '2', '1', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 angelo1999
@@ -967,7 +967,7 @@ Hikaru Nakamura – Viswanathan Anand 1/2
 Vachier-Lagrave – Veselin Topalov 1/2
 Fabiano Caruana – Vladimir Kramnik 1/2
 
-4.95
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 dusdron
@@ -983,7 +983,7 @@ Hikaru Nakamura	–	Viswanathan Anand 1-0
 Vachier-Lagrave	–	Veselin Topalov 1-0
 Fabiano Caruana	–	Vladimir Kramnik 1/2
 
-4.95
+5: ['X', 'X', '1', '1', 'X']
 --------------------------------
 --------------------------------
 zed
@@ -1000,7 +1000,7 @@ Hikaru Nakamura – Viswanathan Anand 0-1
 Vachier-Lagrave – Veselin Topalov 1/2
 Fabiano Caruana – Vladimir Kramnik 1/2
 
-4.95
+5: ['X', '1', '2', 'X', 'X']
 --------------------------------
 --------------------------------
 irishgambit
@@ -1016,7 +1016,7 @@ Hikaru Nakamura – Viswanathan Anand 0 – 1
 Maxime Vachier-Lagrave – Veselin Topalov ½ – ½
 Fabiano Caruana – Vladimir Kramnik ½ – ½
 
-5.00
+5: ['X', 'X', '2', 'X', 'X']
 --------------------------------
 --------------------------------
 pappolo
@@ -1032,7 +1032,7 @@ Hikaru Nakamura – Viswanathan Anand 1/2
 Vachier-Lagrave – Veselin Topalov 1/2
 Fabiano Caruana – Vladimir Kramnik 1/2
 
-4.95
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 paulbar
@@ -1054,7 +1054,7 @@ Classifica finale
 4.So
 5. Anand
 
-4.95
+5: ['1', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 lightknight
@@ -1065,7 +1065,7 @@ LightKnight
             22:43          
 Il pronostico del terzo turno è arrivato in ritardo; resta valido quello della classifica finale.
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 lightknight
@@ -1076,7 +1076,7 @@ LightKnight
             01:23          
 In realtà mi sono confuso (dannato orario sballato…) e il pronostico del turno 3 è valido.
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 angelo1999
@@ -1098,7 +1098,7 @@ Classifica finale:
 4) Aronian
 5) Giri
 
-4.95
+5: ['X', 'X', 'X', '1', 'X']
 --------------------------------
 --------------------------------
 tocqueville
@@ -1114,7 +1114,7 @@ Classifica finale:
 4) Anand
 5) Aronian
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 pappolo
@@ -1136,7 +1136,7 @@ Anish Giri – Wesley So 1/2
 4) Nakamura
 5) Anand
 
-5.00
+5: ['1', '1', '2', '1', 'X']
 --------------------------------
 --------------------------------
 megalovic
@@ -1158,7 +1158,7 @@ Kramnik
 Anand
 Nakamura
 
-4.95
+5: ['1', '1', '2', '1', 'X']
 --------------------------------
 --------------------------------
 spettacoloso
@@ -1205,7 +1205,7 @@ Classifica finale
 4. Aronian
 5. Anand
 
-24.75
+25: ['X', 'X', 'X', 'X', 'X', 'X', 'X', '1', '2', 'X', 'X', 'X', 'X', 'X', 'X', '2', 'X', 'X', 'X', '2', '1', 'X', 'X', 'X', '2']
 --------------------------------
 --------------------------------
 luciano-nucci
@@ -1221,7 +1221,7 @@ Veselin Topalov – Hikaru Nakamura 0-1
 Viswanathan Anand – Michael Adams 1-0
 Anish Giri – Wesley So 1/2
 
-4.95
+5: ['1', 'X', '2', '1', 'X']
 --------------------------------
 --------------------------------
 zed
@@ -1243,7 +1243,7 @@ Anish Giri – Wesley So 1/2
 4) Aronian
 5) Anand
 
-4.95
+5: ['X', '1', '1', 'X', 'X']
 --------------------------------
 --------------------------------
 irishgambit
@@ -1265,7 +1265,7 @@ Classifica finale:
 4) Aronian
 5) Anand
 
-5.00
+5: ['X', 'X', '2', '1', 'X']
 --------------------------------
 --------------------------------
 seitan
@@ -1287,7 +1287,7 @@ Classifica finale
  Aronian
  Nakamura
 
-4.95
+5: ['X', '1', '2', '1', 'X']
 --------------------------------
 --------------------------------
 paulbar
@@ -1303,7 +1303,7 @@ Veselin Topalov – Hikaru Nakamura  0-1
 Viswanathan Anand – Michael Adams 1-0
 Anish Giri – Wesley So   1/2
 
-4.95
+5: ['X', '2', '2', '1', 'X']
 --------------------------------
 --------------------------------
 mike
@@ -1319,7 +1319,7 @@ Kramnik,
 Nakamura
 Aronian
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 mike
@@ -1360,7 +1360,7 @@ Anish Giri ½-½ Fabiano Caruana
 Wesley So ½-½ Vachier-Lagrave
 Michael Adams ½-½ Hikaru Nakamura
 
-24.75
+25: ['1', 'X', 'X', '1', '2', 'X', '1', '1', '2', 'X', 'X', 'X', 'X', '2', '1', 'X', 'X', 'X', '1', 'X', '1', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 angelo1999
@@ -1376,7 +1376,7 @@ Michael Adams – Veselin Topalov 1/2
 Hikaru Nakamura – Vladimir Kramnik 1/2
 Vachier-Lagrave – Fabiano Caruana 0-1
 
-4.95
+5: ['X', '1', 'X', 'X', '2']
 --------------------------------
 --------------------------------
 tocqueville
@@ -1392,7 +1392,7 @@ Michael Adams – Veselin Topalov 1/2
 Hikaru Nakamura – Vladimir Kramnik 0-1
 Vachier-Lagrave – Fabiano Caruana 1/2
 
-4.95
+5: ['1', 'X', 'X', '2', 'X']
 --------------------------------
 --------------------------------
 blade
@@ -1408,7 +1408,7 @@ Michael Adams – Veselin Topalov 1/2
 Hikaru Nakamura – Vladimir Kramnik 1/2
 Vachier-Lagrave – Fabiano Caruana 1/2
 
-4.95
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 seitan
@@ -1424,7 +1424,7 @@ Michael Adams – Veselin Topalov 1/2
 Hikaru Nakamura – Vladimir Kramnik 1/2
 Vachier-Lagrave – Fabiano Caruana 1/2
 
-4.95
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 paolo58
@@ -1464,7 +1464,7 @@ Anish Giri	– Fabiano Caruana   0-1
 Wesley So – Vachier-Lagrave  1-0
 Michael Adams – Hikaru Nakamura  0-1
 
-24.75
+25: ['X', 'X', 'X', 'X', '2', 'X', 'X', '1', 'X', '1', 'X', '2', '2', '2', '1', 'X', '1', 'X', '1', 'X', 'X', 'X', '2', '1', '2']
 --------------------------------
 --------------------------------
 paolo58
@@ -1476,7 +1476,7 @@ paolo58
 Sono di:
 KING.LONDON.2016
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 megalovic
@@ -1492,7 +1492,7 @@ Michael Adams	–	Veselin Topalov 1/2
 Hikaru Nakamura	–	Vladimir Kramnik 1/2
 Vachier-Lagrave	–	Fabiano Caruana 1/2
 
-4.95
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 luciano-nucci
@@ -1508,7 +1508,7 @@ Michael Adams–Veselin Topalov 1/2
 Hikaru Nakamura–Vladimir Kramnik 1/2
 Vachier-Lagrave–Fabiano Caruana 1/2
 
-4.95
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 mike
@@ -1519,7 +1519,7 @@ mike
             10:52          
 la classifica? 
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 lightknight
@@ -1530,7 +1530,7 @@ LightKnight
             16:36          
 Appena possibile, spero in serata 
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 pappolo
@@ -1546,7 +1546,7 @@ Michael Adams – Veselin Topalov 1/2
 Hikaru Nakamura – Vladimir Kramnik 1/2
 Vachier-Lagrave – Fabiano Caruana 0-1
 
-4.95
+5: ['X', '1', 'X', 'X', '2']
 --------------------------------
 --------------------------------
 zed
@@ -1563,7 +1563,7 @@ Michael Adams – Veselin Topalov 1/2
 Hikaru Nakamura – Vladimir Kramnik 0-1
 Vachier-Lagrave – Fabiano Caruana 0-1
 
-4.95
+5: ['1', 'X', 'X', '2', '2']
 --------------------------------
 --------------------------------
 francy29
@@ -1579,7 +1579,7 @@ Michael Adams – Veselin Topalov 1/2
 Hikaru Nakamura – Vladimir Kramnik 1/2
 Vachier-Lagrave – Fabiano Caruana 1/2
 
-4.95
+5: ['X', '1', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 paulbar
@@ -1595,7 +1595,7 @@ Michael Adams	–	Veselin Topalov  0-1
 Hikaru Nakamura	–	Vladimir Kramnik 1/2
 Vachier-Lagrave	–	Fabiano Caruana 1/2
 
-4.95
+5: ['1', 'X', '2', 'X', 'X']
 --------------------------------
 --------------------------------
 irishgambit
@@ -1611,7 +1611,7 @@ Michael Adams – Veselin Topalov 0 – 1
 Hikaru Nakamura – Vladimir Kramnik ½ – ½
 Maxime Vachier-Lagrave – Fabiano Caruana 0 – 1
 
-5.00
+5: ['X', 'X', '2', 'X', '2']
 --------------------------------
 --------------------------------
 angelo1999
@@ -1627,7 +1627,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 0-1
 Viswanathan Anand – Anish Giri 1/2
 
-4.95
+5: ['X', 'X', '1', '2', 'X']
 --------------------------------
 --------------------------------
 francy29
@@ -1643,7 +1643,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 0-1
 Viswanathan Anand – Anish Giri 1/2
 
-4.95
+5: ['X', 'X', '1', '2', 'X']
 --------------------------------
 --------------------------------
 blade
@@ -1659,7 +1659,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 1/2
 Viswanathan Anand – Anish Giri 1/2
 
-4.95
+5: ['X', '1', '1', 'X', 'X']
 --------------------------------
 --------------------------------
 luciano-nucci
@@ -1675,7 +1675,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 0-1
 Viswanathan Anand – Anish Giri 1/2
 
-4.95
+5: ['X', 'X', '1', '2', 'X']
 --------------------------------
 --------------------------------
 megalovic
@@ -1691,7 +1691,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 0-1
 Viswanathan Anand – Anish Giri 1/2
 
-4.95
+5: ['X', '1', '1', '2', 'X']
 --------------------------------
 --------------------------------
 seitan
@@ -1707,7 +1707,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 0-1
 Viswanathan Anand – Anish Giri 1/2
 
-4.95
+5: ['X', 'X', '1', '2', 'X']
 --------------------------------
 --------------------------------
 pappolo
@@ -1723,7 +1723,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 1/2
 Viswanathan Anand – Anish Giri 1/2
 
-4.95
+5: ['X', 'X', '1', 'X', 'X']
 --------------------------------
 --------------------------------
 megalovic
@@ -1739,7 +1739,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 0-1
 Viswanathan Anand – Anish Giri 1/2
 
-4.95
+5: ['X', 'X', '1', '2', 'X']
 --------------------------------
 --------------------------------
 irishgambit
@@ -1755,7 +1755,7 @@ Vladimir Kramnik – Michael Adams ½ – ½
 Veselin Topalov – Wesley So ½ – ½
 Viswanathan Anand – Anish Giri ½ – ½
 
-5.00
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 zed
@@ -1772,7 +1772,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 1/2
 Viswanathan Anand – Anish Giri 1-0
 
-4.95
+5: ['2', 'X', '1', 'X', '1']
 --------------------------------
 --------------------------------
 paulbar
@@ -1788,7 +1788,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 0-1
 Viswanathan Anand – Anish Giri 1/2
 
-5.00
+5: ['X', 'X', '1', '2', 'X']
 --------------------------------
 --------------------------------
 angelo1999
@@ -1816,7 +1816,7 @@ Anish Giri	 – Fabiano Caruana 1/2
 Wesley So – Vachier-Lagrave 1/2
 Michael Adams – Hikaru Nakamura 0-1
 
-14.85
+15: ['X', 'X', 'X', '2', 'X', 'X', 'X', 'X', 'X', 'X', '1', 'X', 'X', 'X', '2']
 --------------------------------
 --------------------------------
 pappolo
@@ -1832,7 +1832,7 @@ Wesley So – Vladimir Kramnik 1/2
 Michael Adams – Fabiano Caruana 0-1
 Hikaru Nakamura – Vachier-Lagrave 1-0
 
-4.95
+5: ['X', 'X', 'X', '2', '1']
 --------------------------------
 --------------------------------
 francy29
@@ -1848,7 +1848,7 @@ Wesley So – Vladimir Kramnik 1/2
 Michael Adams – Fabiano Caruana 1/2
 Hikaru Nakamura – Vachier-Lagrave 1/2
 
-4.95
+5: ['X', '1', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 blade
@@ -1864,7 +1864,7 @@ Wesley So – Vladimir Kramnik 1/2
 Michael Adams – Fabiano Caruana 0-1
 Hikaru Nakamura – Vachier-Lagrave 1-0
 
-4.95
+5: ['X', '1', 'X', '2', '1']
 --------------------------------
 --------------------------------
 megalovic
@@ -1880,7 +1880,7 @@ Wesley So – Vladimir Kramnik 1/2
 Michael Adams – Fabiano Caruana 0-1
 Hikaru Nakamura – Vachier-Lagrave 1/2
 
-4.95
+5: ['X', '1', 'X', '2', 'X']
 --------------------------------
 --------------------------------
 luciano-nucci
@@ -1896,7 +1896,7 @@ Wesley So – Vladimir Kramnik 1/2
 Michael Adams – Fabiano Caruana 0-1
 Hikaru Nakamura – Vachier-Lagrave 1/2
 
-4.95
+5: ['1', '1', 'X', '2', 'X']
 --------------------------------
 --------------------------------
 seitan
@@ -1912,7 +1912,7 @@ Turno 7
  Michael Adams – Fabiano Caruana 1/2
  Hikaru Nakamura – Vachier-Lagrave 1/2
 
-4.95
+5: ['X', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 zed
@@ -1941,7 +1941,7 @@ Anish Giri – Fabiano Caruana 1/2
 Wesley So – Vachier-Lagrave 1/2
 Michael Adams – Hikaru Nakamura 0-1
 
-14.85
+15: ['X', '2', 'X', 'X', '1', '2', 'X', '1', 'X', 'X', 'X', 'X', 'X', 'X', '2']
 --------------------------------
 --------------------------------
 irishgambit
@@ -1957,7 +1957,7 @@ Wesley So – Vladimir Kramnik ½ – ½
 Michael Adams – Fabiano Caruana 0 – 1
 Hikaru Nakamura – Maxime Vachier-Lagrave 0 – 1
 
-5.00
+5: ['X', 'X', 'X', '2', '2']
 --------------------------------
 --------------------------------
 paulbar
@@ -1973,7 +1973,7 @@ Wesley So – Vladimir Kramnik 1/2
 Michael Adams – Fabiano Caruana 0-1
 Hikaru Nakamura – Vachier-Lagrave 1/2
 
-4.95
+5: ['1', '1', 'X', '2', 'X']
 --------------------------------
 --------------------------------
 tocqueville
@@ -1989,7 +1989,7 @@ Wesley So – Vladimir Kramnik 1/2
 Michael Adams – Fabiano Caruana 0-1
 Hikaru Nakamura – Vachier-Lagrave 1/2
 
-4.95
+5: ['X', 'X', 'X', '2', 'X']
 --------------------------------
 --------------------------------
 francy29
@@ -2005,7 +2005,7 @@ Fabiano Caruana – Wesley So 1/2
 Vladimir Kramnik – Anish Giri 1/2
 Veselin Topalov – Viswanathan Anand 1/2
 
-4.95
+5: ['1', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 megalovic
@@ -2021,7 +2021,7 @@ Fabiano Caruana	–	Wesley So 1-0
 Vladimir Kramnik	–	Anish Giri 1/2
 Veselin Topalov	–	Viswanathan Anand 1/2
 
-4.95
+5: ['X', '1', '1', 'X', 'X']
 --------------------------------
 --------------------------------
 blade
@@ -2037,7 +2037,7 @@ Fabiano Caruana – Wesley So 1-0
 Vladimir Kramnik – Anish Giri 1-0
 Veselin Topalov – Viswanathan Anand 1/2
 
-4.95
+5: ['X', 'X', '1', '1', 'X']
 --------------------------------
 --------------------------------
 pappolo
@@ -2053,7 +2053,7 @@ Fabiano Caruana – Wesley So 1-0
 Vladimir Kramnik – Anish Giri 1-0
 Veselin Topalov – Viswanathan Anand 1-0
 
-4.95
+5: ['1', '1', '1', '1', '1']
 --------------------------------
 --------------------------------
 seitan
@@ -2069,7 +2069,7 @@ Turno 8
  Vladimir Kramnik – Anish Giri 1/2
  Veselin Topalov – Viswanathan Anand 1/2
 
-4.95
+5: ['X', '1', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 paulbar
@@ -2085,7 +2085,7 @@ Fabiano Caruana – Wesley So 1-0
 Vladimir Kramnik – Anish Giri 1/2
 Veselin Topalov – Viswanathan Anand 0-1
 
-4.95
+5: ['2', 'X', '1', 'X', '2']
 --------------------------------
 --------------------------------
 luciano-nucci
@@ -2101,7 +2101,7 @@ Fabiano Caruana – Wesley So 1/2
 Vladimir Kramnik – Anish Giri 1/2
 Veselin Topalov – Viswanathan Anand 0-1
 
-4.95
+5: ['X', '1', 'X', 'X', '2']
 --------------------------------
 --------------------------------
 irishgambit
@@ -2117,7 +2117,7 @@ Fabiano Caruana – Wesley So 0 – 1
 Vladimir Kramnik – Anish Giri ½ – ½
 Veselin Topalov – Viswanathan Anand 0 – 1
 
-4.95
+5: ['X', '1', '2', 'X', '2']
 --------------------------------
 --------------------------------
 megalovic
@@ -2133,7 +2133,7 @@ Anish Giri	–	Fabiano Caruana 1/2
 Wesley So	–	Vachier-Lagrave 1/2
 Michael Adams	–	Hikaru Nakamura 0-1
 
-4.95
+5: ['1', 'X', 'X', 'X', '2']
 --------------------------------
 --------------------------------
 seitan
@@ -2149,7 +2149,7 @@ Turno 9
  Wesley So – Vachier-Lagrave 1/2
  Michael Adams – Hikaru Nakamura 1/2
 
-4.95
+5: ['1', 'X', 'X', 'X', 'X']
 --------------------------------
 --------------------------------
 blade
@@ -2165,7 +2165,7 @@ Anish Giri – Fabiano Caruana 1/2
 Wesley So – Vachier-Lagrave 1/2
 Michael Adams – Hikaru Nakamura 1-0
 
-4.95
+5: ['1', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 pappolo
@@ -2181,7 +2181,7 @@ Anish Giri – Fabiano Caruana 1/2
 Wesley So – Vachier-Lagrave 1-0
 Michael Adams – Hikaru Nakamura 0-1
 
-4.95
+5: ['1', 'X', 'X', '1', '2']
 --------------------------------
 --------------------------------
 tocqueville
@@ -2197,7 +2197,7 @@ Anish Giri – Fabiano Caruana 1/2
 Wesley So – Vachier-Lagrave 1/2
 Michael Adams – Hikaru Nakamura 1-0
 
-4.95
+5: ['1', 'X', 'X', 'X', '1']
 --------------------------------
 --------------------------------
 lightknight
@@ -2232,7 +2232,7 @@ sanchopanza	0
 Tromat	0
 ZiggyMoon	0
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 lightknight
@@ -2267,7 +2267,7 @@ sanchopanza	0
 Tromat	0
 ZiggyMoon	0
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 lightknight
@@ -2302,7 +2302,7 @@ sanchopanza	0
 Tromat	0
 ZiggyMoon	0
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 lightknight
@@ -2337,7 +2337,7 @@ Tocqueville	0
 Tromat	0
 ZiggyMoon	0
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 lightknight
@@ -2372,7 +2372,7 @@ sanchopanza	0
 Tromat	0
 ZiggyMoon	0
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 lightknight
@@ -2407,7 +2407,7 @@ Tocqueville	0
 Tromat	0
 ZiggyMoon	0
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 lightknight
@@ -2441,7 +2441,7 @@ elvan	4
 ZiggyMoon	3
 Tromat	1
 
-0.00
+0: []
 --------------------------------
 --------------------------------
 luciano-nucci
@@ -2457,7 +2457,7 @@ Anish Giri – Fabiano Caruana 1/2
 Wesley So – Vachier-Lagrave 1/2
 Michael Adams – Hikaru Nakamura 0-1
 
-4.95
+5: ['1', 'X', 'X', 'X', '2']
 --------------------------------
 --------------------------------
 irishgambit
@@ -2473,7 +2473,7 @@ Anish Giri – Fabiano Caruana ½ – ½
 Wesley So – Maxime Vachier-Lagrave ½ – ½
 Michael Adams – Hikaru Nakamura 0 – 1
 
-5.00
+5: ['1', 'X', 'X', 'X', '2']
 --------------------------------
 --------------------------------
 paulbar
@@ -2489,6 +2489,6 @@ Anish Giri – Fabiano Caruana ½ – ½
 Wesley So – Maxime Vachier-Lagrave ½ – ½
 Michael Adams – Hikaru Nakamura  ½ – ½
 
-5.00
+5: ['1', 'X', 'X', 'X', 'X']
 --------------------------------
 126
