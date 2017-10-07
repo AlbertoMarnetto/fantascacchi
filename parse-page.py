@@ -51,7 +51,17 @@ from collections import namedtuple
 from operator import itemgetter
 
 from bs4 import BeautifulSoup
-Prediction = namedtuple('Prediction', ['white_name', 'black_name', 'outcome', 'round'])
+Prediction = namedtuple('Prediction', ['author', 'white_name', 'black_name', 'outcome', 'round'])
+PredictionKey = namedtuple('Prediction', ['white_name', 'black_name', 'outcome', 'round'])
+PredictionWithScore = namedtuple('Prediction', ['author', 'white_name', 'black_name', 'outcome', 'round', 'score'])
+
+def prediction_key(prediction):
+	return PredictionKey(
+		white_name = prediction.white_name,
+		black_name = prediction.black_name,
+		outcome = prediction.outcome, round =
+		prediction.round)
+
 
 def get_line_round(line):
 	# replace turn numbers expressed in non-standard forms ("primo", "VI", etc.)
@@ -67,7 +77,10 @@ def get_line_round(line):
 	for round_regexp in get_line_round.round_regexps:
 		search_result = round_regexp.search(line)
 		if search_result:
-			return search_result.group('round_number')
+			try:
+				return int(search_result.group('round_number'))
+			except ValueError:
+				pass  # non-numeric turn number, discard it
 
 	return None
 
@@ -117,20 +130,21 @@ get_line_round.round_regexps = [
 
 
 
-def get_line_prediction(line, participants):
+def get_line_prediction(line, event_players):
 	participants_in_line = []
 
-	# Find participants
-	for participant in participants:
-		idx = line.find(participant)
+	# Find event_players
+	for player_name in event_players:
+		idx = line.find(player_name)
 		if idx != -1:
-			participants_in_line.append((participant, idx))
+			participants_in_line.append((player_name, idx))
 		else:
-			participant_tokens = participant.split()
+			# Try to match just the first or family name
+			participant_tokens = player_name.split()
 			for participant_token in participant_tokens:
 				idx = line.find(participant_token)
 				if idx != -1:
-					participants_in_line.append((participant, idx))
+					participants_in_line.append((player_name, idx))
 
 	# Find result
 	line_outcome = '?'
@@ -163,12 +177,10 @@ get_line_prediction.possible_outcomes = [
 
 ##############################################
 
-def extract_predictions(post_text, participants):
+def extract_predictions(post_author, post_text, event_players):
 	lines = post_text.split('\n')
 
-	post_predictions = {}
-	post_predictions['count'] = 0
-	post_predictions['predictions'] = []
+	post_predictions = []
 
 	post_round = None
 
@@ -177,72 +189,121 @@ def extract_predictions(post_text, participants):
 		if line_round is not None:
 			post_round = line_round
 
-		line_prediction = get_line_prediction(line, participants)
+		line_prediction = get_line_prediction(line, event_players)
 		if line_prediction is None:
 			continue
 
-		post_predictions['count'] += 1
 		prediction = Prediction(
+			author = post_author,
 			white_name = line_prediction[0][0],
 			black_name = line_prediction[1][0],
 			outcome = line_prediction[2],
 			round = post_round)
 
-		post_predictions['predictions'].append(prediction)
+		post_predictions.append(prediction)
 
 	return post_predictions
 
 ##############################################
 
-def assign_points(post_predictions, tournament_outcome):
-	post_predictions['score'] = 0
-	for prediction in post_predictions['predictions']:
-		if prediction not in tournament_outcome['predictions']:
-			# Wrong prediction
-			post_predictions['score'] += 0
-		elif prediction.outcome == '1':
-			post_predictions['score'] += 2
-		elif prediction.outcome == 'X':
-			post_predictions['score'] += 1
-		elif prediction.outcome == '2':
-			post_predictions['score'] += 3
+def assign_scores(predictions):
+	official_results = {
+		prediction_key(official_result) : official_result
+		for official_result in predictions
+		if official_result.author == "Official results"
+		}
 
-	return post_predictions
+	scored_predictions = []
+	for prediction in predictions:
+		if prediction.author == "Official results":
+			continue
+
+		score = 0
+		if prediction_key(prediction) in official_results.keys():
+			if prediction.outcome == '1':
+				score = 2
+			elif prediction.outcome == 'X':
+				score = 1
+			elif prediction.outcome == '2':
+				score = 3
+
+		scored_predictions.append( PredictionWithScore(
+			author = prediction.author,
+			white_name = prediction.white_name,
+			black_name = prediction.black_name,
+			outcome = prediction.outcome,
+			round = prediction.round,
+			score = score))
+
+	return scored_predictions
 
 ##############################################
 
-participants = load_participants('participants.json')
+event_players = load_participants('participants.json')
 #print(participants)
 
 tournament_text = open('tournament.txt', "rb").read().decode('utf-8', 'ignore')
-tournament_outcome = extract_predictions(tournament_text, participants)
+tournament_outcome = extract_predictions("Official results", tournament_text, event_players)
 
 posts = load_posts('thread.html')
-print(len(posts))
 
 all_predictions = []
 for post in posts:
-	post_predictions = extract_predictions(post['text'], participants)
-	post_predictions = assign_points(post_predictions, tournament_outcome)
-	post_predictions['author'] = post['author']
-	all_predictions.append(post_predictions)
+	post_predictions = extract_predictions(post['author'], post['text'], event_players)
+	post_predictions = assign_scores(post_predictions + tournament_outcome)
+	all_predictions.extend(post_predictions)
 	rawwrite('--------------------------------\n')
 	rawwrite(post['author'])
 	rawwrite(post['text'])
 	rawwrite('\n')
-	rawwrite("%d: %s\n" % (post_predictions['count'], post_predictions['predictions']))
-	rawwrite("Score: %d\n" % post_predictions['score'])
+	rawwrite("%d: %s\n" % (len(post_predictions), post_predictions))
+	rawwrite("Score: %d\n" % sum(prediction.score for prediction in post_predictions))
 	rawwrite('\n')
 	rawwrite('--------------------------------\n')
 
 rawwrite('--------------------------------\n')
+
 authors = set(post['author'] for post in posts)
-for author in authors:
-	author_score = sum([post_predictions['score'] for post_predictions in all_predictions if post_predictions['author'] == author])
-	rawwrite("%s: %d\n" % (author, author_score))
+rounds = sorted(list(set(prediction.round for prediction in tournament_outcome)))
+
+#rawwrite(str(all_predictions))
+
+rawwrite('\n')
+for round in rounds:
+	rawwrite('--------------------------------\n')
+	rawwrite("Punteggi turno %s\n" % (round))
+
+	round_entries = []
+	for author in authors:
+		author_score = sum(
+			prediction.score
+			for prediction in all_predictions
+			if prediction.author == author and prediction.round == round)
+
+		author_cumulated_score = sum(
+			prediction.score
+			for prediction in all_predictions
+			if prediction.author == author
+				and prediction.round is not None
+				and prediction.round <= round)
+
+		round_entries.append((author, author_score, author_cumulated_score))
+
+	# sort by descending score
+	round_entries.sort( key = lambda round_entry: -round_entry[1])
+	for author, author_score, author_cumulated_score in round_entries:
+		rawwrite("%s : %d\n" % (author, author_score))
+
+	rawwrite('--------------------------------\n')
+	rawwrite("Classifica turno %s\n" % (round))
+
+	# sort by descending cumulated score
+	round_entries.sort( key = lambda round_entry: -round_entry[2])
+	for author, author_score, author_cumulated_score in round_entries:
+		rawwrite("%s : %d\n" % (author, author_cumulated_score))
+	rawwrite('--------------------------------\n')
 
 rawwrite('--------------------------------\n')
 
-	#print("\n".join(post.text ))
 
 
