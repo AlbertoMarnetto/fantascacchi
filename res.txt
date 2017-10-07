@@ -1,3 +1,4 @@
+Non so se potrò collegarmi per i primi turni, quindi anticipo alcuni pronostici e la classifica finale. --> Non so se potrò collegarmi per 1 primi turni, quindi anticipo alcuni pronostici e la classifica finale.
 --------------------------------
 blade
 Blade
@@ -185,6 +186,7 @@ Vladimir Kramnik – Veselin Topalov 1 – 0
 Score: 0
 
 --------------------------------
+Turno I --> Turno 1 
 --------------------------------
 zed
 zed
@@ -200,8 +202,8 @@ Maxime Vachier-Lagrave – Anish Giri 1/2
 Fabiano Caruana – Viswanathan Anand 1-0
 Vladimir Kramnik – Veselin Topalov 1/2
 
-5: [Prediction(white_name='Levon Aronian', black_name='Michael Adams', outcome='1', round=''), Prediction(white_name='Hikaru Nakamura', black_name='Wesley So', outcome='X', round=''), Prediction(white_name='Maxime Vachier-Lagrave', black_name='Anish Giri', outcome='X', round=''), Prediction(white_name='Fabiano Caruana', black_name='Viswanathan Anand', outcome='1', round=''), Prediction(white_name='Vladimir Kramnik', black_name='Veselin Topalov', outcome='X', round='')]
-Score: 0
+5: [Prediction(white_name='Levon Aronian', black_name='Michael Adams', outcome='1', round='1'), Prediction(white_name='Hikaru Nakamura', black_name='Wesley So', outcome='X', round='1'), Prediction(white_name='Maxime Vachier-Lagrave', black_name='Anish Giri', outcome='X', round='1'), Prediction(white_name='Fabiano Caruana', black_name='Viswanathan Anand', outcome='1', round='1'), Prediction(white_name='Vladimir Kramnik', black_name='Veselin Topalov', outcome='X', round='1')]
+Score: 3
 
 --------------------------------
 --------------------------------
@@ -265,6 +267,7 @@ Classifica finale
 Score: 22
 
 --------------------------------
+anche io non so se potro’ sempre collegarmi nei primi turni. Ecco quindi il  mio pronostico per i primi 4 turni --> anche io non so se potro’ sempre collegarmi nei primi turni. Ecco quindi il  mio pronostico per 1 primi 4 turni
 --------------------------------
 mike
 mike
@@ -392,6 +395,10 @@ Vladimir Kramnik – Veselin Topalov 1/2
 Score: 2
 
 --------------------------------
+Levon Aronian – Michael Adams x --> Levon Aronian – Michael Adams 10 
+Hikaru Nakamura – Wesley So x --> Hikaru Nakamura – Wesley So 10 
+Maxime Vachier-Lagrave – Anish Giri x --> Maxime Vachier-Lagrave – Anish Giri 10 
+Vladimir Kramnik – Veselin Topalov x --> Vladimir Kramnik – Veselin Topalov 10 
 --------------------------------
 zugzwang
 Zugzwang
@@ -523,6 +530,7 @@ Classifica finale
 Score: 17
 
 --------------------------------
+Purtroppo sei arrivato appena in ritardo per il primo turno; restano validi gli altri pronostici. --> Purtroppo sei arrivato appena in ritardo per il 1 turno; restano validi gli altri pronostici.
 --------------------------------
 lightknight
 LightKnight
@@ -638,6 +646,7 @@ Wesley So – Michael Adams 1-0
 Score: 6
 
 --------------------------------
+Secondo turno -->  2 turno
 --------------------------------
 elvan
 elvan
@@ -652,10 +661,11 @@ Viswanathan Anand – Maxime Vachier-Lagrave 1/2
 Anish Giri – Hikaru Nakamura 1/2
 Wesley So – Michael Adams 1/2
 
-5: [Prediction(white_name='Vladimir Kramnik', black_name='Levon Aronian', outcome='X', round=''), Prediction(white_name='Veselin Topalov', black_name='Fabiano Caruana', outcome='X', round=''), Prediction(white_name='Viswanathan Anand', black_name='Maxime Vachier-Lagrave', outcome='X', round=''), Prediction(white_name='Anish Giri', black_name='Hikaru Nakamura', outcome='X', round=''), Prediction(white_name='Wesley So', black_name='Michael Adams', outcome='X', round='')]
-Score: 0
+5: [Prediction(white_name='Vladimir Kramnik', black_name='Levon Aronian', outcome='X', round='2'), Prediction(white_name='Veselin Topalov', black_name='Fabiano Caruana', outcome='X', round='2'), Prediction(white_name='Viswanathan Anand', black_name='Maxime Vachier-Lagrave', outcome='X', round='2'), Prediction(white_name='Anish Giri', black_name='Hikaru Nakamura', outcome='X', round='2'), Prediction(white_name='Wesley So', black_name='Michael Adams', outcome='X', round='2')]
+Score: 2
 
 --------------------------------
+Secondo turno -->  2 turno
 --------------------------------
 luciano-nucci
 Luciano Nucci
@@ -670,10 +680,14 @@ Anand –  Vachier-Lagrave 1/2
 Giri – Nakamura 1/2
 So – Adams 1/2
 
-5: [Prediction(white_name='Vladimir Kramnik', black_name='Levon Aronian', outcome='X', round=''), Prediction(white_name='Veselin Topalov', black_name='Fabiano Caruana', outcome='2', round=''), Prediction(white_name='Viswanathan Anand', black_name='Maxime Vachier-Lagrave', outcome='X', round=''), Prediction(white_name='Anish Giri', black_name='Hikaru Nakamura', outcome='X', round=''), Prediction(white_name='Wesley So', black_name='Michael Adams', outcome='X', round='')]
-Score: 0
+5: [Prediction(white_name='Vladimir Kramnik', black_name='Levon Aronian', outcome='X', round='2'), Prediction(white_name='Veselin Topalov', black_name='Fabiano Caruana', outcome='2', round='2'), Prediction(white_name='Viswanathan Anand', black_name='Maxime Vachier-Lagrave', outcome='X', round='2'), Prediction(white_name='Anish Giri', black_name='Hikaru Nakamura', outcome='X', round='2'), Prediction(white_name='Wesley So', black_name='Michael Adams', outcome='X', round='2')]
+Score: 5
 
 --------------------------------
+Secondo turno -->  2 turno
+Kramnik – Aronian x --> Kramnik – Aronian 10 
+Topalov – Caruana x --> Topalov – Caruana 10 
+Giri – Nakamura x --> Giri – Nakamura 10 
 --------------------------------
 zugzwang
 Zugzwang
@@ -688,10 +702,11 @@ Anand – Vachier-Lagrave 1-0
 Giri – Nakamura x
 So – Adams 1-0
 
-5: [Prediction(white_name='Vladimir Kramnik', black_name='Levon Aronian', outcome='X', round=''), Prediction(white_name='Veselin Topalov', black_name='Fabiano Caruana', outcome='X', round=''), Prediction(white_name='Viswanathan Anand', black_name='Maxime Vachier-Lagrave', outcome='1', round=''), Prediction(white_name='Anish Giri', black_name='Hikaru Nakamura', outcome='X', round=''), Prediction(white_name='Wesley So', black_name='Michael Adams', outcome='1', round='')]
-Score: 0
+5: [Prediction(white_name='Vladimir Kramnik', black_name='Levon Aronian', outcome='X', round='2'), Prediction(white_name='Veselin Topalov', black_name='Fabiano Caruana', outcome='X', round='2'), Prediction(white_name='Viswanathan Anand', black_name='Maxime Vachier-Lagrave', outcome='1', round='2'), Prediction(white_name='Anish Giri', black_name='Hikaru Nakamura', outcome='X', round='2'), Prediction(white_name='Wesley So', black_name='Michael Adams', outcome='1', round='2')]
+Score: 6
 
 --------------------------------
+turno II --> turno 2 
 --------------------------------
 zed
 zed
@@ -707,8 +722,8 @@ Viswanathan Anand – Maxime Vachier-Lagrave 1-0
 Anish Giri – Hikaru Nakamura 1/2
 Wesley So – Michael Adams 1-0
 
-5: [Prediction(white_name='Vladimir Kramnik', black_name='Levon Aronian', outcome='X', round=''), Prediction(white_name='Veselin Topalov', black_name='Fabiano Caruana', outcome='X', round=''), Prediction(white_name='Viswanathan Anand', black_name='Maxime Vachier-Lagrave', outcome='1', round=''), Prediction(white_name='Anish Giri', black_name='Hikaru Nakamura', outcome='X', round=''), Prediction(white_name='Wesley So', black_name='Michael Adams', outcome='1', round='')]
-Score: 0
+5: [Prediction(white_name='Vladimir Kramnik', black_name='Levon Aronian', outcome='X', round='2'), Prediction(white_name='Veselin Topalov', black_name='Fabiano Caruana', outcome='X', round='2'), Prediction(white_name='Viswanathan Anand', black_name='Maxime Vachier-Lagrave', outcome='1', round='2'), Prediction(white_name='Anish Giri', black_name='Hikaru Nakamura', outcome='X', round='2'), Prediction(white_name='Wesley So', black_name='Michael Adams', outcome='1', round='2')]
+Score: 6
 
 --------------------------------
 --------------------------------
@@ -783,6 +798,7 @@ Fabiano Caruana	–	Vladimir Kramnik 1/2
 Score: 5
 
 --------------------------------
+Primo turno: su 9 punti a disposizione il massimo raggiunto è 6. -->  1 turno: su 9 punti a disposizione il massimo raggiunto è 6.
 --------------------------------
 lightknight
 LightKnight
@@ -820,6 +836,7 @@ magnons	0
 Score: 0
 
 --------------------------------
+Secondo turno: sempre 9 i punti a disposizione, stavolta si arriva a 8. -->  2 turno: sempre 9 i punti a disposizione, stavolta si arriva a 8.
 --------------------------------
 lightknight
 LightKnight
@@ -1081,6 +1098,7 @@ Fabiano Caruana	–	Vladimir Kramnik 1/2
 Score: 5
 
 --------------------------------
+turno III --> turno 3 
 --------------------------------
 zed
 zed
@@ -1096,8 +1114,8 @@ Hikaru Nakamura – Viswanathan Anand 0-1
 Vachier-Lagrave – Veselin Topalov 1/2
 Fabiano Caruana – Vladimir Kramnik 1/2
 
-5: [Prediction(white_name='Levon Aronian', black_name='Wesley So', outcome='X', round=''), Prediction(white_name='Michael Adams', black_name='Anish Giri', outcome='1', round=''), Prediction(white_name='Hikaru Nakamura', black_name='Viswanathan Anand', outcome='2', round=''), Prediction(white_name='Maxime Vachier-Lagrave', black_name='Veselin Topalov', outcome='X', round=''), Prediction(white_name='Fabiano Caruana', black_name='Vladimir Kramnik', outcome='X', round='')]
-Score: 0
+5: [Prediction(white_name='Levon Aronian', black_name='Wesley So', outcome='X', round='3'), Prediction(white_name='Michael Adams', black_name='Anish Giri', outcome='1', round='3'), Prediction(white_name='Hikaru Nakamura', black_name='Viswanathan Anand', outcome='2', round='3'), Prediction(white_name='Maxime Vachier-Lagrave', black_name='Veselin Topalov', outcome='X', round='3'), Prediction(white_name='Fabiano Caruana', black_name='Vladimir Kramnik', outcome='X', round='3')]
+Score: 3
 
 --------------------------------
 --------------------------------
@@ -1160,6 +1178,7 @@ Classifica finale
 Score: 3
 
 --------------------------------
+Il pronostico del terzo turno è arrivato in ritardo; resta valido quello della classifica finale. --> Il pronostico del 3 turno è arrivato in ritardo; resta valido quello della classifica finale.
 --------------------------------
 lightknight
 LightKnight
@@ -1343,6 +1362,7 @@ Anish Giri – Wesley So 1/2
 Score: 5
 
 --------------------------------
+turno IV --> turno 4 
 --------------------------------
 zed
 zed
@@ -1363,8 +1383,8 @@ Anish Giri – Wesley So 1/2
 4) Aronian
 5) Anand
 
-5: [Prediction(white_name='Fabiano Caruana', black_name='Levon Aronian', outcome='X', round=''), Prediction(white_name='Vladimir Kramnik', black_name='Maxime Vachier-Lagrave', outcome='1', round=''), Prediction(white_name='Veselin Topalov', black_name='Hikaru Nakamura', outcome='1', round=''), Prediction(white_name='Viswanathan Anand', black_name='Michael Adams', outcome='X', round=''), Prediction(white_name='Anish Giri', black_name='Wesley So', outcome='X', round='')]
-Score: 0
+5: [Prediction(white_name='Fabiano Caruana', black_name='Levon Aronian', outcome='X', round='4'), Prediction(white_name='Vladimir Kramnik', black_name='Maxime Vachier-Lagrave', outcome='1', round='4'), Prediction(white_name='Veselin Topalov', black_name='Hikaru Nakamura', outcome='1', round='4'), Prediction(white_name='Viswanathan Anand', black_name='Michael Adams', outcome='X', round='4'), Prediction(white_name='Anish Giri', black_name='Wesley So', outcome='X', round='4')]
+Score: 3
 
 --------------------------------
 --------------------------------
@@ -1702,6 +1722,7 @@ Vachier-Lagrave – Fabiano Caruana 0-1
 Score: 2
 
 --------------------------------
+turno V --> turno 5 
 --------------------------------
 zed
 zed
@@ -1717,8 +1738,8 @@ Michael Adams – Veselin Topalov 1/2
 Hikaru Nakamura – Vladimir Kramnik 0-1
 Vachier-Lagrave – Fabiano Caruana 0-1
 
-5: [Prediction(white_name='Levon Aronian', black_name='Anish Giri', outcome='1', round=''), Prediction(white_name='Wesley So', black_name='Viswanathan Anand', outcome='X', round=''), Prediction(white_name='Michael Adams', black_name='Veselin Topalov', outcome='X', round=''), Prediction(white_name='Hikaru Nakamura', black_name='Vladimir Kramnik', outcome='2', round=''), Prediction(white_name='Maxime Vachier-Lagrave', black_name='Fabiano Caruana', outcome='2', round='')]
-Score: 0
+5: [Prediction(white_name='Levon Aronian', black_name='Anish Giri', outcome='1', round='5'), Prediction(white_name='Wesley So', black_name='Viswanathan Anand', outcome='X', round='5'), Prediction(white_name='Michael Adams', black_name='Veselin Topalov', outcome='X', round='5'), Prediction(white_name='Hikaru Nakamura', black_name='Vladimir Kramnik', outcome='2', round='5'), Prediction(white_name='Maxime Vachier-Lagrave', black_name='Fabiano Caruana', outcome='2', round='5')]
+Score: 1
 
 --------------------------------
 --------------------------------
@@ -1937,6 +1958,7 @@ Viswanathan Anand – Anish Giri ½ – ½
 Score: 2
 
 --------------------------------
+turno VI --> turno 6 
 --------------------------------
 zed
 zed
@@ -1952,7 +1974,7 @@ Vladimir Kramnik – Michael Adams 1-0
 Veselin Topalov – Wesley So 1/2
 Viswanathan Anand – Anish Giri 1-0
 
-5: [Prediction(white_name='Maxime Vachier-Lagrave', black_name='Levon Aronian', outcome='2', round=''), Prediction(white_name='Fabiano Caruana', black_name='Hikaru Nakamura', outcome='X', round=''), Prediction(white_name='Vladimir Kramnik', black_name='Michael Adams', outcome='1', round=''), Prediction(white_name='Veselin Topalov', black_name='Wesley So', outcome='X', round=''), Prediction(white_name='Viswanathan Anand', black_name='Anish Giri', outcome='1', round='')]
+5: [Prediction(white_name='Maxime Vachier-Lagrave', black_name='Levon Aronian', outcome='2', round='6'), Prediction(white_name='Fabiano Caruana', black_name='Hikaru Nakamura', outcome='X', round='6'), Prediction(white_name='Vladimir Kramnik', black_name='Michael Adams', outcome='1', round='6'), Prediction(white_name='Veselin Topalov', black_name='Wesley So', outcome='X', round='6'), Prediction(white_name='Viswanathan Anand', black_name='Anish Giri', outcome='1', round='6')]
 Score: 0
 
 --------------------------------
@@ -2112,6 +2134,9 @@ Turno 7
 Score: 4
 
 --------------------------------
+turno VII --> turno 7 
+Turno VIII --> Turno 8 
+Turno IX --> Turno 9 
 --------------------------------
 zed
 zed
@@ -2139,8 +2164,8 @@ Anish Giri – Fabiano Caruana 1/2
 Wesley So – Vachier-Lagrave 1/2
 Michael Adams – Hikaru Nakamura 0-1
 
-15: [Prediction(white_name='Levon Aronian', black_name='Viswanathan Anand', outcome='X', round=''), Prediction(white_name='Anish Giri', black_name='Veselin Topalov', outcome='2', round=''), Prediction(white_name='Wesley So', black_name='Vladimir Kramnik', outcome='X', round=''), Prediction(white_name='Michael Adams', black_name='Fabiano Caruana', outcome='X', round=''), Prediction(white_name='Hikaru Nakamura', black_name='Maxime Vachier-Lagrave', outcome='1', round=''), Prediction(white_name='Hikaru Nakamura', black_name='Levon Aronian', outcome='2', round=''), Prediction(white_name='Maxime Vachier-Lagrave', black_name='Michael Adams', outcome='X', round=''), Prediction(white_name='Fabiano Caruana', black_name='Wesley So', outcome='1', round=''), Prediction(white_name='Vladimir Kramnik', black_name='Anish Giri', outcome='X', round=''), Prediction(white_name='Veselin Topalov', black_name='Viswanathan Anand', outcome='X', round=''), Prediction(white_name='Levon Aronian', black_name='Veselin Topalov', outcome='X', round=''), Prediction(white_name='Viswanathan Anand', black_name='Vladimir Kramnik', outcome='X', round=''), Prediction(white_name='Anish Giri', black_name='Fabiano Caruana', outcome='X', round=''), Prediction(white_name='Wesley So', black_name='Maxime Vachier-Lagrave', outcome='X', round=''), Prediction(white_name='Michael Adams', black_name='Hikaru Nakamura', outcome='2', round='')]
-Score: 0
+15: [Prediction(white_name='Levon Aronian', black_name='Viswanathan Anand', outcome='X', round='7'), Prediction(white_name='Anish Giri', black_name='Veselin Topalov', outcome='2', round='7'), Prediction(white_name='Wesley So', black_name='Vladimir Kramnik', outcome='X', round='7'), Prediction(white_name='Michael Adams', black_name='Fabiano Caruana', outcome='X', round='7'), Prediction(white_name='Hikaru Nakamura', black_name='Maxime Vachier-Lagrave', outcome='1', round='7'), Prediction(white_name='Hikaru Nakamura', black_name='Levon Aronian', outcome='2', round='8'), Prediction(white_name='Maxime Vachier-Lagrave', black_name='Michael Adams', outcome='X', round='8'), Prediction(white_name='Fabiano Caruana', black_name='Wesley So', outcome='1', round='8'), Prediction(white_name='Vladimir Kramnik', black_name='Anish Giri', outcome='X', round='8'), Prediction(white_name='Veselin Topalov', black_name='Viswanathan Anand', outcome='X', round='8'), Prediction(white_name='Levon Aronian', black_name='Veselin Topalov', outcome='X', round='9'), Prediction(white_name='Viswanathan Anand', black_name='Vladimir Kramnik', outcome='X', round='9'), Prediction(white_name='Anish Giri', black_name='Fabiano Caruana', outcome='X', round='9'), Prediction(white_name='Wesley So', black_name='Maxime Vachier-Lagrave', outcome='X', round='9'), Prediction(white_name='Michael Adams', black_name='Hikaru Nakamura', outcome='2', round='9')]
+Score: 10
 
 --------------------------------
 --------------------------------
@@ -2197,6 +2222,7 @@ Hikaru Nakamura – Vachier-Lagrave 1/2
 Score: 3
 
 --------------------------------
+Turno VIII --> Turno 8 
 --------------------------------
 francy29
 francy29
@@ -2211,8 +2237,8 @@ Fabiano Caruana – Wesley So 1/2
 Vladimir Kramnik – Anish Giri 1/2
 Veselin Topalov – Viswanathan Anand 1/2
 
-5: [Prediction(white_name='Hikaru Nakamura', black_name='Levon Aronian', outcome='1', round=''), Prediction(white_name='Maxime Vachier-Lagrave', black_name='Michael Adams', outcome='X', round=''), Prediction(white_name='Fabiano Caruana', black_name='Wesley So', outcome='X', round=''), Prediction(white_name='Vladimir Kramnik', black_name='Anish Giri', outcome='X', round=''), Prediction(white_name='Veselin Topalov', black_name='Viswanathan Anand', outcome='X', round='')]
-Score: 0
+5: [Prediction(white_name='Hikaru Nakamura', black_name='Levon Aronian', outcome='1', round='8'), Prediction(white_name='Maxime Vachier-Lagrave', black_name='Michael Adams', outcome='X', round='8'), Prediction(white_name='Fabiano Caruana', black_name='Wesley So', outcome='X', round='8'), Prediction(white_name='Vladimir Kramnik', black_name='Anish Giri', outcome='X', round='8'), Prediction(white_name='Veselin Topalov', black_name='Viswanathan Anand', outcome='X', round='8')]
+Score: 3
 
 --------------------------------
 --------------------------------
@@ -2431,6 +2457,7 @@ Michael Adams – Hikaru Nakamura 1-0
 Score: 3
 
 --------------------------------
+Terzo turno: 6 punti disponibili, ci si ferma a 5. -->  3 turno: 6 punti disponibili, ci si ferma a 5.
 --------------------------------
 lightknight
 LightKnight
@@ -2468,6 +2495,7 @@ ZiggyMoon	0
 Score: 0
 
 --------------------------------
+Quarto turno: magnons e spettacolar team fanno bottino pieno, per loro 7+3=10 punti. -->  4 turno: magnons e spettacolar team fanno bottino pieno, per loro 7+3=10 punti.
 --------------------------------
 lightknight
 LightKnight
@@ -2505,6 +2533,7 @@ ZiggyMoon	0
 Score: 0
 
 --------------------------------
+Quinto turno: solo 4 punti al massimo rispetto ai 6 di giornata. -->  5 turno: solo 4 punti al massimo rispetto ai 6 di giornata.
 --------------------------------
 lightknight
 LightKnight
@@ -2542,6 +2571,7 @@ ZiggyMoon	0
 Score: 0
 
 --------------------------------
+Sesto turno: 9 punti da prendere, si arriva a 6. -->  6 turno: 9 punti da prendere, si arriva a 6.
 --------------------------------
 lightknight
 LightKnight
@@ -2579,6 +2609,7 @@ ZiggyMoon	0
 Score: 0
 
 --------------------------------
+Settimo turno: ancora 6 punti il totale di giornata, ma ci si ferma appena prima, a 5. -->  7 turno: ancora 6 punti il totale di giornata, ma ci si ferma appena prima, a 5.
 --------------------------------
 lightknight
 LightKnight
@@ -2616,6 +2647,7 @@ ZiggyMoon	0
 Score: 0
 
 --------------------------------
+Ottavo turno: di nuovo si arriva a un punto in meno del massimo, 6 su 7. -->  8 turno: di nuovo si arriva a un punto in meno del massimo, 6 su 7.
 --------------------------------
 lightknight
 LightKnight
@@ -2744,29 +2776,29 @@ Score: 4
 
 --------------------------------
 --------------------------------
-angelo1999: 36
-magnons: 17
-dusdron: 18
-zed: 0
-zugzwang: 1
-megalovic: 43
-mike: 35
-tromat: 1
-spettacoloso: 43
-pappolo: 26
-blade: 30
-paulbar: 27
-francy29: 23
-elvan: 0
 sanchopanza: 0
 seitan: 40
+blade: 30
+dusdron: 18
+ziggymoon: 3
 paolo58: 22
-luciano-nucci: 30
+zugzwang: 7
+elvan: 2
+tromat: 1
 lightknight: 0
 bryterlayter335: 26
+zed: 26
+francy29: 26
+magnons: 17
+pappolo: 26
 irishgambit: 32
+mike: 35
 renabucodonosor: 6
-ziggymoon: 3
 tocqueville: 21
+angelo1999: 36
+luciano-nucci: 35
+paulbar: 27
+megalovic: 43
+spettacoloso: 43
 --------------------------------
 126

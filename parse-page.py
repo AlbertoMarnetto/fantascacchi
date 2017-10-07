@@ -54,12 +54,68 @@ from bs4 import BeautifulSoup
 Prediction = namedtuple('Prediction', ['white_name', 'black_name', 'outcome', 'round'])
 
 def get_line_round(line):
-	round_regexp = re.compile("(Round|Turno)\D*(?P<round_number>\d*)", re.IGNORECASE)
-	search_result = round_regexp.search(line)
-	if search_result:
-		return search_result.group('round_number')
-	else:
-		return None
+	# replace turn numbers expressed in non-standard forms ("primo", "VI", etc.)
+	# with Arabic numbers
+	for ordinal, replacement in get_line_round.ordinal_replacements_regexps:
+		(new_line, replacement_count) = ordinal.subn(replacement, line)
+		if replacement_count > 0:
+			rawwrite("%s --> %s\n" % (line, new_line))
+			line = new_line
+			break
+
+	# Indentify and extract the turn number
+	for round_regexp in get_line_round.round_regexps:
+		search_result = round_regexp.search(line)
+		if search_result:
+			return search_result.group('round_number')
+
+	return None
+
+get_line_round.ordinal_replacements = [
+	("(^|\W)primo($|\W)", " 1 "),
+	("(^|\W)secondo($|\W)", " 2 "),
+	("(^|\W)terzo($|\W)", " 3 "),
+	("(^|\W)quarto($|\W)", " 4 "),
+	("(^|\W)quinto($|\W)", " 5 "),
+	("(^|\W)sesto($|\W)", " 6 "),
+	("(^|\W)settimo($|\W)", " 7 "),
+	("(^|\W)ottavo($|\W)", " 8 "),
+	("(^|\W)nono($|\W)", " 9 "),
+	("(^|\W)decimo($|\W)", " 10 "),
+	("(^|\W)undicesimo($|\W)", " 11 "),
+	("(^|\W)dodicesimo($|\W)", " 12 "),
+	("(^|\W)tredicesimo($|\W)", " 13 "),
+	("(^|\W)quattordicesimo($|\W)", " 14 "),
+	("(^|\W)quindicesimo($|\W)", " 15 "),
+	("(^|\W)sedicesimo($|\W)", " 16 "),
+	("(^|\W)I($|\W)", " 1 "),
+	("(^|\W)II($|\W)", " 2 "),
+	("(^|\W)III($|\W)", " 3 "),
+	("(^|\W)IV($|\W)", " 4 "),
+	("(^|\W)V($|\W)", " 5 "),
+	("(^|\W)VI($|\W)", " 6 "),
+	("(^|\W)VII($|\W)", " 7 "),
+	("(^|\W)VIII($|\W)", " 8 "),
+	("(^|\W)IX($|\W)", " 9 "),
+	("(^|\W)X($|\W)", " 10 "),
+	("(^|\W)XI($|\W)", " 11 "),
+	("(^|\W)XII($|\W)", " 12 "),
+	("(^|\W)XIII($|\W)", " 13 "),
+	("(^|\W)XIV($|\W)", " 14 "),
+	("(^|\W)XV($|\W)", " 15 "),
+	("(^|\W)XVI($|\W)", " 16 "),
+	]
+
+get_line_round.ordinal_replacements_regexps = [
+	( re.compile(pair[0], re.IGNORECASE), pair[1]) for pair in get_line_round.ordinal_replacements
+]
+
+get_line_round.round_regexps = [
+	re.compile("(Round|Turno)\D*(?P<round_number>\d+)", re.IGNORECASE),
+	re.compile("(?P<round_number>\d+)\D*(Round|Turno)", re.IGNORECASE)
+	]
+
+
 
 def get_line_prediction(line, participants):
 	participants_in_line = []
@@ -164,12 +220,12 @@ tournament_outcome = extract_predictions(tournament_text, participants)
 posts = load_posts('thread.html')
 print(len(posts))
 
-post_predictions_list = []
+all_predictions = []
 for post in posts:
 	post_predictions = extract_predictions(post['text'], participants)
 	post_predictions = assign_points(post_predictions, tournament_outcome)
 	post_predictions['author'] = post['author']
-	post_predictions_list.append(post_predictions)
+	all_predictions.append(post_predictions)
 	rawwrite('--------------------------------\n')
 	rawwrite(post['author'])
 	rawwrite(post['text'])
@@ -182,7 +238,7 @@ for post in posts:
 rawwrite('--------------------------------\n')
 authors = set(post['author'] for post in posts)
 for author in authors:
-	author_score = sum([post_predictions['score'] for post_predictions in post_predictions_list if post_predictions['author'] == author])
+	author_score = sum([post_predictions['score'] for post_predictions in all_predictions if post_predictions['author'] == author])
 	rawwrite("%s: %d\n" % (author, author_score))
 
 rawwrite('--------------------------------\n')
