@@ -18,8 +18,6 @@ def rawwrite(string):
 ##############################################
 
 import re as re
-from collections import namedtuple
-
 from bs4 import BeautifulSoup
 
 def load_posts(filename):
@@ -53,8 +51,17 @@ from collections import namedtuple
 from operator import itemgetter
 
 from bs4 import BeautifulSoup
+Prediction = namedtuple('Prediction', ['white_name', 'black_name', 'outcome', 'round'])
 
-def process_line(line, participants):
+def get_line_round(line):
+	round_regexp = re.compile("(Round|Turno)\D*(?P<round_number>\d*)", re.IGNORECASE)
+	search_result = round_regexp.search(line)
+	if search_result:
+		return search_result.group('round_number')
+	else:
+		return None
+
+def get_line_prediction(line, participants):
 	participants_in_line = []
 
 	# Find participants
@@ -71,7 +78,7 @@ def process_line(line, participants):
 
 	# Find result
 	line_outcome = '?'
-	for outcome_re, outcome in process_line.possible_outcomes:
+	for outcome_re, outcome in get_line_prediction.possible_outcomes:
 		if outcome_re.search(line):
 			line_outcome = outcome
 			break
@@ -88,7 +95,7 @@ def process_line(line, participants):
 # In descending order of reliability,
 # e.g. "0 - 1" matches both the 2nd and the 6th regexp,
 # but the former has priority
-process_line.possible_outcomes = [
+get_line_prediction.possible_outcomes = [
 		(re.compile("\D1\s*[-–\\\/]\s*0($|\D)"), '1'), # 1 - 0
 		(re.compile("\D0\s*[-–\\\/]\s*1($|\D)"), '2'), # 0 - 1
 		(re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), 'X'), # ½ - ½
@@ -107,12 +114,25 @@ def extract_predictions(post_text, participants):
 	post_predictions['count'] = 0
 	post_predictions['predictions'] = []
 
+	post_round = None
+
 	for line in lines:
-		line_prediction = process_line(line, participants)
-		if not line_prediction is None:
-			post_predictions['count'] += 1
-			prediction = (line_prediction[0][0], line_prediction[1][0], line_prediction[2])
-			post_predictions['predictions'].append(prediction)
+		line_round = get_line_round(line)
+		if line_round is not None:
+			post_round = line_round
+
+		line_prediction = get_line_prediction(line, participants)
+		if line_prediction is None:
+			continue
+
+		post_predictions['count'] += 1
+		prediction = Prediction(
+			white_name = line_prediction[0][0],
+			black_name = line_prediction[1][0],
+			outcome = line_prediction[2],
+			round = post_round)
+
+		post_predictions['predictions'].append(prediction)
 
 	return post_predictions
 
@@ -121,9 +141,16 @@ def extract_predictions(post_text, participants):
 def assign_points(post_predictions, tournament_outcome):
 	post_predictions['score'] = 0
 	for prediction in post_predictions['predictions']:
-		if prediction in tournament_outcome['predictions']:
+		if prediction not in tournament_outcome['predictions']:
+			# Wrong prediction
+			post_predictions['score'] += 0
+		elif prediction.outcome == '1':
+			post_predictions['score'] += 2
+		elif prediction.outcome == 'X':
 			post_predictions['score'] += 1
-			
+		elif prediction.outcome == '2':
+			post_predictions['score'] += 3
+
 	return post_predictions
 
 ##############################################
@@ -135,7 +162,6 @@ tournament_text = open('tournament.txt', "rb").read().decode('utf-8', 'ignore')
 tournament_outcome = extract_predictions(tournament_text, participants)
 
 posts = load_posts('thread.html')
-#sys.stdout.buffer.write(b'\ufeff')
 print(len(posts))
 
 post_predictions_list = []
@@ -160,7 +186,7 @@ for author in authors:
 	rawwrite("%s: %d\n" % (author, author_score))
 
 rawwrite('--------------------------------\n')
-	
+
 	#print("\n".join(post.text ))
 
 
