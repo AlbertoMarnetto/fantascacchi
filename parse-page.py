@@ -85,54 +85,82 @@ def process_line(line, participants):
 		return None
 
 
+# In descending order of reliability,
+# e.g. "0 - 1" matches both the 2nd and the 6th regexp,
+# but the former has priority
 process_line.possible_outcomes = [
-		(re.compile("\D1\s*[-–\\\/]\s*0($|\D)"), '1'),
-		(re.compile("\D0\s*[-–\\\/]\s*1($|\D)"), '2'),
-		(re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), 'X'),
-		(re.compile("\D1[\\\/]2($|\D)"), 'X'),
-		(re.compile("\s[xX]($|\s)"), 'X'),
-		(re.compile("\D1($|\D)"), '1'),
-		(re.compile("\D2($|\D)"), '2')
+		(re.compile("\D1\s*[-–\\\/]\s*0($|\D)"), '1'), # 1 - 0
+		(re.compile("\D0\s*[-–\\\/]\s*1($|\D)"), '2'), # 0 - 1
+		(re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), 'X'), # ½ - ½
+		(re.compile("\D1[\\\/]2($|\D)"), 'X'), # 1/2
+		(re.compile("\s[xX]($|\s)"), 'X'), # X
+		(re.compile("\D1($|\D)"), '1'), # 1
+		(re.compile("\D2($|\D)"), '2') # 2
 		]
 
 ##############################################
 
-def process_post(post, participants):
-	lines = post['text'].split('\n')
+def extract_predictions(post_text, participants):
+	lines = post_text.split('\n')
 
-	post_parse_result = {}
-	post_parse_result['bet_count'] = 0
-	post_parse_result['odds'] = []
+	post_predictions = {}
+	post_predictions['count'] = 0
+	post_predictions['predictions'] = []
 
 	for line in lines:
-		line_parse_result = process_line(line, participants)
-		if not line_parse_result is None:
-			post_parse_result['bet_count'] += 1
-			post_parse_result['odds'].append(line_parse_result[2])
+		line_prediction = process_line(line, participants)
+		if not line_prediction is None:
+			post_predictions['count'] += 1
+			prediction = (line_prediction[0][0], line_prediction[1][0], line_prediction[2])
+			post_predictions['predictions'].append(prediction)
 
-	return post_parse_result
+	return post_predictions
 
 ##############################################
 
+def assign_points(post_predictions, tournament_outcome):
+	post_predictions['score'] = 0
+	for prediction in post_predictions['predictions']:
+		if prediction in tournament_outcome['predictions']:
+			post_predictions['score'] += 1
+			
+	return post_predictions
+
+##############################################
 
 participants = load_participants('participants.json')
 #print(participants)
+
+tournament_text = open('tournament.txt', "rb").read().decode('utf-8', 'ignore')
+tournament_outcome = extract_predictions(tournament_text, participants)
 
 posts = load_posts('thread.html')
 #sys.stdout.buffer.write(b'\ufeff')
 print(len(posts))
 
+post_predictions_list = []
 for post in posts:
+	post_predictions = extract_predictions(post['text'], participants)
+	post_predictions = assign_points(post_predictions, tournament_outcome)
+	post_predictions['author'] = post['author']
+	post_predictions_list.append(post_predictions)
 	rawwrite('--------------------------------\n')
 	rawwrite(post['author'])
-	post_parse_result = process_post(post, participants)
 	rawwrite(post['text'])
 	rawwrite('\n')
-	rawwrite("%d: %s" % (post_parse_result['bet_count'], post_parse_result['odds']))
+	rawwrite("%d: %s\n" % (post_predictions['count'], post_predictions['predictions']))
+	rawwrite("Score: %d\n" % post_predictions['score'])
 	rawwrite('\n')
 	rawwrite('--------------------------------\n')
 
+rawwrite('--------------------------------\n')
+authors = set(post['author'] for post in posts)
+for author in authors:
+	author_score = sum([post_predictions['score'] for post_predictions in post_predictions_list if post_predictions['author'] == author])
+	rawwrite("%s: %d\n" % (author, author_score))
 
+rawwrite('--------------------------------\n')
+	
 	#print("\n".join(post.text ))
 
 
