@@ -205,27 +205,61 @@ def repair_turns(predictions):
 
 	def repaired_prediction(prediction):
 		assert game(prediction) in official_results, "Missing game in official results " + str(game)
-		
+
 		expected_round = official_results[game(prediction)].round
 		assert expected_round is not None, "Missing round in official results for game" + str(game)
-		
+
 		# if the given round matches with the tournament calendar, do nothing
 		if prediction.round == expected_round:
 			return prediction
-			
+
 		# Otherwise, write the correct round number
 		# Only give a warning if a wrong round was given
 		# (not if it was missing)
 		if prediction.round is not None:
 			rawwrite("%s: wrong round, should be %d" % (prediction, expected_round))
-		
+
 		prediction_dict = prediction._asdict()  # make the prediction mutable
 		prediction_dict['round'] = expected_round
 		return Prediction(**prediction_dict)
-		
+
 	return list(map(repaired_prediction, predictions))
 
-	
+def remove_duplicates(predictions):
+	# from https://stackoverflow.com/a/480227/2453661
+
+	# We iterate the list of prdictions in reverse chronological order,
+	# store every seen one in a set,
+	# and discard a prediction
+	# if another with the same author and game was already seen
+
+	seen = {}
+
+	def is_obsolete(prediction, seen):
+		prediction_key = (
+			prediction.author,
+			prediction.white_name,
+			prediction.black_name,
+			prediction.round
+			)
+
+		if prediction_key in seen.keys():
+			rawwrite(format(
+				"Ignored prediction: %s, as replaced by %s \n"
+				% ( prediction, seen[prediction_key] )
+			))
+			return True
+		else:
+			seen[prediction_key] = prediction
+			return False
+
+	return list(reversed([
+		prediction for prediction in reversed(predictions)
+		#prediction for prediction in predictions
+		if not is_obsolete(prediction, seen)
+		]))
+
+
 def assign_scores(predictions):
 	def prediction_key(prediction):
 		return (
@@ -288,6 +322,7 @@ for post in posts:
 	#rawwrite('--------------------------------\n')
 
 all_predictions = repair_turns(all_predictions)
+all_predictions = remove_duplicates(all_predictions)
 all_predictions = assign_scores(all_predictions)
 
 authors = set(post.author for post in posts)
