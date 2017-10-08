@@ -1,5 +1,14 @@
-######################################
+from bs4 import BeautifulSoup
+from collections import namedtuple
 import json
+from operator import itemgetter
+import re as re
+
+Post = namedtuple("Post", ['author', 'text'])
+Prediction = namedtuple("Prediction", ['author', 'white_name', 'black_name', 'outcome', 'round'])
+PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ('score',))
+
+######################################
 
 def load_participants(filename):
 	with open(filename, "r") as file:
@@ -17,9 +26,6 @@ def rawwrite(string):
 
 ##############################################
 
-import re as re
-from bs4 import BeautifulSoup
-
 def load_posts(filename):
 	html_page = open(filename, "rb").read().decode('utf-8', 'ignore')
 	soup = BeautifulSoup(html_page, "html.parser")
@@ -34,25 +40,14 @@ def load_posts(filename):
 			continue
 
 		post_author = comment_author_class[0].replace('comment-author-', '', 1)
-
 		post_text = post_tag.find('div', attrs = {'class': 'info_com'}).text
 
-		#print(post_text)
-
-		post = { 'author' : post_author, 'text' : post_text}
+		post = Post( author = post_author, text = post_text )
 		posts.append(post)
 
 	return posts
 
 ##############################################
-
-import re as re
-from collections import namedtuple
-from operator import itemgetter
-
-from bs4 import BeautifulSoup
-Prediction = namedtuple('Prediction', ['author', 'white_name', 'black_name', 'outcome', 'round'])
-PredictionWithScore = namedtuple('PredictionWithScore', Prediction._fields + ('score',))
 
 def get_line_round(line):
 	# replace turn numbers expressed in non-standard forms ("primo", "VI", etc.)
@@ -60,7 +55,7 @@ def get_line_round(line):
 	for ordinal, replacement in get_line_round.ordinal_replacements_regexps:
 		(new_line, replacement_count) = ordinal.subn(replacement, line)
 		if replacement_count > 0:
-			rawwrite("%s --> %s\n" % (line, new_line))
+			#rawwrite("%s --> %s\n" % (line, new_line))
 			line = new_line
 			break
 
@@ -117,9 +112,7 @@ get_line_round.ordinal_replacements_regexps = [
 get_line_round.round_regexps = [
 	re.compile("(Round|Turno)\D*(?P<round_number>\d+)", re.IGNORECASE),
 	re.compile("(?P<round_number>\d+)\D*(Round|Turno)", re.IGNORECASE)
-	]
-
-
+]
 
 def get_line_prediction(line, event_players):
 	participants_in_line = []
@@ -168,8 +161,8 @@ get_line_prediction.possible_outcomes = [
 
 ##############################################
 
-def extract_predictions(post_author, post_text, event_players):
-	lines = post_text.split('\n')
+def extract_predictions(post, event_players):
+	lines = post.text.split('\n')
 
 	post_predictions = []
 
@@ -185,7 +178,7 @@ def extract_predictions(post_author, post_text, event_players):
 			continue
 
 		prediction = Prediction(
-			author = post_author,
+			author = post.author,
 			white_name = line_prediction[0][0],
 			black_name = line_prediction[1][0],
 			outcome = line_prediction[2],
@@ -197,6 +190,42 @@ def extract_predictions(post_author, post_text, event_players):
 
 ##############################################
 
+def repair_turns(predictions):
+	def game(prediction):
+		return (
+			prediction.white_name,
+			prediction.black_name,
+			)
+
+	official_results = {
+		game(official_result) : official_result
+		for official_result in predictions
+		if official_result.author == "Official results"
+		}
+
+	def repaired_prediction(prediction):
+		assert game(prediction) in official_results, "Missing game in official results " + str(game)
+		
+		expected_round = official_results[game(prediction)].round
+		assert expected_round is not None, "Missing round in official results for game" + str(game)
+		
+		# if the given round matches with the tournament calendar, do nothing
+		if prediction.round == expected_round:
+			return prediction
+			
+		# Otherwise, write the correct round number
+		# Only give a warning if a wrong round was given
+		# (not if it was missing)
+		if prediction.round is not None:
+			rawwrite("%s: wrong round, should be %d" % (prediction, expected_round))
+		
+		prediction_dict = prediction._asdict()  # make the prediction mutable
+		prediction_dict['round'] = expected_round
+		return Prediction(**prediction_dict)
+		
+	return list(map(repaired_prediction, predictions))
+
+	
 def assign_scores(predictions):
 	def prediction_key(prediction):
 		return (
@@ -210,7 +239,6 @@ def assign_scores(predictions):
 		for official_result in predictions
 		if official_result.author == "Official results"
 		}
-
 
 	scored_predictions = []
 	for prediction in predictions:
@@ -238,28 +266,32 @@ event_players = load_participants('participants.json')
 #print(participants)
 
 tournament_text = open('tournament.txt', "rb").read().decode('utf-8', 'ignore')
-tournament_outcome = extract_predictions("Official results", tournament_text, event_players)
+tournament_post = Post( author = "Official results", text = tournament_text)
+official_results = extract_predictions(tournament_post, event_players)
+
 
 posts = load_posts('thread.html')
 
 all_predictions = []
+all_predictions.extend(official_results)
+
 for post in posts:
-	post_predictions = extract_predictions(post['author'], post['text'], event_players)
-	post_predictions = assign_scores(post_predictions + tournament_outcome)
+	post_predictions = extract_predictions(post, event_players)
 	all_predictions.extend(post_predictions)
-	rawwrite('--------------------------------\n')
-	rawwrite(post['author'])
-	rawwrite(post['text'])
-	rawwrite('\n')
-	rawwrite("%d: %s\n" % (len(post_predictions), post_predictions))
-	rawwrite("Score: %d\n" % sum(prediction.score for prediction in post_predictions))
-	rawwrite('\n')
-	rawwrite('--------------------------------\n')
+	#rawwrite('--------------------------------\n')
+	#rawwrite(post.author)
+	#rawwrite(post.text)
+	#rawwrite('\n')
+	#rawwrite("%d: %s\n" % (len(post_predictions), post_predictions))
+	#rawwrite("Score: %d\n" % sum(prediction.score for prediction in post_predictions))
+	#rawwrite('\n')
+	#rawwrite('--------------------------------\n')
 
-rawwrite('--------------------------------\n')
+all_predictions = repair_turns(all_predictions)
+all_predictions = assign_scores(all_predictions)
 
-authors = set(post['author'] for post in posts)
-rounds = sorted(list(set(prediction.round for prediction in tournament_outcome)))
+authors = set(post.author for post in posts)
+rounds = sorted(list(set(prediction.round for prediction in official_results)))
 
 #rawwrite(str(all_predictions))
 
@@ -284,8 +316,8 @@ for round in rounds:
 
 		round_entries.append((author, author_score, author_cumulated_score))
 
-	# sort by descending score
-	round_entries.sort( key = lambda round_entry: -round_entry[1])
+	# sort by descending score, then by name
+	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
 	for author, author_score, author_cumulated_score in round_entries:
 		rawwrite("%s : %d\n" % (author, author_score))
 
