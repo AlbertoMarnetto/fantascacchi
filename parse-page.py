@@ -52,16 +52,7 @@ from operator import itemgetter
 
 from bs4 import BeautifulSoup
 Prediction = namedtuple('Prediction', ['author', 'white_name', 'black_name', 'outcome', 'round'])
-PredictionKey = namedtuple('Prediction', ['white_name', 'black_name', 'outcome', 'round'])
-PredictionWithScore = namedtuple('Prediction', ['author', 'white_name', 'black_name', 'outcome', 'round', 'score'])
-
-def prediction_key(prediction):
-	return PredictionKey(
-		white_name = prediction.white_name,
-		black_name = prediction.black_name,
-		outcome = prediction.outcome, round =
-		prediction.round)
-
+PredictionWithScore = namedtuple('PredictionWithScore', Prediction._fields + ('score',))
 
 def get_line_round(line):
 	# replace turn numbers expressed in non-standard forms ("primo", "VI", etc.)
@@ -207,11 +198,19 @@ def extract_predictions(post_author, post_text, event_players):
 ##############################################
 
 def assign_scores(predictions):
+	def prediction_key(prediction):
+		return (
+			prediction.white_name,
+			prediction.black_name,
+			prediction.outcome
+			)
+
 	official_results = {
 		prediction_key(official_result) : official_result
 		for official_result in predictions
 		if official_result.author == "Official results"
 		}
+
 
 	scored_predictions = []
 	for prediction in predictions:
@@ -228,11 +227,7 @@ def assign_scores(predictions):
 				score = 3
 
 		scored_predictions.append( PredictionWithScore(
-			author = prediction.author,
-			white_name = prediction.white_name,
-			black_name = prediction.black_name,
-			outcome = prediction.outcome,
-			round = prediction.round,
+			**prediction._asdict(),
 			score = score))
 
 	return scored_predictions
