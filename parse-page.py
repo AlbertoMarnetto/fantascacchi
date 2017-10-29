@@ -55,7 +55,6 @@ def get_line_round(line):
 	for ordinal, replacement in get_line_round.ordinal_replacements_regexps:
 		(new_line, replacement_count) = ordinal.subn(replacement, line)
 		if replacement_count > 0:
-			#rawwrite("%s --> %s\n" % (line, new_line))
 			line = new_line
 			break
 
@@ -114,22 +113,23 @@ get_line_round.round_regexps = [
 	re.compile("(?P<round_number>\d+)\D*(Round|Turno)", re.IGNORECASE)
 ]
 
-def get_line_prediction(line, event_players):
-	participants_in_line = []
-
-	# Find event_players
+def get_line_players(line, event_players):
+	line_players = []
 	for player_name in event_players:
-		idx = line.find(player_name)
-		if idx != -1:
-			participants_in_line.append((player_name, idx))
-		else:
-			# Try to match just the first or family name
-			participant_tokens = player_name.split()
-			for participant_token in participant_tokens:
-				idx = line.find(participant_token)
-				if idx != -1:
-					participants_in_line.append((player_name, idx))
+		# Try to match just the first or family name
+		participant_tokens = player_name.split()
+		for participant_token in participant_tokens:
+			participant_regex = r"\b" + participant_token + r"\b"
+			maybe_match = re.search(participant_regex, line, re.IGNORECASE)
+			if maybe_match is not None:
+				line_players.append((player_name, maybe_match.start()))
+				break
 
+	return line_players
+
+def get_line_prediction(line, event_players):
+	line_players = []
+		
 	# Find result
 	line_outcome = '?'
 	for outcome_re, outcome in get_line_prediction.possible_outcomes:
@@ -139,9 +139,11 @@ def get_line_prediction(line, event_players):
 		#else:
 		#	print('%s does not match %s' % (line, outcome))
 
-	if len(participants_in_line) == 2:
-		participants_in_line.sort(key = itemgetter(1))
-		return (participants_in_line[0], participants_in_line[1], line_outcome)
+	line_players = get_line_players(line, event_players)
+
+	if len(line_players) == 2 and outcome is not None:
+		line_players.sort(key = itemgetter(1))
+		return (line_players[0], line_players[1], line_outcome)
 	else:
 		return None
 
@@ -158,6 +160,27 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("\D1($|\D)"), '1'), # 1
 		(re.compile("\D2($|\D)"), '2') # 2
 		]
+		
+def get_line_ranking(line, event_players):
+	line_players = []
+
+	line_players = get_line_players(line, event_players)
+
+	if len(line_players) != 1:
+		return None
+		
+	# Check that no other words are on the line
+	# except possibly for a number
+	if not get_line_ranking.line_re.search(line):
+		return None
+	
+	# Success
+	return line_players[0][0]
+	
+
+# One optional numer at the beginning,
+# followed by 1-2 words
+get_line_ranking.line_re = re.compile("^\d*\W*(\S+\s?){1,2}$")
 
 ##############################################
 
@@ -165,28 +188,34 @@ def extract_predictions(post, event_players):
 	lines = post.text.split('\n')
 
 	post_predictions = []
-
-	post_round = None
-
+	post_ranking = []
+	
+	post_current_round = None
+	is_in_ranking_mode = False
+	
 	for line in lines:
 		line_round = get_line_round(line)
 		if line_round is not None:
-			post_round = line_round
+			post_current_round = line_round
 
 		line_prediction = get_line_prediction(line, event_players)
-		if line_prediction is None:
+		if line_prediction is not None:
+			prediction = Prediction(
+				author = post.author,
+				white_name = line_prediction[0][0],
+				black_name = line_prediction[1][0],
+				outcome = line_prediction[2],
+				round = post_current_round)
+
+			post_predictions.append(prediction)
 			continue
-
-		prediction = Prediction(
-			author = post.author,
-			white_name = line_prediction[0][0],
-			black_name = line_prediction[1][0],
-			outcome = line_prediction[2],
-			round = post_round)
-
-		post_predictions.append(prediction)
-
-	return post_predictions
+		
+		line_ranking = get_line_ranking(line, event_players)
+		if line_ranking is not None:
+			rawwrite("For the ranking? " + line + " --> " + line_ranking + "\n")
+			post_ranking.append(line_ranking)
+				
+	return post_predictions #, post_ranking)
 
 ##############################################
 
@@ -196,18 +225,18 @@ def repair_turns(predictions):
 			prediction.white_name,
 			prediction.black_name,
 			)
-
+	
 	official_results = {
 		game(official_result) : official_result
 		for official_result in predictions
 		if official_result.author == "Official results"
 		}
-
+	
 	def repaired_prediction(prediction):
-		assert game(prediction) in official_results, "Missing game in official results " + str(game)
+		assert game(prediction) in official_results, "Missing game in official results " + str(prediction)
 
 		expected_round = official_results[game(prediction)].round
-		assert expected_round is not None, "Missing round in official results for game" + str(game)
+		assert expected_round is not None, "Missing round in official results for game" + str(prediction)
 
 		# if the given round matches with the tournament calendar, do nothing
 		if prediction.round == expected_round:
@@ -228,7 +257,7 @@ def repair_turns(predictions):
 def remove_duplicates(predictions):
 	# from https://stackoverflow.com/a/480227/2453661
 
-	# We iterate the list of prdictions in reverse chronological order,
+	# Iterate the list of predictions in reverse chronological order,
 	# store every seen one in a set,
 	# and discard a prediction
 	# if another with the same author and game was already seen
@@ -244,10 +273,6 @@ def remove_duplicates(predictions):
 			)
 
 		if prediction_key in seen.keys():
-			rawwrite(format(
-				"Ignored prediction: %s, as replaced by %s \n"
-				% ( prediction, seen[prediction_key] )
-			))
 			return True
 		else:
 			seen[prediction_key] = prediction
@@ -310,16 +335,9 @@ all_predictions = []
 all_predictions.extend(official_results)
 
 for post in posts:
+	#post_predictions, post_ranking = extract_predictions(post, event_players)
 	post_predictions = extract_predictions(post, event_players)
 	all_predictions.extend(post_predictions)
-	#rawwrite('--------------------------------\n')
-	#rawwrite(post.author)
-	#rawwrite(post.text)
-	#rawwrite('\n')
-	#rawwrite("%d: %s\n" % (len(post_predictions), post_predictions))
-	#rawwrite("Score: %d\n" % sum(prediction.score for prediction in post_predictions))
-	#rawwrite('\n')
-	#rawwrite('--------------------------------\n')
 
 all_predictions = repair_turns(all_predictions)
 all_predictions = remove_duplicates(all_predictions)
@@ -327,8 +345,6 @@ all_predictions = assign_scores(all_predictions)
 
 authors = set(post.author for post in posts)
 rounds = sorted(list(set(prediction.round for prediction in official_results)))
-
-#rawwrite(str(all_predictions))
 
 rawwrite('\n')
 for round in rounds:
