@@ -7,6 +7,9 @@ import re as re
 Post = namedtuple("Post", ['author', 'text'])
 Prediction = namedtuple("Prediction", ['author', 'white_name', 'black_name', 'outcome', 'round'])
 PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ('score',))
+Ranking = namedtuple("Ranking", ['author', 'ranking_list'])
+
+EXPECTED_RANKING_LENGTH = 5
 
 ######################################
 
@@ -129,7 +132,7 @@ def get_line_players(line, event_players):
 
 def get_line_prediction(line, event_players):
 	line_players = []
-		
+
 	# Find result
 	line_outcome = '?'
 	for outcome_re, outcome in get_line_prediction.possible_outcomes:
@@ -160,7 +163,7 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("\D1($|\D)"), '1'), # 1
 		(re.compile("\D2($|\D)"), '2') # 2
 		]
-		
+
 def get_line_ranking(line, event_players):
 	line_players = []
 
@@ -168,15 +171,15 @@ def get_line_ranking(line, event_players):
 
 	if len(line_players) != 1:
 		return None
-		
+
 	# Check that no other words are on the line
 	# except possibly for a number
 	if not get_line_ranking.line_re.search(line):
 		return None
-	
+
 	# Success
 	return line_players[0][0]
-	
+
 
 # One optional numer at the beginning,
 # followed by 1-2 words
@@ -188,11 +191,11 @@ def extract_predictions(post, event_players):
 	lines = post.text.split('\n')
 
 	post_predictions = []
-	post_ranking = []
-	
+	partial_ranking = []
+
 	post_current_round = None
 	is_in_ranking_mode = False
-	
+
 	for line in lines:
 		line_round = get_line_round(line)
 		if line_round is not None:
@@ -209,13 +212,21 @@ def extract_predictions(post, event_players):
 
 			post_predictions.append(prediction)
 			continue
-		
+
 		line_ranking = get_line_ranking(line, event_players)
 		if line_ranking is not None:
-			rawwrite("For the ranking? " + line + " --> " + line_ranking + "\n")
-			post_ranking.append(line_ranking)
-				
-	return post_predictions #, post_ranking)
+			partial_ranking.append(line_ranking)
+
+	if len(partial_ranking) != 0 and len(partial_ranking) != EXPECTED_RANKING_LENGTH:
+		rawwrite("Bad ranking: %s" % post_ranking)
+	elif len(partial_ranking) == EXPECTED_RANKING_LENGTH:
+		post_ranking = Ranking(
+			author = post.author,
+			ranking_list = partial_ranking)
+	else:
+		post_ranking = None
+
+	return post_predictions, post_ranking
 
 ##############################################
 
@@ -225,13 +236,13 @@ def repair_turns(predictions):
 			prediction.white_name,
 			prediction.black_name,
 			)
-	
+
 	official_results = {
 		game(official_result) : official_result
 		for official_result in predictions
 		if official_result.author == "Official results"
 		}
-	
+
 	def repaired_prediction(prediction):
 		assert game(prediction) in official_results, "Missing game in official results " + str(prediction)
 
@@ -285,7 +296,7 @@ def remove_duplicates(predictions):
 		]))
 
 
-def assign_scores(predictions):
+def assign_prediction_scores(predictions):
 	def prediction_key(prediction):
 		return (
 			prediction.white_name,
@@ -319,6 +330,40 @@ def assign_scores(predictions):
 
 	return scored_predictions
 
+def assign_ranking_scores(rankings):
+	# Indovinare il vincitore del torneo porterà 3 punti; ciascun giocatore in classifica, diverso dal vincitore, di cui si sia indovinata la posizione porterà 2 punti; ciascun giocatore indovinato ma messo al posto sbagliato porterà 1 punto.
+	official_ranking = [ ranking.ranking_list
+		for ranking in rankings
+		if ranking.author == "Official results"
+		][0]
+
+	ranking_scores = {}  # author --> points
+
+	for ranking in rankings:
+		if ranking.author == "Official results":
+			continue
+
+		wrongly_placed = []
+
+		score = 0
+
+		for position, player in enumerate(ranking.ranking_list):
+			if position == 0 and player == official_ranking[position]:
+				score += 3
+			elif position > 0 and player == official_ranking[position]:
+				score += 2
+			else:
+				wrongly_placed.append(player)
+
+		for player in wrongly_placed:
+			if player in official_ranking:
+				score += 1
+
+		# This automatically overwrites older predictions
+		ranking_scores[ranking.author] = score
+
+	return ranking_scores
+
 ##############################################
 
 event_players = load_participants('participants.json')
@@ -326,30 +371,34 @@ event_players = load_participants('participants.json')
 
 tournament_text = open('tournament.txt', "rb").read().decode('utf-8', 'ignore')
 tournament_post = Post( author = "Official results", text = tournament_text)
-official_results = extract_predictions(tournament_post, event_players)
-
+official_results, official_ranking = extract_predictions(tournament_post, event_players)
 
 posts = load_posts('thread.html')
 
 all_predictions = []
 all_predictions.extend(official_results)
 
+all_rankings = []
+all_rankings.append(official_ranking)
+
 for post in posts:
-	#post_predictions, post_ranking = extract_predictions(post, event_players)
-	post_predictions = extract_predictions(post, event_players)
+	post_predictions, post_ranking = extract_predictions(post, event_players)
+
 	all_predictions.extend(post_predictions)
+
+	if post_ranking is not None:
+		all_rankings.append(post_ranking)
+
 
 all_predictions = repair_turns(all_predictions)
 all_predictions = remove_duplicates(all_predictions)
-all_predictions = assign_scores(all_predictions)
+all_predictions = assign_prediction_scores(all_predictions)
 
 authors = set(post.author for post in posts)
 rounds = sorted(list(set(prediction.round for prediction in official_results)))
 
 rawwrite('\n')
 for round in rounds:
-	rawwrite('--------------------------------\n')
-	rawwrite("Punteggi turno %s\n" % (round))
 
 	round_entries = []
 	for author in authors:
@@ -369,6 +418,8 @@ for round in rounds:
 
 	# sort by descending score, then by name
 	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
+	rawwrite('--------------------------------\n')
+	rawwrite("Punteggi turno %s\n" % (round))
 	for author, author_score, author_cumulated_score in round_entries:
 		rawwrite("%s : %d\n" % (author, author_score))
 
@@ -381,7 +432,41 @@ for round in rounds:
 		rawwrite("%s : %d\n" % (author, author_cumulated_score))
 	rawwrite('--------------------------------\n')
 
-rawwrite('--------------------------------\n')
+
+ranking_scores = assign_ranking_scores(all_rankings)
+rawwrite("Punti piazzamenti:")
+rawwrite(str(ranking_scores))
+
+for round in "FINAL":
+	round_entries = []
+	for author in authors:
+		author_ranking_score = ranking_scores[author] if author in ranking_scores.keys() else 0
+
+		author_final_score = author_ranking_score + sum(
+			prediction.score
+			for prediction in all_predictions
+			if prediction.author == author
+				and prediction.round is not None)
+
+		round_entries.append((author, author_ranking_score, author_final_score))
+
+	# sort by descending score, then by name
+	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
+	rawwrite('--------------------------------\n')
+	rawwrite("Punteggi per i piazzamenti\n")
+	for author, author_ranking_score, author_cumulated_score in round_entries:
+		rawwrite("%s : %d\n" % (author, author_ranking_score))
+
+	rawwrite('--------------------------------\n')
+	rawwrite("CLASSIFICA FINALE\n")
+
+	# sort by descending cumulated score
+	round_entries.sort( key = lambda round_entry: -round_entry[2])
+	for author, author_ranking_score, author_final_score in round_entries:
+		rawwrite("%s : %d\n" % (author, author_final_score))
+	rawwrite('--------------------------------\n')
+
+
 
 
 

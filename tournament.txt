@@ -75,3 +75,11 @@ Viswanathan Anand	½-½	Vladimir Kramnik
 Anish Giri	½-½	Fabiano Caruana	
 Wesley So	½-½	Maxime Vachier-Lagrave	
 Michael Adams	½-½	Hikaru Nakamura	
+
+Classifica:
+So, Wesley
+Caruana, Fabiano
+Kramnik, Vladimir
+Anand, Viswanathan
+Nakamura, Hikaru
+
