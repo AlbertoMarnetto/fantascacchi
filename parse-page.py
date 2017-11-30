@@ -13,19 +13,22 @@ EXPECTED_RANKING_LENGTH = 5
 
 ######################################
 
+import sys
+
+def write_out(string):
+	sys.stdout.buffer.write(string.encode("utf-8"))
+
+def write_err(string):
+	sys.stderr.buffer.write(string.encode("utf-8"))
+
+######################################
+
 def load_participants(filename):
 	with open(filename, "r") as file:
 		data = json.load(file)
 		return data
 
 	# S. also https://stackoverflow.com/questions/6578986/how-to-convert-json-data-into-a-python-object
-
-######################################
-
-import sys
-
-def rawwrite(string):
-	sys.stdout.buffer.write(string.encode("utf-8"))
 
 ##############################################
 
@@ -144,7 +147,7 @@ def get_line_prediction(line, event_players):
 
 	line_players = get_line_players(line, event_players)
 
-	if len(line_players) == 2 and outcome is not None:
+	if len(line_players) == 2 and line_outcome != '?':
 		line_players.sort(key = itemgetter(1))
 		return (line_players[0], line_players[1], line_outcome)
 	else:
@@ -217,8 +220,11 @@ def extract_predictions(post, event_players):
 		if line_ranking is not None:
 			partial_ranking.append(line_ranking)
 
+	if len(post_predictions) % 5 != 0 or len(post_predictions) == 0:
+		write_err("Unusual number of predictions: %d \n %s" % (len(post_predictions), post.text))
+
 	if len(partial_ranking) != 0 and len(partial_ranking) != EXPECTED_RANKING_LENGTH:
-		rawwrite("Bad ranking: %s" % partial_ranking)
+		write_err("Bad ranking: %s" % partial_ranking)
 	elif len(partial_ranking) == EXPECTED_RANKING_LENGTH:
 		post_ranking = Ranking(
 			author = post.author,
@@ -257,7 +263,7 @@ def repair_turns(predictions):
 		# Only give a warning if a wrong round was given
 		# (not if it was missing)
 		if prediction.round is not None:
-			rawwrite("%s: wrong round, should be %d" % (prediction, expected_round))
+			write_err("%s: wrong round, should be %d" % (prediction, expected_round))
 
 		prediction_dict = prediction._asdict()  # make the prediction mutable
 		prediction_dict['round'] = expected_round
@@ -384,6 +390,8 @@ all_rankings.append(official_ranking)
 for post in posts:
 	post_predictions, post_ranking = extract_predictions(post, event_players)
 
+	#write_err("%s : %s\n" % (post.text, post_predictions))
+
 	all_predictions.extend(post_predictions)
 
 	if post_ranking is not None:
@@ -397,7 +405,7 @@ all_predictions = assign_prediction_scores(all_predictions)
 authors = set(post.author for post in posts)
 rounds = sorted(list(set(prediction.round for prediction in official_results)))
 
-rawwrite('\n')
+write_out('\n')
 for round in rounds:
 
 	round_entries = []
@@ -418,55 +426,50 @@ for round in rounds:
 
 	# sort by descending score, then by name
 	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
-	rawwrite('--------------------------------\n')
-	rawwrite("Punteggi turno %s\n" % (round))
+	write_out('--------------------------------\n')
+	write_out("Punteggi turno %s\n" % (round))
 	for author, author_score, author_cumulated_score in round_entries:
-		rawwrite("%s : %d\n" % (author, author_score))
+		write_out("%s : %d\n" % (author, author_score))
 
-	rawwrite('--------------------------------\n')
-	rawwrite("Classifica turno %s\n" % (round))
+	write_out('--------------------------------\n')
+	write_out("Classifica turno %s\n" % (round))
 
 	# sort by descending cumulated score
 	round_entries.sort( key = lambda round_entry: -round_entry[2])
 	for author, author_score, author_cumulated_score in round_entries:
-		rawwrite("%s : %d\n" % (author, author_cumulated_score))
-	rawwrite('--------------------------------\n')
+		write_out("%s : %d\n" % (author, author_cumulated_score))
+	write_out('--------------------------------\n')
 
 
 ranking_scores = assign_ranking_scores(all_rankings)
-rawwrite("Punti piazzamenti:")
-rawwrite(str(ranking_scores))
+#write_out("Punti piazzamenti:\n%s\n" % str(ranking_scores))
 
-for round in "FINAL":
-	round_entries = []
-	for author in authors:
-		author_ranking_score = ranking_scores[author] if author in ranking_scores.keys() else 0
+# Final round
+round_entries = []
+for author in authors:
+	author_ranking_score = ranking_scores[author] if author in ranking_scores.keys() else 0
 
-		author_final_score = author_ranking_score + sum(
-			prediction.score
-			for prediction in all_predictions
-			if prediction.author == author
-				and prediction.round is not None)
+	author_final_score = author_ranking_score + sum(
+		prediction.score
+		for prediction in all_predictions
+		if prediction.author == author
+			and prediction.round is not None)
 
-		round_entries.append((author, author_ranking_score, author_final_score))
+	round_entries.append((author, author_ranking_score, author_final_score))
 
-	# sort by descending score, then by name
-	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
-	rawwrite('--------------------------------\n')
-	rawwrite("Punteggi per i piazzamenti\n")
-	for author, author_ranking_score, author_cumulated_score in round_entries:
-		rawwrite("%s : %d\n" % (author, author_ranking_score))
+# sort by descending score, then by name
+round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
+write_out('--------------------------------\n')
+write_out("Punteggi per i piazzamenti\n")
+for author, author_ranking_score, author_cumulated_score in round_entries:
+	write_out("%s : %d\n" % (author, author_ranking_score))
 
-	rawwrite('--------------------------------\n')
-	rawwrite("CLASSIFICA FINALE\n")
+write_out('--------------------------------\n')
+write_out("CLASSIFICA FINALE\n")
 
-	# sort by descending cumulated score
-	round_entries.sort( key = lambda round_entry: -round_entry[2])
-	for author, author_ranking_score, author_final_score in round_entries:
-		rawwrite("%s : %d\n" % (author, author_final_score))
-	rawwrite('--------------------------------\n')
-
-
-
-
+# sort by descending cumulated score
+round_entries.sort( key = lambda round_entry: -round_entry[2])
+for author, author_ranking_score, author_final_score in round_entries:
+	write_out("%s : %d\n" % (author, author_final_score))
+write_out('--------------------------------\n')
 
