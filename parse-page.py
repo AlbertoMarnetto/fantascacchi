@@ -218,7 +218,7 @@ def extract_predictions(post, event_players):
 			partial_ranking.append(line_ranking)
 
 	if len(partial_ranking) != 0 and len(partial_ranking) != EXPECTED_RANKING_LENGTH:
-		rawwrite("Bad ranking: %s" % post_ranking)
+		rawwrite("Bad ranking: %s" % partial_ranking)
 	elif len(partial_ranking) == EXPECTED_RANKING_LENGTH:
 		post_ranking = Ranking(
 			author = post.author,
