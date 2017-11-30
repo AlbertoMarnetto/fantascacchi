@@ -1,0 +1,85 @@
+# From http://www.londonchessclassic.com/gct/gct_schedule.htm
+# (copy-pasted in Excel, saved as text, converted to UTF-8)
+
+Round 1			
+Friday 9 Dec, 16.00-22.30			
+Levon Aronian	1-0	Michael Adams 	
+Hikaru Nakamura	0-1	Wesley So	
+Maxime Vachier-Lagrave	½-½	Anish Giri	
+Fabiano Caruana	½-½	Viswanathan Anand	
+Vladimir Kramnik	1-0	Veselin Topalov	
+			
+Round 2			
+Saturday 10 Dec, 14.00-20.30			
+Vladimir Kramnik	½-½	Levon Aronian	
+Veselin Topalov	0-1	Fabiano Caruana	
+Viswanathan Anand	1-0	Maxime Vachier-Lagrave	
+Anish Giri	½-½	Hikaru Nakamura	
+Wesley So	1-0	Michael Adams	
+			
+Round 3			
+Sunday 11 Dec, 14.00-20.30			
+Levon Aronian	½-½	Wesley So	
+Michael Adams	½-½	Anish Giri	
+Hikaru Nakamura	1-0	Viswanathan Anand	
+Maxime Vachier-Lagrave	½-½	Veselin Topalov	
+Fabiano Caruana	½-½	Vladimir Kramnik	
+			
+Round 4			
+Monday 12 Dec, 16.00-22.30			
+Fabiano Caruana	½-½	Levon Aronian	
+Vladimir Kramnik	½-½	Maxime Vachier-Lagrave	
+Veselin Topalov	0-1	Hikaru Nakamura	
+Viswanathan Anand	½-½	Michael Adams	
+Anish Giri	½-½	Wesley So	
+			
+Round 5			
+Tuesday 13 Dec, 16.00-22.30			
+Levon Aronian	½-½	Anish Giri	
+Wesley So	½-½	Viswanathan Anand	
+Michael Adams	1-0	Veselin Topalov	
+Hikaru Nakamura	½-½	Vladimir Kramnik	
+Maxime Vachier-Lagrave	½-½	Fabiano Caruana	
+			
+Rest Day			
+Wednesday 14 Dec			
+			
+Round 6			
+Thursday 15 Dec, 16.00-22.30			
+Maxime Vachier-Lagrave	1-0	Levon Aronian	
+Fabiano Caruana	1-0	Hikaru Nakamura	
+Vladimir Kramnik	½-½	Michael Adams	
+Veselin Topalov	0-1	Wesley So	
+Viswanathan Anand	½-½	Anish Giri	
+			
+Round 7			
+Friday 16 Dec, 16.00-22.30			
+Levon Aronian	½-½	Viswanathan Anand	
+Anish Giri	½-½	Veselin Topalov	
+Wesley So	½-½	Vladimir Kramnik	
+Michael Adams	½-½	Fabiano Caruana	
+Hikaru Nakamura	1-0	Maxime Vachier-Lagrave	
+			
+Round 8			
+Saturday 17 Dec, 14.00-20.30			
+Hikaru Nakamura	½-½	Levon Aronian	
+Maxime Vachier-Lagrave	½-½	Michael Adams	
+Fabiano Caruana	½-½	Wesley So	
+Vladimir Kramnik	½-½	Anish Giri	
+Veselin Topalov	0-1	Viswanathan Anand	
+			
+Round 9			
+Sunday 18 Dec, 14.00-20.30			
+Levon Aronian	0-1	Veselin Topalov	
+Viswanathan Anand	½-½	Vladimir Kramnik	
+Anish Giri	½-½	Fabiano Caruana	
+Wesley So	½-½	Maxime Vachier-Lagrave	
+Michael Adams	½-½	Hikaru Nakamura	
+
+Classifica:
+So, Wesley
+Caruana, Fabiano
+Kramnik, Vladimir
+Anand, Viswanathan
+Nakamura, Hikaru
+
