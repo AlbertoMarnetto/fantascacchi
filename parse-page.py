@@ -23,11 +23,20 @@ def write_err(string):
 
 ######################################
 
-def load_participants(filename):
+def load_aux_data(filename):
 	with open(filename, "r") as file:
 		data = json.load(file)
-		return data
 
+		participants = data["participants"]
+
+		post_corrections = []
+		for correction in data["corrections"]:
+			post_correction = Post(
+				author = correction["author"],
+				text = "\n".join(correction["text"]))
+			post_corrections.append(post_correction)
+
+		return participants, post_corrections
 	# S. also https://stackoverflow.com/questions/6578986/how-to-convert-json-data-into-a-python-object
 
 ##############################################
@@ -337,7 +346,12 @@ def assign_prediction_scores(predictions):
 	return scored_predictions
 
 def assign_ranking_scores(rankings):
-	# Indovinare il vincitore del torneo porterà 3 punti; ciascun giocatore in classifica, diverso dal vincitore, di cui si sia indovinata la posizione porterà 2 punti; ciascun giocatore indovinato ma messo al posto sbagliato porterà 1 punto.
+	# Indovinare il vincitore del torneo porterà 3 punti;
+	# ciascun giocatore in classifica, diverso dal vincitore,
+	# di cui si sia indovinata la posizione porterà 2 punti;
+	# ciascun giocatore indovinato ma messo al posto sbagliato
+	# porterà 1 punto.
+
 	official_ranking = [ ranking.ranking_list
 		for ranking in rankings
 		if ranking.author == "Official results"
@@ -372,7 +386,7 @@ def assign_ranking_scores(rankings):
 
 ##############################################
 
-event_players = load_participants('participants.json')
+event_players, post_corrections = load_aux_data('aux-data.json')
 #print(participants)
 
 tournament_text = open('tournament.txt', "rb").read().decode('utf-8', 'ignore')
@@ -380,6 +394,7 @@ tournament_post = Post( author = "Official results", text = tournament_text)
 official_results, official_ranking = extract_predictions(tournament_post, event_players)
 
 posts = load_posts('thread.html')
+posts.extend(post_corrections)
 
 all_predictions = []
 all_predictions.extend(official_results)
