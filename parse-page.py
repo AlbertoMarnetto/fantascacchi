@@ -8,6 +8,8 @@ Post = namedtuple("Post", ["author", "text"])
 Prediction = namedtuple("Prediction", ["author", "white_name", "black_name", "outcome", "round"])
 PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ("score",))
 Ranking = namedtuple("Ranking", ["author", "ranking_list"])
+MastersAppellatives = namedtuple("MastersAppellatives", ["names", "nicknames"])
+ManualAdjustments = namedtuple("ManualAdjustments", ["post_corrections", "should_ignore_post"])
 
 ######################################
 
@@ -25,7 +27,16 @@ def load_aux_data(filename):
 	with open(filename, "r", encoding = "utf-8") as file:
 		data = json.load(file)
 
-		masters_names = data["masters_names"]
+		masters_appellatives = MastersAppellatives(
+			names = data["masters_names"],
+			nicknames = data["masters_nicknames"]
+			)
+
+		# Add empty nicknames list, so that every master has an entry
+		# in the nicknames dictionary
+		for master_name in masters_appellatives.names:
+			if master_name not in masters_appellatives.nicknames.keys():
+				masters_appellatives.nicknames[master_name] = []
 
 		post_corrections = []
 		for correction in data["corrections"]:
@@ -34,12 +45,19 @@ def load_aux_data(filename):
 				text = "\n".join(correction["text"]))
 			post_corrections.append(post_correction)
 
-		return masters_names, post_corrections
+		def should_ignore_post(post):
+			return any(string in post.text for string in data["posts_string_blacklist"])
+
+		manual_adjustments = ManualAdjustments(
+			post_corrections = post_corrections,
+			should_ignore_post = should_ignore_post)
+
+		return masters_appellatives, manual_adjustments
 	# S. also https://stackoverflow.com/questions/6578986/how-to-convert-json-data-into-a-python-object
 
 ##############################################
 
-def load_posts(filename):
+def load_posts(filename, should_ignore_post):
 	html_page = open(filename, "rb").read().decode("utf-8", "ignore")
 	soup = BeautifulSoup(html_page, "html.parser")
 	post_tags = soup.find_all("li", attrs={"class": re.compile("comment byuser.*")})
@@ -47,9 +65,9 @@ def load_posts(filename):
 	posts = []
 
 	for post_tag in post_tags:
-		comment_author_class = [ 
-			post_tag_class 
-			for post_tag_class in post_tag["class"] 
+		comment_author_class = [
+			post_tag_class
+			for post_tag_class in post_tag["class"]
 			if post_tag_class.startswith("comment-author-") ]
 
 		if len(comment_author_class) != 1:
@@ -57,8 +75,11 @@ def load_posts(filename):
 
 		post_text = post_tag.find("div", attrs = {"class": "info_com"}).text
 		post_author = [ line for line in post_text.split("\n") if line != "" ][0]
-
 		post = Post( author = post_author, text = post_text )
+
+		if should_ignore_post(post):
+			continue
+
 		posts.append(post)
 
 	return posts
@@ -129,21 +150,23 @@ get_line_round.round_regexps = [
 	re.compile("(?P<round_number>\d+)\D*(Round|Turno)", re.IGNORECASE)
 ]
 
-def get_masters_names_in_line(line, masters_names):
+def get_masters_names_in_line(line, masters_appellatives):
 	masters_names_in_line = []
-	for master_name in masters_names:
-		# Try to match just the first or family name
-		participant_tokens = master_name.split()
-		for participant_token in participant_tokens:
-			participant_regex = r"\b" + participant_token + r"\b"
-			maybe_match = re.search(participant_regex, line, re.IGNORECASE)
+	for master_name in masters_appellatives.names:
+		# Try to match just the first or family name, or the nick
+		master_tokens = master_name.split()
+		master_tokens.extend(masters_appellatives.nicknames[master_name])
+
+		for master_token in master_tokens:
+			token_regex = r"\b" + master_token + r"\b"
+			maybe_match = re.search(token_regex, line, re.IGNORECASE)
 			if maybe_match is not None:
 				masters_names_in_line.append((master_name, maybe_match.start()))
 				break
 
 	return masters_names_in_line
 
-def get_line_prediction(line, masters_names):
+def get_line_prediction(line, masters_appellatives):
 	masters_names_in_line = []
 
 	# Find result
@@ -155,13 +178,16 @@ def get_line_prediction(line, masters_names):
 		#else:
 		#	print("%s does not match %s" % (line, outcome))
 
-	masters_names_in_line = get_masters_names_in_line(line, masters_names)
+	masters_names_in_line = get_masters_names_in_line(line, masters_appellatives)
 
 	if len(masters_names_in_line) == 2 and line_outcome != "?":
 		masters_names_in_line.sort(key = itemgetter(1))
 		return (masters_names_in_line[0], masters_names_in_line[1], line_outcome)
-	else:
+	elif len(masters_names_in_line) < 2:
 		return None
+	else:
+		write_err("Suspect line: %s\n (%d names, %s outcome)\n"
+			% (line, len(masters_names_in_line), line_outcome))
 
 
 # In descending order of reliability,
@@ -179,10 +205,10 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("@@@"), "@") # @ (still to be played)
 		]
 
-def get_line_ranking(line, masters_names):
+def get_line_ranking(line, masters_appellatives):
 	masters_names_in_line = []
 
-	masters_names_in_line = get_masters_names_in_line(line, masters_names)
+	masters_names_in_line = get_masters_names_in_line(line, masters_appellatives)
 
 	if len(masters_names_in_line) != 1:
 		return None
@@ -190,6 +216,8 @@ def get_line_ranking(line, masters_names):
 	# Check that no other words are on the line
 	# except possibly for a number
 	if not get_line_ranking.line_re.search(line):
+		write_err("Suspect line: %s\n (1 name but not OK for the ranking)\n"
+			% (line))
 		return None
 
 	# Success
@@ -202,7 +230,7 @@ get_line_ranking.line_re = re.compile("^\d*\W*(\S+\s?){1,2}$")
 
 ##############################################
 
-def extract_predictions(post, masters_names):
+def extract_predictions(post, masters_appellatives):
 	lines = post.text.split("\n")
 
 	post_predictions = []
@@ -216,7 +244,7 @@ def extract_predictions(post, masters_names):
 		if line_round is not None:
 			post_current_round = line_round
 
-		line_prediction = get_line_prediction(line, masters_names)
+		line_prediction = get_line_prediction(line, masters_appellatives)
 		if line_prediction is not None:
 			prediction = Prediction(
 				author = post.author,
@@ -228,11 +256,11 @@ def extract_predictions(post, masters_names):
 			post_predictions.append(prediction)
 			continue
 
-		line_ranking = get_line_ranking(line, masters_names)
+		line_ranking = get_line_ranking(line, masters_appellatives)
 		if line_ranking is not None:
 			partial_ranking.append(line_ranking)
 
-	games_per_round_count = len(masters_names) / 2
+	games_per_round_count = len(masters_appellatives.names) / 2
 	if len(post_predictions) % games_per_round_count != 0 or len(post_predictions) == 0:
 		write_err("\n***\nUnusual number of predictions: %d\n%s\n%s\n***\n"
 			% (len(post_predictions), post.author, post.text))
@@ -392,14 +420,14 @@ def assign_ranking_scores(rankings):
 
 ##############################################
 
-masters_names, post_corrections = load_aux_data("aux-data.json")
+masters_appellatives, manual_adjustments = load_aux_data("aux-data.json")
 
 tournament_text = open("tournament.txt", "rb").read().decode("utf-8", "ignore")
 tournament_post = Post( author = "Official results", text = tournament_text)
-official_results, official_ranking = extract_predictions(tournament_post, masters_names)
+official_results, official_ranking = extract_predictions(tournament_post, masters_appellatives)
 
-posts = load_posts("thread.html")
-posts.extend(post_corrections)
+posts = load_posts("thread.html", manual_adjustments.should_ignore_post)
+posts.extend(manual_adjustments.post_corrections)
 
 all_predictions = []
 all_predictions.extend(official_results)
@@ -408,7 +436,7 @@ all_rankings = []
 all_rankings.append(official_ranking)
 
 for post in posts:
-	post_predictions, post_ranking = extract_predictions(post, masters_names)
+	post_predictions, post_ranking = extract_predictions(post, masters_appellatives)
 
 	#write_err("%s : %s\n" % (post.text, post_predictions))
 
@@ -424,7 +452,7 @@ all_predictions = assign_prediction_scores(all_predictions)
 
 authors = set(post.author for post in posts)
 rounds = sorted(list(set(prediction.round for prediction in official_results)))
-games_per_round_count = len(masters_names) / 2
+games_per_round_count = len(masters_appellatives.names) / 2
 
 scores_per_rounds = []
 for round in rounds:
@@ -458,7 +486,7 @@ for round in rounds:
 
 	# sort by descending score, then by name
 	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
-	
+
 	write_out("\n--------------------------------\n")
 	write_out("Punteggi turno %s\n" % (round))
 	for author, author_score, author_cumulated_score in round_entries:

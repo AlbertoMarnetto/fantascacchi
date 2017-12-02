@@ -1,5 +1,5 @@
 {
-	"participants" :
+	"masters_names" :
 	[
 		"Ian Nepomniachtchi",
 		"Levon Aronian",
@@ -13,11 +13,24 @@
 		"Maxime Vachier-Lagrave"
 	]
 	,
+	"masters_nicknames" :
+	{
+		"Maxime Vachier-Lagrave" : [ "MVL" ],
+		"Ian Nepomniachtchi" : [ "Nepo" ],
+		"Fabiano Caruana" : [ "Caru" ],
+		"Vishy Anand" : [ "Andand" ],
+		"Sergey Karjakin" : [ "Karhakin" ],
+		"dummy" : []
+	}
+	,
 	"corrections" :
+	[
+	]
+	,
+	"corrections_sample" :
 	[
 		{
 			"author" : "irishgambit",
-			"author_nick" : "IrishGambit",
 			"text" :
 			[
 				"Ian Nepomniachtchi - Levon Aronian @@@",
@@ -27,5 +40,12 @@
 				"Wesley So - Maxime Vachier-Lagrave @@@"
 			]
 		}
+	]
+	,
+	"posts_string_blacklist" :
+	[
+		"E già possibile pronosticare per il primo turno",
+		"si prende licenza di abbreviargli",
+		"Risultati e classifica dopo il turno"
 	]
 }
