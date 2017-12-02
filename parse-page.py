@@ -233,7 +233,8 @@ def extract_predictions(post, event_players):
 		if line_ranking is not None:
 			partial_ranking.append(line_ranking)
 
-	if len(post_predictions) % 5 != 0 or len(post_predictions) == 0:
+	games_per_round_count = len(event_players) / 2
+	if len(post_predictions) % games_per_round_count != 0 or len(post_predictions) == 0:
 		write_err("\n***\nUnusual number of predictions: %d\n%s\n%s\n***\n"
 			% (len(post_predictions), post.author_nick, post.text))
 
@@ -430,8 +431,11 @@ authors = set(post.author for post in posts)
 rounds = sorted(list(set(prediction.round for prediction in official_results)))
 
 write_out("\n")
-for round in rounds:
 
+games_per_round_count = len(event_players) / 2
+
+scores_per_rounds = []
+for round in rounds:
 	round_entries = []
 	for author in authors:
 		author_score = sum(
@@ -439,12 +443,24 @@ for round in rounds:
 			for prediction in all_predictions
 			if prediction.author == author and prediction.round == round)
 
-		author_cumulated_score = sum(
-			prediction.score
+		# Nel caso vengano indovinate tutte le partite di un turno,
+		# verranno assegnati 3 punti aggiuntivi.
+		author_good_predictions_count = sum(
+			1
 			for prediction in all_predictions
 			if prediction.author == author
-				and prediction.round is not None
-				and prediction.round <= round)
+				and prediction.round == round
+				and prediction.score > 0)
+
+		if author_good_predictions_count == games_per_round_count:
+			author_score += 3
+
+		scores_per_rounds.append( (round, author, author_score) )
+
+		author_cumulated_score = sum(
+			tuple[2]
+			for tuple in scores_per_rounds
+			if tuple[1] == author)
 
 		round_entries.append((author, author_score, author_cumulated_score))
 
