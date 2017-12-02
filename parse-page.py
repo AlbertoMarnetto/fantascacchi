@@ -4,7 +4,7 @@ import json
 from operator import itemgetter
 import re as re
 
-Post = namedtuple("Post", ["author", "author_nick", "text"])
+Post = namedtuple("Post", ["author", "text"])
 Prediction = namedtuple("Prediction", ["author", "white_name", "black_name", "outcome", "round"])
 PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ("score",))
 Ranking = namedtuple("Ranking", ["author", "ranking_list"])
@@ -33,7 +33,6 @@ def load_aux_data(filename):
 		for correction in data["corrections"]:
 			post_correction = Post(
 				author = correction["author"],
-				author_nick = correction["author_nick"],
 				text = "\n".join(correction["text"]))
 			post_corrections.append(post_correction)
 
@@ -55,11 +54,10 @@ def load_posts(filename):
 		if len(comment_author_class) != 1:
 			continue
 
-		post_author = comment_author_class[0].replace("comment-author-", "", 1)
 		post_text = post_tag.find("div", attrs = {"class": "info_com"}).text
-		post_author_nick = [ line for line in post_text.split("\n") if line != "" ][0]
+		post_author = [ line for line in post_text.split("\n") if line != "" ][0]
 
-		post = Post( author = post_author, author_nick = post_author_nick, text = post_text )
+		post = Post( author = post_author, text = post_text )
 		posts.append(post)
 
 	return posts
@@ -236,7 +234,7 @@ def extract_predictions(post, event_players):
 	games_per_round_count = len(event_players) / 2
 	if len(post_predictions) % games_per_round_count != 0 or len(post_predictions) == 0:
 		write_err("\n***\nUnusual number of predictions: %d\n%s\n%s\n***\n"
-			% (len(post_predictions), post.author_nick, post.text))
+			% (len(post_predictions), post.author, post.text))
 
 	if len(partial_ranking) != 0 and len(partial_ranking) != EXPECTED_RANKING_LENGTH:
 		write_err("Bad ranking: %s" % partial_ranking)
@@ -396,7 +394,7 @@ event_players, post_corrections = load_aux_data("aux-data.json")
 #print(participants)
 
 tournament_text = open("tournament.txt", "rb").read().decode("utf-8", "ignore")
-tournament_post = Post( author = "Official results", author_nick = "Official results", text = tournament_text)
+tournament_post = Post( author = "Official results", text = tournament_text)
 official_results, official_ranking = extract_predictions(tournament_post, event_players)
 
 posts = load_posts("thread.html")
@@ -408,11 +406,7 @@ all_predictions.extend(official_results)
 all_rankings = []
 all_rankings.append(official_ranking)
 
-author_nicknames = {}
-
 for post in posts:
-	author_nicknames[post.author] = post.author_nick
-
 	post_predictions, post_ranking = extract_predictions(post, event_players)
 
 	#write_err("%s : %s\n" % (post.text, post_predictions))
@@ -469,7 +463,7 @@ for round in rounds:
 	write_out("--------------------------------\n")
 	write_out("Punteggi turno %s\n" % (round))
 	for author, author_score, author_cumulated_score in round_entries:
-		write_out("%s : %d\n" % (author_nicknames[author], author_score))
+		write_out("%s : %d\n" % (author, author_score))
 
 	write_out("--------------------------------\n")
 	write_out("Classifica turno %s\n" % (round))
@@ -477,7 +471,7 @@ for round in rounds:
 	# sort by descending cumulated score
 	round_entries.sort( key = lambda round_entry: -round_entry[2])
 	for author, author_score, author_cumulated_score in round_entries:
-		write_out("%s : %d\n" % (author_nicknames[author], author_cumulated_score))
+		write_out("%s : %d\n" % (author, author_cumulated_score))
 	write_out("--------------------------------\n")
 
 
@@ -502,7 +496,7 @@ round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) 
 write_out("--------------------------------\n")
 write_out("Punteggi per i piazzamenti\n")
 for author, author_ranking_score, author_cumulated_score in round_entries:
-	write_out("%s : %d\n" % (author_nicknames[author], author_ranking_score))
+	write_out("%s : %d\n" % (author, author_ranking_score))
 
 write_out("--------------------------------\n")
 write_out("CLASSIFICA FINALE\n")
@@ -510,6 +504,6 @@ write_out("CLASSIFICA FINALE\n")
 # sort by descending cumulated score
 round_entries.sort( key = lambda round_entry: -round_entry[2])
 for author, author_ranking_score, author_final_score in round_entries:
-	write_out("%s : %d\n" % (author_nicknames[author], author_final_score))
+	write_out("%s : %d\n" % (author, author_final_score))
 write_out("--------------------------------\n")
 
