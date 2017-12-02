@@ -4,10 +4,10 @@ import json
 from operator import itemgetter
 import re as re
 
-Post = namedtuple("Post", ['author', 'text'])
-Prediction = namedtuple("Prediction", ['author', 'white_name', 'black_name', 'outcome', 'round'])
-PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ('score',))
-Ranking = namedtuple("Ranking", ['author', 'ranking_list'])
+Post = namedtuple("Post", ["author", "author_nick", "text"])
+Prediction = namedtuple("Prediction", ["author", "white_name", "black_name", "outcome", "round"])
+PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ("score",))
+Ranking = namedtuple("Ranking", ["author", "ranking_list"])
 
 EXPECTED_RANKING_LENGTH = 5
 
@@ -33,6 +33,7 @@ def load_aux_data(filename):
 		for correction in data["corrections"]:
 			post_correction = Post(
 				author = correction["author"],
+				author_nick = correction["author_nick"],
 				text = "\n".join(correction["text"]))
 			post_corrections.append(post_correction)
 
@@ -42,22 +43,23 @@ def load_aux_data(filename):
 ##############################################
 
 def load_posts(filename):
-	html_page = open(filename, "rb").read().decode('utf-8', 'ignore')
+	html_page = open(filename, "rb").read().decode("utf-8", "ignore")
 	soup = BeautifulSoup(html_page, "html.parser")
-	post_tags = soup.find_all('li', attrs={'class': re.compile('comment byuser.*')})
+	post_tags = soup.find_all("li", attrs={"class": re.compile("comment byuser.*")})
 
 	posts = []
 
 	for post_tag in post_tags:
-		comment_author_class = [ post_tag_class for post_tag_class in post_tag['class'] if post_tag_class.startswith('comment-author-') ]
+		comment_author_class = [ post_tag_class for post_tag_class in post_tag["class"] if post_tag_class.startswith("comment-author-") ]
 
 		if len(comment_author_class) != 1:
 			continue
 
-		post_author = comment_author_class[0].replace('comment-author-', '', 1)
-		post_text = post_tag.find('div', attrs = {'class': 'info_com'}).text
+		post_author = comment_author_class[0].replace("comment-author-", "", 1)
+		post_text = post_tag.find("div", attrs = {"class": "info_com"}).text
+		post_author_nick = [ line for line in post_text.split("\n") if line != "" ][0]
 
-		post = Post( author = post_author, text = post_text )
+		post = Post( author = post_author, author_nick = post_author_nick, text = post_text )
 		posts.append(post)
 
 	return posts
@@ -78,7 +80,7 @@ def get_line_round(line):
 		search_result = round_regexp.search(line)
 		if search_result:
 			try:
-				return int(search_result.group('round_number'))
+				return int(search_result.group("round_number"))
 			except ValueError:
 				pass  # non-numeric turn number, discard it
 
@@ -146,17 +148,17 @@ def get_line_prediction(line, event_players):
 	line_players = []
 
 	# Find result
-	line_outcome = '?'
+	line_outcome = "?"
 	for outcome_re, outcome in get_line_prediction.possible_outcomes:
 		if outcome_re.search(line):
 			line_outcome = outcome
 			break
 		#else:
-		#	print('%s does not match %s' % (line, outcome))
+		#	print("%s does not match %s" % (line, outcome))
 
 	line_players = get_line_players(line, event_players)
 
-	if len(line_players) == 2 and line_outcome != '?':
+	if len(line_players) == 2 and line_outcome != "?":
 		line_players.sort(key = itemgetter(1))
 		return (line_players[0], line_players[1], line_outcome)
 	else:
@@ -167,13 +169,13 @@ def get_line_prediction(line, event_players):
 # e.g. "0 - 1" matches both the 2nd and the 6th regexp,
 # but the former has priority
 get_line_prediction.possible_outcomes = [
-		(re.compile("\D1\s*[-–\\\/]\s*0($|\D)"), '1'), # 1 - 0
-		(re.compile("\D0\s*[-–\\\/]\s*1($|\D)"), '2'), # 0 - 1
-		(re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), 'X'), # ½ - ½
-		(re.compile("\D1[\\\/]2($|\D)"), 'X'), # 1/2
-		(re.compile("\s[xX]($|\s)"), 'X'), # X
-		(re.compile("\D1($|\D)"), '1'), # 1
-		(re.compile("\D2($|\D)"), '2') # 2
+		(re.compile("\D1\s*[-–\\\/]\s*0($|\D)"), "1"), # 1 - 0
+		(re.compile("\D0\s*[-–\\\/]\s*1($|\D)"), "2"), # 0 - 1
+		(re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), "X"), # ½ - ½
+		(re.compile("\D1[\\\/]2($|\D)"), "X"), # 1/2
+		(re.compile("\s[xX]($|\s)"), "X"), # X
+		(re.compile("\D1($|\D)"), "1"), # 1
+		(re.compile("\D2($|\D)"), "2") # 2
 		]
 
 def get_line_ranking(line, event_players):
@@ -200,7 +202,7 @@ get_line_ranking.line_re = re.compile("^\d*\W*(\S+\s?){1,2}$")
 ##############################################
 
 def extract_predictions(post, event_players):
-	lines = post.text.split('\n')
+	lines = post.text.split("\n")
 
 	post_predictions = []
 	partial_ranking = []
@@ -275,7 +277,7 @@ def repair_turns(predictions):
 			write_err("%s: wrong round, should be %d" % (prediction, expected_round))
 
 		prediction_dict = prediction._asdict()  # make the prediction mutable
-		prediction_dict['round'] = expected_round
+		prediction_dict["round"] = expected_round
 		return Prediction(**prediction_dict)
 
 	return list(map(repaired_prediction, predictions))
@@ -332,11 +334,11 @@ def assign_prediction_scores(predictions):
 
 		score = 0
 		if prediction_key(prediction) in official_results.keys():
-			if prediction.outcome == '1':
+			if prediction.outcome == "1":
 				score = 2
-			elif prediction.outcome == 'X':
+			elif prediction.outcome == "X":
 				score = 1
-			elif prediction.outcome == '2':
+			elif prediction.outcome == "2":
 				score = 3
 
 		scored_predictions.append( PredictionWithScore(
@@ -386,14 +388,14 @@ def assign_ranking_scores(rankings):
 
 ##############################################
 
-event_players, post_corrections = load_aux_data('aux-data.json')
+event_players, post_corrections = load_aux_data("aux-data.json")
 #print(participants)
 
-tournament_text = open('tournament.txt', "rb").read().decode('utf-8', 'ignore')
-tournament_post = Post( author = "Official results", text = tournament_text)
+tournament_text = open("tournament.txt", "rb").read().decode("utf-8", "ignore")
+tournament_post = Post( author = "Official results", author_nick = "Official results", text = tournament_text)
 official_results, official_ranking = extract_predictions(tournament_post, event_players)
 
-posts = load_posts('thread.html')
+posts = load_posts("thread.html")
 posts.extend(post_corrections)
 
 all_predictions = []
@@ -402,7 +404,11 @@ all_predictions.extend(official_results)
 all_rankings = []
 all_rankings.append(official_ranking)
 
+author_nicknames = {}
+
 for post in posts:
+	author_nicknames[post.author] = post.author_nick
+
 	post_predictions, post_ranking = extract_predictions(post, event_players)
 
 	#write_err("%s : %s\n" % (post.text, post_predictions))
@@ -420,7 +426,7 @@ all_predictions = assign_prediction_scores(all_predictions)
 authors = set(post.author for post in posts)
 rounds = sorted(list(set(prediction.round for prediction in official_results)))
 
-write_out('\n')
+write_out("\n")
 for round in rounds:
 
 	round_entries = []
@@ -441,19 +447,19 @@ for round in rounds:
 
 	# sort by descending score, then by name
 	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
-	write_out('--------------------------------\n')
+	write_out("--------------------------------\n")
 	write_out("Punteggi turno %s\n" % (round))
 	for author, author_score, author_cumulated_score in round_entries:
-		write_out("%s : %d\n" % (author, author_score))
+		write_out("%s : %d\n" % (author_nicknames[author], author_score))
 
-	write_out('--------------------------------\n')
+	write_out("--------------------------------\n")
 	write_out("Classifica turno %s\n" % (round))
 
 	# sort by descending cumulated score
 	round_entries.sort( key = lambda round_entry: -round_entry[2])
 	for author, author_score, author_cumulated_score in round_entries:
-		write_out("%s : %d\n" % (author, author_cumulated_score))
-	write_out('--------------------------------\n')
+		write_out("%s : %d\n" % (author_nicknames[author], author_cumulated_score))
+	write_out("--------------------------------\n")
 
 
 ranking_scores = assign_ranking_scores(all_rankings)
@@ -474,17 +480,17 @@ for author in authors:
 
 # sort by descending score, then by name
 round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
-write_out('--------------------------------\n')
+write_out("--------------------------------\n")
 write_out("Punteggi per i piazzamenti\n")
 for author, author_ranking_score, author_cumulated_score in round_entries:
-	write_out("%s : %d\n" % (author, author_ranking_score))
+	write_out("%s : %d\n" % (author_nicknames[author], author_ranking_score))
 
-write_out('--------------------------------\n')
+write_out("--------------------------------\n")
 write_out("CLASSIFICA FINALE\n")
 
 # sort by descending cumulated score
 round_entries.sort( key = lambda round_entry: -round_entry[2])
 for author, author_ranking_score, author_final_score in round_entries:
-	write_out("%s : %d\n" % (author, author_final_score))
-write_out('--------------------------------\n')
+	write_out("%s : %d\n" % (author_nicknames[author], author_final_score))
+write_out("--------------------------------\n")
 
