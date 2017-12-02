@@ -24,7 +24,7 @@ def write_err(string):
 ######################################
 
 def load_aux_data(filename):
-	with open(filename, "r") as file:
+	with open(filename, "r", encoding = "utf-8") as file:
 		data = json.load(file)
 
 		participants = data["participants"]
@@ -173,9 +173,11 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("\D0\s*[-–\\\/]\s*1($|\D)"), "2"), # 0 - 1
 		(re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), "X"), # ½ - ½
 		(re.compile("\D1[\\\/]2($|\D)"), "X"), # 1/2
+		(re.compile("\spatta($|\s)"), "X"), # patta
 		(re.compile("\s[xX]($|\s)"), "X"), # X
 		(re.compile("\D1($|\D)"), "1"), # 1
-		(re.compile("\D2($|\D)"), "2") # 2
+		(re.compile("\D2($|\D)"), "2"), # 2
+		(re.compile("@@@"), "@") # @ (still to be played)
 		]
 
 def get_line_ranking(line, event_players):
@@ -232,7 +234,8 @@ def extract_predictions(post, event_players):
 			partial_ranking.append(line_ranking)
 
 	if len(post_predictions) % 5 != 0 or len(post_predictions) == 0:
-		write_err("Unusual number of predictions: %d \n %s" % (len(post_predictions), post.text))
+		write_err("\n***\nUnusual number of predictions: %d\n%s\n%s\n***\n"
+			% (len(post_predictions), post.author_nick, post.text))
 
 	if len(partial_ranking) != 0 and len(partial_ranking) != EXPECTED_RANKING_LENGTH:
 		write_err("Bad ranking: %s" % partial_ranking)
