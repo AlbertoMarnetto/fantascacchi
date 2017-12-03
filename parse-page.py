@@ -488,12 +488,12 @@ for round in rounds:
 	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
 
 	write_out("\n--------------------------------\n")
-	write_out("Punteggi turno %s\n" % (round))
+	write_out("Punteggi del turno %s\n" % (round))
 	for author, author_score, author_cumulated_score in round_entries:
 		write_out("%s : %d\n" % (author, author_score))
 
 	write_out("--------------------------------\n")
-	write_out("Classifica turno %s\n" % (round))
+	write_out("Classifica dopo il turno %s\n" % (round))
 
 	# sort by descending cumulated score
 	round_entries.sort( key = lambda round_entry: -round_entry[2])
