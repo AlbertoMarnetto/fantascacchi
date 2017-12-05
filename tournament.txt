@@ -21,19 +21,19 @@ Fabiano Caruana	-	Levon Aronian X
 
 Round 3
 Monday 4 Dec, 16.00-23.00
-Ian Nepomniachtchi	-	Fabiano Caruana @@@
-Levon Aronian	-	Sergey Karjakin @@@
-Magnus Carlsen	-	Vishy Anand @@@
-Mickey Adams	-	Maxime Vachier-Lagrave @@@
-Hikaru Nakamura	-	Wesley So @@@
+Ian Nepomniachtchi	-	Fabiano Caruana X
+Levon Aronian	-	Sergey Karjakin X
+Magnus Carlsen	-	Vishy Anand X
+Mickey Adams	-	Maxime Vachier-Lagrave X
+Hikaru Nakamura	-	Wesley So X
 
 Round 4
 Tuesday 5 Dec, 16.00-23.00
-Hikaru Nakamura	-	Ian Nepomniachtchi @@@
-Wesley So	-	Mickey Adams @@@
-Maxime Vachier-Lagrave	-	Magnus Carlsen @@@
-Vishy Anand	-	Levon Aronian @@@
-Sergey Karjakin	-	Fabiano Caruana @@@
+Hikaru Nakamura	-	Ian Nepomniachtchi X
+Wesley So	-	Mickey Adams X
+Maxime Vachier-Lagrave	-	Magnus Carlsen X
+Vishy Anand	-	Levon Aronian X
+Sergey Karjakin	-	Fabiano Caruana 2
 
 Round 5
 Wednesday 6 Dec, 16.00-23.00

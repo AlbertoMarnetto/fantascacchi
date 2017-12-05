@@ -15,11 +15,12 @@
 	,
 	"masters_nicknames" :
 	{
-		"Maxime Vachier-Lagrave" : [ "MVL" ],
+		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier" ],
 		"Ian Nepomniachtchi" : [ "Nepo" ],
-		"Fabiano Caruana" : [ "Caru" ],
+		"Fabiano Caruana" : [ "Caru", "Cariana" ],
 		"Vishy Anand" : [ "Andand" ],
-		"Sergey Karjakin" : [ "Karhakin" ],
+		"Sergey Karjakin" : [ "Karhakin", "Karijakin" ],
+		"Hikaru Nakamura" : [ "Naka", "ka" ],
 		"dummy" : []
 	}
 	,
@@ -46,6 +47,13 @@
 	[
 		"E già possibile pronosticare per il primo turno",
 		"si prende licenza di abbreviargli",
-		"Risultati e classifica dopo il turno"
+		"Risultati e classifica dopo il turno",
+		"Classifica dopo il turno",
+		"Ricorda che entro le 17 di oggi va data anche la classifica",
+		"ehm sorry nel fare copia dei nomi",
+		"hai copiato quello giusto sono in testa",
+		"Ho fatto la “prova” per vedere se l’orario",
+		"\nBlade\n\n\n            5 dicembre 2017 -\n            17:24          \nprova\n",
+		"sicuramente verra accettato"
 	]
 }

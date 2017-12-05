@@ -158,7 +158,7 @@ def get_masters_names_in_line(line, masters_appellatives):
 		master_tokens.extend(masters_appellatives.nicknames[master_name])
 
 		for master_token in master_tokens:
-			token_regex = r"\b" + master_token + r"\b"
+			token_regex = r"(\b|\d)" + master_token + r"(\b|\d)"
 			maybe_match = re.search(token_regex, line, re.IGNORECASE)
 			if maybe_match is not None:
 				masters_names_in_line.append((master_name, maybe_match.start()))
@@ -198,6 +198,7 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("\D0\s*[-–\\\/]\s*1($|\D)"), "2"), # 0 - 1
 		(re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), "X"), # ½ - ½
 		(re.compile("\D1[\\\/]2($|\D)"), "X"), # 1/2
+		(re.compile("\D0\.5($|\D)"), "X"), # 1/2
 		(re.compile("\spatta($|\s)"), "X"), # patta
 		(re.compile("\s[xX]($|\s)"), "X"), # X
 		(re.compile("\D1($|\D)"), "1"), # 1
@@ -225,8 +226,8 @@ def get_line_ranking(line, masters_appellatives):
 
 
 # One optional numer at the beginning,
-# followed by 1-2 words
-get_line_ranking.line_re = re.compile("^\d*\W*(\S+\s?){1,2}$")
+# followed by 1-3 words
+get_line_ranking.line_re = re.compile("^\d*\W*(\S+\s?){1,3}$")
 
 ##############################################
 
@@ -261,19 +262,22 @@ def extract_predictions(post, masters_appellatives):
 			partial_ranking.append(line_ranking)
 
 	games_per_round_count = len(masters_appellatives.names) / 2
-	if len(post_predictions) % games_per_round_count != 0 or len(post_predictions) == 0:
+	if len(post_predictions) % games_per_round_count != 0:
 		write_err("\n***\nUnusual number of predictions: %d\n%s\n%s\n***\n"
 			% (len(post_predictions), post.author, post.text))
 
 	expected_ranking_length = 5
-	if len(partial_ranking) != 0 and len(partial_ranking) != expected_ranking_length:
-		write_err("Bad ranking: %s" % partial_ranking)
-	elif len(partial_ranking) == expected_ranking_length:
+	if len(partial_ranking) == expected_ranking_length:
 		post_ranking = Ranking(
 			author = post.author,
 			ranking_list = partial_ranking)
 	else:
+		if len(partial_ranking) != 0:
+			write_err("Bad ranking: %s\nPost: %s" % (partial_ranking, post.text))
 		post_ranking = None
+
+	if len(post_predictions) == 0 and post_ranking is None:
+		write_err("\n***\nNo predictions nor ranking\n***%s\n" % repr(post.text))
 
 	return post_predictions, post_ranking
 
@@ -485,18 +489,18 @@ for round in rounds:
 		round_entries.append((author, author_score, author_cumulated_score))
 
 	# sort by descending score, then by name
-	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
+	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
 
 	write_out("\n--------------------------------\n")
 	write_out("Punteggi del turno %s\n" % (round))
 	for author, author_score, author_cumulated_score in round_entries:
 		write_out("%s : %d\n" % (author, author_score))
 
-	write_out("--------------------------------\n")
+	write_out("\n--------------------------------\n")
 	write_out("Classifica dopo il turno %s\n" % (round))
 
 	# sort by descending cumulated score
-	round_entries.sort( key = lambda round_entry: -round_entry[2])
+	round_entries.sort( key = lambda round_entry: (-round_entry[2], round_entry[0].lower()) )
 	for author, author_score, author_cumulated_score in round_entries:
 		write_out("%s : %d\n" % (author, author_cumulated_score))
 	write_out("--------------------------------\n")
@@ -519,17 +523,17 @@ for author in authors:
 	round_entries.append((author, author_ranking_score, author_final_score))
 
 # sort by descending score, then by name
-round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0]) )
-write_out("--------------------------------\n")
+round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
+write_out("\n--------------------------------\n")
 write_out("Punteggi per i piazzamenti\n")
 for author, author_ranking_score, author_cumulated_score in round_entries:
 	write_out("%s : %d\n" % (author, author_ranking_score))
 
-write_out("--------------------------------\n")
+write_out("\n--------------------------------\n")
 write_out("CLASSIFICA FINALE\n")
 
 # sort by descending cumulated score
-round_entries.sort( key = lambda round_entry: -round_entry[2])
+round_entries.sort( key = lambda round_entry: (-round_entry[2], round_entry[0].lower()))
 for author, author_ranking_score, author_final_score in round_entries:
 	write_out("%s : %d\n" % (author, author_final_score))
 write_out("--------------------------------\n")
