@@ -9,7 +9,7 @@ Prediction = namedtuple("Prediction", ["author", "white_name", "black_name", "ou
 PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ("score",))
 Ranking = namedtuple("Ranking", ["author", "ranking_list"])
 MastersAppellatives = namedtuple("MastersAppellatives", ["names", "nicknames"])
-ManualAdjustments = namedtuple("ManualAdjustments", ["post_corrections", "should_ignore_post"])
+ManualAdjustments = namedtuple("ManualAdjustments", ["post_corrections", "should_ignore_post", "official_ranking"])
 
 ######################################
 
@@ -48,9 +48,15 @@ def load_aux_data(filename):
 		def should_ignore_post(post):
 			return any(string in post.text for string in data["posts_string_blacklist"])
 
+		official_ranking = {
+			int(position) : names_list
+			for (position, names_list)
+			in data["official_ranking"].items() }
+
 		manual_adjustments = ManualAdjustments(
 			post_corrections = post_corrections,
-			should_ignore_post = should_ignore_post)
+			should_ignore_post = should_ignore_post,
+			official_ranking = official_ranking)
 
 		return masters_appellatives, manual_adjustments
 	# S. also https://stackoverflow.com/questions/6578986/how-to-convert-json-data-into-a-python-object
@@ -167,16 +173,12 @@ def get_masters_names_in_line(line, masters_appellatives):
 	return masters_names_in_line
 
 def get_line_prediction(line, masters_appellatives):
-	masters_names_in_line = []
-
 	# Find result
 	line_outcome = "?"
 	for outcome_re, outcome in get_line_prediction.possible_outcomes:
 		if outcome_re.search(line):
 			line_outcome = outcome
 			break
-		#else:
-		#	print("%s does not match %s" % (line, outcome))
 
 	masters_names_in_line = get_masters_names_in_line(line, masters_appellatives)
 
@@ -198,7 +200,7 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("\D0\s*[-–\\\/]\s*1($|\D)"), "2"), # 0 - 1
 		(re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), "X"), # ½ - ½
 		(re.compile("\D1[\\\/]2($|\D)"), "X"), # 1/2
-		(re.compile("\D0\.5($|\D)"), "X"), # 1/2
+		(re.compile("\D0\.5($|\D)"), "X"), # 0.5
 		(re.compile("\spatta($|\s)"), "X"), # patta
 		(re.compile("\s[xX]($|\s)"), "X"), # X
 		(re.compile("\D1($|\D)"), "1"), # 1
@@ -217,7 +219,7 @@ def get_line_ranking(line, masters_appellatives):
 	# Check that no other words are on the line
 	# except possibly for a number
 	if not get_line_ranking.line_re.search(line):
-		write_err("Suspect line: %s\n (1 name but not OK for the ranking)\n"
+		write_err("Suspect line: %s\n (one name but not OK for the ranking)\n"
 			% (line))
 		return None
 
@@ -383,17 +385,18 @@ def assign_prediction_scores(predictions):
 
 	return scored_predictions
 
-def assign_ranking_scores(rankings):
-	# Indovinare il vincitore del torneo porterà 3 punti;
+def assign_ranking_scores(rankings, official_ranking):
+	# “Indovinare il vincitore del torneo porterà 3 punti;
 	# ciascun giocatore in classifica, diverso dal vincitore,
 	# di cui si sia indovinata la posizione porterà 2 punti;
 	# ciascun giocatore indovinato ma messo al posto sbagliato
-	# porterà 1 punto.
+	# porterà 1 punto.”
 
-	official_ranking = [ ranking.ranking_list
-		for ranking in rankings
-		if ranking.author == "Official results"
-		][0]
+	all_in_official_ranking = [
+		master_name
+		for names_list in official_ranking.values()
+		for master_name in names_list
+		]
 
 	ranking_scores = {}  # author --> points
 
@@ -406,15 +409,15 @@ def assign_ranking_scores(rankings):
 		score = 0
 
 		for position, master_name in enumerate(ranking.ranking_list):
-			if position == 0 and master_name == official_ranking[position]:
+			if position == 0 and master_name in official_ranking[position + 1]:
 				score += 3
-			elif position > 0 and master_name == official_ranking[position]:
+			elif position > 0 and master_name in official_ranking[position + 1]:
 				score += 2
 			else:
 				wrongly_placed.append(master_name)
 
 		for master_name in wrongly_placed:
-			if master_name in official_ranking:
+			if master_name in all_in_official_ranking:
 				score += 1
 
 		# This automatically overwrites older predictions
@@ -428,7 +431,7 @@ masters_appellatives, manual_adjustments = load_aux_data("aux-data.json")
 
 tournament_text = open("tournament.txt", "rb").read().decode("utf-8", "ignore")
 tournament_post = Post( author = "Official results", text = tournament_text)
-official_results, official_ranking = extract_predictions(tournament_post, masters_appellatives)
+official_results, _ = extract_predictions(tournament_post, masters_appellatives)
 
 posts = load_posts("thread.html", manual_adjustments.should_ignore_post)
 posts.extend(manual_adjustments.post_corrections)
@@ -437,7 +440,6 @@ all_predictions = []
 all_predictions.extend(official_results)
 
 all_rankings = []
-all_rankings.append(official_ranking)
 
 for post in posts:
 	post_predictions, post_ranking = extract_predictions(post, masters_appellatives)
@@ -467,8 +469,8 @@ for round in rounds:
 			for prediction in all_predictions
 			if prediction.author == author and prediction.round == round)
 
-		# Nel caso vengano indovinate tutte le partite di un turno,
-		# verranno assegnati 3 punti aggiuntivi.
+		# “Nel caso vengano indovinate tutte le partite di un turno,
+		# verranno assegnati 3 punti aggiuntivi.”
 		author_good_predictions_count = sum(
 			1
 			for prediction in all_predictions
@@ -491,50 +493,49 @@ for round in rounds:
 	# sort by descending score, then by name
 	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
 
-	write_out("\n--------------------------------\n")
+	write_out("\n────────────────────────────────\n")
 	write_out("Punteggi del turno %s\n" % (round))
 	for author, author_score, author_cumulated_score in round_entries:
 		write_out("%s : %d\n" % (author, author_score))
 
-	write_out("\n--------------------------------\n")
+	write_out("\n────────────────────────────────\n")
 	write_out("Classifica dopo il turno %s\n" % (round))
 
 	# sort by descending cumulated score
 	round_entries.sort( key = lambda round_entry: (-round_entry[2], round_entry[0].lower()) )
 	for author, author_score, author_cumulated_score in round_entries:
 		write_out("%s : %d\n" % (author, author_cumulated_score))
-	write_out("--------------------------------\n")
+	write_out("────────────────────────────────\n")
 
-
-ranking_scores = assign_ranking_scores(all_rankings)
+ranking_scores = assign_ranking_scores(all_rankings, manual_adjustments.official_ranking)
 #write_out("Punti piazzamenti:\n%s\n" % str(ranking_scores))
 
-# Final round
-round_entries = []
+grand_total_entries = []
 for author in authors:
+	author_predictions_score = sum(
+		round_entry[2]
+		for round_entry in round_entries
+		if round_entry[0] == author)
+
 	author_ranking_score = ranking_scores[author] if author in ranking_scores.keys() else 0
 
-	author_final_score = author_ranking_score + sum(
-		prediction.score
-		for prediction in all_predictions
-		if prediction.author == author
-			and prediction.round is not None)
+	author_final_score = author_predictions_score + author_ranking_score
 
-	round_entries.append((author, author_ranking_score, author_final_score))
+	grand_total_entries.append((author, author_ranking_score, author_final_score))
 
 # sort by descending score, then by name
-round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
-write_out("\n--------------------------------\n")
+grand_total_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
+write_out("\n────────────────────────────────\n")
 write_out("Punteggi per i piazzamenti\n")
-for author, author_ranking_score, author_cumulated_score in round_entries:
+for author, author_ranking_score, author_final_score in grand_total_entries:
 	write_out("%s : %d\n" % (author, author_ranking_score))
 
-write_out("\n--------------------------------\n")
+write_out("\n────────────────────────────────\n")
 write_out("CLASSIFICA FINALE\n")
 
 # sort by descending cumulated score
-round_entries.sort( key = lambda round_entry: (-round_entry[2], round_entry[0].lower()))
-for author, author_ranking_score, author_final_score in round_entries:
+grand_total_entries.sort( key = lambda round_entry: (-round_entry[2], round_entry[0].lower()))
+for author, author_ranking_score, author_final_score in grand_total_entries:
 	write_out("%s : %d\n" % (author, author_final_score))
-write_out("--------------------------------\n")
+write_out("────────────────────────────────\n")
 
