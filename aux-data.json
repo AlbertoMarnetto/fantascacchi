@@ -24,8 +24,42 @@
 		"dummy" : []
 	}
 	,
+	"official_ranking" :
+	{
+		"1" : [ "Fabiano Caruana" ],
+		"2" : [ "Ian Nepomniachtchi" ],
+		"3" : [ "Magnus Carlsen", "Maxime Vachier-Lagrave", "Wesley So" ],
+		"4" : [ ],
+		"5" : [ ]
+	}
+	,
 	"corrections" :
 	[
+		{
+			"author" : "lordste",
+			"text" :
+			[
+				"Round 6",
+				"Mickey Adams - Ian Nepomniachtchi X",
+				"Hikaru Nakamura - Magnus Carlsen X",
+				"Wesley So - Levon Aronian X",
+				"Maxime Vachier-Lagrave - Fabiano Caruana X",
+				"Vishy Anand - Sergey Karjakin X"
+			]
+		}
+		,
+		{
+			"author" : "andijjj",
+			"text" :
+			[
+				"Round 7",
+				"Ian Nepomniachtchi - Vishy Anand X",
+				"Sergey Karjakin - Maxime Vachier-Lagrave X",
+				"Fabiano Caruana - Wesley So X",
+				"Levon Aronian - Hikaru Nakamura X",
+				"Magnus Carlsen - Mickey Adams X"
+			]
+		}
 	]
 	,
 	"corrections_sample" :
@@ -54,6 +88,19 @@
 		"hai copiato quello giusto sono in testa",
 		"Ho fatto la “prova” per vedere se l’orario",
 		"\nBlade\n\n\n            5 dicembre 2017 -\n            17:24          \nprova\n",
-		"sicuramente verra accettato"
-	]
+		"sicuramente verra accettato",
+		"\nIrishGambit\n\n\n            5 dicembre 2017 -\n",
+		"\nsandinista\n\n\n            5 dicembre 2017 -\n",
+		"\nIrishGambit\n\n\n            6 dicembre 2017 -\n",
+		"\nolivo\n\n\n            5 dicembre 2017 -\n            22:24          \nSì mi disp",
+		"\nIrishGambit\n\n\n            7 dicembre 2017 -\n     ",
+		"\nchicco\n\n\n            8 dicembre 2017 -\n            23:46",
+		"\nchicco\n\n\n            8 dicembre 2017 -\n            23:51",
+		"\nlordste\n\n\n            8 dicembre 2017 -\n            14:07",
+		"\nandijjj\n\n\n            9 dicembre 2017 -\n            09:08",
+		"\nandijjj\n\n\n            9 dicembre 2017 -\n            09:10",
+		"\nsaskekun\n\n\n            9 dicembre 2017 -\n",
+		"\nBlade\n\n\n            9 dicembre 2017 -\n            17:06",
+		"◘"
+		]
 }
