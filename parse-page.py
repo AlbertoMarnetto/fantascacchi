@@ -9,7 +9,7 @@ Prediction = namedtuple("Prediction", ["author", "white_name", "black_name", "ou
 PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ("score",))
 Ranking = namedtuple("Ranking", ["author", "ranking_list"])
 MastersAppellatives = namedtuple("MastersAppellatives", ["names", "nicknames"])
-ManualAdjustments = namedtuple("ManualAdjustments", ["post_corrections", "should_ignore_post", "official_ranking"])
+ManualAdjustments = namedtuple("ManualAdjustments", ["post_corrections", "should_ignore_post", "official_ranking", "scoring_system"])
 
 ######################################
 
@@ -52,11 +52,17 @@ def load_aux_data(filename):
 			int(position) : names_list
 			for (position, names_list)
 			in data["official_ranking"].items() }
-
+			
+		scoring_system = (
+			"2_2_2" if "scoring_system" in data.keys() and data["scoring_system"] == "2_2_2"
+			else "2_1_3")
+			
 		manual_adjustments = ManualAdjustments(
 			post_corrections = post_corrections,
 			should_ignore_post = should_ignore_post,
-			official_ranking = official_ranking)
+			official_ranking = official_ranking,
+			scoring_system = scoring_system
+			)
 
 		return masters_appellatives, manual_adjustments
 	# S. also https://stackoverflow.com/questions/6578986/how-to-convert-json-data-into-a-python-object
@@ -351,7 +357,7 @@ def remove_duplicates(predictions):
 		]))
 
 
-def assign_prediction_scores(predictions):
+def assign_prediction_scores(predictions, scoring_system):
 	def prediction_key(prediction):
 		return (
 			prediction.white_name,
@@ -372,12 +378,22 @@ def assign_prediction_scores(predictions):
 
 		score = 0
 		if prediction_key(prediction) in official_results.keys():
-			if prediction.outcome == "1":
-				score = 2
-			elif prediction.outcome == "X":
-				score = 1
-			elif prediction.outcome == "2":
-				score = 3
+			if scoring_system == "2_2_2":
+				if prediction.outcome == "1":
+					score = 2
+				elif prediction.outcome == "X":
+					score = 2
+				elif prediction.outcome == "2":
+					score = 2
+			elif scoring_system == "2_1_3":
+				if prediction.outcome == "1":
+					score = 2
+				elif prediction.outcome == "X":
+					score = 1
+				elif prediction.outcome == "2":
+					score = 3
+			else:
+				assert False, "Unknown scoring system: " + scoring_system
 
 		scored_predictions.append( PredictionWithScore(
 			**prediction._asdict(),
@@ -454,7 +470,7 @@ for post in posts:
 
 all_predictions = repair_turns(all_predictions)
 all_predictions = remove_duplicates(all_predictions)
-all_predictions = assign_prediction_scores(all_predictions)
+all_predictions = assign_prediction_scores(all_predictions, manual_adjustments.scoring_system)
 
 authors = set(post.author for post in posts)
 rounds = sorted(list(set(prediction.round for prediction in official_results)))
