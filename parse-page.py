@@ -9,7 +9,7 @@ Prediction = namedtuple("Prediction", ["author", "white_name", "black_name", "ou
 PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ("score",))
 Ranking = namedtuple("Ranking", ["author", "ranking_list"])
 MastersAppellatives = namedtuple("MastersAppellatives", ["names", "nicknames"])
-ManualAdjustments = namedtuple("ManualAdjustments", ["post_corrections", "should_ignore_post", "official_ranking", "scoring_system"])
+ManualAdjustments = namedtuple("ManualAdjustments", ["post_corrections", "should_ignore_post", "official_ranking", "scoring_system", "games_per_round"])
 
 ######################################
 
@@ -52,16 +52,21 @@ def load_aux_data(filename):
 			int(position) : names_list
 			for (position, names_list)
 			in data["official_ranking"].items() }
-			
+
 		scoring_system = (
 			"2_2_2" if "scoring_system" in data.keys() and data["scoring_system"] == "2_2_2"
 			else "2_1_3")
-			
+
+		games_per_round = (
+			None if "games_per_round" not in data.keys()
+			else data["games_per_round"])
+
 		manual_adjustments = ManualAdjustments(
 			post_corrections = post_corrections,
 			should_ignore_post = should_ignore_post,
 			official_ranking = official_ranking,
-			scoring_system = scoring_system
+			scoring_system = scoring_system,
+			games_per_round = games_per_round
 			)
 
 		return masters_appellatives, manual_adjustments
@@ -239,7 +244,7 @@ get_line_ranking.line_re = re.compile("^\d*\W*(\S+\s?){1,3}$")
 
 ##############################################
 
-def extract_predictions(post, masters_appellatives):
+def extract_predictions(post, masters_appellatives, games_per_round):
 	lines = post.text.split("\n")
 
 	post_predictions = []
@@ -269,7 +274,11 @@ def extract_predictions(post, masters_appellatives):
 		if line_ranking is not None:
 			partial_ranking.append(line_ranking)
 
-	games_per_round_count = len(masters_appellatives.names) / 2
+	if games_per_round == None:
+		games_per_round_count = len(masters_appellatives.names) / 2
+	else:
+		games_per_round_count = games_per_round
+
 	if len(post_predictions) % games_per_round_count != 0:
 		write_err("\n***\nUnusual number of predictions: %d\n%s\n%s\n***\n"
 			% (len(post_predictions), post.author, post.text))
@@ -447,7 +456,7 @@ masters_appellatives, manual_adjustments = load_aux_data("aux-data.json")
 
 tournament_text = open("tournament.txt", "rb").read().decode("utf-8", "ignore")
 tournament_post = Post( author = "Official results", text = tournament_text)
-official_results, _ = extract_predictions(tournament_post, masters_appellatives)
+official_results, _ = extract_predictions(tournament_post, masters_appellatives, manual_adjustments.games_per_round)
 
 posts = load_posts("thread.html", manual_adjustments.should_ignore_post)
 posts.extend(manual_adjustments.post_corrections)
@@ -458,7 +467,7 @@ all_predictions.extend(official_results)
 all_rankings = []
 
 for post in posts:
-	post_predictions, post_ranking = extract_predictions(post, masters_appellatives)
+	post_predictions, post_ranking = extract_predictions(post, masters_appellatives, manual_adjustments.games_per_round)
 
 	#write_err("%s : %s\n" % (post.text, post_predictions))
 
