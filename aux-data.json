@@ -1,4 +1,7 @@
 {
+	"games_per_round" : 6,
+	"scoring_system" : "2_2_2",
+	
 	"masters_names" :
 	[
 		"Ian Nepomniachtchi",
@@ -10,7 +13,26 @@
 		"Hikaru Nakamura",
 		"Vishy Anand",
 		"Wesley So",
-		"Maxime Vachier-Lagrave"
+		"Maxime Vachier-Lagrave",
+		"Blomqvist",
+		"Gunina",
+		"Duda",
+		"Debashis",
+		"Navara",
+		"Vitiugov",
+		"Gagare",
+		"Goryachkina",
+		"Ivanchuk",
+		"Christiansen",
+		"Perez Ponsa",
+		"Moroni",
+		"Lalith Babu",
+		"Rapport",
+		"Mikhalevski",
+		"Howell",
+		"Dzagnidze",
+		"Grandelius",
+		"Steinberg"
 	]
 	,
 	"masters_nicknames" :
@@ -21,45 +43,22 @@
 		"Vishy Anand" : [ "Andand" ],
 		"Sergey Karjakin" : [ "Karhakin", "Karijakin" ],
 		"Hikaru Nakamura" : [ "Naka", "ka" ],
+		"Debashis" : ["Debshis"],
+		"Vitiugov" : ["Vituigiv", "Vituigov"],
 		"dummy" : []
 	}
 	,
 	"official_ranking" :
 	{
-		"1" : [ "Fabiano Caruana" ],
-		"2" : [ "Ian Nepomniachtchi" ],
-		"3" : [ "Magnus Carlsen", "Maxime Vachier-Lagrave", "Wesley So" ],
+		"1" : [ ],
+		"2" : [ ],
+		"3" : [ ],
 		"4" : [ ],
 		"5" : [ ]
 	}
 	,
 	"corrections" :
 	[
-		{
-			"author" : "lordste",
-			"text" :
-			[
-				"Round 6",
-				"Mickey Adams - Ian Nepomniachtchi X",
-				"Hikaru Nakamura - Magnus Carlsen X",
-				"Wesley So - Levon Aronian X",
-				"Maxime Vachier-Lagrave - Fabiano Caruana X",
-				"Vishy Anand - Sergey Karjakin X"
-			]
-		}
-		,
-		{
-			"author" : "andijjj",
-			"text" :
-			[
-				"Round 7",
-				"Ian Nepomniachtchi - Vishy Anand X",
-				"Sergey Karjakin - Maxime Vachier-Lagrave X",
-				"Fabiano Caruana - Wesley So X",
-				"Levon Aronian - Hikaru Nakamura X",
-				"Magnus Carlsen - Mickey Adams X"
-			]
-		}
 	]
 	,
 	"corrections_sample" :
@@ -79,28 +78,10 @@
 	,
 	"posts_string_blacklist" :
 	[
-		"E già possibile pronosticare per il primo turno",
-		"si prende licenza di abbreviargli",
-		"Risultati e classifica dopo il turno",
-		"Classifica dopo il turno",
-		"Ricorda che entro le 17 di oggi va data anche la classifica",
-		"ehm sorry nel fare copia dei nomi",
-		"hai copiato quello giusto sono in testa",
-		"Ho fatto la “prova” per vedere se l’orario",
-		"\nBlade\n\n\n            5 dicembre 2017 -\n            17:24          \nprova\n",
-		"sicuramente verra accettato",
-		"\nIrishGambit\n\n\n            5 dicembre 2017 -\n",
-		"\nsandinista\n\n\n            5 dicembre 2017 -\n",
-		"\nIrishGambit\n\n\n            6 dicembre 2017 -\n",
-		"\nolivo\n\n\n            5 dicembre 2017 -\n            22:24          \nSì mi disp",
-		"\nIrishGambit\n\n\n            7 dicembre 2017 -\n     ",
-		"\nchicco\n\n\n            8 dicembre 2017 -\n            23:46",
-		"\nchicco\n\n\n            8 dicembre 2017 -\n            23:51",
-		"\nlordste\n\n\n            8 dicembre 2017 -\n            14:07",
-		"\nandijjj\n\n\n            9 dicembre 2017 -\n            09:08",
-		"\nandijjj\n\n\n            9 dicembre 2017 -\n            09:10",
-		"\nsaskekun\n\n\n            9 dicembre 2017 -\n",
-		"\nBlade\n\n\n            9 dicembre 2017 -\n            17:06",
+		"\nBlade\n\n\n            23 gennaio 2018 -\n            20:39          \n",
+		"\nBlade\n\n\n            23 gennaio 2018 -\n            20:45          \n",
+		"\nchicco\n\n\n            24 gennaio 2018 -\n            02:29          \n",
+		"\nfalk17\n\n\n            24 gennaio 2018 -\n            19:46          \n",
 		"◘"
 		]
 }

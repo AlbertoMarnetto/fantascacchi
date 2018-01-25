@@ -1,0 +1,86 @@
+# http://www.londonchessclassic.com/gct/lcc_schedule.htm
+
+Round 1
+Friday 1 Dec, 14.00-21.00
+Ian Nepomniachtchi	½-½	Levon Aronian
+Magnus Carlsen	½-½	Fabiano Caruana
+Mickey Adams	½-½	Sergey Karjakin
+Hikaru Nakamura	½-½	Vishy Anand
+Wesley So	½-½	Maxime Vachier-Lagrave
+
+Rest Day 1
+Saturday 2 Dec
+
+Round 2
+Sunday 3 Dec, 14.00-21.00
+Wesley So	-	Ian Nepomniachtchi X
+Maxime Vachier-Lagrave	-	Hikaru Nakamura X
+Vishy Anand	-	Mickey Adams X
+Sergey Karjakin	-	Magnus Carlsen X
+Fabiano Caruana	-	Levon Aronian X
+
+Round 3
+Monday 4 Dec, 16.00-23.00
+Ian Nepomniachtchi	-	Fabiano Caruana X
+Levon Aronian	-	Sergey Karjakin X
+Magnus Carlsen	-	Vishy Anand X
+Mickey Adams	-	Maxime Vachier-Lagrave X
+Hikaru Nakamura	-	Wesley So X
+
+Round 4
+Tuesday 5 Dec, 16.00-23.00
+Hikaru Nakamura	-	Ian Nepomniachtchi X
+Wesley So	-	Mickey Adams X
+Maxime Vachier-Lagrave	-	Magnus Carlsen X
+Vishy Anand	-	Levon Aronian X
+Sergey Karjakin	-	Fabiano Caruana 2
+
+Round 5
+Wednesday 6 Dec, 16.00-23.00
+Ian Nepomniachtchi	-	Sergey Karjakin X
+Fabiano Caruana	-	Vishy Anand 1
+Levon Aronian	-	Maxime Vachier-Lagrave X
+Magnus Carlsen	-	Wesley So X
+Mickey Adams	-	Hikaru Nakamura X
+
+Rest Day 2
+Thursday 7 Dec
+
+Round 6
+Friday 8 Dec, 16.00-23.00
+Mickey Adams	-	Ian Nepomniachtchi 2
+Hikaru Nakamura	-	Magnus Carlsen X
+Wesley So	-	Levon Aronian X
+Maxime Vachier-Lagrave	-	Fabiano Caruana X
+Vishy Anand	-	Sergey Karjakin X
+
+Round 7
+Saturday 9 Dec, 14.00-21.00
+Ian Nepomniachtchi	-	Vishy Anand 1
+Sergey Karjakin	-	Maxime Vachier-Lagrave 2
+Fabiano Caruana	-	Wesley So X
+Levon Aronian	-	Hikaru Nakamura X
+Magnus Carlsen	-	Mickey Adams 1
+
+Round 8
+Sunday 10 Dec, 14.00-21.00
+Magnus Carlsen	-	Ian Nepomniachtchi 2
+Mickey Adams	-	Levon Aronian X
+Hikaru Nakamura	-	Fabiano Caruana X
+Wesley So	-	Sergey Karjakin X
+Maxime Vachier-Lagrave	-	Vishy Anand X
+
+Round 9
+Monday 11 Dec, 12.00-21.00
+Ian Nepomniachtchi	-	Maxime Vachier-Lagrave X
+Vishy Anand	-	Wesley So 2
+Sergey Karjakin	-	Hikaru Nakamura X
+Fabiano Caruana	-	Mickey Adams 1
+Levon Aronian	-	Magnus Carlsen 2
+
+Classifica:
+Ian Nepomniachtchi
+Levon Aronian
+Magnus Carlsen
+Fabiano Caruana
+Mickey Adams
