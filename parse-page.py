@@ -9,7 +9,13 @@ Prediction = namedtuple("Prediction", ["author", "white_name", "black_name", "ou
 PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ("score",))
 Ranking = namedtuple("Ranking", ["author", "ranking_list"])
 MastersAppellatives = namedtuple("MastersAppellatives", ["names", "nicknames"])
-ManualAdjustments = namedtuple("ManualAdjustments", ["post_corrections", "should_ignore_post", "official_ranking", "scoring_system", "games_per_round"])
+ManualAdjustments = namedtuple("ManualAdjustments", [
+	"post_corrections",
+	"should_ignore_post",
+	"official_ranking",
+	"scoring_system",
+	"games_per_round",
+	"team_names"])
 
 ######################################
 
@@ -61,12 +67,17 @@ def load_aux_data(filename):
 			None if "games_per_round" not in data.keys()
 			else data["games_per_round"])
 
+		team_names = (
+			{} if "team_names" not in data.keys()
+			else data["team_names"])
+
 		manual_adjustments = ManualAdjustments(
 			post_corrections = post_corrections,
 			should_ignore_post = should_ignore_post,
 			official_ranking = official_ranking,
 			scoring_system = scoring_system,
-			games_per_round = games_per_round
+			games_per_round = games_per_round,
+			team_names = team_names
 			)
 
 		return masters_appellatives, manual_adjustments
@@ -74,7 +85,7 @@ def load_aux_data(filename):
 
 ##############################################
 
-def load_posts(filename, should_ignore_post):
+def load_posts(filename, should_ignore_post, team_names):
 	html_page = open(filename, "rb").read().decode("utf-8", "ignore")
 	soup = BeautifulSoup(html_page, "html.parser")
 	post_tags = soup.find_all("li", attrs={"class": re.compile("comment byuser.*")})
@@ -91,7 +102,11 @@ def load_posts(filename, should_ignore_post):
 			continue
 
 		post_text = post_tag.find("div", attrs = {"class": "info_com"}).text
-		post_author = [ line for line in post_text.split("\n") if line != "" ][0]
+		post_username = [ line for line in post_text.split("\n") if line != "" ][0]
+		post_author = (
+			post_username if post_username not in team_names.keys()
+			else team_names[post_username])
+
 		post = Post( author = post_author, text = post_text )
 
 		if should_ignore_post(post):
@@ -210,9 +225,11 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("\D1\s*[-–\\\/]\s*0($|\D)"), "1"), # 1 - 0
 		(re.compile("\D0\s*[-–\\\/]\s*1($|\D)"), "2"), # 0 - 1
 		(re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), "X"), # ½ - ½
-		(re.compile("\D1[\\\/]2($|\D)"), "X"), # 1/2
+		(re.compile("\D1\s*[\\\/]\s*2($|\D)"), "X"), # 1/2
 		(re.compile("\D0\.5($|\D)"), "X"), # 0.5
 		(re.compile("\spatta($|\s)"), "X"), # patta
+		(re.compile("\s1\s*0($|\s)"), "1"), # 1 0
+		(re.compile("\s0\s*1($|\s)"), "2"), # 0 1
 		(re.compile("\s[xX]($|\s)"), "X"), # X
 		(re.compile("\D1($|\D)"), "1"), # 1
 		(re.compile("\D2($|\D)"), "2"), # 2
@@ -458,7 +475,7 @@ tournament_text = open("tournament.txt", "rb").read().decode("utf-8", "ignore")
 tournament_post = Post( author = "Official results", text = tournament_text)
 official_results, _ = extract_predictions(tournament_post, masters_appellatives, manual_adjustments.games_per_round)
 
-posts = load_posts("thread.html", manual_adjustments.should_ignore_post)
+posts = load_posts("thread.html", manual_adjustments.should_ignore_post, manual_adjustments.team_names)
 posts.extend(manual_adjustments.post_corrections)
 
 all_predictions = []
@@ -519,12 +536,12 @@ for round in rounds:
 	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
 
 	write_out("\n────────────────────────────────\n")
-	write_out("Punteggi del turno %s\n" % (round))
+	write_out("Punteggi del turno %s\n\n" % (round))
 	for author, author_score, author_cumulated_score in round_entries:
 		write_out("%s : %d\n" % (author, author_score))
 
 	write_out("\n────────────────────────────────\n")
-	write_out("Classifica dopo il turno %s\n" % (round))
+	write_out("Classifica dopo il turno %s\n\n" % (round))
 
 	# sort by descending cumulated score
 	round_entries.sort( key = lambda round_entry: (-round_entry[2], round_entry[0].lower()) )
