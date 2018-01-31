@@ -9,13 +9,14 @@ Prediction = namedtuple("Prediction", ["author", "white_name", "black_name", "ou
 PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ("score",))
 Ranking = namedtuple("Ranking", ["author", "ranking_list"])
 MastersAppellatives = namedtuple("MastersAppellatives", ["names", "nicknames"])
-ManualAdjustments = namedtuple("ManualAdjustments", [
+TournamentData = namedtuple("TournamentData", [
 	"post_corrections",
 	"should_ignore_post",
 	"official_ranking",
 	"scoring_system",
 	"games_per_round",
-	"team_names"])
+	"team_names",
+	"expected_ranking_length"])
 
 ######################################
 
@@ -59,28 +60,26 @@ def load_aux_data(filename):
 			for (position, names_list)
 			in data["official_ranking"].items() }
 
-		scoring_system = (
-			"2_2_2" if "scoring_system" in data.keys() and data["scoring_system"] == "2_2_2"
-			else "2_1_3")
+		scoring_system = data.get("scoring_system", "2_1_3")
 
-		games_per_round = (
-			None if "games_per_round" not in data.keys()
-			else data["games_per_round"])
+		games_per_round = data.get("games_per_round", None)
 
-		team_names = (
-			{} if "team_names" not in data.keys()
-			else data["team_names"])
+		team_names = data.get("team_names", {})
 
-		manual_adjustments = ManualAdjustments(
+		expected_ranking_length = data.get("expected_ranking_length", 5)
+
+
+		tournament_data = TournamentData(
 			post_corrections = post_corrections,
 			should_ignore_post = should_ignore_post,
 			official_ranking = official_ranking,
 			scoring_system = scoring_system,
 			games_per_round = games_per_round,
-			team_names = team_names
+			team_names = team_names,
+			expected_ranking_length = expected_ranking_length
 			)
 
-		return masters_appellatives, manual_adjustments
+		return masters_appellatives, tournament_data
 	# S. also https://stackoverflow.com/questions/6578986/how-to-convert-json-data-into-a-python-object
 
 ##############################################
@@ -198,7 +197,7 @@ def get_masters_names_in_line(line, masters_appellatives):
 
 	return masters_names_in_line
 
-def get_line_prediction(line, masters_appellatives):
+def get_line_prediction(line, masters_appellatives, author_name):
 	# Find result
 	line_outcome = "?"
 	for outcome_re, outcome in get_line_prediction.possible_outcomes:
@@ -211,11 +210,14 @@ def get_line_prediction(line, masters_appellatives):
 	if len(masters_names_in_line) == 2 and line_outcome != "?":
 		masters_names_in_line.sort(key = itemgetter(1))
 		return (masters_names_in_line[0], masters_names_in_line[1], line_outcome)
+	elif len(masters_names_in_line) == 1 and line_outcome != "?":
+		write_err("Suspect line from %s: %s\n (1 name, %s)\n"
+			% (author_name, line, masters_names_in_line[0][0]))
 	elif len(masters_names_in_line) < 2:
 		return None
 	else:
-		write_err("Suspect line: %s\n (%d names, %s outcome)\n"
-			% (line, len(masters_names_in_line), line_outcome))
+		write_err("Suspect line from %s: %s\n (%d names, %s outcome)\n"
+			% (author_name, line, len(masters_names_in_line), line_outcome))
 
 
 # In descending order of reliability,
@@ -236,7 +238,7 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("@@@"), "@") # @ (still to be played)
 		]
 
-def get_line_ranking(line, masters_appellatives):
+def get_line_ranking(line, masters_appellatives, author_name):
 	masters_names_in_line = []
 
 	masters_names_in_line = get_masters_names_in_line(line, masters_appellatives)
@@ -247,8 +249,8 @@ def get_line_ranking(line, masters_appellatives):
 	# Check that no other words are on the line
 	# except possibly for a number
 	if not get_line_ranking.line_re.search(line):
-		write_err("Suspect line: %s\n (one name but not OK for the ranking)\n"
-			% (line))
+		write_err("Suspect line from %s: %s\n (one name but not OK for the ranking)\n"
+			% (author_name, line))
 		return None
 
 	# Success
@@ -261,7 +263,7 @@ get_line_ranking.line_re = re.compile("^\d*\W*(\S+\s?){1,3}$")
 
 ##############################################
 
-def extract_predictions(post, masters_appellatives, games_per_round):
+def extract_predictions(post, masters_appellatives, games_per_round, expected_ranking_length):
 	lines = post.text.split("\n")
 
 	post_predictions = []
@@ -275,7 +277,7 @@ def extract_predictions(post, masters_appellatives, games_per_round):
 		if line_round is not None:
 			post_current_round = line_round
 
-		line_prediction = get_line_prediction(line, masters_appellatives)
+		line_prediction = get_line_prediction(line, masters_appellatives, post.author)
 		if line_prediction is not None:
 			prediction = Prediction(
 				author = post.author,
@@ -287,7 +289,7 @@ def extract_predictions(post, masters_appellatives, games_per_round):
 			post_predictions.append(prediction)
 			continue
 
-		line_ranking = get_line_ranking(line, masters_appellatives)
+		line_ranking = get_line_ranking(line, masters_appellatives, post.author)
 		if line_ranking is not None:
 			partial_ranking.append(line_ranking)
 
@@ -300,7 +302,6 @@ def extract_predictions(post, masters_appellatives, games_per_round):
 		write_err("\n***\nUnusual number of predictions: %d\n%s\n%s\n***\n"
 			% (len(post_predictions), post.author, post.text))
 
-	expected_ranking_length = 5
 	if len(partial_ranking) == expected_ranking_length:
 		post_ranking = Ranking(
 			author = post.author,
@@ -331,7 +332,9 @@ def repair_turns(predictions):
 		}
 
 	def repaired_prediction(prediction):
-		assert game(prediction) in official_results, "Missing game in official results " + str(prediction)
+		if game(prediction) not in official_results:
+			write_err("Missing game in official results: " + str(prediction) + "\n")
+			return prediction
 
 		expected_round = official_results[game(prediction)].round
 		assert expected_round is not None, "Missing round in official results for game" + str(prediction)
@@ -404,7 +407,7 @@ def assign_prediction_scores(predictions, scoring_system):
 
 		score = 0
 		if prediction_key(prediction) in official_results.keys():
-			if scoring_system == "2_2_2":
+			if tournament_data.scoring_system == "2_2_2":
 				if prediction.outcome == "1":
 					score = 2
 				elif prediction.outcome == "X":
@@ -469,14 +472,14 @@ def assign_ranking_scores(rankings, official_ranking):
 
 ##############################################
 
-masters_appellatives, manual_adjustments = load_aux_data("aux-data.json")
+masters_appellatives, tournament_data = load_aux_data("aux-data.json")
 
 tournament_text = open("tournament.txt", "rb").read().decode("utf-8", "ignore")
 tournament_post = Post( author = "Official results", text = tournament_text)
-official_results, _ = extract_predictions(tournament_post, masters_appellatives, manual_adjustments.games_per_round)
+official_results, _ = extract_predictions(tournament_post, masters_appellatives, tournament_data.games_per_round, tournament_data.expected_ranking_length)
 
-posts = load_posts("thread.html", manual_adjustments.should_ignore_post, manual_adjustments.team_names)
-posts.extend(manual_adjustments.post_corrections)
+posts = load_posts("thread.html", tournament_data.should_ignore_post, tournament_data.team_names)
+posts.extend(tournament_data.post_corrections)
 
 all_predictions = []
 all_predictions.extend(official_results)
@@ -484,7 +487,7 @@ all_predictions.extend(official_results)
 all_rankings = []
 
 for post in posts:
-	post_predictions, post_ranking = extract_predictions(post, masters_appellatives, manual_adjustments.games_per_round)
+	post_predictions, post_ranking = extract_predictions(post, masters_appellatives, tournament_data.games_per_round, tournament_data.expected_ranking_length)
 
 	#write_err("%s : %s\n" % (post.text, post_predictions))
 
@@ -496,7 +499,7 @@ for post in posts:
 
 all_predictions = repair_turns(all_predictions)
 all_predictions = remove_duplicates(all_predictions)
-all_predictions = assign_prediction_scores(all_predictions, manual_adjustments.scoring_system)
+all_predictions = assign_prediction_scores(all_predictions, tournament_data.scoring_system)
 
 authors = set(post.author for post in posts)
 rounds = sorted(list(set(prediction.round for prediction in official_results)))
@@ -520,7 +523,8 @@ for round in rounds:
 				and prediction.round == round
 				and prediction.score > 0)
 
-		if author_good_predictions_count == games_per_round_count:
+		if (tournament_data.scoring_system != "2_2_2"
+				and author_good_predictions_count == games_per_round_count):
 			author_score += 3
 
 		scores_per_rounds.append( (round, author, author_score) )
@@ -549,7 +553,7 @@ for round in rounds:
 		write_out("%s : %d\n" % (author, author_cumulated_score))
 	write_out("────────────────────────────────\n")
 
-ranking_scores = assign_ranking_scores(all_rankings, manual_adjustments.official_ranking)
+ranking_scores = assign_ranking_scores(all_rankings, tournament_data.official_ranking)
 #write_out("Punti piazzamenti:\n%s\n" % str(ranking_scores))
 
 grand_total_entries = []
