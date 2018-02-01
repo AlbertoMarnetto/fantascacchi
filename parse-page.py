@@ -299,8 +299,8 @@ def extract_predictions(post, masters_appellatives, games_per_round, expected_ra
 		games_per_round_count = games_per_round
 
 	if len(post_predictions) % games_per_round_count != 0:
-		write_err("\n***\nUnusual number of predictions: %d\n%s\n%s\n***\n"
-			% (len(post_predictions), post.author, post.text))
+		write_err("\n***\nUnusual number of predictions: %d\n%s\n%s\n%s\n***\n"
+			% (len(post_predictions), post.author, post.text, str(post_predictions)))
 
 	if len(partial_ranking) == expected_ranking_length:
 		post_ranking = Ranking(
@@ -471,6 +471,7 @@ def assign_ranking_scores(rankings, official_ranking):
 	return ranking_scores
 
 ##############################################
+
 
 masters_appellatives, tournament_data = load_aux_data("aux-data.json")
 
