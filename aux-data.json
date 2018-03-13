@@ -1,55 +1,18 @@
 {
-	"games_per_round" : 6,
-	"scoring_system" : "2_2_2",
-	"expected_ranking_length": 1,
+	"games_per_round" : 4,
+	"scoring_system" : "2_1_3",
+	"expected_ranking_length": 3,
+	"bonus_for_perfect_round_prediction": 2,
 	"masters_names" :
 	[
-		"Aronian",
-		"Adams",
-		"Hikaru Nakamura",
-		"Wesley So",
-		"Maxime Vachier-Lagrave",
-		"Blomqvist",
-		"Gunina",
-		"Duda",
-		"Debashis",
-		"Navara",
-		"Vitiugov",
-		"Gagare",
-		"Goryachkina",
-		"Ivanchuk",
-		"Christiansen",
-		"Perez Ponsa",
-		"Moroni",
-		"Lalith Babu",
-		"Rapport",
-		"Mikhalevski",
-		"Howell",
-		"Dzagnidze",
-		"Grandelius",
-		"Steinberg",
-		"Gledura",
-		"Antipov",
-		"Batsiashvili",
-		"Grigoriants",
-		"Peralta",
-		"Lê Quang Liem",
-		"Sutovsky",
-		"Moussard",
-		"Saric",
-		"Svane",
-		"Esipenko",
-		"Harikrishna",
-		"Gupta",
-		"Vocaturo",
-		"Sandipan",
-		"Short",
-		"Oparin",
-		"Dubov",
-		"Tregubov",
-		"Wang",
-		"Sethuraman",
-		"Gelfand"
+		"Vladimir Kramnik",
+		"Alexander Grischuk",
+		"Sergey Karjakin",
+		"Shakhriyar Mamedyarov",
+		"Levon Aronian",
+		"Ding Liren",
+		"Fabiano Caruana",
+		"Wesley So"
 	]
 	,
 	"masters_nicknames" :
@@ -58,12 +21,16 @@
 		"Ian Nepomniachtchi" : [ "Nepo" ],
 		"Fabiano Caruana" : [ "Caru", "Cariana" ],
 		"Vishy Anand" : [ "Andand" ],
-		"Sergey Karjakin" : [ "Karhakin", "Karijakin" ],
+		"Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
 		"Hikaru Nakamura" : [ "Naka", "ka", "Nakamur" ],
 		"Debashis" : ["Debshis"],
 		"Vitiugov" : ["Vituigiv", "Vituigov"],
 		"Moussard" : ["Muossard"],
 		"Dubov" : ["Dubiv"],
+		"Alexander Grischuk" : ["Grishuk", "GRIS"],
+		"Vladimir Kramnik" : ["KRAM"],
+		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME"],
+		"Levon Aronian" : ["ARON"],
 		"dummy" : []
 	}
 	,
@@ -86,17 +53,28 @@
 	"corrections" :
 	[
 		{
-			"author" : "Zugzwang",
+			"author" : "topalovo",
 			"text" :
 			[
-				"Dubov – Vachier-Lagrave 1 - 0",
-				"Nakamura – Rapport 1 - 0",
-				"Aronian – Sethuraman 1 – 0",
-				"Howell – Vitiugov 1 - 0",
-				"Grandelius – Wang 1 - 0",
-				"Gelfand – Gupta 1 - 0"				
+"\n kramnik-grischuk patta\n karjakin-mamedyarov 1-0\n  aronian-ding liren 1-0;\n caruana-so patta"			
 			]
 		}
+		,
+		{
+			"author" : "topalovo",
+			"text" :
+			[
+"\nQuesti i i miei pronostici :\nKramnik-Karjakin patta \n Mamedyarov-Aronian patta \n Ding Liren-Caruana 0-1 \n Grischuk-So 1-0 \n"			
+			]
+		}			
+		,
+		{
+			"author" : "topalovo",
+			"text" :
+			[
+"\nI miei pronostici per il turno 3:\n karjakin-grischuk 1-0\n; Aronian-kramnik patta\n; caruana – mamedyarov patta\n; so-ding 1-0 \n"			
+			]
+		}	
 	]
 	,
 	"corrections_sample" :
@@ -111,40 +89,55 @@
 				"Hikaru Nakamura - Vishy Anand @@@",
 				"Wesley So - Maxime Vachier-Lagrave @@@"
 			]
-		}
+		}		
 	]
 	,
 	"posts_string_blacklist" :
 	[
-		"\nBlade\n\n\n            23 gennaio 2018 -\n            20:39          \n",
-		"\nBlade\n\n\n            23 gennaio 2018 -\n            20:45          \n",
-		"\nchicco\n\n\n            24 gennaio 2018 -\n            02:29          \n",
-		"\nfalk17\n\n\n            24 gennaio 2018 -\n            19:46          \n",
-		"\nchicco\n\n\n            25 gennaio 2018 -\n            00:12          \n",
-		"\nIrishGambit\n\n\n            25 gennaio 2018 -\n            00:31",
-		"\npaolo58\n\n\n            25 gennaio 2018 -\n            01:04",
-		"\nIrishGambit\n\n\n            25 gennaio 2018 -\n            01:19",
-		"\nchicco\n\n\n            25 gennaio 2018 -\n            10:51   ",
-		"\nIrishGambit\n\n\n            25 gennaio 2018 -\n            23:11",
-		"\nBlade\n\n\n            26 gennaio 2018 -\n            21:02          \nGrazie, anche se naturalmente mi sono dimenticato \n",
-		"\nIrishGambit\n\n\n            25 gennaio 2018 -\n            23:15",
-		"\nIrishGambit\n\n\n            25 gennaio 2018 -\n            23:23",
-		"\nIrishGambit\n\n\n            26 gennaio 2018 -\n            00:07",
-		"\nZugzwang\n\n\n            26 gennaio 2018 -\n            11:30",
-		"\nIrishGambit\n\n\n            28 gennaio 2018 -\n            12:48",
-		"\nIrishGambit\n\n\n            28 gennaio 2018 -\n            12:55",
-		"\nIrishGambit\n\n\n            28 gennaio 2018 -\n            23:15",
-		"\nsandinista\n\n\n            31 gennaio 2018 -\n            13:49",
-		"\nsandinista\n\n\n            31 gennaio 2018 -\n            14:21",
-		"\nIrishGambit\n\n\n            31 gennaio 2018 -\n            14:37",
-		"\nIrishGambit\n\n\n            31 gennaio 2018 -\n            23:30",
-		"solo la patta rapida fra Oparin e Aronian impedisce a didici di raggiungere la perfezione",
-		"\nIrishGambit\n\n\n            31 gennaio 2018 -\n            23:48",
-		"\nZugzwang\n\n\n            1 febbraio 2018 -\n            02:39",
-		"\nIrishGambit\n\n\n            1 febbraio 2018 -\n            13:19",
-		"\nsandinista\n\n\n            1 febbraio 2018 -\n            13:28",
-		"\nsandinista\n\n\n            1 febbraio 2018 -\n            13:39",
-		"\nchicco\n\n\n            1 febbraio 2018 -\n            18:36",
+		"16 febbraio 2018 -\n            21:57",
+		"16 febbraio 2018 -\n            22:02",
+		"17 febbraio 2018 -\n            23:40",
+		"18 febbraio 2018 -\n            23:23",
+		"19 febbraio 2018 -\n            21:35",
+		"19 febbraio 2018 -\n            21:48",
+		"19 febbraio 2018 -\n            22:40",
+		"19 febbraio 2018 -\n            22:54",
+		"19 febbraio 2018 -\n            21:54",
+		"\nfalk17\n\n\n            9 marzo 2018 -\n            19:57          \nsquadra: SISSA LEONFORTE",
+		"9 marzo 2018 -\n            22:22",
+		"9 marzo 2018 -\n            22:34",
+		"9 marzo 2018 -\n            22:38",
+		"\ntopalovo\n\n\n            9 marzo 2018 -\n            23:29",
+		"\nFranco77\n\n\n            10 marzo 2018 -\n            21:20          \n",
+		"\nsandinista\n\n\n            11 marzo 2018 -\n            14:54",
+		"\nchicco\n\n\n            11 marzo 2018 -\n            14:55",
+		"\nchicco\n\n\n            11 marzo 2018 -\n            15:03",
+		"\nsandinista\n\n\n            11 marzo 2018 -\n            15:17 ",
+		"\nIrishGambit\n\n\n            11 marzo 2018 -\n            16:17",
+		"\nsandinista\n\n\n            11 marzo 2018 -\n            16:36",
+		"\nIrishGambit\n\n\n            11 marzo 2018 -\n            22:10",
+		"\nchicco\n\n\n            11 marzo 2018 -\n            22:37",
+		"\nchicco\n\n\n            11 marzo 2018 -\n            22:40",
+		"\ntopalovo\n\n\n            11 marzo 2018 -\n",
+		"\nIrishGambit\n\n\n            12 marzo 2018 -\n            08:58",
+		"\nIrishGambit\n\n\n            11 marzo 2018 -\n            23:51",
+		"\nIrishGambit\n\n\n            11 marzo 2018 -\n            23:37",
+		"\nIrishGambit\n\n\n            11 marzo 2018 -\n            23:55",
+		"\nIrishGambit\n\n\n            12 marzo 2018 -\n            00:00",
+		"\ntallerino\n\n\n            12 marzo 2018 -\n            13:06",
+		"\nIrishGambit\n\n\n            12 marzo 2018 -\n            13:43",
+		"\nIrishGambit\n\n\n            12 marzo 2018 -\n            00:07",
+		"\norcoisback\n\n\n            12 marzo 2018 -\n            12:39",
+		"\nIrishGambit\n\n\n            12 marzo 2018 -\n            13:42",
+		"\ntopalovo\n\n\n            12 marzo 2018 -\n            14:49",
+		"\nsandinista\n\n\n            12 marzo 2018 -\n            14:54",
+		"\nsandinista\n\n\n            12 marzo 2018 -\n            14:58",
+		"\nsandinista\n\n\n            12 marzo 2018 -\n            22:57",
+		"",
+		"",
+		"",
+		"",
+		"",
 		"◘"
 		]
 }
