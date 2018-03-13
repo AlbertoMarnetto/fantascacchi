@@ -16,7 +16,8 @@ TournamentData = namedtuple("TournamentData", [
 	"scoring_system",
 	"games_per_round",
 	"team_names",
-	"expected_ranking_length"])
+	"expected_ranking_length",
+	"bonus_for_perfect_round_prediction"])
 
 ######################################
 
@@ -53,7 +54,7 @@ def load_aux_data(filename):
 			post_corrections.append(post_correction)
 
 		def should_ignore_post(post):
-			return any(string in post.text for string in data["posts_string_blacklist"])
+			return any(string in post.text for string in data["posts_string_blacklist"] if string != "")
 
 		official_ranking = {
 			int(position) : names_list
@@ -68,6 +69,8 @@ def load_aux_data(filename):
 
 		expected_ranking_length = data.get("expected_ranking_length", 5)
 
+		bonus_for_perfect_round_prediction = data.get("bonus_for_perfect_round_prediction", 0)
+
 
 		tournament_data = TournamentData(
 			post_corrections = post_corrections,
@@ -76,7 +79,8 @@ def load_aux_data(filename):
 			scoring_system = scoring_system,
 			games_per_round = games_per_round,
 			team_names = team_names,
-			expected_ranking_length = expected_ranking_length
+			expected_ranking_length = expected_ranking_length,
+			bonus_for_perfect_round_prediction = bonus_for_perfect_round_prediction
 			)
 
 		return masters_appellatives, tournament_data
@@ -524,9 +528,8 @@ for round in rounds:
 				and prediction.round == round
 				and prediction.score > 0)
 
-		if (tournament_data.scoring_system != "2_2_2"
-				and author_good_predictions_count == games_per_round_count):
-			author_score += 3
+		if (author_good_predictions_count == games_per_round_count):
+			author_score += tournament_data.bonus_for_perfect_round_prediction
 
 		scores_per_rounds.append( (round, author, author_score) )
 
