@@ -28,9 +28,10 @@
 		"Moussard" : ["Muossard"],
 		"Dubov" : ["Dubiv"],
 		"Alexander Grischuk" : ["Grishuk", "GRIS"],
-		"Vladimir Kramnik" : ["KRAM"],
-		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME"],
-		"Levon Aronian" : ["ARON"],
+		"Vladimir Kramnik" : ["KRAM", "Kraminik"],
+		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov"],
+		"Levon Aronian" : ["ARON", "Aronina"],
+		"Ding Liren" : ["Ringraziato"],
 		"dummy" : []
 	}
 	,
@@ -73,6 +74,25 @@
 			"text" :
 			[
 "\nI miei pronostici per il turno 3:\n karjakin-grischuk 1-0\n; Aronian-kramnik patta\n; caruana – mamedyarov patta\n; so-ding 1-0 \n"			
+			]
+		}
+		,
+		{
+			"author" : "Zugzwang",
+			"text" :
+			[
+				"Karjakin – Grischuk ½ - ½",
+				"Aronian – Kramnik ½ - ½",
+				"Caruana – Mamedyarov ½ - ½",
+				"So – Ding ½ - ½"
+			]
+		}
+		,
+		{
+			"author" : "topalovo",
+			"text" :
+			[
+"Le mie previsioni per il turno 4 :\ngrischuk-ding liren patta\n mamedyarov-so patta\n kramnik-caruana patta\n karjakin-aronian 1-0\nI miei pronostici per il podio :\n1. kramnik\n 2. caruana\n 3. karjakin\n\nBuona giornata\n"
 			]
 		}	
 	]
@@ -133,9 +153,18 @@
 		"\nsandinista\n\n\n            12 marzo 2018 -\n            14:54",
 		"\nsandinista\n\n\n            12 marzo 2018 -\n            14:58",
 		"\nsandinista\n\n\n            12 marzo 2018 -\n            22:57",
-		"",
-		"",
-		"",
+		"\nIrishGambit\n\n\n            13 marzo 2018 -\n            00:27",
+		"\nIrishGambit\n\n\n            13 marzo 2018 -\n            00:31          \n",
+		"\nIrishGambit\n\n\n            13 marzo 2018 -\n            00:46",
+		"\nIrishGambit\n\n\n            13 marzo 2018 -\n            15:45",
+		"\ntopalovo\n\n\n            13 marzo 2018 -\n            11:14          \n",
+		"\nZugzwang\n\n\n            13 marzo 2018 -\n            16:57          \n",
+		"\nIrishGambit\n\n\n            13 marzo 2018 -\n            18:14          \n",
+		"\nsandinista\n\n\n            15 marzo 2018 -\n            20:57          \n",
+		"\nandijjj\n\n\n            15 marzo 2018 -\n",
+		"\nsandinista\n\n\n            15 marzo 2018 -\n            21:35",
+		"\nIrishGambit\n\n\n            15 marzo 2018 -\n            21:57",
+		"\nsandinista\n\n\n            15 marzo 2018 -\n            21:59",
 		"",
 		"",
 		"◘"

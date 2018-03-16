@@ -23,14 +23,27 @@ So – Ding ½ - ½
 
 Round 4
 
-Grischuk – Ding @@@
-Mamedyarov – So @@@
-Kramnik – Caruana @@@
-Karjakin – Aronian @@@
+Grischuk – Ding ½ - ½
+Mamedyarov – So ½ - ½
+Kramnik – Caruana 0 - 1
+Karjakin – Aronian 0 - 1
 
 Round 5
 
-Aronian – Grischuk @@@
-Caruana – Karjakin @@@
-So – Kramnik @@@
-Ding – Mamedyarov @@@
+Aronian – Grischuk ½ - ½
+Caruana – Karjakin ½ - ½
+So – Kramnik ½ - ½
+Ding – Mamedyarov ½ - ½
+
+Round 6
+Caruana – Grischuk @@@
+So – Aronian @@@
+Ding – Karjakin @@@
+Mamedyarov – Kramnik @@@
+
+Round 7
+
+Grischuk – Mamedyarov @@@
+Kramnik – Ding Liren @@@
+Karjakin – So @@@
+Aronian – Caruana @@@
