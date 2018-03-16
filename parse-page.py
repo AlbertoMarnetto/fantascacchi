@@ -193,7 +193,7 @@ def get_masters_names_in_line(line, masters_appellatives):
 		master_tokens.extend(masters_appellatives.nicknames[master_name])
 
 		for master_token in master_tokens:
-			token_regex = r"(\b|\d)" + master_token + r"(\b|\d)"
+			token_regex = r"(\b|\d|½)" + master_token + r"(\b|\d|½)"
 			maybe_match = re.search(token_regex, line, re.IGNORECASE)
 			if maybe_match is not None:
 				masters_names_in_line.append((master_name, maybe_match.start()))
@@ -217,11 +217,13 @@ def get_line_prediction(line, masters_appellatives, author_name):
 	elif len(masters_names_in_line) == 1 and line_outcome != "?":
 		write_err("Suspect line from %s: %s\n (1 name, %s)\n"
 			% (author_name, line, masters_names_in_line[0][0]))
+		return None
 	elif len(masters_names_in_line) < 2:
 		return None
 	else:
 		write_err("Suspect line from %s: %s\n (%d names, %s outcome)\n"
 			% (author_name, line, len(masters_names_in_line), line_outcome))
+		return None
 
 
 # In descending order of reliability,
@@ -589,3 +591,11 @@ for author, author_ranking_score, author_final_score in grand_total_entries:
 	write_out("%s : %d\n" % (author, author_final_score))
 write_out("────────────────────────────────\n")
 
+
+#import datetime
+#import locale
+
+## https://docs.python.org/2/library/time.html#time.strftime
+#input = "15 marzo 2018 - 22:54"
+#loc = locale.setlocale(locale.LC_ALL, "Italian_Italy.1252")
+#date = datetime.datetime.strptime( input, "%d %B %Y - %H:%M" )
