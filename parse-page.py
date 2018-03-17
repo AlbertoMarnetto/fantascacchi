@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from collections import namedtuple
 import datetime
+from enum import Enum
 import json
 from operator import itemgetter
 import re as re
@@ -247,30 +248,57 @@ def get_masters_names_in_line(line, masters_appellatives):
 
 	return masters_names_in_line
 
+class ParseOutcome(Enum):
+	SUCCESS = 1,
+	NONE = 2,
+	SUSPECT = 3
+
+LinePredictionResult = namedtuple("LinePredictionResult", [
+	"parse_outcome",
+	"suspect_reason",
+	"first_master",
+	"second_master",
+	"match_outcome"])
+	
 def get_line_prediction(line, masters_appellatives, author_name):
 	# Find result
-	line_outcome = "?"
+	match_outcome = None
 	for outcome_re, outcome in get_line_prediction.possible_outcomes:
 		if outcome_re.search(line):
-			line_outcome = outcome
+			match_outcome = outcome
 			break
 
 	masters_names_in_line = get_masters_names_in_line(line, masters_appellatives)
 
-	if len(masters_names_in_line) == 2 and line_outcome != "?":
+	if len(masters_names_in_line) == 2 and match_outcome is not None:
 		masters_names_in_line.sort(key = itemgetter(1))
-		return (masters_names_in_line[0], masters_names_in_line[1], line_outcome)
-	elif len(masters_names_in_line) == 1 and line_outcome != "?":
-		write_err("Suspect line from %s: %s\n (1 name, %s)\n"
-			% (author_name, line, masters_names_in_line[0][0]))
-		return None
+		return LinePredictionResult(
+			parse_outcome = ParseOutcome.SUCCESS,
+			suspect_reason = None,
+			first_master = masters_names_in_line[0][0], 
+			second_master = masters_names_in_line[1][0], 
+			match_outcome = match_outcome)
+	elif len(masters_names_in_line) == 1:
+		return LinePredictionResult(
+			parse_outcome = ParseOutcome.SUSPECT,
+			suspect_reason = "One master, {}".format(masters_names_in_line[0][0]),
+			first_master = None, 
+			second_master = None, 
+			match_outcome = None)
 	elif len(masters_names_in_line) < 2:
-		return None
+		return LinePredictionResult(
+			parse_outcome = ParseOutcome.NONE,
+			suspect_reason = None,
+			first_master = None,
+			second_master = None,
+			match_outcome = None)
 	else:
-		write_err("Suspect line from %s: %s\n (%d names, %s outcome)\n"
-			% (author_name, line, len(masters_names_in_line), line_outcome))
-		return None
-
+		return LinePredictionResult(
+			parse_outcome = ParseOutcome.SUSPECT,
+			suspect_reason = "%d masters: %s".format((len(masters_names_in_line), (master_name[0] for master_name in master_name))),
+			first_master = None,
+			second_master = None,
+			match_outcome = match_outcome)
 
 # In descending order of reliability,
 # e.g. "0 - 1" matches both the 2nd and the 6th regexp,
@@ -301,8 +329,6 @@ def get_line_ranking(line, masters_appellatives, author_name):
 	# Check that no other words are on the line
 	# except possibly for a number
 	if not get_line_ranking.line_re.search(line):
-		write_err("Suspect line from %s: %s\n (one name but not OK for the ranking)\n"
-			% (author_name, line))
 		return None
 
 	# Success
@@ -324,26 +350,33 @@ def extract_predictions(post, masters_appellatives, games_per_round, expected_ra
 	post_current_round = None
 	is_in_ranking_mode = False
 
+	is_post_suspect = False
+	suspect_reasons = ""
 	for line in lines:
 		line_round = get_line_round(line)
 		if line_round is not None:
 			post_current_round = line_round
 
 		line_prediction = get_line_prediction(line, masters_appellatives, post.author)
-		if line_prediction is not None:
+		
+		if line_prediction.parse_outcome == ParseOutcome.SUCCESS:
 			prediction = Prediction(
 				author = post.author,
-				white_name = line_prediction[0][0],
-				black_name = line_prediction[1][0],
-				outcome = line_prediction[2],
+				white_name = line_prediction.first_master,
+				black_name = line_prediction.second_master,
+				outcome = line_prediction.match_outcome,
 				round = post_current_round)
 
 			post_predictions.append(prediction)
 			continue
-
-		line_ranking = get_line_ranking(line, masters_appellatives, post.author)
-		if line_ranking is not None:
-			partial_ranking.append(line_ranking)
+		else:
+			line_ranking = get_line_ranking(line, masters_appellatives, post.author)
+			if line_ranking is not None:
+				partial_ranking.append(line_ranking)
+			elif line_prediction.parse_outcome == ParseOutcome.SUSPECT:
+				suspect_reasons += "Suspect line: {} ({})\n".format(
+					line, line_prediction.suspect_reason)
+				is_post_suspect = True
 
 	if games_per_round == None:
 		games_per_round_count = len(masters_appellatives.names) / 2
@@ -351,8 +384,9 @@ def extract_predictions(post, masters_appellatives, games_per_round, expected_ra
 		games_per_round_count = games_per_round
 
 	if len(post_predictions) % games_per_round_count != 0:
-		write_err("\n***\nUnusual number of predictions: %d\n%s\n%s\n%s\n***\n"
-			% (len(post_predictions), post.author, post.text, str(post_predictions)))
+		suspect_reasons += "Unusual number of predictions: {}\n".format(
+			len(post_predictions))
+		is_post_suspect = True
 
 	if len(partial_ranking) == expected_ranking_length:
 		post_ranking = Ranking(
@@ -360,11 +394,16 @@ def extract_predictions(post, masters_appellatives, games_per_round, expected_ra
 			ranking_list = partial_ranking)
 	else:
 		if len(partial_ranking) != 0:
-			write_err("Bad ranking: %s\nPost: %s" % (partial_ranking, post.text))
+			suspect_reasons += "Bad ranking: {}\n".format(partial_ranking)
+			is_post_suspect = True
 		post_ranking = None
 
 	if len(post_predictions) == 0 and post_ranking is None:
-		write_err("\n***\nNo predictions nor ranking\n***%s\n" % repr(post.text))
+		suspect_reasons += "No predictions nor ranking\n"
+		is_post_suspect = True
+		
+	if is_post_suspect:
+		write_err("Suspect post:\n{}\nReasons:\n{}\n\n".format(post.text, suspect_reasons))
 
 	return post_predictions, post_ranking
 
@@ -494,8 +533,6 @@ def calculate_round_entries(all_predictions, official_results, bonus_for_perfect
 			for prediction in official_results
 			if prediction.round == round
 			)
-
-		write_err("{} : {} games\n".format(round, games_in_this_round))
 
 		for author in authors:
 			author_score_for_this_round = sum(
