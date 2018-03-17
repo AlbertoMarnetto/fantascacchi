@@ -12,6 +12,7 @@ PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ("s
 Ranking = namedtuple("Ranking", ["author", "ranking_list"])
 MastersAppellatives = namedtuple("MastersAppellatives", ["names", "nicknames"])
 TournamentData = namedtuple("TournamentData", [
+	"last_checked_post_datetime",
 	"post_corrections",
 	"should_ignore_post",
 	"official_ranking",
@@ -53,6 +54,9 @@ def load_aux_data(filename):
 			if master_name not in masters_appellatives.nicknames.keys():
 				masters_appellatives.nicknames[master_name] = []
 
+		_, last_checked_post_datetime = get_username_and_date(
+			data.get("last_checked_post", "Dubois\n10 ottobre 1817\n19:14\n"))
+
 		post_corrections = []
 		for correction in data["corrections"]:
 			post_correction = Post(
@@ -79,8 +83,8 @@ def load_aux_data(filename):
 
 		bonus_for_perfect_round_prediction = data.get("bonus_for_perfect_round_prediction", 0)
 
-
 		tournament_data = TournamentData(
+			last_checked_post_datetime = last_checked_post_datetime,
 			post_corrections = post_corrections,
 			should_ignore_post = should_ignore_post,
 			official_ranking = official_ranking,
@@ -259,7 +263,7 @@ LinePredictionResult = namedtuple("LinePredictionResult", [
 	"first_master",
 	"second_master",
 	"match_outcome"])
-	
+
 def get_line_prediction(line, masters_appellatives, author_name):
 	# Find result
 	match_outcome = None
@@ -275,15 +279,15 @@ def get_line_prediction(line, masters_appellatives, author_name):
 		return LinePredictionResult(
 			parse_outcome = ParseOutcome.SUCCESS,
 			suspect_reason = None,
-			first_master = masters_names_in_line[0][0], 
-			second_master = masters_names_in_line[1][0], 
+			first_master = masters_names_in_line[0][0],
+			second_master = masters_names_in_line[1][0],
 			match_outcome = match_outcome)
 	elif len(masters_names_in_line) == 1:
 		return LinePredictionResult(
 			parse_outcome = ParseOutcome.SUSPECT,
 			suspect_reason = "One master, {}".format(masters_names_in_line[0][0]),
-			first_master = None, 
-			second_master = None, 
+			first_master = None,
+			second_master = None,
 			match_outcome = None)
 	elif len(masters_names_in_line) < 2:
 		return LinePredictionResult(
@@ -295,7 +299,7 @@ def get_line_prediction(line, masters_appellatives, author_name):
 	else:
 		return LinePredictionResult(
 			parse_outcome = ParseOutcome.SUSPECT,
-			suspect_reason = "%d masters: %s".format((len(masters_names_in_line), (master_name[0] for master_name in master_name))),
+			suspect_reason = "{} masters: {}".format(len(masters_names_in_line), (", ").join([master_name[0] for master_name in masters_names_in_line])),
 			first_master = None,
 			second_master = None,
 			match_outcome = match_outcome)
@@ -341,7 +345,9 @@ get_line_ranking.line_re = re.compile("^\d*\W*(\S+\s?){1,3}$")
 
 ##############################################
 
-def extract_predictions(post, masters_appellatives, games_per_round, expected_ranking_length):
+def extract_predictions(post, masters_appellatives, tournament_data):
+	games_per_round = tournament_data.games_per_round
+
 	lines = post.text.split("\n")
 
 	post_predictions = []
@@ -358,7 +364,7 @@ def extract_predictions(post, masters_appellatives, games_per_round, expected_ra
 			post_current_round = line_round
 
 		line_prediction = get_line_prediction(line, masters_appellatives, post.author)
-		
+
 		if line_prediction.parse_outcome == ParseOutcome.SUCCESS:
 			prediction = Prediction(
 				author = post.author,
@@ -388,7 +394,7 @@ def extract_predictions(post, masters_appellatives, games_per_round, expected_ra
 			len(post_predictions))
 		is_post_suspect = True
 
-	if len(partial_ranking) == expected_ranking_length:
+	if len(partial_ranking) == tournament_data.expected_ranking_length:
 		post_ranking = Ranking(
 			author = post.author,
 			ranking_list = partial_ranking)
@@ -401,9 +407,9 @@ def extract_predictions(post, masters_appellatives, games_per_round, expected_ra
 	if len(post_predictions) == 0 and post_ranking is None:
 		suspect_reasons += "No predictions nor ranking\n"
 		is_post_suspect = True
-		
-	if is_post_suspect:
-		write_err("Suspect post:\n{}\nReasons:\n{}\n\n".format(post.text, suspect_reasons))
+
+	if is_post_suspect and post.date > tournament_data.last_checked_post_datetime :
+		write_err("Suspect post:\n{}\nReasons:\n{}\n\n".format(repr(post.text), suspect_reasons))
 
 	return post_predictions, post_ranking
 
@@ -520,6 +526,8 @@ def assign_prediction_scores(predictions, scoring_system):
 			score = score))
 
 	return scored_predictions
+
+##############################################
 
 def calculate_round_entries(all_predictions, official_results, bonus_for_perfect_round_prediction):
 	authors = set(post.author for post in all_predictions)
@@ -666,7 +674,7 @@ def print_final_results(grand_total_entries):
 	write_out("────────────────────────────────\n")
 
 ##############################################
-
+# main
 
 masters_appellatives, tournament_data = load_aux_data("aux-data.json")
 
@@ -675,7 +683,7 @@ tournament_post = Post(
 	author = "Official results",
 	date = datetime.datetime(1817, 10, 10),
 	text = tournament_text)
-official_results, _ = extract_predictions(tournament_post, masters_appellatives, tournament_data.games_per_round, tournament_data.expected_ranking_length)
+official_results, _ = extract_predictions(tournament_post, masters_appellatives, tournament_data)
 
 posts = load_posts("thread.html", tournament_data.should_ignore_post, tournament_data.team_names)
 posts.extend(tournament_data.post_corrections)
@@ -686,7 +694,7 @@ all_predictions.extend(official_results)
 all_rankings = []
 
 for post in posts:
-	post_predictions, post_ranking = extract_predictions(post, masters_appellatives, tournament_data.games_per_round, tournament_data.expected_ranking_length)
+	post_predictions, post_ranking = extract_predictions(post, masters_appellatives, tournament_data)
 
 	#write_err("%s : %s\n" % (post.text, post_predictions))
 
@@ -706,6 +714,3 @@ grand_total_entries = calculate_grand_total_entries(round_entries, ranking_score
 
 print_round_results(round_entries)
 print_final_results(grand_total_entries)
-
-
-
