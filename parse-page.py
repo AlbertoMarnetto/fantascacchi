@@ -1,10 +1,11 @@
 from bs4 import BeautifulSoup
 from collections import namedtuple
+import datetime
 import json
 from operator import itemgetter
 import re as re
 
-Post = namedtuple("Post", ["author", "text"])
+Post = namedtuple("Post", ["author", "date", "text"])
 Prediction = namedtuple("Prediction", ["author", "white_name", "black_name", "outcome", "round"])
 PredictionWithScore = namedtuple("PredictionWithScore", Prediction._fields + ("score",))
 Ranking = namedtuple("Ranking", ["author", "ranking_list"])
@@ -18,6 +19,11 @@ TournamentData = namedtuple("TournamentData", [
 	"team_names",
 	"expected_ranking_length",
 	"bonus_for_perfect_round_prediction"])
+RoundEntry = namedtuple("RoundEntry", [
+	"round",
+	"author",
+	"author_score",
+	"author_cumulated_score"])
 
 ######################################
 
@@ -50,6 +56,7 @@ def load_aux_data(filename):
 		for correction in data["corrections"]:
 			post_correction = Post(
 				author = correction["author"],
+				date = datetime.datetime(1817, 10, 10),
 				text = "\n".join(correction["text"]))
 			post_corrections.append(post_correction)
 
@@ -105,12 +112,12 @@ def load_posts(filename, should_ignore_post, team_names):
 			continue
 
 		post_text = post_tag.find("div", attrs = {"class": "info_com"}).text
-		post_username = [ line for line in post_text.split("\n") if line != "" ][0]
+		post_username, post_date = get_username_and_date(post_text)
 		post_author = (
 			post_username if post_username not in team_names.keys()
 			else team_names[post_username])
 
-		post = Post( author = post_author, text = post_text )
+		post = Post( author = post_author, date = post_date, text = post_text )
 
 		if should_ignore_post(post):
 			continue
@@ -118,6 +125,45 @@ def load_posts(filename, should_ignore_post, team_names):
 		posts.append(post)
 
 	return posts
+
+##############################################
+
+def get_username_and_date(text):
+	# date on second non-empty line
+	# time on third not-empty line
+	non_empty_lines = [ line for line in text.split("\n") if line != "" ]
+
+	username = non_empty_lines[0]
+
+	date_text = non_empty_lines[1]
+	time_text = non_empty_lines[2]
+
+	date_elements = date_text.split()
+	day = int(date_elements[0])
+	month = get_username_and_date.months[date_elements[1]]
+	year = int(date_elements[2])
+
+	time_elements = time_text.strip().split(":")
+	hour = int(time_elements[0])
+	minute = int(time_elements[1])
+
+	date = datetime.datetime(year, month, day, hour, minute, 0)
+	return username, date
+
+get_username_and_date.months = {
+	"gennaio" : 1,
+	"febbraio" : 2,
+	"marzo" : 3,
+	"aprile" : 4,
+	"maggio" : 5,
+	"giugno" : 6,
+	"luglio" : 7,
+	"agosto" : 8,
+	"settembre" : 9,
+	"ottobre" : 10,
+	"novembre" : 11,
+	"dicembre" : 12
+	}
 
 ##############################################
 
@@ -436,6 +482,72 @@ def assign_prediction_scores(predictions, scoring_system):
 
 	return scored_predictions
 
+def calculate_round_entries(all_predictions, official_results, bonus_for_perfect_round_prediction):
+	authors = set(post.author for post in all_predictions)
+	rounds = sorted(list(set(prediction.round for prediction in official_results)))
+
+	round_entries = []
+	scores_per_rounds = []
+	for round in rounds:
+		games_in_this_round = sum(
+			1
+			for prediction in official_results
+			if prediction.round == round
+			)
+
+		write_err("{} : {} games\n".format(round, games_in_this_round))
+
+		for author in authors:
+			author_score_for_this_round = sum(
+				prediction.score
+				for prediction in all_predictions
+				if prediction.author == author and prediction.round == round)
+
+			# “Nel caso vengano indovinate tutte le partite di un turno,
+			# verranno assegnati 3 punti aggiuntivi.”
+			author_good_predictions_count = sum(
+				1
+				for prediction in all_predictions
+				if prediction.author == author
+					and prediction.round == round
+					and prediction.score > 0)
+
+			if (author_good_predictions_count == games_in_this_round):
+				author_score_for_this_round += tournament_data.bonus_for_perfect_round_prediction
+
+			scores_per_rounds.append( (round, author, author_score_for_this_round) )
+
+			author_cumulated_score = sum(
+				tuple[2]
+				for tuple in scores_per_rounds
+				if tuple[1] == author)
+
+			round_entries.append(RoundEntry(
+				round = round,
+				author = author,
+				author_score = author_score_for_this_round,
+				author_cumulated_score = author_cumulated_score))
+
+	return round_entries
+
+def calculate_grand_total_entries(round_entries, ranking_scores):
+	authors = set(round_entry.author for round_entry in round_entries)
+
+	grand_total_entries = []
+	for author in authors:
+		author_predictions_score = sum(
+			round_entry.author_score
+			for round_entry in round_entries
+			if round_entry.author == author)
+
+		author_ranking_score = ranking_scores[author] if author in ranking_scores.keys() else 0
+
+		author_final_score = author_predictions_score + author_ranking_score
+
+		grand_total_entries.append((author, author_ranking_score, author_final_score))
+
+	return grand_total_entries
+
 def assign_ranking_scores(rankings, official_ranking):
 	# “Indovinare il vincitore del torneo porterà 3 punti;
 	# ciascun giocatore in classifica, diverso dal vincitore,
@@ -476,13 +588,56 @@ def assign_ranking_scores(rankings, official_ranking):
 
 	return ranking_scores
 
+def print_round_results(round_entries):
+	rounds = sorted(list(set(round_entry.round for round_entry in round_entries)))
+
+	for round in rounds:
+		round_entries_for_this_round = [ round_entry for round_entry in round_entries if round_entry.round == round ]
+
+		# sort by descending score, then by name
+		round_entries_for_this_round.sort( key = lambda round_entry: (-round_entry.author_score, round_entry.author.lower()) )
+
+		write_out("\n────────────────────────────────\n")
+		write_out("Punteggi del turno %s\n\n" % (round))
+		for round_entry in round_entries_for_this_round:
+			write_out("%s : %d\n" % (round_entry.author, round_entry.author_score))
+
+		write_out("\n────────────────────────────────\n")
+		write_out("Classifica dopo il turno %s\n\n" % (round))
+
+		# sort by descending cumulated score
+		round_entries_for_this_round.sort( key = lambda round_entry: (-round_entry.author_cumulated_score, round_entry.author.lower()) )
+		for round_entry in round_entries_for_this_round:
+			write_out("%s : %d\n" % (round_entry.author, round_entry.author_cumulated_score))
+		write_out("────────────────────────────────\n")
+
+def print_final_results(grand_total_entries):
+	# sort by descending score, then by name
+	grand_total_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
+	write_out("\n────────────────────────────────\n")
+	write_out("Punteggi per i piazzamenti\n")
+	for author, author_ranking_score, author_final_score in grand_total_entries:
+		write_out("%s : %d\n" % (author, author_ranking_score))
+
+	write_out("\n────────────────────────────────\n")
+	write_out("CLASSIFICA FINALE\n")
+
+	# sort by descending cumulated score
+	grand_total_entries.sort( key = lambda round_entry: (-round_entry[2], round_entry[0].lower()))
+	for author, author_ranking_score, author_final_score in grand_total_entries:
+		write_out("%s : %d\n" % (author, author_final_score))
+	write_out("────────────────────────────────\n")
+
 ##############################################
 
 
 masters_appellatives, tournament_data = load_aux_data("aux-data.json")
 
 tournament_text = open("tournament.txt", "rb").read().decode("utf-8", "ignore")
-tournament_post = Post( author = "Official results", text = tournament_text)
+tournament_post = Post(
+	author = "Official results",
+	date = datetime.datetime(1817, 10, 10),
+	text = tournament_text)
 official_results, _ = extract_predictions(tournament_post, masters_appellatives, tournament_data.games_per_round, tournament_data.expected_ranking_length)
 
 posts = load_posts("thread.html", tournament_data.should_ignore_post, tournament_data.team_names)
@@ -508,94 +663,12 @@ all_predictions = repair_turns(all_predictions)
 all_predictions = remove_duplicates(all_predictions)
 all_predictions = assign_prediction_scores(all_predictions, tournament_data.scoring_system)
 
-authors = set(post.author for post in posts)
-rounds = sorted(list(set(prediction.round for prediction in official_results)))
-games_per_round_count = len(masters_appellatives.names) / 2
-
-scores_per_rounds = []
-for round in rounds:
-	round_entries = []
-	for author in authors:
-		author_score = sum(
-			prediction.score
-			for prediction in all_predictions
-			if prediction.author == author and prediction.round == round)
-
-		# “Nel caso vengano indovinate tutte le partite di un turno,
-		# verranno assegnati 3 punti aggiuntivi.”
-		author_good_predictions_count = sum(
-			1
-			for prediction in all_predictions
-			if prediction.author == author
-				and prediction.round == round
-				and prediction.score > 0)
-
-		if (author_good_predictions_count == games_per_round_count):
-			author_score += tournament_data.bonus_for_perfect_round_prediction
-
-		scores_per_rounds.append( (round, author, author_score) )
-
-		author_cumulated_score = sum(
-			tuple[2]
-			for tuple in scores_per_rounds
-			if tuple[1] == author)
-
-		round_entries.append((author, author_score, author_cumulated_score))
-
-	# sort by descending score, then by name
-	round_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
-
-	write_out("\n────────────────────────────────\n")
-	write_out("Punteggi del turno %s\n\n" % (round))
-	for author, author_score, author_cumulated_score in round_entries:
-		write_out("%s : %d\n" % (author, author_score))
-
-	write_out("\n────────────────────────────────\n")
-	write_out("Classifica dopo il turno %s\n\n" % (round))
-
-	# sort by descending cumulated score
-	round_entries.sort( key = lambda round_entry: (-round_entry[2], round_entry[0].lower()) )
-	for author, author_score, author_cumulated_score in round_entries:
-		write_out("%s : %d\n" % (author, author_cumulated_score))
-	write_out("────────────────────────────────\n")
-
+round_entries = calculate_round_entries(all_predictions, official_results, tournament_data.bonus_for_perfect_round_prediction)
 ranking_scores = assign_ranking_scores(all_rankings, tournament_data.official_ranking)
-#write_out("Punti piazzamenti:\n%s\n" % str(ranking_scores))
+grand_total_entries = calculate_grand_total_entries(round_entries, ranking_scores)
 
-grand_total_entries = []
-for author in authors:
-	author_predictions_score = sum(
-		round_entry[2]
-		for round_entry in round_entries
-		if round_entry[0] == author)
-
-	author_ranking_score = ranking_scores[author] if author in ranking_scores.keys() else 0
-
-	author_final_score = author_predictions_score + author_ranking_score
-
-	grand_total_entries.append((author, author_ranking_score, author_final_score))
-
-# sort by descending score, then by name
-grand_total_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
-write_out("\n────────────────────────────────\n")
-write_out("Punteggi per i piazzamenti\n")
-for author, author_ranking_score, author_final_score in grand_total_entries:
-	write_out("%s : %d\n" % (author, author_ranking_score))
-
-write_out("\n────────────────────────────────\n")
-write_out("CLASSIFICA FINALE\n")
-
-# sort by descending cumulated score
-grand_total_entries.sort( key = lambda round_entry: (-round_entry[2], round_entry[0].lower()))
-for author, author_ranking_score, author_final_score in grand_total_entries:
-	write_out("%s : %d\n" % (author, author_final_score))
-write_out("────────────────────────────────\n")
+print_round_results(round_entries)
+print_final_results(grand_total_entries)
 
 
-#import datetime
-#import locale
 
-## https://docs.python.org/2/library/time.html#time.strftime
-#input = "15 marzo 2018 - 22:54"
-#loc = locale.setlocale(locale.LC_ALL, "Italian_Italy.1252")
-#date = datetime.datetime.strptime( input, "%d %B %Y - %H:%M" )
