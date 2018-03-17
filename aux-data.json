@@ -22,12 +22,8 @@
 		"Fabiano Caruana" : [ "Caru", "Cariana" ],
 		"Vishy Anand" : [ "Andand" ],
 		"Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
-		"Hikaru Nakamura" : [ "Naka", "ka", "Nakamur" ],
-		"Debashis" : ["Debshis"],
-		"Vitiugov" : ["Vituigiv", "Vituigov"],
-		"Moussard" : ["Muossard"],
-		"Dubov" : ["Dubiv"],
-		"Alexander Grischuk" : ["Grishuk", "GRIS"],
+		"Hikaru Nakamura" : [ "Naka" ],
+		"Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck"],
 		"Vladimir Kramnik" : ["KRAM", "Kraminik"],
 		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov"],
 		"Levon Aronian" : ["ARON", "Aronina"],
@@ -46,10 +42,12 @@
 	,
 	"team_names" :
 	{
-	"paolo58" : "ARIANNA",
-	"zed" : "QUARTA NAZIONALE",
-	"falk17" : "SISSA LEONFORTE"
+		"paolo58" : "ARIANNA",
+		"zed" : "QUARTA NAZIONALE",
+		"falk17" : "SISSA LEONFORTE"
 	}
+	,
+	"last_checked_post" : "\nTalia\n\n\n            17 marzo 2018 -\n            10:16          \n"
 	,
 	"corrections" :
 	[
@@ -57,7 +55,7 @@
 			"author" : "topalovo",
 			"text" :
 			[
-"\n kramnik-grischuk patta\n karjakin-mamedyarov 1-0\n  aronian-ding liren 1-0;\n caruana-so patta"			
+				"\n kramnik-grischuk patta\n karjakin-mamedyarov 1-0\n  aronian-ding liren 1-0;\n caruana-so patta"
 			]
 		}
 		,
@@ -65,15 +63,15 @@
 			"author" : "topalovo",
 			"text" :
 			[
-"\nQuesti i i miei pronostici :\nKramnik-Karjakin patta \n Mamedyarov-Aronian patta \n Ding Liren-Caruana 0-1 \n Grischuk-So 1-0 \n"			
+				"\nQuesti i i miei pronostici :\nKramnik-Karjakin patta \n Mamedyarov-Aronian patta \n Ding Liren-Caruana 0-1 \n Grischuk-So 1-0 \n"
 			]
-		}			
+		}
 		,
 		{
 			"author" : "topalovo",
 			"text" :
 			[
-"\nI miei pronostici per il turno 3:\n karjakin-grischuk 1-0\n; Aronian-kramnik patta\n; caruana – mamedyarov patta\n; so-ding 1-0 \n"			
+				"\nI miei pronostici per il turno 3:\n karjakin-grischuk 1-0\n; Aronian-kramnik patta\n; caruana – mamedyarov patta\n; so-ding 1-0 \n"
 			]
 		}
 		,
@@ -92,9 +90,9 @@
 			"author" : "topalovo",
 			"text" :
 			[
-"Le mie previsioni per il turno 4 :\ngrischuk-ding liren patta\n mamedyarov-so patta\n kramnik-caruana patta\n karjakin-aronian 1-0\nI miei pronostici per il podio :\n1. kramnik\n 2. caruana\n 3. karjakin\n\nBuona giornata\n"
+				"Le mie previsioni per il turno 4 :\ngrischuk-ding liren patta\n mamedyarov-so patta\n kramnik-caruana patta\n karjakin-aronian 1-0\nI miei pronostici per il podio :\n1. kramnik\n 2. caruana\n 3. karjakin\n\nBuona giornata\n"
 			]
-		}	
+		}
 	]
 	,
 	"corrections_sample" :
@@ -109,63 +107,11 @@
 				"Hikaru Nakamura - Vishy Anand @@@",
 				"Wesley So - Maxime Vachier-Lagrave @@@"
 			]
-		}		
+		}
 	]
 	,
 	"posts_string_blacklist" :
 	[
-		"16 febbraio 2018 -\n            21:57",
-		"16 febbraio 2018 -\n            22:02",
-		"17 febbraio 2018 -\n            23:40",
-		"18 febbraio 2018 -\n            23:23",
-		"19 febbraio 2018 -\n            21:35",
-		"19 febbraio 2018 -\n            21:48",
-		"19 febbraio 2018 -\n            22:40",
-		"19 febbraio 2018 -\n            22:54",
-		"19 febbraio 2018 -\n            21:54",
-		"\nfalk17\n\n\n            9 marzo 2018 -\n            19:57          \nsquadra: SISSA LEONFORTE",
-		"9 marzo 2018 -\n            22:22",
-		"9 marzo 2018 -\n            22:34",
-		"9 marzo 2018 -\n            22:38",
-		"\ntopalovo\n\n\n            9 marzo 2018 -\n            23:29",
-		"\nFranco77\n\n\n            10 marzo 2018 -\n            21:20          \n",
-		"\nsandinista\n\n\n            11 marzo 2018 -\n            14:54",
-		"\nchicco\n\n\n            11 marzo 2018 -\n            14:55",
-		"\nchicco\n\n\n            11 marzo 2018 -\n            15:03",
-		"\nsandinista\n\n\n            11 marzo 2018 -\n            15:17 ",
-		"\nIrishGambit\n\n\n            11 marzo 2018 -\n            16:17",
-		"\nsandinista\n\n\n            11 marzo 2018 -\n            16:36",
-		"\nIrishGambit\n\n\n            11 marzo 2018 -\n            22:10",
-		"\nchicco\n\n\n            11 marzo 2018 -\n            22:37",
-		"\nchicco\n\n\n            11 marzo 2018 -\n            22:40",
-		"\ntopalovo\n\n\n            11 marzo 2018 -\n",
-		"\nIrishGambit\n\n\n            12 marzo 2018 -\n            08:58",
-		"\nIrishGambit\n\n\n            11 marzo 2018 -\n            23:51",
-		"\nIrishGambit\n\n\n            11 marzo 2018 -\n            23:37",
-		"\nIrishGambit\n\n\n            11 marzo 2018 -\n            23:55",
-		"\nIrishGambit\n\n\n            12 marzo 2018 -\n            00:00",
-		"\ntallerino\n\n\n            12 marzo 2018 -\n            13:06",
-		"\nIrishGambit\n\n\n            12 marzo 2018 -\n            13:43",
-		"\nIrishGambit\n\n\n            12 marzo 2018 -\n            00:07",
-		"\norcoisback\n\n\n            12 marzo 2018 -\n            12:39",
-		"\nIrishGambit\n\n\n            12 marzo 2018 -\n            13:42",
-		"\ntopalovo\n\n\n            12 marzo 2018 -\n            14:49",
-		"\nsandinista\n\n\n            12 marzo 2018 -\n            14:54",
-		"\nsandinista\n\n\n            12 marzo 2018 -\n            14:58",
-		"\nsandinista\n\n\n            12 marzo 2018 -\n            22:57",
-		"\nIrishGambit\n\n\n            13 marzo 2018 -\n            00:27",
-		"\nIrishGambit\n\n\n            13 marzo 2018 -\n            00:31          \n",
-		"\nIrishGambit\n\n\n            13 marzo 2018 -\n            00:46",
-		"\nIrishGambit\n\n\n            13 marzo 2018 -\n            15:45",
-		"\ntopalovo\n\n\n            13 marzo 2018 -\n            11:14          \n",
-		"\nZugzwang\n\n\n            13 marzo 2018 -\n            16:57          \n",
-		"\nIrishGambit\n\n\n            13 marzo 2018 -\n            18:14          \n",
-		"\nsandinista\n\n\n            15 marzo 2018 -\n            20:57          \n",
-		"\nandijjj\n\n\n            15 marzo 2018 -\n",
-		"\nsandinista\n\n\n            15 marzo 2018 -\n            21:35",
-		"\nIrishGambit\n\n\n            15 marzo 2018 -\n            21:57",
-		"\nsandinista\n\n\n            15 marzo 2018 -\n            21:59",
-		"",
 		"",
 		"◘"
 		]
