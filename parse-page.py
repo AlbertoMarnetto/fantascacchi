@@ -24,6 +24,7 @@ TournamentData = namedtuple("TournamentData", [
 RoundEntry = namedtuple("RoundEntry", [
 	"round",
 	"author",
+	"author_predictions_count",
 	"author_score",
 	"author_cumulated_score"])
 
@@ -543,6 +544,12 @@ def calculate_round_entries(all_predictions, official_results, bonus_for_perfect
 			)
 
 		for author in authors:
+			author_predictions_for_this_round = [
+				prediction
+				for prediction in all_predictions
+				if prediction.author == author
+					and prediction.round == round]
+
 			author_score_for_this_round = sum(
 				prediction.score
 				for prediction in all_predictions
@@ -552,10 +559,8 @@ def calculate_round_entries(all_predictions, official_results, bonus_for_perfect
 			# verranno assegnati 3 punti aggiuntivi.”
 			author_good_predictions_count = sum(
 				1
-				for prediction in all_predictions
-				if prediction.author == author
-					and prediction.round == round
-					and prediction.score > 0)
+				for prediction in author_predictions_for_this_round
+				if prediction.score > 0)
 
 			if (author_good_predictions_count == games_in_this_round):
 				author_score_for_this_round += tournament_data.bonus_for_perfect_round_prediction
@@ -570,6 +575,7 @@ def calculate_round_entries(all_predictions, official_results, bonus_for_perfect
 			round_entries.append(RoundEntry(
 				round = round,
 				author = author,
+				author_predictions_count = len(author_predictions_for_this_round),
 				author_score = author_score_for_this_round,
 				author_cumulated_score = author_cumulated_score))
 
@@ -637,7 +643,10 @@ def print_round_results(round_entries):
 	rounds = sorted(list(set(round_entry.round for round_entry in round_entries)))
 
 	for round in rounds:
-		round_entries_for_this_round = [ round_entry for round_entry in round_entries if round_entry.round == round ]
+		round_entries_for_this_round = [
+			round_entry
+			for round_entry in round_entries
+			if round_entry.round == round ]
 
 		# sort by descending score, then by name
 		round_entries_for_this_round.sort( key = lambda round_entry: (-round_entry.author_score, round_entry.author.lower()) )
@@ -645,6 +654,8 @@ def print_round_results(round_entries):
 		write_out("\n────────────────────────────────\n")
 		write_out("Punteggi del turno %s\n\n" % (round))
 		for round_entry in round_entries_for_this_round:
+			if round_entry.author_predictions_count == 0:
+				continue
 			write_out("%s : %d\n" % (round_entry.author, round_entry.author_score))
 
 		write_out("\n────────────────────────────────\n")
