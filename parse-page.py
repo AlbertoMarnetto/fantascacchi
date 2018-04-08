@@ -20,7 +20,8 @@ TournamentData = namedtuple("TournamentData", [
 	"games_per_round",
 	"team_names",
 	"expected_ranking_length",
-	"bonus_for_perfect_round_prediction"])
+	"bonus_for_perfect_round_prediction",
+	"ranking_scoring"])
 RoundEntry = namedtuple("RoundEntry", [
 	"round",
 	"author",
@@ -84,6 +85,9 @@ def load_aux_data(filename):
 
 		bonus_for_perfect_round_prediction = data.get("bonus_for_perfect_round_prediction", 0)
 
+		ranking_scoring = data.get("ranking_scoring",
+			{ "first_ranked_correct" : 3, "other_ranked_correct" : 2, "ranked_incorrect" : 1 } )
+
 		tournament_data = TournamentData(
 			last_checked_post_datetime = last_checked_post_datetime,
 			post_corrections = post_corrections,
@@ -93,7 +97,8 @@ def load_aux_data(filename):
 			games_per_round = games_per_round,
 			team_names = team_names,
 			expected_ranking_length = expected_ranking_length,
-			bonus_for_perfect_round_prediction = bonus_for_perfect_round_prediction
+			bonus_for_perfect_round_prediction = bonus_for_perfect_round_prediction,
+			ranking_scoring = ranking_scoring
 			)
 
 		return masters_appellatives, tournament_data
@@ -194,38 +199,38 @@ def get_line_round(line):
 	return None
 
 get_line_round.ordinal_replacements = [
-	("(^|\W)primo($|\W)", " 1 "),
-	("(^|\W)secondo($|\W)", " 2 "),
-	("(^|\W)terzo($|\W)", " 3 "),
-	("(^|\W)quarto($|\W)", " 4 "),
-	("(^|\W)quinto($|\W)", " 5 "),
-	("(^|\W)sesto($|\W)", " 6 "),
-	("(^|\W)settimo($|\W)", " 7 "),
-	("(^|\W)ottavo($|\W)", " 8 "),
-	("(^|\W)nono($|\W)", " 9 "),
-	("(^|\W)decimo($|\W)", " 10 "),
-	("(^|\W)undicesimo($|\W)", " 11 "),
-	("(^|\W)dodicesimo($|\W)", " 12 "),
-	("(^|\W)tredicesimo($|\W)", " 13 "),
-	("(^|\W)quattordicesimo($|\W)", " 14 "),
-	("(^|\W)quindicesimo($|\W)", " 15 "),
-	("(^|\W)sedicesimo($|\W)", " 16 "),
-	("(^|\W)I($|\W)", " 1 "),
-	("(^|\W)II($|\W)", " 2 "),
-	("(^|\W)III($|\W)", " 3 "),
-	("(^|\W)IV($|\W)", " 4 "),
-	("(^|\W)V($|\W)", " 5 "),
-	("(^|\W)VI($|\W)", " 6 "),
-	("(^|\W)VII($|\W)", " 7 "),
-	("(^|\W)VIII($|\W)", " 8 "),
-	("(^|\W)IX($|\W)", " 9 "),
-	("(^|\W)X($|\W)", " 10 "),
-	("(^|\W)XI($|\W)", " 11 "),
-	("(^|\W)XII($|\W)", " 12 "),
-	("(^|\W)XIII($|\W)", " 13 "),
-	("(^|\W)XIV($|\W)", " 14 "),
-	("(^|\W)XV($|\W)", " 15 "),
-	("(^|\W)XVI($|\W)", " 16 "),
+	("(^|\W)primo(:|$|\W)", " 1 "),
+	("(^|\W)secondo(:|$|\W)", " 2 "),
+	("(^|\W)terzo(:|$|\W)", " 3 "),
+	("(^|\W)quarto(:|$|\W)", " 4 "),
+	("(^|\W)quinto(:|$|\W)", " 5 "),
+	("(^|\W)sesto(:|$|\W)", " 6 "),
+	("(^|\W)settimo(:|$|\W)", " 7 "),
+	("(^|\W)ottavo(:|$|\W)", " 8 "),
+	("(^|\W)nono(:|$|\W)", " 9 "),
+	("(^|\W)decimo(:|$|\W)", " 10 "),
+	("(^|\W)undicesimo(:|$|\W)", " 11 "),
+	("(^|\W)dodicesimo(:|$|\W)", " 12 "),
+	("(^|\W)tredicesimo(:|$|\W)", " 13 "),
+	("(^|\W)quattordicesimo(:|$|\W)", " 14 "),
+	("(^|\W)quindicesimo(:|$|\W)", " 15 "),
+	("(^|\W)sedicesimo(:|$|\W)", " 16 "),
+	("(^|\W)I(:|$|\W)", " 1 "),
+	("(^|\W)II(:|$|\W)", " 2 "),
+	("(^|\W)III(:|$|\W)", " 3 "),
+	("(^|\W)IV(:|$|\W)", " 4 "),
+	("(^|\W)V(:|$|\W)", " 5 "),
+	("(^|\W)VI(:|$|\W)", " 6 "),
+	("(^|\W)VII(:|$|\W)", " 7 "),
+	("(^|\W)VIII(:|$|\W)", " 8 "),
+	("(^|\W)IX(:|$|\W)", " 9 "),
+	("(^|\W)X(:|$|\W)", " 10 "),
+	("(^|\W)XI(:|$|\W)", " 11 "),
+	("(^|\W)XII(:|$|\W)", " 12 "),
+	("(^|\W)XIII(:|$|\W)", " 13 "),
+	("(^|\W)XIV(:|$|\W)", " 14 "),
+	("(^|\W)XV(:|$|\W)", " 15 "),
+	("(^|\W)XVI(:|$|\W)", " 16 "),
 	]
 
 get_line_round.ordinal_replacements_regexps = [
@@ -233,8 +238,8 @@ get_line_round.ordinal_replacements_regexps = [
 ]
 
 get_line_round.round_regexps = [
-	re.compile("(Round|Turno)\D*(?P<round_number>\d+)", re.IGNORECASE),
-	re.compile("(?P<round_number>\d+)\D*(Round|Turno)", re.IGNORECASE)
+	re.compile("(Round|Turno)\W*(?P<round_number>\d+)", re.IGNORECASE),
+	re.compile("(?P<round_number>\d+)\W*(Round|Turno)", re.IGNORECASE)
 ]
 
 def get_masters_names_in_line(line, masters_appellatives):
@@ -315,6 +320,7 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("\D1\s*[\\\/]\s*2($|\D)"), "X"), # 1/2
 		(re.compile("\D0\.5($|\D)"), "X"), # 0.5
 		(re.compile("\spatta($|\s)"), "X"), # patta
+		(re.compile("\s½($|\s)"), "X"), # patta
 		(re.compile("\s1\s*0($|\s)"), "1"), # 1 0
 		(re.compile("\s0\s*1($|\s)"), "2"), # 0 1
 		(re.compile("\s[xX]($|\s)"), "X"), # X
@@ -342,7 +348,7 @@ def get_line_ranking(line, masters_appellatives, author_name):
 
 # One optional numer at the beginning,
 # followed by 1-3 words
-get_line_ranking.line_re = re.compile("^\d*\W*(\S+\s?){1,3}$")
+get_line_ranking.line_re = re.compile("^\d*[).\W]*(\S+\s?){1,3}$")
 
 ##############################################
 
@@ -591,20 +597,23 @@ def calculate_grand_total_entries(round_entries, ranking_scores):
 			for round_entry in round_entries
 			if round_entry.author == author)
 
-		author_ranking_score = ranking_scores[author] if author in ranking_scores.keys() else 0
+		if author_predictions_score > 10 and author not in ranking_scores:
+			write_err("Suspect missing ranking for {}\n".format(author))
 
+		author_ranking_score = ranking_scores.get(author, 0)
 		author_final_score = author_predictions_score + author_ranking_score
 
-		grand_total_entries.append((author, author_ranking_score, author_final_score))
+		grand_total_entries.append((author, author_final_score))
 
 	return grand_total_entries
 
-def assign_ranking_scores(rankings, official_ranking):
+def assign_ranking_scores(rankings, tournament_data):
 	# “Indovinare il vincitore del torneo porterà 3 punti;
 	# ciascun giocatore in classifica, diverso dal vincitore,
 	# di cui si sia indovinata la posizione porterà 2 punti;
 	# ciascun giocatore indovinato ma messo al posto sbagliato
 	# porterà 1 punto.”
+	official_ranking = tournament_data.official_ranking
 
 	all_in_official_ranking = [
 		master_name
@@ -624,15 +633,15 @@ def assign_ranking_scores(rankings, official_ranking):
 
 		for position, master_name in enumerate(ranking.ranking_list):
 			if position == 0 and master_name in official_ranking[position + 1]:
-				score += 3
+				score += tournament_data.ranking_scoring["first_ranked_correct"]
 			elif position > 0 and master_name in official_ranking[position + 1]:
-				score += 2
+				score += tournament_data.ranking_scoring["other_ranked_correct"]
 			else:
 				wrongly_placed.append(master_name)
 
 		for master_name in wrongly_placed:
 			if master_name in all_in_official_ranking:
-				score += 1
+				score += tournament_data.ranking_scoring["ranked_incorrect"]
 
 		# This automatically overwrites older predictions
 		ranking_scores[ranking.author] = score
@@ -667,22 +676,40 @@ def print_round_results(round_entries):
 			write_out("%s : %d\n" % (round_entry.author, round_entry.author_cumulated_score))
 		write_out("────────────────────────────────\n")
 
-def print_final_results(grand_total_entries):
+
+def print_ranking_scores(ranking_scores):
+	ranking_entries = list(ranking_scores.items())
+
 	# sort by descending score, then by name
-	grand_total_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
+	ranking_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()) )
 	write_out("\n────────────────────────────────\n")
 	write_out("Punteggi per i piazzamenti\n")
-	for author, author_ranking_score, author_final_score in grand_total_entries:
+	for author, author_ranking_score in ranking_entries:
 		write_out("%s : %d\n" % (author, author_ranking_score))
 
+
+def print_final_results(grand_total_entries):
 	write_out("\n────────────────────────────────\n")
 	write_out("CLASSIFICA FINALE\n")
 
 	# sort by descending cumulated score
-	grand_total_entries.sort( key = lambda round_entry: (-round_entry[2], round_entry[0].lower()))
-	for author, author_ranking_score, author_final_score in grand_total_entries:
+	grand_total_entries.sort( key = lambda round_entry: (-round_entry[1], round_entry[0].lower()))
+	for author, author_final_score in grand_total_entries:
 		write_out("%s : %d\n" % (author, author_final_score))
 	write_out("────────────────────────────────\n")
+
+##############################################
+# aux
+
+def print_all_rankings(sorted_rankings):
+	write_err("\n")
+	for ranking in sorted_rankings:
+		write_err("{}:\n{}\n{}\n{}\n\n".format(
+			ranking.author,
+			ranking.ranking_list[0],
+			ranking.ranking_list[1],
+			ranking.ranking_list[2],
+			))
 
 ##############################################
 # main
@@ -720,8 +747,11 @@ all_predictions = remove_duplicates(all_predictions)
 all_predictions = assign_prediction_scores(all_predictions, tournament_data.scoring_system)
 
 round_entries = calculate_round_entries(all_predictions, official_results, tournament_data.bonus_for_perfect_round_prediction)
-ranking_scores = assign_ranking_scores(all_rankings, tournament_data.official_ranking)
+ranking_scores = assign_ranking_scores(all_rankings, tournament_data)
 grand_total_entries = calculate_grand_total_entries(round_entries, ranking_scores)
 
+sorted_rankings = sorted(all_rankings, key = lambda ranking: (ranking.author.lower()))
+
 print_round_results(round_entries)
+print_ranking_scores(ranking_scores)
 print_final_results(grand_total_entries)
