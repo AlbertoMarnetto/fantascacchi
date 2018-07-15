@@ -5,14 +5,14 @@
 	"bonus_for_perfect_round_prediction": 2,
 	"masters_names" :
 	[
+		"Georg Meier",
+		"Radoslaw Wojtaszek",
+		"Vladislav Kovalev",
+		"Jan-Krzysztof Duda",
+		"Liviu-Dieter Nisipeanu",
 		"Vladimir Kramnik",
-		"Alexander Grischuk",
-		"Sergey Karjakin",
-		"Shakhriyar Mamedyarov",
-		"Levon Aronian",
-		"Ding Liren",
-		"Fabiano Caruana",
-		"Wesley So"
+		"Anish Giri",
+		"Ian Nepomniachtchi"
 	]
 	,
 	"masters_nicknames" :
@@ -33,9 +33,9 @@
 	,
 	"official_ranking" :
 	{
-		"1" : [ "Fabiano Caruana" ],
-		"2" : [ "Shakhriyar Mamedyarov" ],
-		"3" : [ "Sergey Karjakin" ]
+		"1" : [ "" ],
+		"2" : [ "" ],
+		"3" : [ "" ]
 	}
 	,
 	"ranking_scoring" :
@@ -49,63 +49,25 @@
 	{
 		"paolo58" : "ARIANNA",
 		"zed" : "QUARTA NAZIONALE",
-		"falk17" : "SISSA LEONFORTE"
+		"falk17" : "SISSA LEONFORTE",
+		"sanchopanza" : "moscacchista"
 	}
 	,
-	"last_checked_post" : "\nchicco\n\n\n            26 marzo 2018 -\n            21:49          \n"
+	"last_checked_post" : "\nsandinista\n\n\n            14 luglio 2018 -\n            12:35"
 	,
 	"corrections" :
 	[
 		{
-			"author" : "topalovo",
+			"author" : "moscacchista",
 			"text" :
 			[
-				"\n kramnik-grischuk patta\n karjakin-mamedyarov 1-0\n  aronian-ding liren 1-0;\n caruana-so patta"
+				"Meier – Giri ½ – ½",
+				"Kovalev – Nepomniachtchi ½ – ½",
+				"Nisipeanu – Duda ½ – ½",
+				"Wojtaszek – Kramnik ½ – ½"
 			]
 		}
-		,
-		{
-			"author" : "topalovo",
-			"text" :
-			[
-				"\nQuesti i i miei pronostici :\nKramnik-Karjakin patta \n Mamedyarov-Aronian patta \n Ding Liren-Caruana 0-1 \n Grischuk-So 1-0 \n"
-			]
-		}
-		,
-		{
-			"author" : "topalovo",
-			"text" :
-			[
-				"\nI miei pronostici per il turno 3:\n karjakin-grischuk 1-0\n; Aronian-kramnik patta\n; caruana – mamedyarov patta\n; so-ding 1-0 \n"
-			]
-		}
-		,
-		{
-			"author" : "Zugzwang",
-			"text" :
-			[
-				"Karjakin – Grischuk ½ - ½",
-				"Aronian – Kramnik ½ - ½",
-				"Caruana – Mamedyarov ½ - ½",
-				"So – Ding ½ - ½"
-			]
-		}
-		,
-		{
-			"author" : "topalovo",
-			"text" :
-			[
-				"Le mie previsioni per il turno 4 :\ngrischuk-ding liren patta\n mamedyarov-so patta\n kramnik-caruana patta\n karjakin-aronian 1-0\nI miei pronostici per il podio :\n1. kramnik\n 2. caruana\n 3. karjakin\n\nBuona giornata\n"
-			]
-		}
-		,
-		{
-			"author" : "topalovo",
-			"text" :
-			[
-				"\ntopalovo\n\n\n            21 marzo 2018 -\n            15:14          \nPronistico del sottoscritto per i turni 10, 11 e 12 dei candidati :\nturno 10 :  grischuk-karjakin patta\n; kramnik-aronian patta\n; mamedyarov-caruana patta; ding liren-so 1-0\nturno 11 : ding liren-grischuk 0-1\n; so-mamedyarov 0-1\n; caruana-kramnik 1-0\n;\naronian-karjakin 0-1\nturno 12 : grischuk-aronian 1-0\n; karjakin-caruana 1-0\n; kramnik-so patta\n; mamedyarov-ding liren 1-0\n.\nBuona giornata\n"
-			]
-		}	]
+	]
 	,
 	"corrections_sample" :
 	[
@@ -124,8 +86,6 @@
 	,
 	"posts_string_blacklist" :
 	[
-		"\nIrishGambit\n\n\n            20 marzo 2018 -\n            01:00",
-		"\ntopalovo\n\n\n            21 marzo 2018 -\n            15:14          \n",
-		"◘"
-		]
+
+	]
 }

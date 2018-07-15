@@ -1,100 +1,16 @@
-# Torneo dei Candidati 2018
+# Dortmund 2018
 
 Round 1
 
-Kramnik – Grischuk 1 - 0
-Karjakin – Mamedyarov 0 - 1
-Aronian – Ding  ½ - ½
-Caruana – So 1 - 0
+Wojtaszek – Meier ½ – ½
+Kramnik – Nisipeanu ½ – ½
+Duda – Kovalev ½ – ½
+Nepomniachtchi – Giri ½ – ½
 
 Round 2
 
-Grischuk – So 1 - 0
-Ding – Caruana ½ - ½
-Mamedyarov – Aronian ½ - ½
-Kramnik – Karjakin ½ - ½
-
-Round 3
-
-Karjakin – Grischuk ½ - ½
-Aronian – Kramnik 0 - 1
-Caruana – Mamedyarov ½ - ½
-So – Ding ½ - ½
-
-Round 4
-
-Grischuk – Ding ½ - ½
-Mamedyarov – So ½ - ½
-Kramnik – Caruana 0 - 1
-Karjakin – Aronian 0 - 1
-
-Round 5
-
-Aronian – Grischuk ½ - ½
-Caruana – Karjakin ½ - ½
-So – Kramnik ½ - ½
-Ding – Mamedyarov ½ - ½
-
-Round 6
-Caruana – Grischuk ½ - ½
-So – Aronian 1 - 0
-Ding – Karjakin ½ - ½
-Mamedyarov – Kramnik 1 - 0
-
-Round 7
-
-Grischuk – Mamedyarov ½ - ½
-Kramnik – Ding Liren ½ - ½
-Karjakin – So 1 - 0
-Aronian – Caruana 0 - 1
-
-Round 8
-
-Grischuk – Kramnik 1 - 0
-Mamedyarov – Karjakin ½ - ½
-Ding – Aronian ½ - ½
-So – Caruana ½ - ½
-
-Round 9
-
-So – Grischuk ½ - ½
-Caruana – Ding Liren ½ - ½
-Aronian – Mamedyarov ½ - ½
-Karjakin – Kramnik 1 - 0
-
-Round 10
-Mamedyarov - Caruana ½ - ½ 
-Grischuk - Karjakin ½ - ½ 
-Ding - So ½ - ½ 
-Kramnik - Aronian 1 - 0 
-
-Round 11
-Caruana - Kramnik ½ - ½ 
-Ding - Grischuk ½ - ½ 
-So - Mamedyarov ½ - ½ 
-Aronian - Karjakin 0 - 1 
-
-Round 12
-Grischuk - Aronian ½ - ½
-Karjakin - Caruana 1 - 0
-Kramnik - So ½ - ½
-Mamedyarov - Ding 0 - 1
-
-Round 12
-Grischuk - Aronian 
-Karjakin - Caruana 1 - 0
-Kramnik - So ½ - ½
-Mamedyarov - Ding 0 - 1
-
-Round 13
-Mamedyarov - Grischuk 1 - 0
-Ding - Kramnik ½ - ½
-So - Karjakin ½ - ½
-Caruana - Aronian 1 - 0
-
-Round 14
-Grischuk - Caruana 0 - 1
-Aronian - So ½ - ½
-Karjakin - Ding ½ - ½
-Kramnik - Mamedyarov ½ - ½
+Meier – Giri @@@
+Kovalev – Nepomniachtchi @@@
+Nisipeanu – Duda @@@
+Wojtaszek – Kramnik @@@
 
