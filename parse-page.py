@@ -234,12 +234,12 @@ get_line_round.ordinal_replacements = [
 	]
 
 get_line_round.ordinal_replacements_regexps = [
-	( re.compile(pair[0], re.IGNORECASE), pair[1]) for pair in get_line_round.ordinal_replacements
+	( re.compile(pair[0], re.IGNORECASE | re.ASCII), pair[1]) for pair in get_line_round.ordinal_replacements
 ]
 
 get_line_round.round_regexps = [
-	re.compile("(Round|Turno)\W*(?P<round_number>\d+)", re.IGNORECASE),
-	re.compile("(?P<round_number>\d+)\W*(Round|Turno)", re.IGNORECASE)
+	re.compile("(Round|Turno)\W*(?P<round_number>\d+)", re.IGNORECASE | re.ASCII),
+	re.compile("(?P<round_number>\d+)\W*(Round|Turno)", re.IGNORECASE | re.ASCII)
 ]
 
 def get_masters_names_in_line(line, masters_appellatives):
