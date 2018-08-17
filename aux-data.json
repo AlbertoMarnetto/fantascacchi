@@ -31,11 +31,13 @@
 		"dummy" : []
 	}
 	,
+	"official_ranking_source" : "https://www.sparkassen-chess-meeting.de/turnier-2017/tabelle.html"
+	,
 	"official_ranking" :
 	{
-		"1" : [ "" ],
-		"2" : [ "" ],
-		"3" : [ "" ]
+		"1" : [ "Ian Nepomniachtchi" ],
+		"2" : [ "Anish Giri" ],
+		"3" : [ "Vladislav Kovalev" ]
 	}
 	,
 	"ranking_scoring" :
@@ -53,7 +55,7 @@
 		"sanchopanza" : "moscacchista"
 	}
 	,
-	"last_checked_post" : "\nsandinista\n\n\n            14 luglio 2018 -\n            12:35"
+	"last_checked_post" : "\nBlade\n\n\n            22 luglio 2018 -\n            14:58          \n"
 	,
 	"corrections" :
 	[
@@ -64,7 +66,15 @@
 				"Meier – Giri ½ – ½",
 				"Kovalev – Nepomniachtchi ½ – ½",
 				"Nisipeanu – Duda ½ – ½",
-				"Wojtaszek – Kramnik ½ – ½"
+				"Wojtaszek – Kramnik ½ – ½",
+				"Meier - Nisipeanu ½ – ½",
+				"Wojtaszek - Kovalev ½ – ½",
+				"Kramnik - Giri ½ – ½",
+				"Duda - Nepomniachtchi ½ – ½ ",
+				"Nepomniachtchi - Meier 1 - 0",
+				"Giri - Duda 1 - 0",
+				"Kovalev - Kramnik 0 - 1",
+				"Nisipeanu - Wojtaszek ½ – ½"
 			]
 		}
 	]
@@ -86,6 +96,7 @@
 	,
 	"posts_string_blacklist" :
 	[
-
+		"\nIrishGambit\n\n\n            15 luglio 2018 -\n            23:20",
+		"\nPappolo\n\n\n            16 luglio 2018 -\n            13:44"
 	]
 }
