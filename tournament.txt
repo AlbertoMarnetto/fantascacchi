@@ -1,73 +1,31 @@
-# Sinquefield 2018
+# Tata 2019
 
 Round 1
-No.	White	Result	Black
-Aronian Levon – Karjakin Sergey   @@@
-Vachier-Lagrave Maxime – Carlsen Magnus   @@@
-Nakamura Hikaru – Anand Viswanathan   @@@
-Mamedyarov Shakhriyar – So Wesley   @@@
-Caruana Fabiano – Grischuk Alexander   @@@
+
+GM Ding, Liren (0) 2813  —  GM Carlsen, M. (0) 2835 @@@
+GM Vidit, S. G. (0) 2695  —  GM Duda, J. (0) 2738 @@@
+GM Van Foreest (0) 2612  —  GM Anand, V. (0) 2773 @@@
+GM Fedoseev, V. (0) 2724  —   GM Rapport, R. (0) 2731 @@@
+GM Shankland, S. (0) 2725  —  GM Mamedyarov (0) 2817 @@@
+GM Radjabov, T. (0) 2757  —  GM Kramnik, V. (0) 2777 @@@
+GM Giri, Anish (0) 2783  —  GM Nepomniachtc. (0) 2763 @@@
 
 Round 2
-No.	White	Result	Black
-Caruana Fabiano – Aronian Levon   ½ - ½
-Grischuk Alexander – Mamedyarov Shakhriyar   ½ - ½
-So Wesley – Nakamura Hikaru   ½ - ½
-Anand Viswanathan – Vachier-Lagrave Maxime   ½ - ½
-Carlsen Magnus – Karjakin Sergey   1 - 0
+
  
 Round 3
-No.	White	Result	Black
-Aronian Levon – Carlsen Magnus   ½ - ½
-Karjakin Sergey – Anand Viswanathan   ½ - ½
-Vachier-Lagrave Maxime – So Wesley   ½ - ½
-Nakamura Hikaru – Grischuk Alexander   0 - 1
-Mamedyarov Shakhriyar – Caruana Fabiano   ½ - ½
+
  
 Round 4
-No.	White	Result	Black
-Mamedyarov Shakhriyar – Aronian Levon   ½ - ½
-Caruana Fabiano – Nakamura Hikaru   1 - 0
-Grischuk Alexander – Vachier-Lagrave Maxime   ½ - ½
-So Wesley – Karjakin Sergey   ½ - ½
-Anand Viswanathan – Carlsen Magnus   ½ - ½
+
 
 Round 5
-No.	White	Result	Black
-Aronian Levon – Anand Viswanathan   ½ - ½
-Carlsen Magnus – So Wesley   ½ - ½
-Karjakin Sergey – Grischuk Alexander   ½ - ½
-Vachier-Lagrave Maxime – Caruana Fabiano   ½ - ½
-Nakamura Hikaru – Mamedyarov Shakhriyar   ½ - ½
+
 
 Round 6
-No.	White	Result	Black
-Nakamura Hikaru – Aronian Levon   ½ - ½
-Mamedyarov Shakhriyar – Vachier-Lagrave Maxime   ½ - ½
-Caruana Fabiano – Karjakin Sergey   1 - 0
-Grischuk Alexander – Carlsen Magnus   ½ - ½
-So Wesley – Anand Viswanathan   ½ - ½
+
 
 Round 7
-No.	White	Result	Black
-Aronian Levon – So Wesley   ½ - ½
-Anand Viswanathan – Grischuk Alexander   ½ - ½
-Carlsen Magnus – Caruana Fabiano   ½ - ½
-Karjakin Sergey – Mamedyarov Shakhriyar   ½ - ½
-Vachier-Lagrave Maxime – Nakamura Hikaru   ½ - ½
 
-Round 8
-No.	White	Result	Black
-Vachier-Lagrave Maxime – Aronian Levon   ½ - ½
-Nakamura Hikaru – Karjakin Sergey   ½ - ½
-Mamedyarov Shakhriyar – Carlsen Magnus   ½ - ½
-Caruana Fabiano – Anand Viswanathan   ½ - ½
-Grischuk Alexander – So Wesley   ½ - ½
 
-Round 9
-No.	White	Result	Black
-Aronian Levon – Grischuk Alexander   1 - 0
-So Wesley – Caruana Fabiano   ½ - ½
-Anand Viswanathan – Mamedyarov Shakhriyar   ½ - ½
-Carlsen Magnus – Nakamura Hikaru   1 - 0
-Karjakin Sergey – Vachier-Lagrave Maxime   ½ - ½
+

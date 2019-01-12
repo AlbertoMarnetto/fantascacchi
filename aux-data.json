@@ -1,26 +1,30 @@
 {
-	"games_per_round" : 5,
-	"scoring_system" : "2_1_3",
-	"expected_ranking_length": 5,
-	"bonus_for_perfect_round_prediction": 3,
+	"games_per_round" : 7,
+	"scoring_system" : "3_1_4",
+	"expected_ranking_length": 3,
+	"bonus_for_perfect_round_prediction": 2,
 	"masters_names" :
 	[
-		"Fabiano Caruana",
-		"Levon Aronian",
-		"Alexander Grischuk",
+		"Magnus Carlsen ",
+		"Ian Nepomniachtchi",
+		"Vladimir Kramnik",
+		"Anish Giri",
 		"Shakhriyar Mamedyarov",
-		"Wesley So",
-		"Hikaru Nakamura",
+		"Teimour Radjabov",
+		"Richard Rapport",
+		"Samuel Shankland",
 		"Viswanathan Anand",
-		"Maxime Vachier-Lagrave",
-		"Magnus Carlsen",
-		"Sergey Karjakin"
+		"Vladimir Fedoseev",
+		"Jan-Krzysztof Duda",
+		"Jorden Van Foreest",
+		"Ding Liren",
+		"Vidit Santosh Gujrathi"
 	]
 	,
 	"masters_nicknames" :
 	{
 		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher" ],
-		"Ian Nepomniachtchi" : [ "Nepo" ],
+		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc" ],
 		"Fabiano Caruana" : [ "Caru", "Cariana" ],
 		"Viswanathan Anand" : [ "Andand" ],
 		"Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
@@ -37,11 +41,9 @@
 	,
 	"official_ranking" :
 	{
-		"1" : [ "Fabiano Caruana", "Magnus Carlsen", "Levon Aronian" ],
-		"2" : [ "Fabiano Caruana", "Magnus Carlsen", "Levon Aronian" ],
-		"3" : [ "Fabiano Caruana", "Magnus Carlsen", "Levon Aronian" ],
-		"4" : [ "Shakhriyar Mamedyarov" ],
-		"5" : [ "Alexander Grischuk", "Viswanathan Anand", "Maxime Vachier-Lagrave" ]
+		"1" : [  ],
+		"2" : [  ],
+		"3" : [  ]
 	}
 	,
 	"ranking_scoring" :
@@ -59,73 +61,12 @@
 		"sanchopanza" : "moscacchista"
 	}
 	,
-	"last_checked_post" : "\nruy lopez\n\n\n            28 agosto 2018 -\n            17:44          \n"
+	"last_checked_post" : "\nBlade\n\n\n            11 gennaio 2019 -\n            22:55"
 	,
 	"corrections" :
 	[
-		{
-			"author" : "Zugzwang",
-			"text" :
-			[
-				"Aronian Levon Carlsen Magnus   ½ - ½",
-				"Karjakin Sergey Anand Viswanathan   ½ - ½",
-				"Vachier-Lagrave Maxime So Wesley   ½ - ½",
-				"Nakamura Hikaru Grischuk Alexander   ½ - ½",
-				"Mamedyarov Shakhriyar Caruana Fabiano   ½ - ½",
-				
-				"Aronian Levon   Anand Viswanathan   ½ - ½",
-				"Carlsen Magnus   So Wesley   ½ - ½",
-				"Karjakin Sergey   Grischuk Alexander   ½ - ½",
-				"Vachier-Lagrave Maxime   Caruana Fabiano   ½ - ½",
-				"Nakamura Hikaru   Mamedyarov Shakhriyar   ½ - ½",
-				
-				"Aronian Levon   Anand Viswanathan   ½ - ½",
-				"Carlsen Magnus   So Wesley   ½ - ½",
-				"Karjakin Sergey   Grischuk Alexander   ½ - ½",
-				"Vachier-Lagrave Maxime   Caruana Fabiano   ½ - ½",
-				"Nakamura Hikaru   Mamedyarov Shakhriyar   ½ - ½",
-				
-				"Nakamura Hikaru Aronian Levon   ½ - ½",
-				"Mamedyarov Shakhriyar   Vachier-Lagrave Maxime   ½ - ½",
-				"Caruana Fabiano   Karjakin Sergey   ½ - ½",
-				"Grischuk Alexander   Carlsen Magnus   ½ - ½",
-				"So Wesley   Anand Viswanathan   ½ - ½",
-				
-				"Aronian Levon   So Wesley   ½ - ½",
-				"Anand Viswanathan   Grischuk Alexander   ½ - ½",
-				"Carlsen Magnus   Caruana Fabiano   ½ - ½",
-				"Karjakin Sergey   Mamedyarov Shakhriyar   ½ - ½",
-				"Vachier-Lagrave Maxime   Nakamura Hikaru   ½ - ½",		
-				"Vachier-Lagrave Maxime   Aronian Levon   ½ - ½",
-				"Nakamura Hikaru   Karjakin Sergey   ½ - ½",
-				"Mamedyarov Shakhriyar   Carlsen Magnus   ½ - ½",
-				"Caruana Fabiano   Anand Viswanathan   ½ - ½",
-				"Grischuk Alexander   So Wesley   ½ - ½",
-				"Aronian Levon – Grischuk Alexander   ½ - ½",
-				"So Wesley – Caruana Fabiano   ½ - ½",
-				"Anand Viswanathan – Mamedyarov Shakhriyar   ½ - ½",
-				"Carlsen Magnus – Nakamura Hikaru   ½ - ½",
-				"Karjakin Sergey – Vachier-Lagrave Maxime   ½ - ½"
-			]		
-		}	
-		,
-		{
-			"author" : "moscacchista",
-			"text" :
-			[				
-				"Aronian Levon   So Wesley   ½ - ½",
-				"Anand Viswanathan   Grischuk Alexander   ½ - ½",
-				"Carlsen Magnus   Caruana Fabiano   ½ - ½",
-				"Karjakin Sergey   Mamedyarov Shakhriyar   ½ - ½",
-				"Vachier-Lagrave Maxime   Nakamura Hikaru   ½ - ½"	,		
-				"Vachier-Lagrave Maxime   Aronian Levon   ½ - ½",
-				"Nakamura Hikaru   Karjakin Sergey   ½ - ½",
-				"Mamedyarov Shakhriyar   Carlsen Magnus   ½ - ½",
-				"Caruana Fabiano   Anand Viswanathan   ½ - ½",
-				"Grischuk Alexander   So Wesley   ½ - ½"			
-			]		
-		}	
-		]
+
+	]
 	,
 	"corrections_sample" :
 	[
@@ -144,7 +85,5 @@
 	,
 	"posts_string_blacklist" :
 	[
-		"Terzo turno: ancora nessun pronostico perfetto, la classica schedina di sole X",
-		"Al turno inaugurale del fantascacchi la vittoria di Carlsen"
 	]
 }
