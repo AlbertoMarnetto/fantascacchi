@@ -17,6 +17,7 @@ TournamentData = namedtuple("TournamentData", [
 	"should_ignore_post",
 	"official_ranking",
 	"scoring_system",
+	"enable_default_draw_prediction",
 	"games_per_round",
 	"team_names",
 	"expected_ranking_length",
@@ -76,6 +77,8 @@ def load_aux_data(filename):
 			in data["official_ranking"].items() }
 
 		scoring_system = data.get("scoring_system", "2_1_3")
+		
+		enable_default_draw_prediction = data.get("enable_default_draw_prediction", False)
 
 		games_per_round = data.get("games_per_round", None)
 
@@ -94,6 +97,7 @@ def load_aux_data(filename):
 			should_ignore_post = should_ignore_post,
 			official_ranking = official_ranking,
 			scoring_system = scoring_system,
+			enable_default_draw_prediction = enable_default_draw_prediction,
 			games_per_round = games_per_round,
 			team_names = team_names,
 			expected_ranking_length = expected_ranking_length,
@@ -506,9 +510,6 @@ def assign_prediction_scores(predictions, scoring_system):
 
 	scored_predictions = []
 	for prediction in predictions:
-		if prediction.author == "Official results":
-			continue
-
 		score = 0
 		if prediction_key(prediction) in official_results.keys():
 			if tournament_data.scoring_system == "2_2_2":
@@ -525,6 +526,13 @@ def assign_prediction_scores(predictions, scoring_system):
 					score = 1
 				elif prediction.outcome == "2":
 					score = 3
+			elif scoring_system == "3_1_4":
+				if prediction.outcome == "1":
+					score = 3
+				elif prediction.outcome == "X":
+					score = 1
+				elif prediction.outcome == "2":
+					score = 4					
 			else:
 				assert False, "Unknown scoring system: " + scoring_system
 
@@ -536,12 +544,14 @@ def assign_prediction_scores(predictions, scoring_system):
 
 ##############################################
 
-def calculate_round_entries(all_predictions, official_results, bonus_for_perfect_round_prediction):
+def calculate_round_entries(all_predictions, official_results, tournament_data):
 	authors = set(post.author for post in all_predictions)
 	rounds = sorted(list(set(prediction.round for prediction in official_results)))
 
 	round_entries = []
 	scores_per_rounds = []
+	
+	authors_with_predictions = set()
 	for round in rounds:
 		games_in_this_round = sum(
 			1
@@ -550,16 +560,32 @@ def calculate_round_entries(all_predictions, official_results, bonus_for_perfect
 			)
 
 		for author in authors:
+			if author == "Official results":
+				continue
+				
 			author_predictions_for_this_round = [
 				prediction
 				for prediction in all_predictions
 				if prediction.author == author
 					and prediction.round == round]
 
+			if len(author_predictions_for_this_round) > 0:
+				authors_with_predictions.add(author)
+			else:	
+				# “Pronostico di riserva”: if the author was a participant
+				# in previous rounds, give points as if an all-draw prediction
+				# for this round had been given	
+				if (tournament_data.enable_default_draw_prediction
+						and author in authors_with_predictions):
+					author_predictions_for_this_round = [
+						prediction
+						for prediction in official_results
+						if prediction.round == round
+						and prediction.outcome == "X"]
+					
 			author_score_for_this_round = sum(
 				prediction.score
-				for prediction in all_predictions
-				if prediction.author == author and prediction.round == round)
+				for prediction in author_predictions_for_this_round)
 
 			# “Nel caso vengano indovinate tutte le partite di un turno,
 			# verranno assegnati 3 punti aggiuntivi.”
@@ -567,7 +593,7 @@ def calculate_round_entries(all_predictions, official_results, bonus_for_perfect
 				1
 				for prediction in author_predictions_for_this_round
 				if prediction.score > 0)
-
+				
 			if (author_good_predictions_count == games_in_this_round):
 				author_score_for_this_round += tournament_data.bonus_for_perfect_round_prediction
 
@@ -746,7 +772,7 @@ all_predictions = repair_turns(all_predictions)
 all_predictions = remove_duplicates(all_predictions)
 all_predictions = assign_prediction_scores(all_predictions, tournament_data.scoring_system)
 
-round_entries = calculate_round_entries(all_predictions, official_results, tournament_data.bonus_for_perfect_round_prediction)
+round_entries = calculate_round_entries(all_predictions, official_results, tournament_data)
 ranking_scores = assign_ranking_scores(all_rankings, tournament_data)
 grand_total_entries = calculate_grand_total_entries(round_entries, ranking_scores)
 
