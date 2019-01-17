@@ -3,18 +3,19 @@
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
 	"bonus_for_perfect_round_prediction": 2,
+	"enable_default_draw_prediction": 1,
 	"masters_names" :
 	[
 		"Magnus Carlsen ",
 		"Ian Nepomniachtchi",
-		"Vladimir Kramnik",
+		"Kramnik",
 		"Anish Giri",
 		"Shakhriyar Mamedyarov",
 		"Teimour Radjabov",
 		"Richard Rapport",
 		"Samuel Shankland",
 		"Viswanathan Anand",
-		"Vladimir Fedoseev",
+		"Fedoseev",
 		"Jan-Krzysztof Duda",
 		"Jorden Van Foreest",
 		"Ding Liren",
@@ -58,10 +59,11 @@
 		"paolo58" : "ARIANNA",
 		"zed" : "QUARTA NAZIONALE",
 		"falk17" : "SISSA LEONFORTE",
-		"sanchopanza" : "moscacchista"
+		"sanchopanza" : "moscacchista",
+		"Angelmann" : "Neanderthal Boys"
 	}
 	,
-	"last_checked_post" : "\nBlade\n\n\n            11 gennaio 2019 -\n            22:55"
+	"last_checked_post" : "\nchicco\n\n\n            16 gennaio 2019 -\n            20:39          \n"
 	,
 	"corrections" :
 	[
@@ -85,5 +87,6 @@
 	,
 	"posts_string_blacklist" :
 	[
+		"\nCrazyRook\n\n\n            11 gennaio 2019"
 	]
 }

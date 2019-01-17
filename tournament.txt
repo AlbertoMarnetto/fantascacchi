@@ -1,31 +1,86 @@
 # Tata 2019
 
-Round 1
+# https://www.tatasteelchess.com/players/masters/master-schedule
 
-GM Ding, Liren (0) 2813  —  GM Carlsen, M. (0) 2835 @@@
-GM Vidit, S. G. (0) 2695  —  GM Duda, J. (0) 2738 @@@
-GM Van Foreest (0) 2612  —  GM Anand, V. (0) 2773 @@@
-GM Fedoseev, V. (0) 2724  —   GM Rapport, R. (0) 2731 @@@
-GM Shankland, S. (0) 2725  —  GM Mamedyarov (0) 2817 @@@
-GM Radjabov, T. (0) 2757  —  GM Kramnik, V. (0) 2777 @@@
-GM Giri, Anish (0) 2783  —  GM Nepomniachtc. (0) 2763 @@@
+Round 1 - Saturday the 12th
+Ding, Liren - Carlsen, Magnus 	@@@
+Vidit, Santosh Gujrathi - Duda, Jan-Krzysztof 	  	@@@
+Van Foreest, Jorden - Anand, Viswanathan 	  	@@@
+Fedoseev, Vladimir - Rapport, Richard 	  	@@@
+Shankland, Samuel - Mamedyarov, Shakhriyar 	  	@@@
+Radjabov, Teimour - Kramnik, Vladimir 	  	@@@
+Giri, Anish - Nepomniachtchi, Ian 	  	@@@
 
-Round 2
+Round 2 - Sunday the 13th
+Carlsen, Magnus - Nepomniachtchi, Ian 	½-½
+Kramnik, Vladimir - Giri, Anish 	0-1
+Mamedyarov, Shakhriyar - Radjabov, Teimour 	½-½
+Rapport, Richard - Shankland, Samuel 	½-½
+Anand, Viswanathan - Fedoseev, Vladimir 	½-½
+Duda, Jan-Krzysztof - Van Foreest, Jorden 	0-1
+Ding, Liren - Vidit, Santosh Gujrathi 	½-½
 
- 
-Round 3
+Round 3 - Monday the 14th
+Vidit, Santosh Gujrathi - Carlsen, Magnus 	½-½
+Van Foreest, Jorden - Ding, Liren 	0-1
+Fedoseev, Vladimir - Duda, Jan-Krzysztof 	0-1
+Shankland, Samuel - Anand, Viswanathan 	½-½
+Radjabov, Teimour - Rapport, Richard 	½-½
+Giri, Anish - Mamedyarov, Shakhriyar 	½-½
+Nepomniachtchi, Ian - Kramnik, Vladimir 	1-0
 
- 
-Round 4
+Round 4 - Tuesday the 15th
+Carlsen, Magnus - Kramnik, Vladimir 	½-½
+Mamedyarov, Shakhriyar - Nepomniachtchi, Ian 	½-½
+Rapport, Richard - Giri, Anish 	0-1
+Anand, Viswanathan - Radjabov, Teimour 	½-½
+Duda, Jan-Krzysztof - Shankland, Samuel 	½-½
+Ding, Liren - Fedoseev, Vladimir 	½-½
+Vidit, Santosh Gujrathi - Van Foreest, Jorden 	1-0
 
 
-Round 5
+Round 5 - Wednesday the 16th (Alkmaar)
+Van Foreest, Jorden - Carlsen, Magnus 	0-1
+Fedoseev, Vladimir - Vidit, Santosh Gujrathi 	½-½
+Shankland, Samuel - Ding, Liren 	0-1
+Radjabov, Teimour - Duda, Jan-Krzysztof 	½-½
+Giri, Anish - Anand, Viswanathan 	½-½
+Nepomniachtchi, Ian - Rapport, Richard 	½-½
+Kramnik, Vladimir - Mamedyarov, Shakhriyar 	½-½
 
+Round 6 - Friday the 18th
+Carlsen, Magnus - Mamedyarov, Shakhriyar
+Rapport, Richard - Kramnik, Vladimir
+Anand, Viswanathan - Nepomniachtchi, Ian
+Duda, Jan-Krzysztof - Giri, Anish
+Ding, Liren - Radjabov, Teimour
+Vidit, Santosh Gujrathi - Shankland, Samuel
+Van Foreest, Jorden - Fedoseev, Vladimir
 
-Round 6
+Round 7 - Saturday the 19th
+Fedoseev, Vladimir - Carlsen, Magnus
+Shankland, Samuel - Van Foreest, Jorden
+Radjabov, Teimour - Vidit, Santosh Gujrathi
+Giri, Anish - Ding, Liren
+Nepomniachtchi, Ian - Duda, Jan-Krzysztof
+Kramnik, Vladimir - Anand, Viswanathan
+Mamedyarov, Shakhriyar - Rapport, Richard
 
+Round 8 - Sunday the 20th
+Carlsen, Magnus - Rapport, Richard
+Anand, Viswanathan - Mamedyarov, Shakhriyar
+Duda, Jan-Krzysztof - Kramnik, Vladimir
+Ding, Liren - Nepomniachtchi, Ian
+Vidit, Santosh Gujrathi - Giri, Anish
+Van Foreest, Jorden - Radjabov, Teimour
+Fedoseev, Vladimir - Shankland, Samuel
 
-Round 7
-
-
+Round 9 - Tuesday the 22nd
+Shankland, Samuel - Carlsen, Magnus
+Radjabov, Teimour - Fedoseev, Vladimir
+Giri, Anish - Van Foreest, Jorden
+Nepomniachtchi, Ian - Vidit, Santosh Gujrathi
+Kramnik, Vladimir - Ding, Liren
+Mamedyarov, Shakhriyar - Duda, Jan-Krzysztof
+Rapport, Richard - Anand, Viswanathan
 
