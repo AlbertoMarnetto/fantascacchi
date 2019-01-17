@@ -284,8 +284,9 @@ def get_line_prediction(line, masters_appellatives, author_name):
 
 	masters_names_in_line = get_masters_names_in_line(line, masters_appellatives)
 
+	masters_names_in_line.sort(key = itemgetter(1))
+
 	if len(masters_names_in_line) == 2 and match_outcome is not None:
-		masters_names_in_line.sort(key = itemgetter(1))
 		return LinePredictionResult(
 			parse_outcome = ParseOutcome.SUCCESS,
 			suspect_reason = None,
@@ -306,6 +307,16 @@ def get_line_prediction(line, masters_appellatives, author_name):
 			first_master = None,
 			second_master = None,
 			match_outcome = None)
+	elif ( len(masters_names_in_line) == 2
+			and match_outcome is None
+			and author_name == "Official results"):
+		# Game not yet played
+		return LinePredictionResult(
+			parse_outcome = ParseOutcome.SUCCESS,
+			suspect_reason = None,
+			first_master = masters_names_in_line[0][0],
+			second_master = masters_names_in_line[1][0],
+			match_outcome = "@")
 	else:
 		return LinePredictionResult(
 			parse_outcome = ParseOutcome.SUSPECT,
@@ -536,7 +547,7 @@ def assign_prediction_scores(predictions, scoring_system):
 			else:
 				assert False, "Unknown scoring system: " + scoring_system
 
-		scored_predictions.append( PredictionWithScore(
+		scored_predictions.append(PredictionWithScore(
 			**prediction._asdict(),
 			score = score))
 
@@ -544,9 +555,17 @@ def assign_prediction_scores(predictions, scoring_system):
 
 ##############################################
 
-def calculate_round_entries(all_predictions, official_results, tournament_data):
+def calculate_round_entries(all_predictions, tournament_data):
+	official_results = [
+		prediction
+		for prediction in all_predictions
+		if prediction.author == "Official results"
+		]
+
 	authors = set(post.author for post in all_predictions)
 	rounds = sorted(list(set(prediction.round for prediction in official_results)))
+
+
 
 	round_entries = []
 	scores_per_rounds = []
@@ -772,7 +791,7 @@ all_predictions = repair_turns(all_predictions)
 all_predictions = remove_duplicates(all_predictions)
 all_predictions = assign_prediction_scores(all_predictions, tournament_data.scoring_system)
 
-round_entries = calculate_round_entries(all_predictions, official_results, tournament_data)
+round_entries = calculate_round_entries(all_predictions, tournament_data)
 ranking_scores = assign_ranking_scores(all_rankings, tournament_data)
 grand_total_entries = calculate_grand_total_entries(round_entries, ranking_scores)
 
