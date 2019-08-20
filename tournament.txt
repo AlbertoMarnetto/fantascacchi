@@ -1,86 +1,78 @@
-# Tata 2019
+# GRENKE 2019
 
-# https://www.tatasteelchess.com/players/masters/master-schedule
+# http://www.grenkechessclassic.de/en/grenke-chess-classic-2015/pairings-standings
 
-Round 1 - Saturday the 12th
-Ding, Liren - Carlsen, Magnus 	@@@
-Vidit, Santosh Gujrathi - Duda, Jan-Krzysztof 	  	@@@
-Van Foreest, Jorden - Anand, Viswanathan 	  	@@@
-Fedoseev, Vladimir - Rapport, Richard 	  	@@@
-Shankland, Samuel - Mamedyarov, Shakhriyar 	  	@@@
-Radjabov, Teimour - Kramnik, Vladimir 	  	@@@
-Giri, Anish - Nepomniachtchi, Ian 	  	@@@
+Round 1 (20.04.2019 / 15:00)
+Table	TNr	Player	-	TNr	Player	Result
+1	1.	Meier, Georg	-	10.	Vallejo Pons, Francisco	 1/2-1/2
+2	2.	Aronian, Levon	-	9.	Naiditsch, Arkadij	 1/2-1/2
+3	3.	Svidler, Peter	-	8.	Caruana, Fabiano	 1/2-1/2
+4	4.	Vachier-Lagrave, Maxime	-	7.	Anand, Viswanathan	 1/2-1/2
+5	5.	Keymer, Vincent	-	6.	Carlsen, Magnus	 0-1
+ 
+Round 2 (21.04.2019 / 15:00)
+Table	TNr	Player	-	TNr	Player	Result
+1	10.	Vallejo Pons, Francisco	-	6.	Carlsen, Magnus	 0-1
+2	7.	Anand, Viswanathan	-	5.	Keymer, Vincent	 1-0
+3	8.	Caruana, Fabiano	-	4.	Vachier-Lagrave, Maxime	 1/2-1/2
+4	9.	Naiditsch, Arkadij	-	3.	Svidler, Peter	 0-1
+5	1.	Meier, Georg	-	2.	Aronian, Levon	 1/2-1/2
+ 
+Round 3 (22.04.2019 / 15:00)
+Table	TNr	Player	-	TNr	Player	Result
+1	2.	Aronian, Levon	-	10.	Vallejo Pons, Francisco	 1/2-1/2
+2	3.	Svidler, Peter	-	1.	Meier, Georg	 1-0
+3	4.	Vachier-Lagrave, Maxime	-	9.	Naiditsch, Arkadij	 1/2-1/2
+4	5.	Keymer, Vincent	-	8.	Caruana, Fabiano	 0-1
+5	6.	Carlsen, Magnus	-	7.	Anand, Viswanathan	 1/2-1/2
+ 
+Round 4 (23.04.2019 / 15:00)
+Table	TNr	Player	-	TNr	Player	Result
+1	10.	Vallejo Pons, Francisco	-	7.	Anand, Viswanathan	 0-1
+2	8.	Caruana, Fabiano	-	6.	Carlsen, Magnus	 1/2-1/2
+3	9.	Naiditsch, Arkadij	-	5.	Keymer, Vincent	 1-0
+4	1.	Meier, Georg	-	4.	Vachier-Lagrave, Maxime	 0-1
+5	2.	Aronian, Levon	-	3.	Svidler, Peter	 1-0
+ 
+Round 5 (24.04.2019 / 15:00)
+Table	TNr	Player	-	TNr	Player	Result
+1	3.	Svidler, Peter	-	10.	Vallejo Pons, Francisco	 1/2-1/2
+2	4.	Vachier-Lagrave, Maxime	-	2.	Aronian, Levon	 1/2-1/2
+3	5.	Keymer, Vincent	-	1.	Meier, Georg	 1-0
+4	6.	Carlsen, Magnus	-	9.	Naiditsch, Arkadij	 1/2-1/2
+5	7.	Anand, Viswanathan	-	8.	Caruana, Fabiano	 1/2-1/2
+ 
+Round 6 (26.04.2019 / 15:00)
+Table	TNr	Player	-	TNr	Player	Result
+1	10.	Vallejo Pons, Francisco	-	8.	Caruana, Fabiano	 1/2-1/2
+2	9.	Naiditsch, Arkadij	-	7.	Anand, Viswanathan	 1-0
+3	1.	Meier, Georg	-	6.	Carlsen, Magnus	 0-1
+4	2.	Aronian, Levon	-	5.	Keymer, Vincent	 1/2-1/2
+5	3.	Svidler, Peter	-	4.	Vachier-Lagrave, Maxime	 1/2-1/2
+ 
+Round 7 (27.04.2019 / 15:00)
+Table	TNr	Player	-	TNr	Player	Result
+1	4.	Vachier-Lagrave, Maxime	-	10.	Vallejo Pons, Francisco	 1/2-1/2
+2	5.	Keymer, Vincent	-	3.	Svidler, Peter	 1/2-1/2
+3	6.	Carlsen, Magnus	-	2.	Aronian, Levon	 1-0
+4	7.	Anand, Viswanathan	-	1.	Meier, Georg	 0-1
+5	8.	Caruana, Fabiano	-	9.	Naiditsch, Arkadij	 1-0
+ 
+Round 8 (28.04.2019 / 15:00)
+Table	TNr	Player	-	TNr	Player	Result
+1	10.	Vallejo Pons, Francisco	-	9.	Naiditsch, Arkadij	1/2-1/2
+2	1.	Meier, Georg	-	8.	Caruana, Fabiano	 0-1
+3	2.	Aronian, Levon	-	7.	Anand, Viswanathan	 1/2-1/2
+4	3.	Svidler, Peter	-	6.	Carlsen, Magnus	 0-1
+5	4.	Vachier-Lagrave, Maxime	-	5.	Keymer, Vincent	 1-0
 
-Round 2 - Sunday the 13th
-Carlsen, Magnus - Nepomniachtchi, Ian 	½-½
-Kramnik, Vladimir - Giri, Anish 	0-1
-Mamedyarov, Shakhriyar - Radjabov, Teimour 	½-½
-Rapport, Richard - Shankland, Samuel 	½-½
-Anand, Viswanathan - Fedoseev, Vladimir 	½-½
-Duda, Jan-Krzysztof - Van Foreest, Jorden 	0-1
-Ding, Liren - Vidit, Santosh Gujrathi 	½-½
-
-Round 3 - Monday the 14th
-Vidit, Santosh Gujrathi - Carlsen, Magnus 	½-½
-Van Foreest, Jorden - Ding, Liren 	0-1
-Fedoseev, Vladimir - Duda, Jan-Krzysztof 	0-1
-Shankland, Samuel - Anand, Viswanathan 	½-½
-Radjabov, Teimour - Rapport, Richard 	½-½
-Giri, Anish - Mamedyarov, Shakhriyar 	½-½
-Nepomniachtchi, Ian - Kramnik, Vladimir 	1-0
-
-Round 4 - Tuesday the 15th
-Carlsen, Magnus - Kramnik, Vladimir 	½-½
-Mamedyarov, Shakhriyar - Nepomniachtchi, Ian 	½-½
-Rapport, Richard - Giri, Anish 	0-1
-Anand, Viswanathan - Radjabov, Teimour 	½-½
-Duda, Jan-Krzysztof - Shankland, Samuel 	½-½
-Ding, Liren - Fedoseev, Vladimir 	½-½
-Vidit, Santosh Gujrathi - Van Foreest, Jorden 	1-0
+Round 9 (29.04.2019 / 15:00)
+Table	TNr	Player	-	TNr	Player	Result
+1	5.	Keymer, Vincent	-	10.	Vallejo Pons, Francisco	 0-1
+2	6.	Carlsen, Magnus	-	4.	Vachier-Lagrave, Maxime	 1-0
+3	7.	Anand, Viswanathan	-	3.	Svidler, Peter	 1/2-1/2
+4	8.	Caruana, Fabiano	-	2.	Aronian, Levon	 1/2-1/2
+5	9.	Naiditsch, Arkadij	-	1.	Meier, Georg	 1-0
 
 
-Round 5 - Wednesday the 16th (Alkmaar)
-Van Foreest, Jorden - Carlsen, Magnus 	0-1
-Fedoseev, Vladimir - Vidit, Santosh Gujrathi 	½-½
-Shankland, Samuel - Ding, Liren 	0-1
-Radjabov, Teimour - Duda, Jan-Krzysztof 	½-½
-Giri, Anish - Anand, Viswanathan 	½-½
-Nepomniachtchi, Ian - Rapport, Richard 	½-½
-Kramnik, Vladimir - Mamedyarov, Shakhriyar 	½-½
-
-Round 6 - Friday the 18th
-Carlsen, Magnus - Mamedyarov, Shakhriyar
-Rapport, Richard - Kramnik, Vladimir
-Anand, Viswanathan - Nepomniachtchi, Ian
-Duda, Jan-Krzysztof - Giri, Anish
-Ding, Liren - Radjabov, Teimour
-Vidit, Santosh Gujrathi - Shankland, Samuel
-Van Foreest, Jorden - Fedoseev, Vladimir
-
-Round 7 - Saturday the 19th
-Fedoseev, Vladimir - Carlsen, Magnus
-Shankland, Samuel - Van Foreest, Jorden
-Radjabov, Teimour - Vidit, Santosh Gujrathi
-Giri, Anish - Ding, Liren
-Nepomniachtchi, Ian - Duda, Jan-Krzysztof
-Kramnik, Vladimir - Anand, Viswanathan
-Mamedyarov, Shakhriyar - Rapport, Richard
-
-Round 8 - Sunday the 20th
-Carlsen, Magnus - Rapport, Richard
-Anand, Viswanathan - Mamedyarov, Shakhriyar
-Duda, Jan-Krzysztof - Kramnik, Vladimir
-Ding, Liren - Nepomniachtchi, Ian
-Vidit, Santosh Gujrathi - Giri, Anish
-Van Foreest, Jorden - Radjabov, Teimour
-Fedoseev, Vladimir - Shankland, Samuel
-
-Round 9 - Tuesday the 22nd
-Shankland, Samuel - Carlsen, Magnus
-Radjabov, Teimour - Fedoseev, Vladimir
-Giri, Anish - Van Foreest, Jorden
-Nepomniachtchi, Ian - Vidit, Santosh Gujrathi
-Kramnik, Vladimir - Ding, Liren
-Mamedyarov, Shakhriyar - Duda, Jan-Krzysztof
-Rapport, Richard - Anand, Viswanathan
 

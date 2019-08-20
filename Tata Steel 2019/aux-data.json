@@ -1,5 +1,5 @@
 {
-	"games_per_round" : 5,
+	"games_per_round" : 7,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
 	"bonus_for_perfect_round_prediction": 2,
@@ -7,15 +7,19 @@
 	"masters_names" :
 	[
 		"Magnus Carlsen",
+		"Ian Nepomniachtchi",
+		"Kramnik",
+		"Anish Giri",
+		"Shakhriyar Mamedyarov",
+		"Teimour Radjabov",
+		"Richard Rapport",
+		"Samuel Shankland",
 		"Viswanathan Anand",
-		"Fabiano Caruana",
-		"Peter Svidler",
-		"Levon Aronian",
-		"Francisco Vallejo Pons",
-		"Maxime Vachier-Lagrave",
-		"Vincent Keymer",
-		"Georg Meier",
-		"Arkadij Naiditsch" 
+		"Fedoseev",
+		"Jan-Krzysztof Duda",
+		"Jorden Van Foreest",
+		"Ding Liren",
+		"Vidit Santosh Gujrathi"
 	]
 	,
 	"masters_nicknames" :
@@ -30,18 +34,17 @@
 		"Vladimir Kramnik" : ["KRAM", "Kraminik"],
 		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov"],
 		"Levon Aronian" : ["ARON", "Aronina"],
-		"Ding Liren" : [ "DingLiren" ],
-		"Meier" : ["Meijer"],
+		"Ding Liren" : ["Ringraziato", "DingLiren" ],
 		"dummy" : []
 	}
 	,
-	"official_ranking_source" : "http://www.grenkechessclassic.de/en/grenke-chess-classic-2015/pairings-standings"
+	"official_ranking_source" : "https://www.sparkassen-chess-meeting.de/turnier-2017/tabelle.html"
 	,
 	"official_ranking" :
 	{
 		"1" : [ "Magnus Carlsen" ],
-		"2" : [ "Fabiano Caruana" ],
-		"3" : [ "Arkadij Naiditsch" ]
+		"2" : [ "Anish Giri" ],
+		"3" : [ "Ian Nepomniachtchi" ]
 	}
 	,
 	"ranking_scoring" :
@@ -53,23 +56,24 @@
 	,
 	"team_names" :
 	{
-		"paolo58" : "Arianna-Lorenzo",
-		"zed" : "Quarta Nazionale",
-		"falk17" : "Sissa Leonforte",
+		"paolo58" : "ARIANNA",
+		"zed" : "QUARTA NAZIONALE",
+		"falk17" : "SISSA LEONFORTE",
 		"sanchopanza" : "moscacchista",
-		"Angelmann" : "Neanderthal Boys",
-		"prof73" : "Nova Gorica",
-		"alexhish" : "Potemkin",
-		"Il Surname" : "Pietrotornaindietro",
-		"mago" : "Demonios",
-		"chicco" : "Chicco",
-		"antoniobg1982" : "Bobby Fischer"
+		"Angelmann" : "Neanderthal Boys"
 	}
 	,
-	"last_checked_post" : "\nIrishGambit\n\n\n            28 aprile 2019 -\n            00:39          \n"
+	"last_checked_post" : "\nGiammy\n\n\n            27 gennaio 2019 -\n            13:29          \n"
 	,
 	"corrections" :
 	[
+		{
+			"author" : "mago",
+			"text" :
+			[
+				"Mamedyarov, Shakhriyar – Duda, Jan-Krzysztof 0-1"
+			]
+		}
 	]
 	,
 	"corrections_sample" :
@@ -89,5 +93,6 @@
 	,
 	"posts_string_blacklist" :
 	[
+		"\nCrazyRook\n\n\n            11 gennaio 2019"
 	]
 }
