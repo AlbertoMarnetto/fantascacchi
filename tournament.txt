@@ -1,78 +1,102 @@
-# GRENKE 2019
+# Sinquefield Cup 2019
 
-# http://www.grenkechessclassic.de/en/grenke-chess-classic-2015/pairings-standings
+# https://grandchesstour.org/2019-grand-chess-tour/2019-sinquefield-cup/results-and-standings
 
-Round 1 (20.04.2019 / 15:00)
-Table	TNr	Player	-	TNr	Player	Result
-1	1.	Meier, Georg	-	10.	Vallejo Pons, Francisco	 1/2-1/2
-2	2.	Aronian, Levon	-	9.	Naiditsch, Arkadij	 1/2-1/2
-3	3.	Svidler, Peter	-	8.	Caruana, Fabiano	 1/2-1/2
-4	4.	Vachier-Lagrave, Maxime	-	7.	Anand, Viswanathan	 1/2-1/2
-5	5.	Keymer, Vincent	-	6.	Carlsen, Magnus	 0-1
+Round 1
+No.	White	Result	Black
+1	Ding Liren	½ - ½	So Wesley
+2	Aronian Levon	½ - ½	Vachier-Lagrave Maxime
+3	Carlsen Magnus	½ - ½	Giri Anish
+4	Nepomniachtchi Ian	0 - 1	Anand Viswanathan
+5	Nakamura Hikaru	½ - ½	Caruana Fabiano
+6	Karjakin Sergey	½ - ½	Mamedyarov Shakhriyar
  
-Round 2 (21.04.2019 / 15:00)
-Table	TNr	Player	-	TNr	Player	Result
-1	10.	Vallejo Pons, Francisco	-	6.	Carlsen, Magnus	 0-1
-2	7.	Anand, Viswanathan	-	5.	Keymer, Vincent	 1-0
-3	8.	Caruana, Fabiano	-	4.	Vachier-Lagrave, Maxime	 1/2-1/2
-4	9.	Naiditsch, Arkadij	-	3.	Svidler, Peter	 0-1
-5	1.	Meier, Georg	-	2.	Aronian, Levon	 1/2-1/2
+Round 2
+No.	White	Result	Black
+1	Karjakin Sergey	½ - ½	Ding Liren
+2	Mamedyarov Shakhriyar	½ - ½	Nakamura Hikaru
+3	Caruana Fabiano	½ - ½	Nepomniachtchi Ian
+4	Anand Viswanathan	½ - ½	Carlsen Magnus
+5	Giri Anish	½ - ½	Aronian Levon
+6	Vachier-Lagrave Maxime	½ - ½	So Wesley
  
-Round 3 (22.04.2019 / 15:00)
-Table	TNr	Player	-	TNr	Player	Result
-1	2.	Aronian, Levon	-	10.	Vallejo Pons, Francisco	 1/2-1/2
-2	3.	Svidler, Peter	-	1.	Meier, Georg	 1-0
-3	4.	Vachier-Lagrave, Maxime	-	9.	Naiditsch, Arkadij	 1/2-1/2
-4	5.	Keymer, Vincent	-	8.	Caruana, Fabiano	 0-1
-5	6.	Carlsen, Magnus	-	7.	Anand, Viswanathan	 1/2-1/2
+Round 3
+No.	White	Result	Black
+1	Ding Liren	½ - ½	Vachier-Lagrave Maxime
+2	So Wesley	½ - ½	Giri Anish
+3	Aronian Levon	½ - ½	Anand Viswanathan
+4	Carlsen Magnus	½ - ½	Caruana Fabiano
+5	Nepomniachtchi Ian	½ - ½	Mamedyarov Shakhriyar
+6	Nakamura Hikaru	½ - ½	Karjakin Sergey
  
-Round 4 (23.04.2019 / 15:00)
-Table	TNr	Player	-	TNr	Player	Result
-1	10.	Vallejo Pons, Francisco	-	7.	Anand, Viswanathan	 0-1
-2	8.	Caruana, Fabiano	-	6.	Carlsen, Magnus	 1/2-1/2
-3	9.	Naiditsch, Arkadij	-	5.	Keymer, Vincent	 1-0
-4	1.	Meier, Georg	-	4.	Vachier-Lagrave, Maxime	 0-1
-5	2.	Aronian, Levon	-	3.	Svidler, Peter	 1-0
+Round 4
+No.	White	Result	Black
+1	Nakamura Hikaru	 ½ - ½	Ding Liren
+2	Karjakin Sergey	½ - ½	Nepomniachtchi Ian
+3	Mamedyarov Shakhriyar	½ - ½ 	Carlsen Magnus
+4	Caruana Fabiano	 1 - 0	Aronian Levon
+5	Anand Viswanathan	½ - ½ 	So Wesley
+6	Giri Anish	 ½ - ½	Vachier-Lagrave Maxime
  
-Round 5 (24.04.2019 / 15:00)
-Table	TNr	Player	-	TNr	Player	Result
-1	3.	Svidler, Peter	-	10.	Vallejo Pons, Francisco	 1/2-1/2
-2	4.	Vachier-Lagrave, Maxime	-	2.	Aronian, Levon	 1/2-1/2
-3	5.	Keymer, Vincent	-	1.	Meier, Georg	 1-0
-4	6.	Carlsen, Magnus	-	9.	Naiditsch, Arkadij	 1/2-1/2
-5	7.	Anand, Viswanathan	-	8.	Caruana, Fabiano	 1/2-1/2
+Round 5
+No.	White	Result	Black
+1	Ding Liren	1 - 0	Giri Anish
+2	Vachier-Lagrave Maxime	½ - ½	Anand Viswanathan
+3	So Wesley	½ - ½	Caruana Fabiano
+4	Aronian Levon	½ - ½	Mamedyarov Shakhriyar
+5	Carlsen Magnus	½ - ½	Karjakin Sergey
+6	Nepomniachtchi Ian	1 - 0	Nakamura Hikaru
  
-Round 6 (26.04.2019 / 15:00)
-Table	TNr	Player	-	TNr	Player	Result
-1	10.	Vallejo Pons, Francisco	-	8.	Caruana, Fabiano	 1/2-1/2
-2	9.	Naiditsch, Arkadij	-	7.	Anand, Viswanathan	 1-0
-3	1.	Meier, Georg	-	6.	Carlsen, Magnus	 0-1
-4	2.	Aronian, Levon	-	5.	Keymer, Vincent	 1/2-1/2
-5	3.	Svidler, Peter	-	4.	Vachier-Lagrave, Maxime	 1/2-1/2
+Round 6
+No.	White	Result	Black
+1	Nepomniachtchi Ian	½ - ½	Ding Liren
+2	Nakamura Hikaru	½ - ½	Carlsen Magnus
+3	Karjakin Sergey	½ - ½	Aronian Levon
+4	Mamedyarov Shakhriyar	½ - ½	So Wesley
+5	Caruana Fabiano	½ - ½	Vachier-Lagrave Maxime
+6	Anand Viswanathan	½ - ½	Giri Anish
  
-Round 7 (27.04.2019 / 15:00)
-Table	TNr	Player	-	TNr	Player	Result
-1	4.	Vachier-Lagrave, Maxime	-	10.	Vallejo Pons, Francisco	 1/2-1/2
-2	5.	Keymer, Vincent	-	3.	Svidler, Peter	 1/2-1/2
-3	6.	Carlsen, Magnus	-	2.	Aronian, Levon	 1-0
-4	7.	Anand, Viswanathan	-	1.	Meier, Georg	 0-1
-5	8.	Caruana, Fabiano	-	9.	Naiditsch, Arkadij	 1-0
+Round 7
+No.	White	Result	Black
+1	Ding Liren	½ - ½	Anand Viswanathan
+2	Giri Anish	½ - ½	Caruana Fabiano
+3	Vachier-Lagrave Maxime	½ - ½	Mamedyarov Shakhriyar
+4	So Wesley	½ - ½	Karjakin Sergey
+5	Aronian Levon	½ - ½	Nakamura Hikaru
+6	Carlsen Magnus	½ - ½	Nepomniachtchi Ian
  
-Round 8 (28.04.2019 / 15:00)
-Table	TNr	Player	-	TNr	Player	Result
-1	10.	Vallejo Pons, Francisco	-	9.	Naiditsch, Arkadij	1/2-1/2
-2	1.	Meier, Georg	-	8.	Caruana, Fabiano	 0-1
-3	2.	Aronian, Levon	-	7.	Anand, Viswanathan	 1/2-1/2
-4	3.	Svidler, Peter	-	6.	Carlsen, Magnus	 0-1
-5	4.	Vachier-Lagrave, Maxime	-	5.	Keymer, Vincent	 1-0
-
-Round 9 (29.04.2019 / 15:00)
-Table	TNr	Player	-	TNr	Player	Result
-1	5.	Keymer, Vincent	-	10.	Vallejo Pons, Francisco	 0-1
-2	6.	Carlsen, Magnus	-	4.	Vachier-Lagrave, Maxime	 1-0
-3	7.	Anand, Viswanathan	-	3.	Svidler, Peter	 1/2-1/2
-4	8.	Caruana, Fabiano	-	2.	Aronian, Levon	 1/2-1/2
-5	9.	Naiditsch, Arkadij	-	1.	Meier, Georg	 1-0
-
-
-
+Round 8
+No.	White	Result	Black
+1	Carlsen Magnus	 	Ding Liren
+2	Nepomniachtchi Ian	 	Aronian Levon
+3	Nakamura Hikaru	 	So Wesley
+4	Karjakin Sergey	 	Vachier-Lagrave Maxime
+5	Mamedyarov Shakhriyar	 	Giri Anish
+6	Caruana Fabiano	 	Anand Viswanathan
+ 
+Round 9
+No.	White	Result	Black
+1	Ding Liren	 	Caruana Fabiano
+2	Anand Viswanathan	 	Mamedyarov Shakhriyar
+3	Giri Anish	 	Karjakin Sergey
+4	Vachier-Lagrave Maxime	 	Nakamura Hikaru
+5	So Wesley	 	Nepomniachtchi Ian
+6	Aronian Levon	 	Carlsen Magnus
+ 
+Round 10
+No.	White	Result	Black
+1	Aronian Levon	 	Ding Liren
+2	Carlsen Magnus	 	So Wesley
+3	Nepomniachtchi Ian	 	Vachier-Lagrave Maxime
+4	Nakamura Hikaru	 	Giri Anish
+5	Karjakin Sergey	 	Anand Viswanathan
+6	Mamedyarov Shakhriyar	 	Caruana Fabiano
+ 
+Round 11
+No.	White	Result	Black
+1	Ding Liren	 	Mamedyarov Shakhriyar
+2	Caruana Fabiano	 	Karjakin Sergey
+3	Anand Viswanathan	 	Nakamura Hikaru
+4	Giri Anish	 	Nepomniachtchi Ian
+5	Vachier-Lagrave Maxime	 	Carlsen Magnus
+6	So Wesley	 	Aronian Levon

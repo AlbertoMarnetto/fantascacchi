@@ -1,21 +1,23 @@
 {
-	"games_per_round" : 5,
+	"games_per_round" : 6,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
-	"bonus_for_perfect_round_prediction": 2,
+	"bonus_for_perfect_round_prediction": 4,
 	"enable_default_draw_prediction": 1,
 	"masters_names" :
 	[
 		"Magnus Carlsen",
 		"Viswanathan Anand",
 		"Fabiano Caruana",
-		"Peter Svidler",
+		"Ding Liren",
+		"Wesley So",
 		"Levon Aronian",
-		"Francisco Vallejo Pons",
 		"Maxime Vachier-Lagrave",
-		"Vincent Keymer",
-		"Georg Meier",
-		"Arkadij Naiditsch" 
+		"Anish Giri",
+		"Ian Nepomniachtchi",
+		"Hikaru Nakamura",
+		"Sergey Karjakin",
+		"Shakriyar Mamedyarov"
 	]
 	,
 	"masters_nicknames" :
@@ -29,25 +31,25 @@
 		"Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish"],
 		"Vladimir Kramnik" : ["KRAM", "Kraminik"],
 		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov"],
-		"Levon Aronian" : ["ARON", "Aronina"],
+		"Levon Aronian" : ["ARON"],
 		"Ding Liren" : [ "DingLiren" ],
 		"Meier" : ["Meijer"],
 		"dummy" : []
 	}
 	,
-	"official_ranking_source" : "http://www.grenkechessclassic.de/en/grenke-chess-classic-2015/pairings-standings"
+	"official_ranking_source" : "https://grandchesstour.org/2019-grand-chess-tour/2019-sinquefield-cup/results-and-standings"
 	,
 	"official_ranking" :
 	{
-		"1" : [ "Magnus Carlsen" ],
-		"2" : [ "Fabiano Caruana" ],
-		"3" : [ "Arkadij Naiditsch" ]
+		"1" : [  ],
+		"2" : [  ],
+		"3" : [  ]
 	}
 	,
 	"ranking_scoring" :
 	{
-		"first_ranked_correct" : 3,
-		"other_ranked_correct" : 3,
+		"first_ranked_correct" : 4,
+		"other_ranked_correct" : 4,
 		"ranked_incorrect" : 1
 	}
 	,
@@ -56,17 +58,11 @@
 		"paolo58" : "Arianna-Lorenzo",
 		"zed" : "Quarta Nazionale",
 		"falk17" : "Sissa Leonforte",
-		"sanchopanza" : "moscacchista",
-		"Angelmann" : "Neanderthal Boys",
-		"prof73" : "Nova Gorica",
-		"alexhish" : "Potemkin",
-		"Il Surname" : "Pietrotornaindietro",
-		"mago" : "Demonios",
 		"chicco" : "Chicco",
 		"antoniobg1982" : "Bobby Fischer"
 	}
 	,
-	"last_checked_post" : "\nIrishGambit\n\n\n            28 aprile 2019 -\n            00:39          \n"
+	"last_checked_post" : "\nIrishGambit\n\n\n            20 agosto 2019 -\n            19:14          \n"
 	,
 	"corrections" :
 	[
