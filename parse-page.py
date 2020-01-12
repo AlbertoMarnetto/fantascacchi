@@ -365,7 +365,7 @@ def get_line_ranking(line, masters_appellatives, author_name):
 
 # One optional numer at the beginning,
 # followed by 1-3 words
-get_line_ranking.line_re = re.compile("^\d*[).\W]*(\S+\s?){1,3}$")
+get_line_ranking.line_re = re.compile("^\s*\d*[).\W]*(\S+\s?){1,3}$")
 
 ##############################################
 
