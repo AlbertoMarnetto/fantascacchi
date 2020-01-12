@@ -1,102 +1,120 @@
-# Sinquefield Cup 2019
+# Tata steel Masters 2020
 
-# https://grandchesstour.org/2019-grand-chess-tour/2019-sinquefield-cup/results-and-standings
+# https://www.tatasteelchess.com/players/masters/master-schedule
 
-Round 1
-No.	White	Result	Black
-1	Ding Liren	½ - ½	So Wesley
-2	Aronian Levon	½ - ½	Vachier-Lagrave Maxime
-3	Carlsen Magnus	½ - ½	Giri Anish
-4	Nepomniachtchi Ian	0 - 1	Anand Viswanathan
-5	Nakamura Hikaru	½ - ½	Caruana Fabiano
-6	Karjakin Sergey	½ - ½	Mamedyarov Shakhriyar
- 
-Round 2
-No.	White	Result	Black
-1	Karjakin Sergey	½ - ½	Ding Liren
-2	Mamedyarov Shakhriyar	½ - ½	Nakamura Hikaru
-3	Caruana Fabiano	½ - ½	Nepomniachtchi Ian
-4	Anand Viswanathan	½ - ½	Carlsen Magnus
-5	Giri Anish	½ - ½	Aronian Levon
-6	Vachier-Lagrave Maxime	½ - ½	So Wesley
- 
-Round 3
-No.	White	Result	Black
-1	Ding Liren	½ - ½	Vachier-Lagrave Maxime
-2	So Wesley	½ - ½	Giri Anish
-3	Aronian Levon	½ - ½	Anand Viswanathan
-4	Carlsen Magnus	½ - ½	Caruana Fabiano
-5	Nepomniachtchi Ian	½ - ½	Mamedyarov Shakhriyar
-6	Nakamura Hikaru	½ - ½	Karjakin Sergey
- 
-Round 4
-No.	White	Result	Black
-1	Nakamura Hikaru	 ½ - ½	Ding Liren
-2	Karjakin Sergey	½ - ½	Nepomniachtchi Ian
-3	Mamedyarov Shakhriyar	½ - ½ 	Carlsen Magnus
-4	Caruana Fabiano	 1 - 0	Aronian Levon
-5	Anand Viswanathan	½ - ½ 	So Wesley
-6	Giri Anish	 ½ - ½	Vachier-Lagrave Maxime
- 
-Round 5
-No.	White	Result	Black
-1	Ding Liren	1 - 0	Giri Anish
-2	Vachier-Lagrave Maxime	½ - ½	Anand Viswanathan
-3	So Wesley	½ - ½	Caruana Fabiano
-4	Aronian Levon	½ - ½	Mamedyarov Shakhriyar
-5	Carlsen Magnus	½ - ½	Karjakin Sergey
-6	Nepomniachtchi Ian	1 - 0	Nakamura Hikaru
- 
-Round 6
-No.	White	Result	Black
-1	Nepomniachtchi Ian	½ - ½	Ding Liren
-2	Nakamura Hikaru	½ - ½	Carlsen Magnus
-3	Karjakin Sergey	½ - ½	Aronian Levon
-4	Mamedyarov Shakhriyar	½ - ½	So Wesley
-5	Caruana Fabiano	½ - ½	Vachier-Lagrave Maxime
-6	Anand Viswanathan	½ - ½	Giri Anish
- 
-Round 7
-No.	White	Result	Black
-1	Ding Liren	½ - ½	Anand Viswanathan
-2	Giri Anish	½ - ½	Caruana Fabiano
-3	Vachier-Lagrave Maxime	½ - ½	Mamedyarov Shakhriyar
-4	So Wesley	½ - ½	Karjakin Sergey
-5	Aronian Levon	½ - ½	Nakamura Hikaru
-6	Carlsen Magnus	½ - ½	Nepomniachtchi Ian
- 
-Round 8
-No.	White	Result	Black
-1	Carlsen Magnus	½ - ½	Ding Liren
-2	Nepomniachtchi Ian	1 - 0	Aronian Levon
-3	Nakamura Hikaru	½ - ½	So Wesley
-4	Karjakin Sergey	1 - 0	Vachier-Lagrave Maxime
-5	Mamedyarov Shakhriyar	½ - ½	Giri Anish
-6	Caruana Fabiano	½ - ½	Anand Viswanathan
- 
-Round 9
-No.	White	Result	Black
-1	Ding Liren	 	Caruana Fabiano 1 - 0
-2	Anand Viswanathan	 	Mamedyarov Shakhriyar ½ - ½
-3	Giri Anish	 	Karjakin Sergey ½ - ½
-4	Vachier-Lagrave Maxime	 	Nakamura Hikaru ½ - ½
-5	So Wesley	 	Nepomniachtchi Ian 0 - 1
-6	Aronian Levon	 	Carlsen Magnus ½ - ½
- 
-Round 10
-No.	White	Result	Black
-1	Aronian Levon	½ - ½	Ding Liren
-2	Carlsen Magnus	1 - 0	So Wesley
-3	Nepomniachtchi Ian	0 - 1	Vachier-Lagrave Maxime
-4	Nakamura Hikaru	½ - ½	Giri Anish
-5	Karjakin Sergey	½ - ½	Anand Viswanathan
-6	Mamedyarov Shakhriyar	½ - ½	Caruana Fabiano
- 
-Round 11
-No.	White	Result	Black
-1	Ding Liren	½ - ½	Mamedyarov Shakhriyar
-2	Caruana Fabiano	½ - ½	Karjakin Sergey
-3	Anand Viswanathan	½ - ½	Nakamura Hikaru
-4	Giri Anish	1 - 0	Nepomniachtchi Ian
-5	Vachier-Lagrave Maxime	0 - 1	Carlsen Magnus
-6	So Wesley	½ - ½	Aronian Levon
+Round 1 - Saturday the 11th
+Xiong, Jeffery - Dubov, Daniil 	½-½
+Van Foreest, Jorden - Yu, Yangyi 	1-0
+Carlsen, Magnus - Giri, Anish 	½-½
+Caruana, Fabiano - So, Wesley 	½-½
+Anand, Viswanathan - Artemiev, Vladislav 	½-½
+Vitiugov, Nikita - Duda, Jan-Krzysztof 	½-½
+Firouzja, Alireza - Kovalev, Vladislav 	1-0
+
+Round 2 - Sunday the 12th
+Dubov, Daniil - Kovalev, Vladislav 	1-0
+Duda, Jan-Krzysztof - Firouzja, Alireza 	½-½
+Artemiev, Vladislav - Vitiugov, Nikita 	1-0
+So, Wesley - Anand, Viswanathan 	1-0
+Giri, Anish - Caruana, Fabiano 	½-½
+Yu, Yangyi - Carlsen, Magnus 	½-½
+Xiong, Jeffery - Van Foreest, Jorden 	1-0
+
+Round 3 - Monday the 13th
+Van Foreest, Jorden - Dubov, Daniil 	 
+Carlsen, Magnus - Xiong, Jeffery 	 
+Caruana, Fabiano - Yu, Yangyi 	 
+Anand, Viswanathan - Giri, Anish 	 
+Vitiugov, Nikita - So, Wesley 	 
+Firouzja, Alireza - Artemiev, Vladislav 	 
+Kovalev, Vladislav - Duda, Jan-Krzysztof 	 
+
+Round 4 - Tuesday the 14th
+Dubov, Daniil - Duda, Jan-Krzysztof 	 
+Artemiev, Vladislav - Kovalev, Vladislav 	 
+So, Wesley - Firouzja, Alireza 	 
+Giri, Anish - Vitiugov, Nikita 	 
+Yu, Yangyi - Anand, Viswanathan 	 
+Xiong, Jeffery - Caruana, Fabiano 	 
+Van Foreest, Jorden - Carlsen, Magnus 	 
+
+Round 5 - Thursday the 16th (Eindhoven)
+Carlsen, Magnus - Dubov, Daniil 	 
+Caruana, Fabiano - Van Foreest, Jorden 	 
+Anand, Viswanathan - Xiong, Jeffery 	 
+Vitiugov, Nikita - Yu, Yangyi 	 
+Firouzja, Alireza - Giri, Anish 	 
+Kovalev, Vladislav - So, Wesley 	 
+Duda, Jan-Krzysztof - Artemiev, Vladislav 	 
+
+Round 6 - Friday the 17th
+Dubov, Daniil - Artemiev, Vladislav 	 
+So, Wesley - Duda, Jan-Krzysztof 	 
+Giri, Anish - Kovalev, Vladislav 	 
+Yu, Yangyi - Firouzja, Alireza 	 
+Xiong, Jeffery - Vitiugov, Nikita 	 
+Van Foreest, Jorden - Anand, Viswanathan 	 
+Carlsen, Magnus - Caruana, Fabiano 	 
+
+Round 7 - Saturday the 18th
+Caruana, Fabiano - Dubov, Daniil 	 
+Anand, Viswanathan - Carlsen, Magnus 	 
+Vitiugov, Nikita - Van Foreest, Jorden 	 
+Firouzja, Alireza - Xiong, Jeffery 	 
+Kovalev, Vladislav - Yu, Yangyi 	 
+Duda, Jan-Krzysztof - Giri, Anish 	 
+Artemiev, Vladislav - So, Wesley 	 
+
+Round 8 - Sunday the 19th
+Dubov, Daniil - So, Wesley 	 
+Giri, Anish - Artemiev, Vladislav 	 
+Yu, Yangyi - Duda, Jan-Krzysztof 	 
+Xiong, Jeffery - Kovalev, Vladislav 	 
+Van Foreest, Jorden - Firouzja, Alireza 	 
+Carlsen, Magnus - Vitiugov, Nikita 	 
+Caruana, Fabiano - Anand, Viswanathan 	 
+
+Round 9 - Tuesday the 21st
+Anand, Viswanathan - Dubov, Daniil 	 
+Vitiugov, Nikita - Caruana, Fabiano 	 
+Firouzja, Alireza - Carlsen, Magnus 	 
+Kovalev, Vladislav - Van Foreest, Jorden 	 
+Duda, Jan-Krzysztof - Xiong, Jeffery 	 
+Artemiev, Vladislav - Yu, Yangyi 	 
+So, Wesley - Giri, Anish 	 
+
+Round 10 - Wednesday the 22nd
+Dubov, Daniil - Giri, Anish 	 
+Yu, Yangyi - So, Wesley 	 
+Xiong, Jeffery - Artemiev, Vladislav 	 
+Van Foreest, Jorden - Duda, Jan-Krzysztof 	 
+Carlsen, Magnus - Kovalev, Vladislav 	 
+Caruana, Fabiano - Firouzja, Alireza 	 
+Anand, Viswanathan - Vitiugov, Nikita 	 
+
+Round 11 - Friday the 24th
+Vitiugov, Nikita - Dubov, Daniil 	 
+Firouzja, Alireza - Anand, Viswanathan 	 
+Kovalev, Vladislav - Caruana, Fabiano 	 
+Duda, Jan-Krzysztof - Carlsen, Magnus 	 
+Artemiev, Vladislav - Van Foreest, Jorden 	 
+So, Wesley - Xiong, Jeffery 	 
+Giri, Anish - Yu, Yangyi 	 
+
+Round 12 - Saturday the 25th
+Dubov, Daniil - Yu, Yangyi 	 
+Xiong, Jeffery - Giri, Anish 	 
+Van Foreest, Jorden - So, Wesley 	 
+Carlsen, Magnus - Artemiev, Vladislav 	 
+Caruana, Fabiano - Duda, Jan-Krzysztof 	 
+Anand, Viswanathan - Kovalev, Vladislav 	 
+Vitiugov, Nikita - Firouzja, Alireza 	 
+
+Round 13 - Sunday the 26th
+Firouzja, Alireza - Dubov, Daniil 	 
+Kovalev, Vladislav - Vitiugov, Nikita 	 
+Duda, Jan-Krzysztof - Anand, Viswanathan 	 
+Artemiev, Vladislav - Caruana, Fabiano 	 
+So, Wesley - Carlsen, Magnus 	 
+Giri, Anish - Van Foreest, Jorden 	 
+Yu, Yangyi - Xiong, Jeffery 

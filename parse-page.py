@@ -1,3 +1,5 @@
+#! /usr/bin/python3
+
 from bs4 import BeautifulSoup
 from collections import namedtuple
 import datetime
@@ -22,7 +24,9 @@ TournamentData = namedtuple("TournamentData", [
 	"team_names",
 	"expected_ranking_length",
 	"bonus_for_perfect_round_prediction",
-	"ranking_scoring"])
+	"ranking_scoring",
+	"masters_scoring_bonuses"
+	])
 RoundEntry = namedtuple("RoundEntry", [
 	"round",
 	"author",
@@ -91,6 +95,8 @@ def load_aux_data(filename):
 		ranking_scoring = data.get("ranking_scoring",
 			{ "first_ranked_correct" : 3, "other_ranked_correct" : 2, "ranked_incorrect" : 1 } )
 
+		masters_scoring_bonuses = data.get("masters_scoring_bonuses", {})
+
 		tournament_data = TournamentData(
 			last_checked_post_datetime = last_checked_post_datetime,
 			post_corrections = post_corrections,
@@ -102,7 +108,8 @@ def load_aux_data(filename):
 			team_names = team_names,
 			expected_ranking_length = expected_ranking_length,
 			bonus_for_perfect_round_prediction = bonus_for_perfect_round_prediction,
-			ranking_scoring = ranking_scoring
+			ranking_scoring = ranking_scoring,
+			masters_scoring_bonuses = masters_scoring_bonuses
 			)
 
 		return masters_appellatives, tournament_data
@@ -334,6 +341,7 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), "X"), # ½ - ½
 		(re.compile("\D1\s*[\\\/]\s*2($|\D)"), "X"), # 1/2
 		(re.compile("\D0\.5($|\D)"), "X"), # 0.5
+		(re.compile("\D0\,5($|\D)"), "X"), # 0,5
 		(re.compile("\spatta($|\s)"), "X"), # patta
 		(re.compile("\s½($|\s)"), "X"), # patta
 		(re.compile("\s1\s*0($|\s)"), "1"), # 1 0
@@ -369,6 +377,22 @@ get_line_ranking.line_re = re.compile("^\s*\d*[).\W]*(\S+\s?){1,3}$")
 
 ##############################################
 
+def get_winner(prediction):
+	if prediction.outcome == "X":
+		return None
+	elif prediction.outcome == "1":
+		return prediction.white_name
+	elif prediction.outcome == "2":
+		return prediction.black_name
+	
+def get_loser(prediction):
+	if prediction.outcome == "X":
+		return None
+	elif prediction.outcome == "1":
+		return prediction.black_name
+	elif prediction.outcome == "2":
+		return prediction.white_name
+	
 def extract_predictions(post, masters_appellatives, tournament_data):
 	games_per_round = tournament_data.games_per_round
 
@@ -507,7 +531,7 @@ def remove_duplicates(predictions):
 		]))
 
 
-def assign_prediction_scores(predictions, scoring_system):
+def assign_prediction_scores(predictions, scoring_system, masters_scoring_bonuses):
 	def prediction_key(prediction):
 		return (
 			prediction.white_name,
@@ -548,6 +572,15 @@ def assign_prediction_scores(predictions, scoring_system):
 					score = 4					
 			else:
 				assert False, "Unknown scoring system: " + scoring_system
+				
+			INDEX_BONUS_FOR_WINNER = 0
+			INDEX_BONUS_FOR_LOSER = 1
+			
+			winner = get_winner(prediction)
+			score += masters_scoring_bonuses.get(winner, [0, 0])[INDEX_BONUS_FOR_WINNER]
+			
+			loser = get_loser(prediction)
+			score += masters_scoring_bonuses.get(loser, [0, 0])[INDEX_BONUS_FOR_LOSER]
 
 		scored_predictions.append(PredictionWithScore(
 			**prediction._asdict(),
@@ -791,7 +824,8 @@ for post in posts:
 
 all_predictions = repair_turns(all_predictions)
 all_predictions = remove_duplicates(all_predictions)
-all_predictions = assign_prediction_scores(all_predictions, tournament_data.scoring_system)
+all_predictions = assign_prediction_scores(all_predictions,
+		tournament_data.scoring_system, tournament_data.masters_scoring_bonuses)
 
 round_entries = calculate_round_entries(all_predictions, tournament_data)
 ranking_scores = assign_ranking_scores(all_rankings, tournament_data)

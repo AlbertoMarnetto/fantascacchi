@@ -1,7 +1,7 @@
 {
-	"games_per_round" : 6,
+	"games_per_round" : 7,
 	"scoring_system" : "3_1_4",
-	"expected_ranking_length": 3,
+	"expected_ranking_length": 5,
 	"bonus_for_perfect_round_prediction": 4,
 	"enable_default_draw_prediction": 1,
 	"masters_names" :
@@ -9,16 +9,26 @@
 		"Magnus Carlsen",
 		"Viswanathan Anand",
 		"Fabiano Caruana",
-		"Ding Liren",
 		"Wesley So",
-		"Levon Aronian",
-		"Maxime Vachier-Lagrave",
 		"Anish Giri",
-		"Ian Nepomniachtchi",
-		"Hikaru Nakamura",
-		"Sergey Karjakin",
-		"Shakriyar Mamedyarov"
+		"Jeffery Xiong",
+		"Daniil Dubov",
+		"Jorden Van Foreest",
+		"Yu Yangyi",
+		"Vladislav1 Artemiev",
+		"Nikita Vitiugov",
+		"Jan-Krzysztof Duda",
+		"Alireza Firouzja",
+		"Vladislav2 Kovalev"
 	]
+	,
+	"masters_scoring_bonuses" :
+	{
+		"Magnus Carlsen" : [ -1, 1 ],
+		"Daniil Dubov" : [ 1, -1 ],
+		"Vladislav2 Kovalev" : [ 1, -1 ],
+		"Jorden Van Foreest" : [ 1, -1 ]
+	}
 	,
 	"masters_nicknames" :
 	{
@@ -41,9 +51,11 @@
 	,
 	"official_ranking" :
 	{
-		"1" : [ "Ding Liren" ],
-		"2" : [  "Magnus Carlsen" ],
-		"3" : [ "Viswanathan Anand", "Sergey Karjakin" ]
+		"1" : [  ],
+		"2" : [  ],
+		"3" : [  ],
+		"4" : [  ],
+		"5" : [  ]
 	}
 	,
 	"ranking_scoring" :
@@ -85,5 +97,6 @@
 	,
 	"posts_string_blacklist" :
 	[
+	"\nIrishGambit\n\n\n            6 gennaio 2020 -\n"
 	]
 }
