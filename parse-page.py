@@ -711,13 +711,21 @@ def assign_ranking_scores(rankings, tournament_data):
 
 		score = 0
 
-		for position, master_name in enumerate(ranking.ranking_list):
-			if position == 0 and master_name in official_ranking[position + 1]:
-				score += tournament_data.ranking_scoring["first_ranked_correct"]
-			elif position > 0 and master_name in official_ranking[position + 1]:
-				score += tournament_data.ranking_scoring["other_ranked_correct"]
-			else:
-				wrongly_placed.append(master_name)
+		if "other_ranked_correct" in tournament_data.ranking_scoring:
+			# Legacy
+			for position, master_name in enumerate(ranking.ranking_list):
+				if position == 0 and master_name in official_ranking[position + 1]:
+					score += tournament_data.ranking_scoring["first_ranked_correct"]
+				elif position > 0 and master_name in official_ranking[position + 1]:
+					score += tournament_data.ranking_scoring["other_ranked_correct"]
+				else:
+					wrongly_placed.append(master_name)
+		else:
+			for position, master_name in enumerate(ranking.ranking_list):
+				if master_name in official_ranking[position + 1]:
+					score += tournament_data.ranking_scoring[position]
+				else:
+					wrongly_placed.append(master_name)
 
 		for master_name in wrongly_placed:
 			if master_name in all_in_official_ranking:

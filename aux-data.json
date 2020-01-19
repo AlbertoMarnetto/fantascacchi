@@ -60,8 +60,11 @@
 	,
 	"ranking_scoring" :
 	{
-		"first_ranked_correct" : 4,
-		"other_ranked_correct" : 4,
+		"1" : 4,
+		"2" : 3,
+		"3" : 3,
+		"4" : 2,
+		"5" : 2,
 		"ranked_incorrect" : 1
 	}
 	,
@@ -74,7 +77,7 @@
 		"antoniobg1982" : "Bobby Fischer"
 	}
 	,
-	"last_checked_post" : "\nIrishGambit\n\n\n            27 agosto 2019 -\n            01:24          \n"
+	"last_checked_post" : "\nmago\n\n\n            19 gennaio 2020 -\n            08:21          \n"
 	,
 	"corrections" :
 	[
@@ -97,6 +100,8 @@
 	,
 	"posts_string_blacklist" :
 	[
-	"\nIrishGambit\n\n\n            6 gennaio 2020 -\n"
+	"\nIrishGambit\n\n\n            6 gennaio 2020 -\n",
+	"MagnusAlph@",
+	"\nantoniobg1982\n\n\n            14 gennaio 2020 -\n"
 	]
 }

@@ -20,59 +20,61 @@ Giri, Anish - Caruana, Fabiano 	½-½
 Yu, Yangyi - Carlsen, Magnus 	½-½
 Xiong, Jeffery - Van Foreest, Jorden 	1-0
 
+
 Round 3 - Monday the 13th
-Van Foreest, Jorden - Dubov, Daniil 	 
-Carlsen, Magnus - Xiong, Jeffery 	 
-Caruana, Fabiano - Yu, Yangyi 	 
-Anand, Viswanathan - Giri, Anish 	 
-Vitiugov, Nikita - So, Wesley 	 
-Firouzja, Alireza - Artemiev, Vladislav 	 
-Kovalev, Vladislav - Duda, Jan-Krzysztof 	 
+Van Foreest, Jorden - Dubov, Daniil 	1-0
+Carlsen, Magnus - Xiong, Jeffery 	½-½
+Caruana, Fabiano - Yu, Yangyi 	1-0
+Anand, Viswanathan - Giri, Anish 	½-½
+Vitiugov, Nikita - So, Wesley 	½-½
+Firouzja, Alireza - Artemiev, Vladislav 	1-0
+Kovalev, Vladislav - Duda, Jan-Krzysztof 	½-½
 
 Round 4 - Tuesday the 14th
-Dubov, Daniil - Duda, Jan-Krzysztof 	 
-Artemiev, Vladislav - Kovalev, Vladislav 	 
-So, Wesley - Firouzja, Alireza 	 
-Giri, Anish - Vitiugov, Nikita 	 
-Yu, Yangyi - Anand, Viswanathan 	 
-Xiong, Jeffery - Caruana, Fabiano 	 
-Van Foreest, Jorden - Carlsen, Magnus 	 
+Dubov, Daniil - Duda, Jan-Krzysztof 	½-½
+Artemiev, Vladislav - Kovalev, Vladislav 	1-0
+So, Wesley - Firouzja, Alireza 	1-0
+Giri, Anish - Vitiugov, Nikita 	½-½
+Yu, Yangyi - Anand, Viswanathan 	½-½
+Xiong, Jeffery - Caruana, Fabiano 	½-½
+Van Foreest, Jorden - Carlsen, Magnus 	½-½
 
 Round 5 - Thursday the 16th (Eindhoven)
-Carlsen, Magnus - Dubov, Daniil 	 
-Caruana, Fabiano - Van Foreest, Jorden 	 
-Anand, Viswanathan - Xiong, Jeffery 	 
-Vitiugov, Nikita - Yu, Yangyi 	 
-Firouzja, Alireza - Giri, Anish 	 
-Kovalev, Vladislav - So, Wesley 	 
-Duda, Jan-Krzysztof - Artemiev, Vladislav 	 
+Carlsen, Magnus - Dubov, Daniil 	½-½
+Caruana, Fabiano - Van Foreest, Jorden 	½-½
+Anand, Viswanathan - Xiong, Jeffery 	1-0
+Vitiugov, Nikita - Yu, Yangyi 	½-½
+Firouzja, Alireza - Giri, Anish 	1-0
+Kovalev, Vladislav - So, Wesley 	½-½
+Duda, Jan-Krzysztof - Artemiev, Vladislav 	½-½
 
 Round 6 - Friday the 17th
-Dubov, Daniil - Artemiev, Vladislav 	 
-So, Wesley - Duda, Jan-Krzysztof 	 
-Giri, Anish - Kovalev, Vladislav 	 
-Yu, Yangyi - Firouzja, Alireza 	 
-Xiong, Jeffery - Vitiugov, Nikita 	 
-Van Foreest, Jorden - Anand, Viswanathan 	 
-Carlsen, Magnus - Caruana, Fabiano 	 
+Dubov, Daniil - Artemiev, Vladislav 	1-0
+So, Wesley - Duda, Jan-Krzysztof 	½-½
+Giri, Anish - Kovalev, Vladislav 	1-0
+Yu, Yangyi - Firouzja, Alireza 	½-½
+Xiong, Jeffery - Vitiugov, Nikita 	½-½
+Van Foreest, Jorden - Anand, Viswanathan 	½-½
+Carlsen, Magnus - Caruana, Fabiano 	½-½
 
 Round 7 - Saturday the 18th
-Caruana, Fabiano - Dubov, Daniil 	 
-Anand, Viswanathan - Carlsen, Magnus 	 
-Vitiugov, Nikita - Van Foreest, Jorden 	 
-Firouzja, Alireza - Xiong, Jeffery 	 
-Kovalev, Vladislav - Yu, Yangyi 	 
-Duda, Jan-Krzysztof - Giri, Anish 	 
-Artemiev, Vladislav - So, Wesley 	 
+Caruana, Fabiano - Dubov, Daniil 	1-0
+Anand, Viswanathan - Carlsen, Magnus 	½-½
+Vitiugov, Nikita - Van Foreest, Jorden 	0-1
+Firouzja, Alireza - Xiong, Jeffery 	1-0
+Kovalev, Vladislav - Yu, Yangyi 	½-½
+Duda, Jan-Krzysztof - Giri, Anish 	½-½
+Artemiev, Vladislav - So, Wesley 	½-½
 
 Round 8 - Sunday the 19th
-Dubov, Daniil - So, Wesley 	 
-Giri, Anish - Artemiev, Vladislav 	 
-Yu, Yangyi - Duda, Jan-Krzysztof 	 
-Xiong, Jeffery - Kovalev, Vladislav 	 
-Van Foreest, Jorden - Firouzja, Alireza 	 
-Carlsen, Magnus - Vitiugov, Nikita 	 
-Caruana, Fabiano - Anand, Viswanathan 	 
+Dubov, Daniil - So, Wesley 	½-½
+Giri, Anish - Artemiev, Vladislav 	½-½
+Yu, Yangyi - Duda, Jan-Krzysztof 	0-1
+Xiong, Jeffery - Kovalev, Vladislav 	0-1
+Van Foreest, Jorden - Firouzja, Alireza 	½-½
+Carlsen, Magnus - Vitiugov, Nikita 	1-0
+Caruana, Fabiano - Anand, Viswanathan 	1-0
+
 
 Round 9 - Tuesday the 21st
 Anand, Viswanathan - Dubov, Daniil 	 
