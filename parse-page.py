@@ -723,7 +723,7 @@ def assign_ranking_scores(rankings, tournament_data):
 		else:
 			for position, master_name in enumerate(ranking.ranking_list):
 				if master_name in official_ranking[position + 1]:
-					score += tournament_data.ranking_scoring[position]
+					score += tournament_data.ranking_scoring[str(position + 1)]
 				else:
 					wrongly_placed.append(master_name)
 

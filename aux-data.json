@@ -47,15 +47,15 @@
 		"dummy" : []
 	}
 	,
-	"official_ranking_source" : "https://grandchesstour.org/2019-grand-chess-tour/2019-sinquefield-cup/results-and-standings"
+	"official_ranking_source" : "https://www.tatasteelchess.com/players/masters/master-standings"
 	,
 	"official_ranking" :
 	{
-		"1" : [  ],
-		"2" : [  ],
-		"3" : [  ],
-		"4" : [  ],
-		"5" : [  ]
+		"1" : [ "Fabiano Caruana" ],
+		"2" : [ "Magnus Carlsen" ],
+		"3" : [ "Wesley So" ],
+		"4" : [ "Jorden Van Foreest" ],
+		"5" : [ "Daniil Dubov" ]
 	}
 	,
 	"ranking_scoring" :
@@ -77,7 +77,7 @@
 		"antoniobg1982" : "Bobby Fischer"
 	}
 	,
-	"last_checked_post" : "\nIrishGambit\n\n\n            19 gennaio 2020 -\n            21:20          \n"
+	"last_checked_post" : "\nSeitan\n\n\n            26 gennaio 2020 -\n            17:25          \nC’è un errore anche nel mio\nLe patte sono state 5 non 4\n"
 	,
 	"corrections" :
 	[
@@ -102,6 +102,7 @@
 	[
 	"\nIrishGambit\n\n\n            6 gennaio 2020 -\n",
 	"MagnusAlph@",
-	"\nantoniobg1982\n\n\n            14 gennaio 2020 -\n"
+	"\nantoniobg1982\n\n\n            14 gennaio 2020 -\n",
+	"nel calcolo dei miei punti relativi al turno 12"
 	]
 }
