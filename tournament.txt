@@ -1,121 +1,88 @@
 # Tata steel Masters 2020
 
-# https://www.tatasteelchess.com/players/masters/master-schedule
+#http://www.scacchierando.it/torneo-dei-candidati/torneo-dei-candidati-2020-2/ 
 
-Round 1 - Saturday the 11th
-Xiong, Jeffery - Dubov, Daniil 	½-½
-Van Foreest, Jorden - Yu, Yangyi 	1-0
-Carlsen, Magnus - Giri, Anish 	½-½
-Caruana, Fabiano - So, Wesley 	½-½
-Anand, Viswanathan - Artemiev, Vladislav 	½-½
-Vitiugov, Nikita - Duda, Jan-Krzysztof 	½-½
-Firouzja, Alireza - Kovalev, Vladislav 	1-0
+Round 01 (March 17, 2020)
+Vachier-Lagrave – Caruana ½–½
+Ding Liren – Wang Hao 0-1
+Giri – Nepomniachtchi 0-1
+Grischuk – Alekseenko ½–½
 
-Round 2 - Sunday the 12th
-Dubov, Daniil - Kovalev, Vladislav 	1-0
-Duda, Jan-Krzysztof - Firouzja, Alireza 	½-½
-Artemiev, Vladislav - Vitiugov, Nikita 	1-0
-So, Wesley - Anand, Viswanathan 	1-0
-Giri, Anish - Caruana, Fabiano 	½-½
-Yu, Yangyi - Carlsen, Magnus 	½-½
-Xiong, Jeffery - Van Foreest, Jorden 	1-0
+Round 02 (March 18, 2020)
+Caruana – Alekseenko
+Nepomniachtchi – Grischuk
+Wang Hao – Giri
+Vachier-Lagrave – Ding Liren
 
+Round 03 (March 19, 2020)
+Ding Liren – Caruana
+Giri – Vachier-Lagrave
+Grischuk – Wang Hao
+Alekseenko – Nepomniachtchi
 
-Round 3 - Monday the 13th
-Van Foreest, Jorden - Dubov, Daniil 	1-0
-Carlsen, Magnus - Xiong, Jeffery 	½-½
-Caruana, Fabiano - Yu, Yangyi 	1-0
-Anand, Viswanathan - Giri, Anish 	½-½
-Vitiugov, Nikita - So, Wesley 	½-½
-Firouzja, Alireza - Artemiev, Vladislav 	1-0
-Kovalev, Vladislav - Duda, Jan-Krzysztof 	½-½
+Round 04 (March 21, 2020)
+Caruana – Nepomniachtchi
+Wang Hao – Alekseenko
+Vachier-Lagrave – Grischuk
+Ding Liren – Giri
 
-Round 4 - Tuesday the 14th
-Dubov, Daniil - Duda, Jan-Krzysztof 	½-½
-Artemiev, Vladislav - Kovalev, Vladislav 	1-0
-So, Wesley - Firouzja, Alireza 	1-0
-Giri, Anish - Vitiugov, Nikita 	½-½
-Yu, Yangyi - Anand, Viswanathan 	½-½
-Xiong, Jeffery - Caruana, Fabiano 	½-½
-Van Foreest, Jorden - Carlsen, Magnus 	½-½
+Round 05 (March 22, 2020)
+Giri – Caruana
+Grischuk – Ding Liren
+Alekseenko – Vachier-Lagrave
+Nepomniachtchi – Wang Hao
 
-Round 5 - Thursday the 16th (Eindhoven)
-Carlsen, Magnus - Dubov, Daniil 	½-½
-Caruana, Fabiano - Van Foreest, Jorden 	½-½
-Anand, Viswanathan - Xiong, Jeffery 	1-0
-Vitiugov, Nikita - Yu, Yangyi 	½-½
-Firouzja, Alireza - Giri, Anish 	1-0
-Kovalev, Vladislav - So, Wesley 	½-½
-Duda, Jan-Krzysztof - Artemiev, Vladislav 	½-½
+Round 06 (March 23, 2020)
+Grischuk – Caruana
+Alekseenko – Giri
+Nepomniachtchi – Ding Liren
+Wang Hao – Vachier-Lagrave
 
-Round 6 - Friday the 17th
-Dubov, Daniil - Artemiev, Vladislav 	1-0
-So, Wesley - Duda, Jan-Krzysztof 	½-½
-Giri, Anish - Kovalev, Vladislav 	1-0
-Yu, Yangyi - Firouzja, Alireza 	½-½
-Xiong, Jeffery - Vitiugov, Nikita 	½-½
-Van Foreest, Jorden - Anand, Viswanathan 	½-½
-Carlsen, Magnus - Caruana, Fabiano 	½-½
+Round 07 (March 25, 2020)
+Caruana – Wang Hao
+Vachier-Lagrave – Nepomniachtchi
+Ding Liren – Alekseenko
+Giri – Grischuk
 
-Round 7 - Saturday the 18th
-Caruana, Fabiano - Dubov, Daniil 	1-0
-Anand, Viswanathan - Carlsen, Magnus 	½-½
-Vitiugov, Nikita - Van Foreest, Jorden 	0-1
-Firouzja, Alireza - Xiong, Jeffery 	1-0
-Kovalev, Vladislav - Yu, Yangyi 	½-½
-Duda, Jan-Krzysztof - Giri, Anish 	½-½
-Artemiev, Vladislav - So, Wesley 	½-½
+Round 08 (March 26, 2020)
+Caruana – Vachier-Lagrave
+Wang Hao – Ding Liren
+Nepomniachtchi – Giri
+Alekseenko – Grischuk
 
-Round 8 - Sunday the 19th
-Dubov, Daniil - So, Wesley 	½-½
-Giri, Anish - Artemiev, Vladislav 	½-½
-Yu, Yangyi - Duda, Jan-Krzysztof 	0-1
-Xiong, Jeffery - Kovalev, Vladislav 	0-1
-Van Foreest, Jorden - Firouzja, Alireza 	½-½
-Carlsen, Magnus - Vitiugov, Nikita 	1-0
-Caruana, Fabiano - Anand, Viswanathan 	1-0
+Round 09 (March 27, 2020)
+Alekseenko – Caruana
+Grischuk – Nepomniachtchi
+Giri – Wang Hao
+Ding Liren – Vachier-Lagrave
 
-Round 9 - Tuesday the 21st
-Anand, Viswanathan - Dubov, Daniil 	½-½
-Vitiugov, Nikita - Caruana, Fabiano 	½-½
-Firouzja, Alireza - Carlsen, Magnus 	0-1
-Kovalev, Vladislav - Van Foreest, Jorden 	½-½
-Duda, Jan-Krzysztof - Xiong, Jeffery 	½-½
-Artemiev, Vladislav - Yu, Yangyi 	½-½
-So, Wesley - Giri, Anish 	½-½
+Round 10  (March 29, 2020)
+Caruana – Ding Liren
+Vachier-Lagrave – Giri
+Wang Hao – Grischuk
+Nepomniachtchi – Alekseenko
 
-Round 10 - Wednesday the 22nd
-Dubov, Daniil - Giri, Anish 	½-½
-Yu, Yangyi - So, Wesley 	½-½
-Xiong, Jeffery - Artemiev, Vladislav 	1-0
-Van Foreest, Jorden - Duda, Jan-Krzysztof 	½-½
-Carlsen, Magnus - Kovalev, Vladislav 	1-0
-Caruana, Fabiano - Firouzja, Alireza 	1-0
-Anand, Viswanathan - Vitiugov, Nikita 	½-½
+Round 11 (March 30, 2020)
+Nepomniachtchi – Caruana
+Alekseenko – Wang Hao
+Grischuk – Vachier-Lagrave
+Giri – Ding Liren
 
-Round 11 - Friday the 24th
-Vitiugov, Nikita - Dubov, Daniil 	½-½
-Firouzja, Alireza - Anand, Viswanathan 	0-1
-Kovalev, Vladislav - Caruana, Fabiano 	0-1
-Duda, Jan-Krzysztof - Carlsen, Magnus 	½-½
-Artemiev, Vladislav - Van Foreest, Jorden 	1-0
-So, Wesley - Xiong, Jeffery 	½-½
-Giri, Anish - Yu, Yangyi 	½-½
+Round 12 (March 31, 2020)
+Caruana – Giri
+Ding Liren – Grischuk
+Vachier-Lagrave – Alekseenko
+Wang Hao – Nepomniachtchi
 
-Round 12 - Saturday the 25th
-Dubov, Daniil - Yu, Yangyi 	1-0
-Xiong, Jeffery - Giri, Anish 	½-½
-Van Foreest, Jorden - So, Wesley 	½-½
-Carlsen, Magnus - Artemiev, Vladislav 	½-½
-Caruana, Fabiano - Duda, Jan-Krzysztof 	1-0
-Anand, Viswanathan - Kovalev, Vladislav 	½-½
-Vitiugov, Nikita - Firouzja, Alireza 	½-½
+Round 13 (April 02, 2020)
+Wang Hao – Caruana
+Nepomniachtchi – Vachier-Lagrave
+Alekseenko – Ding Liren
+Grischuk – Giri
 
-Round 13 - Sunday the 26th
-Firouzja, Alireza - Dubov, Daniil 	½-½
-Kovalev, Vladislav - Vitiugov, Nikita 	½-½
-Duda, Jan-Krzysztof - Anand, Viswanathan 	½-½
-Artemiev, Vladislav - Caruana, Fabiano 	0-1
-So, Wesley - Carlsen, Magnus 	½-½
-Giri, Anish - Van Foreest, Jorden 	½-½
-Yu, Yangyi - Xiong, Jeffery 	½-½
+Round 14 (April 03, 2020)
+Caruana – Grischuk
+Giri – Alekseenko
+Ding Liren – Nepomniachtchi
+Vachier-Lagrave – Wang Hao
+

@@ -1,19 +1,25 @@
 {
-	"games_per_round" : 4,
+	"games_per_round" : 7,
 	"scoring_system" : "3_1_4",
-	"expected_ranking_length": 3,
-	"bonus_for_perfect_round_prediction": 3,
+	"expected_ranking_length": 5,
+	"bonus_for_perfect_round_prediction": 4,
 	"enable_default_draw_prediction": 1,
 	"masters_names" :
 	[
+		"Magnus Carlsen",
+		"Viswanathan Anand",
 		"Fabiano Caruana",
+		"Wesley So",
 		"Anish Giri",
-		"Ding Liren",
-		"Wang Hao",
-		"Maxime Vachier-Lagrave",
-		"Ian Nepomniachtchi",
-		"Alexander Grischuk",
-		"Kirill Alekseenko"
+		"Jeffery Xiong",
+		"Daniil Dubov",
+		"Jorden Van Foreest",
+		"Yu Yangyi",
+		"Vladislav1 Artemiev",
+		"Nikita Vitiugov",
+		"Jan-Krzysztof Duda",
+		"Alireza Firouzja",
+		"Vladislav2 Kovalev"
 	]
 	,
 	"masters_scoring_bonuses" :
@@ -26,20 +32,18 @@
 	,
 	"masters_nicknames" :
 	{
-		"Warning" : ["Togli Radja come nick di MVL!"],
-		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher", "Radjabov" ],
+		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher" ],
 		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc" ],
 		"Fabiano Caruana" : [ "Caru", "Cariana" ],
 		"Viswanathan Anand" : [ "Andand" ],
 		"Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
 		"Hikaru Nakamura" : [ "Naka" ],
-		"Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish", "Grisc" ],
+		"Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish"],
 		"Vladimir Kramnik" : ["KRAM", "Kraminik"],
 		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov"],
 		"Levon Aronian" : ["ARON"],
 		"Ding Liren" : [ "DingLiren" ],
 		"Meier" : ["Meijer"],
-		"Kirill Alekseenko" : ["Alex", "Aleks"],
 		"dummy" : []
 	}
 	,
@@ -47,16 +51,20 @@
 	,
 	"official_ranking" :
 	{
-		"1" : [],
-		"2" : [],
-		"3" : []
+		"1" : [ "Fabiano Caruana" ],
+		"2" : [ "Magnus Carlsen" ],
+		"3" : [ "Wesley So" ],
+		"4" : [ "Jorden Van Foreest" ],
+		"5" : [ "Daniil Dubov" ]
 	}
 	,
 	"ranking_scoring" :
 	{
 		"1" : 4,
-		"2" : 2,
-		"3" : 2,
+		"2" : 3,
+		"3" : 3,
+		"4" : 2,
+		"5" : 2,
 		"ranked_incorrect" : 1
 	}
 	,
@@ -66,25 +74,13 @@
 		"zed" : "Quarta Nazionale",
 		"falk17" : "Sissa Leonforte",
 		"chicco" : "Chicco",
-		"antoniobg1982" : "Bobby Fischer",
-		"Luigi Orlando" : "gigi8",
-		"mike" : "Mike",
-		"orcoisback" : "tuttiacasapersempre",
-		"Angelmann" : "Neanderthal Boys",
-		"StefanoBellincampi" : "Maggica"
+		"antoniobg1982" : "Bobby Fischer"
 	}
 	,
-	"last_checked_post" : "\nchicco\n\n\n            17 marzo 2020 -\n            22:52          \nIn 9 su 16 finora abbiamo espresso questo pronostico…\n"
+	"last_checked_post" : "\nSeitan\n\n\n            26 gennaio 2020 -\n            17:25          \nC’è un errore anche nel mio\nLe patte sono state 5 non 4\n"
 	,
 	"corrections" :
 	[
-		{
-			"author" : "MeNeSbattoDelTuoControgioco",
-			"text" :
-			[
-				"Grischuk - Alekseenko X"			
-			]
-		}
 	]
 	,
 	"corrections_sample" :
@@ -104,5 +100,9 @@
 	,
 	"posts_string_blacklist" :
 	[
+	"\nIrishGambit\n\n\n            6 gennaio 2020 -\n",
+	"MagnusAlph@",
+	"\nantoniobg1982\n\n\n            14 gennaio 2020 -\n",
+	"nel calcolo dei miei punti relativi al turno 12"
 	]
 }
