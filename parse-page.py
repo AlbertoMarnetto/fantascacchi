@@ -346,7 +346,7 @@ get_line_prediction.possible_outcomes = [
 		(re.compile("\s½($|\s)"), "X"), # patta
 		(re.compile("\s1\s*0($|\s)"), "1"), # 1 0
 		(re.compile("\s0\s*1($|\s)"), "2"), # 0 1
-		(re.compile("\s[xX]($|\s)"), "X"), # X
+		(re.compile("\s[хxX]($|\s)"), "X"), # X (la prima è una "ha" cirillica!
 		(re.compile("\D1\s*$"), "1"), # 1 (end of line)
 		(re.compile("\D2\s*$"), "2"), # 2 (end of line)
 		(re.compile("\D1($|[^0-9.])"), "1"), # 1
@@ -491,8 +491,9 @@ def repair_turns(predictions):
 		# Otherwise, write the correct round number
 		# Only give a warning if a wrong round was given
 		# (not if it was missing)
-		if prediction.round is not None:
-			write_err("%s: wrong round, should be %d\n\n" % (prediction, expected_round))
+                # (disabled, as not useful)
+		#if prediction.round is not None:
+		#	write_err("%s: wrong round, should be %d\n\n" % (prediction, expected_round))
 
 		prediction_dict = prediction._asdict()  # make the prediction mutable
 		prediction_dict["round"] = expected_round
