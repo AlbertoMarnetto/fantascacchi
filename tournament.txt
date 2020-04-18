@@ -1,88 +1,10 @@
-# Tata steel Masters 2020
+# Magnus Carlsen Invitational 2020
 
-# http://www.scacchierando.it/torneo-dei-candidati/torneo-dei-candidati-2020-2/ 
+# http://www.scacchierando.it/tornei-online/magnus-carlsen-invitational/
 
-Round 01 (March 17, 2020)
-Vachier-Lagrave – Caruana ½–½
-Ding Liren – Wang Hao 0-1
-Giri – Nepomniachtchi 0-1
-Grischuk – Alekseenko ½–½
+Primo turno
 
-Round 02 (March 18, 2020)
-Caruana – Alekseenko 1-0
-Nepomniachtchi – Grischuk ½–½
-Wang Hao – Giri  ½–½
-Vachier-Lagrave – Ding Liren 1-0
-
-Round 03 (March 19, 2020)
-Ding Liren – Caruana 1-0
-Giri – Vachier-Lagrave ½–½
-Grischuk – Wang Hao  ½–½
-Alekseenko – Nepomniachtchi ½–½
-
-Round 04 (March 21, 2020)
-Caruana – Nepomniachtchi  ½–½
-Wang Hao – Alekseenko  ½–½
-Vachier-Lagrave – Grischuk  ½–½
-Ding Liren – Giri  ½–½
-
-Round 05 (March 22, 2020)
-Giri – Caruana  ½–½
-Grischuk – Ding Liren  ½–½
-Alekseenko – Vachier-Lagrave  ½–½
-Nepomniachtchi – Wang Hao 1-0
-
-Round 06 (March 23, 2020)
-Grischuk – Caruana ½–½
-Alekseenko – Giri 0-1
-Nepomniachtchi – Ding Liren 1-0
-Wang Hao – Vachier-Lagrave  ½–½
-
-Round 07 (March 25, 2020)
-Caruana – Wang Hao ½–½
-Vachier-Lagrave – Nepomniachtchi 1-0
-Ding Liren – Alekseenko ½–½
-Giri – Grischuk ½–½
-
-Round 08 (March 26, 2020)
-Caruana – Vachier-Lagrave
-Wang Hao – Ding Liren
-Nepomniachtchi – Giri
-Alekseenko – Grischuk
-
-Round 09 (March 27, 2020)
-Alekseenko – Caruana
-Grischuk – Nepomniachtchi
-Giri – Wang Hao
-Ding Liren – Vachier-Lagrave
-
-Round 10  (March 29, 2020)
-Caruana – Ding Liren
-Vachier-Lagrave – Giri
-Wang Hao – Grischuk
-Nepomniachtchi – Alekseenko
-
-Round 11 (March 30, 2020)
-Nepomniachtchi – Caruana
-Alekseenko – Wang Hao
-Grischuk – Vachier-Lagrave
-Giri – Ding Liren
-
-Round 12 (March 31, 2020)
-Caruana – Giri
-Ding Liren – Grischuk
-Vachier-Lagrave – Alekseenko
-Wang Hao – Nepomniachtchi
-
-Round 13 (April 02, 2020)
-Wang Hao – Caruana
-Nepomniachtchi – Vachier-Lagrave
-Alekseenko – Ding Liren
-Grischuk – Giri
-
-Round 14 (April 03, 2020)
-Caruana – Grischuk
-Giri – Alekseenko
-Ding Liren – Nepomniachtchi
-Vachier-Lagrave – Wang Hao
-
+Carlsen – Nakamura 1A
+Firouzja – Ding Liren 2R
+Caruana – Nepo @@@
+Vachier-Lagrave – Giri @@@
