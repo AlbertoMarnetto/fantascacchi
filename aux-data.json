@@ -1,9 +1,42 @@
 {
-	"last_checked_post" : "\nIrishGambit\n\n\n            24 marzo 2020 -\n            11:47          \n"
+	"last_checked_post" : "\nTalia\n\n\n            27 aprile 2020 -\n            13:51          \n"
+	,
+	"corrections" :
+	[
+		{
+			"author" : "Talia",
+			"text" :
+			[
+				"Semifinalisti",
+				"Carlsen", "Caruana", "Nakamura", "Firouzja",
+				"Vincitore",
+				"Carlsen"
+			]
+		}
+	]
+	,
+	"corrections_sample" :
+	[
+		{
+			"author" : "irishgambit",
+			"text" :
+			[
+				"Ian Nepomniachtchi - Levon Aronian @@@",
+				"Magnus Carlsen - Fabiano Caruana @@@",
+				"Mickey Adams - Sergey Karjakin @@@",
+				"Hikaru Nakamura - Vishy Anand @@@",
+				"Wesley So - Maxime Vachier-Lagrave @@@"
+			]
+		}
+	]
+	,
+	"posts_string_blacklist" :
+	[
+	]	
 	,
 	"games_per_round" : 4,
 	"scoring_system" : "3_2_1_0",
-	"expected_ranking_length": 4,
+	"expected_ranking_length": 5,
 	"bonus_for_perfect_round_prediction": 3,
 	"enable_default_draw_prediction": 0,
 	"masters_names" :
@@ -46,19 +79,14 @@
 	,
 	"official_ranking" :
 	{
-		"1" : [],
-		"2" : [],
-		"3" : [],
-		"4" : []
+		"Semifinalists" : [],
+		"Winner" : []
 	}
 	,
 	"ranking_scoring" :
 	{
-		"1" : 3,
-		"2" : 3,
-		"3" : 3,
-		"4" : 3,
-		"ranked_incorrect" : 3
+		"semifinalist_score" : 3,
+		"winner_score" : 6
 	}
 	,
 	"team_names" :
@@ -75,27 +103,5 @@
 		"StefanoBellincampi" : "Maggica",
 		"Giammy" : "Sempreesolokram"
 	}
-	,
-	"corrections" :
-	[
-	]
-	,
-	"corrections_sample" :
-	[
-		{
-			"author" : "irishgambit",
-			"text" :
-			[
-				"Ian Nepomniachtchi - Levon Aronian @@@",
-				"Magnus Carlsen - Fabiano Caruana @@@",
-				"Mickey Adams - Sergey Karjakin @@@",
-				"Hikaru Nakamura - Vishy Anand @@@",
-				"Wesley So - Maxime Vachier-Lagrave @@@"
-			]
-		}
-	]
-	,
-	"posts_string_blacklist" :
-	[
-	]
+
 }

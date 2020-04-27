@@ -75,10 +75,15 @@ def load_aux_data(filename):
         def should_ignore_post(post):
             return any(string in post.text for string in data["posts_string_blacklist"] if string != "")
 
-        official_ranking = {
-            int(position) : names_list
-            for (position, names_list)
-            in data["official_ranking"].items() }
+        if "Winner" in data["official_ranking"].keys():
+            # Winner and Semifinalists
+            official_ranking = data["official_ranking"]
+        else:
+            # 1, 2, 3, 4, 5
+            official_ranking = {
+                int(position) : names_list
+                for (position, names_list)
+                in data["official_ranking"].items() }
 
         scoring_system = data.get("scoring_system", "2_1_3")
         
@@ -790,7 +795,17 @@ def assign_ranking_scores(rankings, tournament_data):
 
         score = 0
 
-        if "other_ranked_correct" in tournament_data.ranking_scoring:
+        if "semifinalist_score" in tournament_data.ranking_scoring:
+            semifinalist_names = ranking.ranking_list[0:-2]
+            winner_name = ranking.ranking_list[-1]
+
+            for semifinalist_name in semifinalist_names:
+                if semifinalist_name in official_ranking["Semifinalists"]:
+                    score += tournament_data.ranking_scoring["semifinalist_score"]
+            if winner_name in official_ranking["Winner"]:
+                score += tournament_data.ranking_scoring["winner_score"]
+
+        elif "other_ranked_correct" in tournament_data.ranking_scoring:
             # Legacy
             for position, master_name in enumerate(ranking.ranking_list):
                 if position == 0 and master_name in official_ranking[position + 1]:
@@ -799,7 +814,7 @@ def assign_ranking_scores(rankings, tournament_data):
                     score += tournament_data.ranking_scoring["other_ranked_correct"]
                 else:
                     wrongly_placed.append(master_name)
-        else:
+        else:  # Normal scoring
             for position, master_name in enumerate(ranking.ranking_list):
                 if master_name in official_ranking[position + 1]:
                     score += tournament_data.ranking_scoring[str(position + 1)]
