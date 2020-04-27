@@ -2,9 +2,33 @@
 
 # http://www.scacchierando.it/tornei-online/magnus-carlsen-invitational/
 
-Primo turno
 
+Turno 1
 Carlsen – Nakamura 1A
-Firouzja – Ding Liren 2R
-Caruana – Nepo @@@
-Vachier-Lagrave – Giri @@@
+Firouzja – Ding 2R
+Caruana – Nepo 1R
+Vachier-Lagrave – Giri 1R
+
+Turno 2
+Carlsen - Firouzja 1R
+Nakamura - Giri 1R
+Nepomniachtchi - Vachier-Lagrave 1A
+Ding - Caruana 2A
+
+Turno 3
+Caruana - Carlsen 2R
+Firouzja - Nakamura 2R
+Vachier-Lagrave - Ding 2A
+Giri - Nepomniachtchi 2R
+
+Turno 4
+Carlsen - Vachier-Lagrave - 1R
+Firouzja - Caruana 2R
+Nakamura - Nepomniachtchi 1R
+Ding - Giri 1A
+
+Turno 5
+Giri - Carlsen 1R
+Vachier-Lagrave - Firouzja 2R
+Caruana - Nakamura 1A
+Nepomniachtchi - Ding 2R
