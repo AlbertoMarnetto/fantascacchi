@@ -792,11 +792,10 @@ def assign_ranking_scores(rankings, tournament_data):
             continue
 
         wrongly_placed = []
-
         score = 0
 
         if "semifinalist_score" in tournament_data.ranking_scoring:
-            semifinalist_names = ranking.ranking_list[0:-2]
+            semifinalist_names = ranking.ranking_list[0:-1]
             winner_name = ranking.ranking_list[-1]
 
             for semifinalist_name in semifinalist_names:
