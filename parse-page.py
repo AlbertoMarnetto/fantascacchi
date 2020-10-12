@@ -581,6 +581,7 @@ def assign_prediction_scores(predictions, scoring_system, masters_scoring_bonuse
         score = 0
         guessed = False
         if prediction_key(prediction) in official_results.keys():
+            guessed = True
             if tournament_data.scoring_system == "2_2_2":
                 if prediction.outcome == "1":
                     score = 2
