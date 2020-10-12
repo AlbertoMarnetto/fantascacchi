@@ -1,18 +1,16 @@
 {
-	"last_checked_post" : "\nGiammy\n\n\n            30 aprile 2020 -\n            09:38          \n"
+	"last_checked_post" : "\nIrishGambit\n\n\n            11 ottobre 2020 -\n            17:51          \n"
 	,
 	"corrections" :
-	[
-		{
-			"author" : "Talia",
-			"text" :
-			[
-				"Semifinalisti",
-				"Carlsen", "Caruana", "Nakamura", "Firouzja",
-				"Vincitore",
-				"Carlsen"
-			]
-		}
+	[{
+		"author" : "lordste",
+		"text" :
+		[
+			"1 Carlsen",
+			"2 Caruana",
+			"3 Aronian"
+		]
+	}
 	]
 	,
 	"corrections_sample" :
@@ -34,31 +32,30 @@
 	[
 	]	
 	,
-	"games_per_round" : 4,
-	"scoring_system" : "3_2_1_0",
-	"expected_ranking_length": 5,
+	"games_per_round" : 3,
+	"scoring_system" : "3_1_4",
+	"expected_ranking_length": 3,
 	"bonus_for_perfect_round_prediction": 3,
-	"enable_default_draw_prediction": 0,
+	"enable_default_draw_prediction": 1,
 	"masters_names" :
 	[
 		"Fabiano Caruana",
-		"Anish Giri",
-		"Ding Liren",
 		"Magnus Carlsen",
-		"Maxime Vachier-Lagrave",
-		"Ian Nepomniachtchi",
-		"Hikaru Nakamura",
-		"Alireza Firouzja"
+		"Alireza Firouzja",
+		"Levon Aronian",
+		"Aryan Tari",
+		"Jan-Krzysztof Duda"
 	]
 	,
 	"masters_scoring_bonuses" :
 	{
-		"Magnus Carlsen" : [ -1, 1 ]
+		"Magnus Carlsen" : [ -1, 1 ],
+		"Aryan Tari" : [ 1, -1 ]
 	}
 	,
 	"masters_nicknames" :
 	{
-		"Warning" : ["Togli Radja come nick di MVL!"],
+		"Warning" : [""],
 		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher" ],
 		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi"],
 		"Fabiano Caruana" : [ "Caru", "Cariana" ],
@@ -79,29 +76,23 @@
 	,
 	"official_ranking" :
 	{
-		"Semifinalists" : ["Magnus Carlsen", "Hikaru Nakamura", "Fabiano Caruana", "Ding Liren"],
-		"Winner" : []
+		"1" : [  ],
+		"2" : [  ],
+		"3" : [  ]
 	}
 	,
 	"ranking_scoring" :
 	{
-		"semifinalist_score" : 3,
-		"winner_score" : 6
+		"1" : 4,
+		"2" : 4,
+		"3" : 4,
+		"ranked_incorrect" : 1
 	}
 	,
 	"team_names" :
 	{
 		"paolo58" : "Arianna-Lorenzo",
-		"zed" : "Quarta Nazionale",
-		"falk17" : "Sissa Leonforte",
-		"chicco" : "Chicco",
-		"antoniobg1982" : "Bobby Fischer",
-		"Luigi Orlando" : "gigi8",
-		"mike" : "Mike",
-		"orcoisback" : "tuttiacasapersempre",
-		"Angelmann" : "Neanderthal Boys",
-		"StefanoBellincampi" : "Maggica",
-		"Giammy" : "Sempreesolokram"
+		"antoniobg1982" : "Bobby Fischer"
 	}
 
 }
