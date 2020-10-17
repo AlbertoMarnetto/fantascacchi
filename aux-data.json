@@ -1,5 +1,5 @@
 {
-	"last_checked_post" : "\nIrishGambit\n\n\n            11 ottobre 2020 -\n            17:51          \n"
+	"last_checked_post" : "\nIrishGambit\n\n\n            15 ottobre 2020 -\n            00:06          \n"
 	,
 	"corrections" :
 	[{
@@ -30,6 +30,7 @@
 	,
 	"posts_string_blacklist" :
 	[
+		"Aronian – Carlsen X"
 	]	
 	,
 	"games_per_round" : 3,
@@ -76,9 +77,9 @@
 	,
 	"official_ranking" :
 	{
-		"1" : [  ],
-		"2" : [  ],
-		"3" : [  ]
+		"1" : [	"Magnus Carlsen" ],
+		"2" : [ "Alireza Firouzja" ],
+		"3" : [ "Levon Aronian" ]
 	}
 	,
 	"ranking_scoring" :

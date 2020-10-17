@@ -1,14 +1,14 @@
 # Magnus Carlsen Invitational 2020
 
-# http://www.scacchierando.it/tornei-chiusi/norway-chess-2020
+# http://www.scacchierando.it/tornei–chiusi/norway–chess–2020
 
 1° turno
-Aronian – Carlsen ½ - ½
+Aronian – Carlsen ½ – ½
 Tari – Caruana 0 – 1
 Duda – Firouzja 0 – 1
 
 2° turno
-Carlsen – Firouzja ½ - ½
+Carlsen – Firouzja ½ – ½
 Caruana – Duda 1 – 0
 Aronian – Tari 1 – 0
 
@@ -33,22 +33,23 @@ Tari – Firouzja 0 – 1
 Aronian – Caruana 0 – 1
 
 7° turno
-Caruana – Carlsen @@@
-Firouzja – Aronian @@@
-Duda – Tari @@@
+Caruana – Carlsen ½ – ½
+Firouzja – Aronian ½ – ½
+Duda – Tari 1 – 0
 
 8° turno
-Carlsen – Tari @@@
-Aronian – Duda @@@
-Caruana – Firouzja @@@
+Carlsen – Tari 1 – 0
+Aronian – Duda ½ – ½
+Caruana – Firouzja ½ – ½
 
 9° turno
-Firouzja – Carlsen @@@
-Duda – Caruana @@@
-Tari – Aronian @@@
+Firouzja – Carlsen 0 – 1
+Duda – Caruana ½ – ½
+Tari – Aronian ½ – ½
 
 10° turno
-Carlsen – Aronian @@@
-Caruana – Tari @@@
-Firouzja – Duda @@@
+Carlsen – Aronian 0 – 1
+Caruana – Tari ½ – ½
+Firouzja – Duda 1 – 0
+
 
