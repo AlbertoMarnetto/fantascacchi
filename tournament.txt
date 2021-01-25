@@ -1,55 +1,95 @@
-# Magnus Carlsen Invitational 2020
+# Tata Steel 2021
 
-# http://www.scacchierando.it/tornei–chiusi/norway–chess–2020
+# https://www.scacchierando.it/supertornei/tata-steel-2021
 
-1° turno
-Aronian – Carlsen ½ – ½
-Tari – Caruana 0 – 1
-Duda – Firouzja 0 – 1
+1° turno 
 
-2° turno
-Carlsen – Firouzja ½ – ½
-Caruana – Duda 1 – 0
-Aronian – Tari 1 – 0
+Carlsen – Firouzja 1 – 0
+Caruana – Van Foreest ½ – ½
+Giri – Tari 1 – 0
+Wojtaszek – Antón ½ – ½
+Harikrishna – Vachier-Lagrave ½ – ½
+Esipenko – Duda ½ – ½
+Grandelius – Donchenko 1 – 0 	
 
-3° turno
-Tari – Carlsen 0 – 1
-Duda – Aronian 0 – 1
-Firouzja – Caruana ½ – ½
 
-4° turno
-Carlsen – Caruana 1 – 0
-Aronian – Firouzja ½ – ½
-Tari – Duda ½ – ½
+2° turno 
 
-5° turno
-Duda – Carlsen 1 – 0
-Firouzja – Tari 1 – 0
-Caruana – Aronian 0 – 1
+Vachier-Lagrave – Firouzja ½ - ½
+Antón – Carlsen ½ - ½
+Tari – Wojtaszek ½ - ½
+Van Foreest – Giri ½ - ½
+Donchenko – Caruana 0 - 1
+Duda – Grandelius 0 - 1
+Harikrishna – Esipenko ½ - ½
 
-6° turno
-Carlsen – Duda 1 – 0
-Tari – Firouzja 0 – 1
-Aronian – Caruana 0 – 1
+3º turno 
 
-7° turno
-Caruana – Carlsen ½ – ½
-Firouzja – Aronian ½ – ½
-Duda – Tari 1 – 0
+Esipenko – Vachier-Lagrave ½ – ½
+Grandelius – Harikrishna 0 – 1
+Caruana – Duda ½ – ½
+Giri – Donchenko ½ – ½
+Wojtaszek – Van Foreest ½ – ½
+Carlsen – Tari ½ – ½
+Firouzja – Antón 1 – 0
 
-8° turno
-Carlsen – Tari 1 – 0
-Aronian – Duda ½ – ½
-Caruana – Firouzja ½ – ½
+4º turno
 
-9° turno
-Firouzja – Carlsen 0 – 1
-Duda – Caruana ½ – ½
-Tari – Aronian ½ – ½
+Vachier-Lagrave – Antón ½ – ½
+Tari – Firouzja ½ – ½
+Van Foreest – Carlsen ½ – ½
+Donchenko – Wojtaszek ½ – ½
+Duda – Giri ½ – ½
+Harikrishna – Caruana ½ – ½
+Esipenko – Grandelius ½ – ½
 
-10° turno
-Carlsen – Aronian 0 – 1
-Caruana – Tari ½ – ½
+5º turno
+
+Grandelius – Vachier-Lagrave 1 – 0
+Caruana – Esipenko ½ – ½
+Giri – Harikrishna ½ – ½
+Wojtaszek – Duda ½ – ½
+Carlsen – Donchenko ½ – ½
+Firouzja – Van Foreest ½ – ½
+Antón – Tari ½ – ½
+
+6º turno
+
+Vachier-Lagrave – Tari ½ – ½
+Van Foreest – Antón 1 – 0
+Donchenko – Firouzja 0 – 1
+Duda – Carlsen ½ – ½
+Harikrishna – Wojtaszek ½ – ½
+Esipenko – Giri ½ – ½
+Grandelius – Caruana ½ – ½
+
+7º turno
+
+Caruana – Vachier-Lagrave 1 – 0
+Giri – Grandelius 1 – 0
+Wojtaszek – Esipenko 0 – 1
+Carlsen – Harikrishna ½ – ½
 Firouzja – Duda 1 – 0
+Antón – Donchenko ½ – ½
+Tari – Van Foreest 0 – 1
 
+8º turno
+
+Vachier-Lagrave – Van Foreest ½ – ½
+Donchenko – Tari ½ – ½
+Duda – Antón ½ – ½
+Harikrishna – Firouzja 0 – 1
+Esipenko – Carlsen 1 – 0
+Grandelius – Wojtaszek ½ – ½
+Caruana – Giri ½ – ½
+
+9º turno
+
+Giri – Vachier-Lagrave @@@ 
+Wojtaszek – Caruana @@@ 
+Carlsen – Grandelius @@@ 
+Firouzja – Esipenko @@@ 
+Antón – Harikrishna @@@ 
+Tari – Duda @@@ 
+Van Foreest – Donchenko @@@ 
 

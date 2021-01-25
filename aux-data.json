@@ -1,16 +1,39 @@
 {
-	"last_checked_post" : "\nIrishGambit\n\n\n            15 ottobre 2020 -\n            00:06          \n"
+	"remarks" : "ettorerusso: classifica a manina",
+	"last_checked_post" : "\nIrishGambit\n\n\n            23 gennaio 2021 -\n            01:25          \n"
 	,
 	"corrections" :
-	[{
-		"author" : "lordste",
-		"text" :
-		[
-			"1 Carlsen",
-			"2 Caruana",
-			"3 Aronian"
-		]
-	}
+	[
+	
+		{
+			"author" : "sanchopanza",
+			"text" :
+			[
+				"2° turno ",
+				"Vachier-Lagrave – Firouzja ½ - ½",
+				"Antón – Carlsen ½ - ½",
+				"Tari – Wojtaszek ½ - ½",
+				"Van Foreest – Giri ½ - ½",
+				"Donchenko – Caruana ½ - ½",
+				"Duda – Grandelius ½ - ½",
+				"Harikrishna – Esipenko ½ - ½"
+			]
+		}
+		,
+		{
+			"author" : "Riserva",
+			"text" :
+			[
+				"2° turno ",
+				"Vachier-Lagrave – Firouzja ½ - ½",
+				"Antón – Carlsen ½ - ½",
+				"Tari – Wojtaszek ½ - ½",
+				"Van Foreest – Giri ½ - ½",
+				"Donchenko – Caruana ½ - ½",
+				"Duda – Grandelius ½ - ½",
+				"Harikrishna – Esipenko ½ - ½"
+			]
+		}
 	]
 	,
 	"corrections_sample" :
@@ -30,34 +53,48 @@
 	,
 	"posts_string_blacklist" :
 	[
-		"Aronian – Carlsen X"
+		"Gaetano_Bresci"
 	]	
 	,
-	"games_per_round" : 3,
+	"games_per_round" : 7,
 	"scoring_system" : "3_1_4",
-	"expected_ranking_length": 3,
-	"bonus_for_perfect_round_prediction": 3,
+	"expected_ranking_length": 5,
+	"bonus_for_perfect_round_prediction": 4,
 	"enable_default_draw_prediction": 1,
 	"masters_names" :
 	[
 		"Fabiano Caruana",
 		"Magnus Carlsen",
 		"Alireza Firouzja",
-		"Levon Aronian",
 		"Aryan Tari",
-		"Jan-Krzysztof Duda"
+		"Jan-Krzysztof Duda",
+		"Maxime Vachier-Lagrave",
+		"Anish Giri",
+		"Pentala Harikrishna",
+		"Radosław Wojtaszek",
+		"Andrej Esipenko",
+		"David Antón Guijarro",
+		"Jorden Van Foreest",
+		"Alexander Donchenko",
+		"Nils Grandelius"
 	]
 	,
 	"masters_scoring_bonuses" :
 	{
 		"Magnus Carlsen" : [ -1, 1 ],
-		"Aryan Tari" : [ 1, -1 ]
+		"Fabiano Caruana" : [ -1, 1 ],
+		"Aryan Tari" : [ 1, -1 ],
+		"Andrej Esipenko" : [ 1, -1 ],
+		"David Antón Guijarro" : [ 1, -1 ],
+		"Jorden Van Foreest" : [ 1, -1 ],
+		"Alexander Donchenko" : [ 1, -1 ],
+		"Nils Grandelius" : [ 1, -1 ]
 	}
 	,
 	"masters_nicknames" :
 	{
 		"Warning" : [""],
-		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher" ],
+		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher", "Lagrave"],
 		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi"],
 		"Fabiano Caruana" : [ "Caru", "Cariana" ],
 		"Viswanathan Anand" : [ "Andand" ],
@@ -70,30 +107,49 @@
 		"Ding Liren" : [ "DingLiren" ],
 		"Meier" : ["Meijer"],
 		"Kirill Alekseenko" : ["Alex", "Aleks", "Aleksenko"],
+		"David Antón Guijarro": ["Anton"],
+		"Radosław Wojtaszek" : ["Wojtasezk"],
+		"Andrej Esipenko" : ["Espineko"],
+		"Pentala Harikrishna" : [ "Harikrshina", "Hari" ],
+		"Magnus Carlsen" : [ "Carsen" ],
+		"Anish Giri" : [ "Gi" ],
+
 		"dummy" : []
 	}
 	,
-	"official_ranking_source" : "https://www.tatasteelchess.com/players/masters/master-standings"
+	"official_ranking_source" : "https://tatasteelchess.com/standings/"
 	,
 	"official_ranking" :
 	{
-		"1" : [	"Magnus Carlsen" ],
-		"2" : [ "Alireza Firouzja" ],
-		"3" : [ "Levon Aronian" ]
+		"1" : [	"" ],
+		"2" : [ "" ],
+		"3" : [ "" ],
+		"4" : [ "" ],
+		"5" : [ "" ]
 	}
 	,
 	"ranking_scoring" :
 	{
 		"1" : 4,
-		"2" : 4,
-		"3" : 4,
+		"2" : 3,
+		"3" : 3,
+		"4" : 2,
+		"5" : 2,
 		"ranked_incorrect" : 1
 	}
 	,
 	"team_names" :
 	{
 		"paolo58" : "Arianna-Lorenzo",
-		"antoniobg1982" : "Bobby Fischer"
+		"antoniobg1982" : "Bobby Fischer",
+		"mago" : "il Vecchio Lonfo Ammargelluto",
+		"zed" : "Quarta Nazionale",
+		"Jas Fasola" : "Fasolowa",
+		"Angelmann" : "Neanderthal Boys",
+		"Luigi Orlando" : "Tini's",
+		"leovil" : "MinasTirith",
+		"StefanoBellincampi" : "Maggica",
+		"falk17" : "Sissa Leonforte"
 	}
 
 }

@@ -1,1 +1,1 @@
-wget "http://www.scacchierando.it/fantascacchi/fantanorway-2020" -O thread.html
+wget "https://www.scacchierando.it/fantascacchi/fantatata-2021" -O thread.html
