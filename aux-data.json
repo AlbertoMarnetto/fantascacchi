@@ -1,6 +1,6 @@
 {
 	"remarks" : "ettorerusso: classifica a manina",
-	"last_checked_post" : "\nIrishGambit\n\n\n            23 gennaio 2021 -\n            01:25          \n"
+	"last_checked_post" : "\nIrishGambit\n\n\n            31 gennaio 2021 -\n            13:50          \n"
 	,
 	"corrections" :
 	[
@@ -79,6 +79,15 @@
 		"Nils Grandelius"
 	]
 	,
+	"official_ranking" :
+	{
+		"1" : [ "Jorden Van Foreest" ],
+		"2" : [	"Anish Giri" ],
+		"3" : [ "Andrej Esipenko" ],
+		"4" : [ "Fabiano Caruana" ],
+		"5" : [ "Alireza Firouzja" ]
+	}
+	,
 	"masters_scoring_bonuses" :
 	{
 		"Magnus Carlsen" : [ -1, 1 ],
@@ -118,15 +127,6 @@
 	}
 	,
 	"official_ranking_source" : "https://tatasteelchess.com/standings/"
-	,
-	"official_ranking" :
-	{
-		"1" : [	"" ],
-		"2" : [ "" ],
-		"3" : [ "" ],
-		"4" : [ "" ],
-		"5" : [ "" ]
-	}
 	,
 	"ranking_scoring" :
 	{
