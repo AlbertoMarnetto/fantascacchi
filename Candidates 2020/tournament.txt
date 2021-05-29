@@ -1,6 +1,6 @@
 # Tata steel Masters 2020
 
-# http://www.scacchierando.it/torneo-dei-candidati/torneo-dei-candidati-2020-2/ 
+# https://www.scacchierando.it/torneo-dei-candidati/torneo-dei-candidati-2020-2/ 
 
 Round 01 (March 17, 2020)
 Vachier-Lagrave – Caruana ½–½
@@ -44,45 +44,44 @@ Vachier-Lagrave – Nepomniachtchi 1-0
 Ding Liren – Alekseenko ½–½
 Giri – Grischuk ½–½
 
-Round 08 (March 26, 2020)
-Caruana – Vachier-Lagrave
-Wang Hao – Ding Liren
-Nepomniachtchi – Giri
-Alekseenko – Grischuk
+Round 08 (April 19, 2021)
+Caruana – Vachier-Lagrave 1-0
+Wang Hao – Ding Liren ½–½
+Nepomniachtchi – Giri ½–½
+Alekseenko – Grischuk 1-0
 
-Round 09 (March 27, 2020)
-Alekseenko – Caruana
-Grischuk – Nepomniachtchi
-Giri – Wang Hao
-Ding Liren – Vachier-Lagrave
+Round 09 (April 20, 2021)
+Alekseenko – Caruana ½ – ½
+Grischuk – Nepomniachtchi ½ – ½
+Giri – Wang Hao 1 - 0
+Ding Liren – Vachier-Lagrave ½ – ½
 
-Round 10  (March 29, 2020)
-Caruana – Ding Liren
-Vachier-Lagrave – Giri
-Wang Hao – Grischuk
-Nepomniachtchi – Alekseenko
+Round 10  (April 21, 2021)
+Caruana – Ding Liren ½ – ½
+Vachier-Lagrave – Giri ½ – ½
+Wang Hao – Grischuk ½ – ½
+Nepomniachtchi – Alekseenko 1 - 0
 
-Round 11 (March 30, 2020)
-Nepomniachtchi – Caruana
-Alekseenko – Wang Hao
-Grischuk – Vachier-Lagrave
-Giri – Ding Liren
+Round 11 (April 23, 2021)
+Nepomniachtchi – Caruana ½ – ½
+Alekseenko – Wang Hao ½ – ½
+Grischuk – Vachier-Lagrave 1 - 0
+Giri – Ding Liren 1 - 0
 
 Round 12 (March 31, 2020)
-Caruana – Giri
-Ding Liren – Grischuk
-Vachier-Lagrave – Alekseenko
-Wang Hao – Nepomniachtchi
+Caruana – Giri 0 – 1
+Ding Liren – Grischuk 1 – 0
+Vachier-Lagrave – Alekseenko 1 – 0
+Wang Hao – Nepomniachtchi 0 – 1
 
-Round 13 (April 02, 2020)
-Wang Hao – Caruana
-Nepomniachtchi – Vachier-Lagrave
-Alekseenko – Ding Liren
-Grischuk – Giri
+Round 13 (April 26, 2021)
+Wang Hao – Caruana 0 – 1
+Nepomniachtchi – Vachier-Lagrave ½ – ½
+Alekseenko – Ding Liren 0 – 1
+Grischuk – Giri 1 – 0
 
-Round 14 (April 03, 2020)
-Caruana – Grischuk
-Giri – Alekseenko
-Ding Liren – Nepomniachtchi
-Vachier-Lagrave – Wang Hao
-
+Round 14 (April 27, 2021)
+Caruana – Grischuk ½ – ½
+Giri – Alekseenko 0 – 1
+Ding Liren – Nepomniachtchi 1 – 0
+Vachier-Lagrave – Wang Hao 1 – 0

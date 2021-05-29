@@ -73,7 +73,8 @@ def load_aux_data(filename):
             post_corrections.append(post_correction)
 
         def should_ignore_post(post):
-            return any(string in post.text for string in data["posts_string_blacklist"] if string != "")
+            return any(string in post.text for string in data["posts_string_blacklist"] if string != "") or (
+                    post.author in data["posts_author_blacklist"])
 
         if "Winner" in data["official_ranking"].keys():
             # Winner and Semifinalists

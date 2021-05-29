@@ -1,134 +1,87 @@
-# Tata Steel 2021
+# Tata steel Masters 2020
 
-# https://www.scacchierando.it/supertornei/tata-steel-2021
+# https://www.scacchierando.it/torneo-dei-candidati/torneo-dei-candidati-2020-2/ 
 
-1° turno 
+Round 01 (March 17, 2020)
+Vachier-Lagrave – Caruana ½–½
+Ding Liren – Wang Hao 0-1
+Giri – Nepomniachtchi 0-1
+Grischuk – Alekseenko ½–½
 
-Carlsen – Firouzja 1 – 0
-Caruana – Van Foreest ½ – ½
-Giri – Tari 1 – 0
-Wojtaszek – Antón ½ – ½
-Harikrishna – Vachier-Lagrave ½ – ½
-Esipenko – Duda ½ – ½
-Grandelius – Donchenko 1 – 0 	
+Round 02 (March 18, 2020)
+Caruana – Alekseenko 1-0
+Nepomniachtchi – Grischuk ½–½
+Wang Hao – Giri  ½–½
+Vachier-Lagrave – Ding Liren 1-0
 
+Round 03 (March 19, 2020)
+Ding Liren – Caruana 1-0
+Giri – Vachier-Lagrave ½–½
+Grischuk – Wang Hao  ½–½
+Alekseenko – Nepomniachtchi ½–½
 
-2° turno 
+Round 04 (March 21, 2020)
+Caruana – Nepomniachtchi  ½–½
+Wang Hao – Alekseenko  ½–½
+Vachier-Lagrave – Grischuk  ½–½
+Ding Liren – Giri  ½–½
 
-Vachier-Lagrave – Firouzja ½ - ½
-Antón – Carlsen ½ - ½
-Tari – Wojtaszek ½ - ½
-Van Foreest – Giri ½ - ½
-Donchenko – Caruana 0 - 1
-Duda – Grandelius 0 - 1
-Harikrishna – Esipenko ½ - ½
+Round 05 (March 22, 2020)
+Giri – Caruana  ½–½
+Grischuk – Ding Liren  ½–½
+Alekseenko – Vachier-Lagrave  ½–½
+Nepomniachtchi – Wang Hao 1-0
 
-3º turno 
+Round 06 (March 23, 2020)
+Grischuk – Caruana ½–½
+Alekseenko – Giri 0-1
+Nepomniachtchi – Ding Liren 1-0
+Wang Hao – Vachier-Lagrave  ½–½
 
-Esipenko – Vachier-Lagrave ½ – ½
-Grandelius – Harikrishna 0 – 1
-Caruana – Duda ½ – ½
-Giri – Donchenko ½ – ½
-Wojtaszek – Van Foreest ½ – ½
-Carlsen – Tari ½ – ½
-Firouzja – Antón 1 – 0
+Round 07 (March 25, 2020)
+Caruana – Wang Hao ½–½
+Vachier-Lagrave – Nepomniachtchi 1-0
+Ding Liren – Alekseenko ½–½
+Giri – Grischuk ½–½
 
-4º turno
+Round 08 (April 19, 2021)
+Caruana – Vachier-Lagrave 1-0
+Wang Hao – Ding Liren ½–½
+Nepomniachtchi – Giri ½–½
+Alekseenko – Grischuk 1-0
 
-Vachier-Lagrave – Antón ½ – ½
-Tari – Firouzja ½ – ½
-Van Foreest – Carlsen ½ – ½
-Donchenko – Wojtaszek ½ – ½
-Duda – Giri ½ – ½
-Harikrishna – Caruana ½ – ½
-Esipenko – Grandelius ½ – ½
+Round 09 (April 20, 2021)
+Alekseenko – Caruana ½ – ½
+Grischuk – Nepomniachtchi ½ – ½
+Giri – Wang Hao 1 - 0
+Ding Liren – Vachier-Lagrave ½ – ½
 
-5º turno
+Round 10  (April 21, 2021)
+Caruana – Ding Liren ½ – ½
+Vachier-Lagrave – Giri ½ – ½
+Wang Hao – Grischuk ½ – ½
+Nepomniachtchi – Alekseenko 1 - 0
 
-Grandelius – Vachier-Lagrave 1 – 0
-Caruana – Esipenko ½ – ½
-Giri – Harikrishna ½ – ½
-Wojtaszek – Duda ½ – ½
-Carlsen – Donchenko ½ – ½
-Firouzja – Van Foreest ½ – ½
-Antón – Tari ½ – ½
+Round 11 (April 23, 2021)
+Nepomniachtchi – Caruana ½ – ½
+Alekseenko – Wang Hao ½ – ½
+Grischuk – Vachier-Lagrave 1 - 0
+Giri – Ding Liren 1 - 0
 
-6º turno
+Round 12 (March 31, 2020)
+Caruana – Giri 0 – 1
+Ding Liren – Grischuk 1 – 0
+Vachier-Lagrave – Alekseenko 1 – 0
+Wang Hao – Nepomniachtchi 0 – 1
 
-Vachier-Lagrave – Tari ½ – ½
-Van Foreest – Antón 1 – 0
-Donchenko – Firouzja 0 – 1
-Duda – Carlsen ½ – ½
-Harikrishna – Wojtaszek ½ – ½
-Esipenko – Giri ½ – ½
-Grandelius – Caruana ½ – ½
+Round 13 (April 26, 2021)
+Wang Hao – Caruana 0 – 1
+Nepomniachtchi – Vachier-Lagrave ½ – ½
+Alekseenko – Ding Liren 0 – 1
+Grischuk – Giri 1 – 0
 
-7º turno
-
-Caruana – Vachier-Lagrave 1 – 0
-Giri – Grandelius 1 – 0
-Wojtaszek – Esipenko 0 – 1
-Carlsen – Harikrishna ½ – ½
-Firouzja – Duda 1 – 0
-Antón – Donchenko ½ – ½
-Tari – Van Foreest 0 – 1
-
-8º turno
-
-Vachier-Lagrave – Van Foreest ½ – ½
-Donchenko – Tari ½ – ½
-Duda – Antón ½ – ½
-Harikrishna – Firouzja 0 – 1
-Esipenko – Carlsen 1 – 0
-Grandelius – Wojtaszek ½ – ½
-Caruana – Giri ½ – ½
-
-9º turno
-
-Giri – Vachier-Lagrave 1 – 0
-Wojtaszek – Caruana 0 – 1
-Carlsen – Grandelius 1 – 0
-Firouzja – Esipenko ½ – ½ 
-Antón – Harikrishna ½ – ½ 
-Tari – Duda ½ – ½ 
-Van Foreest – Donchenko ½ – ½ 
-
-10º turno
-
-Vachier-Lagrave – Donchenko 1 – 0
-Duda – Van Foreest ½ – ½
-Harikrishna – Tari ½ – ½
-Esipenko – Antón 1 – 0
-Grandelius – Firouzja ½ – ½
-Caruana – Carlsen ½ – ½
-Giri – Wojtaszek 1 – 0
-
-11º turno
-
-Wojtaszek – Vachier-Lagrave ½ - ½
-Donchenko – Duda ½ - ½
-Carlsen – Giri ½ - ½
-Firouzja – Caruana ½ - ½
-Antón – Grandelius ½ - ½
-Tari – Esipenko 1 – 0
-Van Foreest – Harikrishna 1 – 0
-
-12º turno
-
-Vachier-Lagrave – Duda ½ – ½
-Harikrishna – Donchenko 1 – 0
-Esipenko – Van Foreest ½ – ½
-Grandelius – Tari ½ – ½
-Caruana – Antón ½ – ½
-Giri – Firouzja ½ – ½
-Wojtaszek – Carlsen ½ – ½
-
-13º turno 
-
-Carlsen – Vachier-Lagrave 1 – 0
-Firouzja – Wojtaszek ½ – ½
-Antón – Giri ½ – ½
-Tari – Caruana ½ – ½
-Van Foreest – Grandelius 1 – 0
-Donchenko – Esipenko 0 – 1
-Duda – Harikrishna ½ – ½
+Round 14 (April 27, 2021)
+Caruana – Grischuk ½ – ½
+Giri – Alekseenko 0 – 1
+Ding Liren – Nepomniachtchi 1 – 0
+Vachier-Lagrave – Wang Hao 1 – 0

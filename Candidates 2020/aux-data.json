@@ -1,5 +1,5 @@
 {
-	"last_checked_post" : "\nIrishGambit\n\n\n            24 marzo 2020 -\n            11:47          \n"
+	"last_checked_post" : "\nIrishGambit\n\n\n            28 aprile 2021 -\n            13:23          \nMa certo, ho inserito il tuo pronostico nella mia griglia\n"
 	,
 	"games_per_round" : 4,
 	"scoring_system" : "3_1_4",
@@ -49,14 +49,14 @@
 	,
 	"official_ranking" :
 	{
-		"1" : [],
-		"2" : [],
-		"3" : []
+		"1" : [ "Ian Nepomniachtchi" ],
+		"2" : [ "Maxime Vachier-Lagrave"],
+		"3" : [ "Anish Giri", "Fabiano Caruana" ]
 	}
 	,
 	"ranking_scoring" :
 	{
-		"1" : 4,
+		"1" : 5,
 		"2" : 2,
 		"3" : 2,
 		"ranked_incorrect" : 1
@@ -79,14 +79,6 @@
 	"corrections" :
 	[
 		{
-			"author" : "MeNeSbattoDelTuoControgioco",
-			"text" :
-			[
-				"Grischuk - Alekseenko X"			
-			]
-		}
-		,
-		{
 			"author" : "marcone8",
 			"text" : [ "1. Nepo", "2. Caruana", "3. Ding" ]
 		}
@@ -106,6 +98,14 @@
 	"corrections_sample" :
 	[
 		{
+			"author" : "MeNeSbattoDelTuoControgioco",
+			"text" :
+			[
+				"Grischuk - Alekseenko X"			
+			]
+		}
+		,
+		{
 			"author" : "irishgambit",
 			"text" :
 			[
@@ -123,5 +123,13 @@
 		"IrishGambit\n\n\n            17 marzo 2020 -\n            23:22          \n",
 		"marcone 8\n\n\n            18 marzo 2020 -\n            12:28          \n",
 		"\nmike\n\n\n            24 marzo 2020 -\n            12:33          \n"
+	],
+	"posts_author_blacklist" :
+	[
+		"Albeggio68", "altapinus", "Apolide1", "Chad", "danni", "Dante", "Dragonflow", "DrunkPawn", "EvaKant",
+		"JLT", "Maggica", "marmocchia", "MeNeSbattoDelTuoControgioco", "mike", "papageno", "piccolo_pollo", "scacchituoi",
+		"scisci", "Sissa Leonforte", "Sterling", "wolf", "Zugzwang",
+		"Akiba", "Ale", "Begovic", "Filolachete", "JohnCipollina", "Kevin", "lordste", "magnons", "mike",
+		"Pappolo", "Pier", "sandinista", "svista", "tuttiacasapersempre"
 	]
 }

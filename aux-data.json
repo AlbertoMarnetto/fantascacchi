@@ -1,43 +1,110 @@
 {
-	"remarks" : "ettorerusso: classifica a manina",
-	"last_checked_post" : "\nIrishGambit\n\n\n            31 gennaio 2021 -\n            13:50          \n"
+	"last_checked_post" : "\nIrishGambit\n\n\n            28 aprile 2021 -\n            13:23          \nMa certo, ho inserito il tuo pronostico nella mia griglia\n"
+	,
+	"games_per_round" : 4,
+	"scoring_system" : "3_1_4",
+	"expected_ranking_length": 3,
+	"bonus_for_perfect_round_prediction": 3,
+	"enable_default_draw_prediction": 1,
+	"masters_names" :
+	[
+		"Fabiano Caruana",
+		"Anish Giri",
+		"Ding Liren",
+		"Wang Hao",
+		"Maxime Vachier-Lagrave",
+		"Ian Nepomniachtchi",
+		"Alexander Grischuk",
+		"Kirill Alekseenko"
+	]
+	,
+	"masters_scoring_bonuses" :
+	{
+		"Magnus Carlsen" : [ -1, 1 ],
+		"Daniil Dubov" : [ 1, -1 ],
+		"Vladislav2 Kovalev" : [ 1, -1 ],
+		"Jorden Van Foreest" : [ 1, -1 ]
+	}
+	,
+	"masters_nicknames" :
+	{
+		"Warning" : ["Togli Radja come nick di MVL!"],
+		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher", "Radjabov" ],
+		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi"],
+		"Fabiano Caruana" : [ "Caru", "Cariana" ],
+		"Viswanathan Anand" : [ "Andand" ],
+		"Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
+		"Hikaru Nakamura" : [ "Naka" ],
+		"Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish", "Grisc", "Grischuck"],
+		"Vladimir Kramnik" : ["KRAM", "Kraminik"],
+		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov"],
+		"Levon Aronian" : ["ARON"],
+		"Ding Liren" : [ "DingLiren" ],
+		"Meier" : ["Meijer"],
+		"Kirill Alekseenko" : ["Alex", "Aleks", "Aleksenko"],
+		"dummy" : []
+	}
+	,
+	"official_ranking_source" : "https://www.tatasteelchess.com/players/masters/master-standings"
+	,
+	"official_ranking" :
+	{
+		"1" : [ "Ian Nepomniachtchi" ],
+		"2" : [ "Maxime Vachier-Lagrave"],
+		"3" : [ "Anish Giri", "Fabiano Caruana" ]
+	}
+	,
+	"ranking_scoring" :
+	{
+		"1" : 5,
+		"2" : 2,
+		"3" : 2,
+		"ranked_incorrect" : 1
+	}
+	,
+	"team_names" :
+	{
+		"paolo58" : "Arianna-Lorenzo",
+		"zed" : "Quarta Nazionale",
+		"falk17" : "Sissa Leonforte",
+		"chicco" : "Chicco",
+		"antoniobg1982" : "Bobby Fischer",
+		"Luigi Orlando" : "gigi8",
+		"mike" : "Mike",
+		"orcoisback" : "tuttiacasapersempre",
+		"Angelmann" : "Neanderthal Boys",
+		"StefanoBellincampi" : "Maggica"
+	}
 	,
 	"corrections" :
 	[
-	
 		{
-			"author" : "sanchopanza",
-			"text" :
-			[
-				"2° turno ",
-				"Vachier-Lagrave – Firouzja ½ - ½",
-				"Antón – Carlsen ½ - ½",
-				"Tari – Wojtaszek ½ - ½",
-				"Van Foreest – Giri ½ - ½",
-				"Donchenko – Caruana ½ - ½",
-				"Duda – Grandelius ½ - ½",
-				"Harikrishna – Esipenko ½ - ½"
-			]
+			"author" : "marcone8",
+			"text" : [ "1. Nepo", "2. Caruana", "3. Ding" ]
 		}
 		,
 		{
-			"author" : "Riserva",
+			"author" : "Mike",
 			"text" :
 			[
-				"2° turno ",
-				"Vachier-Lagrave – Firouzja ½ - ½",
-				"Antón – Carlsen ½ - ½",
-				"Tari – Wojtaszek ½ - ½",
-				"Van Foreest – Giri ½ - ½",
-				"Donchenko – Caruana ½ - ½",
-				"Duda – Grandelius ½ - ½",
-				"Harikrishna – Esipenko ½ - ½"
+				"Caruana - Wang 1",			
+				"MVL - Nepo 1",			
+				"Ding - Alekseenko 1",			
+				"Giri - Grischuk 1"
 			]
 		}
 	]
 	,
 	"corrections_sample" :
 	[
+		{
+			"author" : "MeNeSbattoDelTuoControgioco",
+			"text" :
+			[
+				"Grischuk - Alekseenko X"			
+			]
+		}
+		,
 		{
 			"author" : "irishgambit",
 			"text" :
@@ -53,103 +120,16 @@
 	,
 	"posts_string_blacklist" :
 	[
-		"Gaetano_Bresci"
-	]	
-	,
-	"games_per_round" : 7,
-	"scoring_system" : "3_1_4",
-	"expected_ranking_length": 5,
-	"bonus_for_perfect_round_prediction": 4,
-	"enable_default_draw_prediction": 1,
-	"masters_names" :
+		"IrishGambit\n\n\n            17 marzo 2020 -\n            23:22          \n",
+		"marcone 8\n\n\n            18 marzo 2020 -\n            12:28          \n",
+		"\nmike\n\n\n            24 marzo 2020 -\n            12:33          \n"
+	],
+	"posts_author_blacklist" :
 	[
-		"Fabiano Caruana",
-		"Magnus Carlsen",
-		"Alireza Firouzja",
-		"Aryan Tari",
-		"Jan-Krzysztof Duda",
-		"Maxime Vachier-Lagrave",
-		"Anish Giri",
-		"Pentala Harikrishna",
-		"Radosław Wojtaszek",
-		"Andrej Esipenko",
-		"David Antón Guijarro",
-		"Jorden Van Foreest",
-		"Alexander Donchenko",
-		"Nils Grandelius"
+		"Albeggio68", "altapinus", "Apolide1", "Chad", "danni", "Dante", "Dragonflow", "DrunkPawn", "EvaKant",
+		"JLT", "Maggica", "marmocchia", "MeNeSbattoDelTuoControgioco", "mike", "papageno", "piccolo_pollo", "scacchituoi",
+		"scisci", "Sissa Leonforte", "Sterling", "wolf", "Zugzwang",
+		"Akiba", "Ale", "Begovic", "Filolachete", "JohnCipollina", "Kevin", "lordste", "magnons", "mike",
+		"Pappolo", "Pier", "sandinista", "svista", "tuttiacasapersempre"
 	]
-	,
-	"official_ranking" :
-	{
-		"1" : [ "Jorden Van Foreest" ],
-		"2" : [	"Anish Giri" ],
-		"3" : [ "Andrej Esipenko" ],
-		"4" : [ "Fabiano Caruana" ],
-		"5" : [ "Alireza Firouzja" ]
-	}
-	,
-	"masters_scoring_bonuses" :
-	{
-		"Magnus Carlsen" : [ -1, 1 ],
-		"Fabiano Caruana" : [ -1, 1 ],
-		"Aryan Tari" : [ 1, -1 ],
-		"Andrej Esipenko" : [ 1, -1 ],
-		"David Antón Guijarro" : [ 1, -1 ],
-		"Jorden Van Foreest" : [ 1, -1 ],
-		"Alexander Donchenko" : [ 1, -1 ],
-		"Nils Grandelius" : [ 1, -1 ]
-	}
-	,
-	"masters_nicknames" :
-	{
-		"Warning" : [""],
-		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher", "Lagrave"],
-		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi"],
-		"Fabiano Caruana" : [ "Caru", "Cariana" ],
-		"Viswanathan Anand" : [ "Andand" ],
-		"Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
-		"Hikaru Nakamura" : [ "Naka" ],
-		"Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish", "Grisc", "Grischuck"],
-		"Vladimir Kramnik" : ["KRAM", "Kraminik"],
-		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov"],
-		"Levon Aronian" : ["ARON"],
-		"Ding Liren" : [ "DingLiren" ],
-		"Meier" : ["Meijer"],
-		"Kirill Alekseenko" : ["Alex", "Aleks", "Aleksenko"],
-		"David Antón Guijarro": ["Anton"],
-		"Radosław Wojtaszek" : ["Wojtasezk"],
-		"Andrej Esipenko" : ["Espineko"],
-		"Pentala Harikrishna" : [ "Harikrshina", "Hari" ],
-		"Magnus Carlsen" : [ "Carsen" ],
-		"Anish Giri" : [ "Gi" ],
-
-		"dummy" : []
-	}
-	,
-	"official_ranking_source" : "https://tatasteelchess.com/standings/"
-	,
-	"ranking_scoring" :
-	{
-		"1" : 4,
-		"2" : 3,
-		"3" : 3,
-		"4" : 2,
-		"5" : 2,
-		"ranked_incorrect" : 1
-	}
-	,
-	"team_names" :
-	{
-		"paolo58" : "Arianna-Lorenzo",
-		"antoniobg1982" : "Bobby Fischer",
-		"mago" : "il Vecchio Lonfo Ammargelluto",
-		"zed" : "Quarta Nazionale",
-		"Jas Fasola" : "Fasolowa",
-		"Angelmann" : "Neanderthal Boys",
-		"Luigi Orlando" : "Tini's",
-		"leovil" : "MinasTirith",
-		"StefanoBellincampi" : "Maggica",
-		"falk17" : "Sissa Leonforte"
-	}
-
 }
