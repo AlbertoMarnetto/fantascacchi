@@ -1,87 +1,65 @@
-# Tata steel Masters 2020
+# Superbet Chess Classic
 
-# https://www.scacchierando.it/torneo-dei-candidati/torneo-dei-candidati-2020-2/ 
+2º turno
 
-Round 01 (March 17, 2020)
-Vachier-Lagrave – Caruana ½–½
-Ding Liren – Wang Hao 0-1
-Giri – Nepomniachtchi 0-1
-Grischuk – Alekseenko ½–½
+So, Wesley – Aronian, Levon ½ – ½
+Caruana, Fabiano – Lupulescu, Constantin 1 – 0
+Giri, Anish – Radjabov, Teimour ½ – ½
+Vachier-Lagrave, Maxime – Deac, Bogdan-Daniel 0 – 1
+Mamedyarov, Shakhriyar – Grischuk, Alexander ½ – ½
 
-Round 02 (March 18, 2020)
-Caruana – Alekseenko 1-0
-Nepomniachtchi – Grischuk ½–½
-Wang Hao – Giri  ½–½
-Vachier-Lagrave – Ding Liren 1-0
+3º turno
 
-Round 03 (March 19, 2020)
-Ding Liren – Caruana 1-0
-Giri – Vachier-Lagrave ½–½
-Grischuk – Wang Hao  ½–½
-Alekseenko – Nepomniachtchi ½–½
+Grischuk – So ½ – ½
+Deac – Mamedyarov ½ – ½
+Radjabov – Vacher-Lagrave ½ – ½
+Lupulescu – Giri 1 – 0
+Aronian – Caruana ½ – ½
 
-Round 04 (March 21, 2020)
-Caruana – Nepomniachtchi  ½–½
-Wang Hao – Alekseenko  ½–½
-Vachier-Lagrave – Grischuk  ½–½
-Ding Liren – Giri  ½–½
+4º turno
 
-Round 05 (March 22, 2020)
-Giri – Caruana  ½–½
-Grischuk – Ding Liren  ½–½
-Alekseenko – Vachier-Lagrave  ½–½
-Nepomniachtchi – Wang Hao 1-0
+So – Caruana 1 – 0
+Giri – Aronian ½ – ½
+Vachier-Lagrave – Lupulescu ½ – ½
+Mamedyarov – Radjabov ½ – ½
+Grischuk – Deac 1 – 0
 
-Round 06 (March 23, 2020)
-Grischuk – Caruana ½–½
-Alekseenko – Giri 0-1
-Nepomniachtchi – Ding Liren 1-0
-Wang Hao – Vachier-Lagrave  ½–½
+5° turno
 
-Round 07 (March 25, 2020)
-Caruana – Wang Hao ½–½
-Vachier-Lagrave – Nepomniachtchi 1-0
-Ding Liren – Alekseenko ½–½
-Giri – Grischuk ½–½
+Deac – So ½ – ½
+Radjabov – Grischuk ½ – ½
+Lupulescu – Mamedyarov 0 – 1
+Aronian – Vachier-Lagrave ½ – ½
+Caruana – Giri ½ – ½
 
-Round 08 (April 19, 2021)
-Caruana – Vachier-Lagrave 1-0
-Wang Hao – Ding Liren ½–½
-Nepomniachtchi – Giri ½–½
-Alekseenko – Grischuk 1-0
+6° turno
 
-Round 09 (April 20, 2021)
-Alekseenko – Caruana ½ – ½
-Grischuk – Nepomniachtchi ½ – ½
-Giri – Wang Hao 1 - 0
-Ding Liren – Vachier-Lagrave ½ – ½
+So – Giri ½ – ½
+Vachier-Lagrave – Caruana ½ – ½
+Mamedyarov – Aronian 1 – 0
+Grischuk – Lupulescu 1 – 0
+Deac – Radjabov ½ – ½
 
-Round 10  (April 21, 2021)
-Caruana – Ding Liren ½ – ½
-Vachier-Lagrave – Giri ½ – ½
-Wang Hao – Grischuk ½ – ½
-Nepomniachtchi – Alekseenko 1 - 0
+7º turno
 
-Round 11 (April 23, 2021)
-Nepomniachtchi – Caruana ½ – ½
-Alekseenko – Wang Hao ½ – ½
-Grischuk – Vachier-Lagrave 1 - 0
-Giri – Ding Liren 1 - 0
+Radjabov – So ½ – ½
+Lupulescu – Deac ½ – ½
+Aronian – Grischuk 1 – 0
+Caruana – Mamedyarov 0 – 1
+Giri – Vachier-Lagrave 1 – 0
 
-Round 12 (March 31, 2020)
-Caruana – Giri 0 – 1
-Ding Liren – Grischuk 1 – 0
-Vachier-Lagrave – Alekseenko 1 – 0
-Wang Hao – Nepomniachtchi 0 – 1
+8º turno
 
-Round 13 (April 26, 2021)
-Wang Hao – Caruana 0 – 1
-Nepomniachtchi – Vachier-Lagrave ½ – ½
-Alekseenko – Ding Liren 0 – 1
-Grischuk – Giri 1 – 0
+So – Vachier-Lagrave ½ – ½
+Mamedyarov – Giri ½ – ½
+Grischuk – Caruana ½ – ½
+Deac – Aronian 0 – 1
+Radjabov – Lupulescu ½ – ½
 
-Round 14 (April 27, 2021)
-Caruana – Grischuk ½ – ½
-Giri – Alekseenko 0 – 1
-Ding Liren – Nepomniachtchi 1 – 0
-Vachier-Lagrave – Wang Hao 1 – 0
+9º turno
+
+Lupulescu – So ½ – ½
+Aronian – Radjabov ½ – ½
+Caruana – Deac ½ – ½
+Giri – Grischuk ½ – ½
+Vachier-Lagrave – Mamedyarov ½ – ½
