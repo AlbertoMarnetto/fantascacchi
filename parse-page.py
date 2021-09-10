@@ -24,6 +24,7 @@ TournamentData = namedtuple("TournamentData", [
     "team_names",
     "expected_ranking_length",
     "bonus_for_perfect_round_prediction",
+    "negate_bonus_if_all_draws",
     "ranking_scoring",
     "masters_scoring_bonuses"
     ])
@@ -98,6 +99,8 @@ def load_aux_data(filename):
 
         bonus_for_perfect_round_prediction = data.get("bonus_for_perfect_round_prediction", 0)
 
+        negate_bonus_if_all_draws = data.get("negate_bonus_if_all_draws", 0)
+
         ranking_scoring = data.get("ranking_scoring",
             { "first_ranked_correct" : 3, "other_ranked_correct" : 2, "ranked_incorrect" : 1 } )
 
@@ -114,6 +117,7 @@ def load_aux_data(filename):
             team_names = team_names,
             expected_ranking_length = expected_ranking_length,
             bonus_for_perfect_round_prediction = bonus_for_perfect_round_prediction,
+            negate_bonus_if_all_draws = negate_bonus_if_all_draws,
             ranking_scoring = ranking_scoring,
             masters_scoring_bonuses = masters_scoring_bonuses
             )
@@ -383,7 +387,7 @@ def get_line_ranking(line, masters_appellatives, author_name):
 
 # One optional numer at the beginning,
 # followed by 1-3 words
-get_line_ranking.line_re = re.compile("^\s*\d*[).\W]*(\S+\s?){1,3}$")
+get_line_ranking.line_re = re.compile("^\s*\d*[).ªº\W]*(\S+\s?){1,3}$")
 
 ##############################################
 
@@ -699,6 +703,15 @@ def calculate_round_entries(all_predictions, tournament_data):
             if prediction.round == round
             )
 
+        all_draws_in_this_round = all(
+            prediction.outcome == "X" 
+            for prediction in official_results
+            if prediction.round == round
+            )
+
+        negate_bonus = ( tournament_data.negate_bonus_if_all_draws
+                and all_draws_in_this_round )
+
         for author in authors:
             if author == "Official results":
                 continue
@@ -727,15 +740,16 @@ def calculate_round_entries(all_predictions, tournament_data):
                 prediction.score
                 for prediction in author_predictions_for_this_round)
 
-            # “Nel caso vengano indovinate tutte le partite di un turno,
-            # verranno assegnati 3 punti aggiuntivi.”
-            author_good_predictions_count = sum(
-                1
-                for prediction in author_predictions_for_this_round
-                if prediction.guessed == True)
-                
-            if (author_good_predictions_count == games_in_this_round):
-                author_score_for_this_round += tournament_data.bonus_for_perfect_round_prediction
+            if (not negate_bonus):
+                # “Nel caso vengano indovinate tutte le partite di un turno,
+                # verranno assegnati 3 punti aggiuntivi.”
+                author_good_predictions_count = sum(
+                    1
+                    for prediction in author_predictions_for_this_round
+                    if prediction.guessed == True)
+                    
+                if (author_good_predictions_count == games_in_this_round):
+                    author_score_for_this_round += tournament_data.bonus_for_perfect_round_prediction
 
             scores_per_rounds.append( (round, author, author_score_for_this_round) )
 
