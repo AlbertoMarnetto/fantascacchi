@@ -1,34 +1,39 @@
 {
 	"last_checked_post" : "\nGiammy\n\n\n            14 giugno 2021 -\n            17:10          \n"
 	,
-	"games_per_round" : 3,
+	"games_per_round" : 5,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
-	"bonus_for_perfect_round_prediction": 3,
+	"bonus_for_perfect_round_prediction": 4,
 	"negate_bonus_if_all_draws": true,
 	"enable_default_draw_prediction": 1,
 	"masters_names" :
 	[
-		"Magnus Carlsen",
-		"Arjan Tari",
-		"Ian Nepomniachtchi",
-		"Richard Rapport",
-		"Alireza Firouzja",
-		"Sergej Karjakin"
+		"Fabiano Caruana",
+		"Anish Giri",
+		"Maxime Vachier-Lagrave",
+		"Alexander Grischuk",
+		"Wesley So",
+		"Levon Aronian",
+		"Constantin Lupulescu",
+		"Teimour Radjabov",
+		"Bogdan-Daniel Deac",
+		"Shakhriyar Mamedyarov"
 	]
 	,
 	"masters_scoring_bonuses" :
 	{
 		"Magnus Carlsen" : [ -1, 1 ],
 		"Daniil Dubov" : [ 1, -1 ],
+		"Vladislav2 Kovalev" : [ 1, -1 ],
 		"Jorden Van Foreest" : [ 1, -1 ],
 		"Constantin Lupulescu" : [ 1, -1 ],
-		"Bogdan-Daniel Deac" : [ 1, -1 ],
-		"Arjan Tari" : [ 1, -1 ]
+		"Bogdan-Daniel Deac" : [ 1, -1 ]
 	}
 	,
 	"masters_nicknames" :
 	{
+		"Warning" : ["Togli Radja come nick di MVL!"],
 		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher" ],
 		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi"],
 		"Fabiano Caruana" : [ "Caru", "Cariana" ],
@@ -42,9 +47,6 @@
 		"Ding Liren" : [ "DingLiren" ],
 		"Meier" : ["Meijer"],
 		"Kirill Alekseenko" : ["Alex", "Aleks", "Aleksenko"],
-		"Ian Nepomniachtchi" : [ "Nepomnjaščij", "Nepomnjashchij", "Nepo" ],
-		"Magnus Carlsen" : [ "Carlen", "Carlseb" ],
-		"Alireza Firouzja" : [ "Firojuza", "Firouzjia" ],
 		"dummy" : []
 	}
 	,
@@ -52,33 +54,32 @@
 	,
 	"official_ranking" :
 	{
-		"1" : [],
-		"2" : [],
-		"3" : []
+		"1" : [ "Shakhriyar Mamedyarov" ],
+		"2" : [ "Levon Aronian", "Wesley So", "Alexander Grischuk" ],
+		"3" : [ "Levon Aronian", "Wesley So", "Alexander Grischuk" ]
 	}
 	,
 	"ranking_scoring" :
 	{
-		"1" : 5,
-		"2" : 3,
-		"3" : 3,
+		"1" : 4,
+		"2" : 4,
+		"3" : 4,
 		"ranked_incorrect" : 1
 	}
 	,
 	"team_names" :
 	{
-		"paolo58" : "Ari.Lor.Iso.",
+		"paolo58" : "Arianna-Lorenzo",
 		"zed" : "Quarta Nazionale",
 		"falk17" : "Sissa Leonforte",
 		"chicco" : "Chicco",
 		"antoniobg1982" : "Bobby Fischer",
-		"Luigi Orlando" : "Tini’s",
+		"Luigi Orlando" : "gigi8",
 		"mike" : "Mike",
 		"orcoisback" : "tuttiacasapersempre",
 		"Angelmann" : "Neanderthal Boys",
 		"StefanoBellincampi" : "Maggica",
-		"prof73" : "Nova Gorica",
-		"Jas Fasola" : "Fasolowa"
+		"prof73" : "Nova Gorica"
 	}
 	,
 	"corrections" :
@@ -102,10 +103,10 @@
 	,
 	"posts_string_blacklist" :
 	[
-		"\nIrishGambit\n\n\n            8 giugno 2021 -\n            14:13          \n",
-		"\nchicco\n\n\n            8 settembre 2021 -\n            21:25          \n"
+		"\nIrishGambit\n\n\n            8 giugno 2021 -\n            14:13          \n"
 	],
 	"posts_author_blacklist" :
 	[
+		"Nova Gorica"
 	]
 }
