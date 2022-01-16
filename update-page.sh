@@ -1,1 +1,1 @@
-wget https://www.scacchierando.it/evidenza/fantanorway-2021 -O thread.html
+wget https://www.scacchierando.it/evidenza/fantatata-2022 -O thread.html

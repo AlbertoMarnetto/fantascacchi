@@ -1,30 +1,35 @@
 {
 	"last_checked_post" : "\nIrishGambit\n\n\n            14 settembre 2021 -\n            21:11          \nApplausi!\n"
 	,
-	"games_per_round" : 3,
+	"games_per_round" : 7,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
-	"bonus_for_perfect_round_prediction": 3,
-	"negate_bonus_if_all_draws": true,
+	"bonus_for_perfect_round_prediction": 4,
+	"negate_bonus_if_all_draws": false,
 	"enable_default_draw_prediction": 1,
 	"masters_names" :
 	[
 		"Magnus Carlsen",
-		"Arjan Tari",
-		"Ian Nepomniachtchi",
 		"Richard Rapport",
-		"Alireza Firouzja",
-		"Sergej Karjakin"
+		"Sergej Karjakin",
+		"Anish Giri",
+		"Shakhriyar Mamedyarov",
+		"Andrey Esipenko",
+		"Vidit Gujrathi",
+		"Fabiano Caruana",
+		"Jorden Van Foreest",
+		"Daniil Dubov",
+		"Samuel Shankland",
+		"Nils Grandelius",
+		"Rameshbabu Praggnanandhaa",
+		"Jan-Krzysztof Duda"
 	]
 	,
 	"masters_scoring_bonuses" :
 	{
 		"Magnus Carlsen" : [ -1, 1 ],
-		"Daniil Dubov" : [ 1, -1 ],
-		"Jorden Van Foreest" : [ 1, -1 ],
-		"Constantin Lupulescu" : [ 1, -1 ],
-		"Bogdan-Daniel Deac" : [ 1, -1 ],
-		"Arjan Tari" : [ 1, -1 ]
+		"Nils Grandelius" : [ 1, -1 ],
+		"Rameshbabu Praggnanandhaa" : [ 1, -1 ]
 	}
 	,
 	"masters_nicknames" :
@@ -52,16 +57,18 @@
 	,
 	"official_ranking" :
 	{
-		"1" : [	"Magnus Carlsen" ],
-		"2" : [ "Alireza Firouzja" ],
-		"3" : [ "Richard Rapport" ]
+		"1" : [],
+		"2" : [],
+		"3" : []
 	}
 	,
 	"ranking_scoring" :
 	{
-		"1" : 5,
+		"1" : 4,
 		"2" : 3,
 		"3" : 3,
+		"4" : 2,
+		"5" : 2,
 		"ranked_incorrect" : 1
 	}
 	,
@@ -108,6 +115,5 @@
 	],
 	"posts_author_blacklist" :
 	[
-"Sissa Leonforte"
 	]
 }

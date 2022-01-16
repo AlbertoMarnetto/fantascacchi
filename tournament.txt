@@ -1,62 +1,25 @@
-# Norway Chess 2021
+# Tata Steel Chess 2022
 
 
-2º turno
+# Round 2
 
-Nepomnjaščij – Firouzja ½ – ½
-Carlsen – Tari ½ – ½
-Karjakin – Rapport ½ – ½
-
-3º turno 
-
-Firouzja – Karjakin ½ – ½
-Tari – Nepomnjaščij ½ – ½
-Rapport – Carlsen ½ – ½
-
-4º turno
-
-Tari – Karjakin ½ – ½
-Carlsen – Nepomnjaščij ½ – ½
-Rapport – Firouzja 1 – 0
-
-5º turno
-
-Firouzja – Tari 1 – 0
-Nepomnjaščij – Rapport ½ – ½
-Karjakin – Carlsen 1 – 0
-
-6º turno
-
-Carlsen – Firouzja 1 – 0
-Rapport – Tari 1 – 0
-Karjakin – Nepomnjaščij ½ – ½
-
-7º turno
-
-Firouzja – Nepomnjaščij 1 – 0
-Tari – Carlsen 0 – 1
-Rapport – Karjakin 1 – 0
-
-8º turno
-
-Nepomnjaščij – Tari 0 – 1
-Carlsen – Rapport 1 – 0
-Karjakin – Firouzja 0 – 1
-
-9º turno
-
-Tari – Firouzja 0 – 1
-Carlsen – Karjakin 1 – 0
-Rapport – Nepomnjaščij ½ – ½
-
-10º turno
-
-Firouzja – Rapport 1 – 0
-Nepomnjaščij – Carlsen ½ – ½
-Karjakin – Tari ½ – ½
+Shankland, Sam ½ – ½ Grandelius, Nils
+Rapport, Richard 1 – 0 Van Foreest, Jorden
+Rameshbabu Praggnanandhaa ½ – ½ Duda, Jan-Krzysztof
+Carlsen, Magnus 1 – 0 Giri, Anish
+Mamedyarov, Shakhriyar ½ – ½ Esipenko, Andrey
+Karjakin, Sergey ½ – ½ Dubov, Daniil
+Vidit, Santosh Gujrathi ½ – ½ Caruana, Fabiano
 
 
 
+Round 3   Monday 17 January 2022
 
-
+Caruana, Fabiano – Shankland, Sam @@@
+Dubov, Daniil – Vidit, Santosh Gujrathi @@@
+Esipenko, Andrey – Karjakin, Sergey @@@
+Giri, Anish – Mamedyarov, Shakhriyar @@@
+Duda, Jan-Krzysztof – Carlsen, Magnus @@@
+Van Foreest, Jorden – Rameshbabu Praggnanandhaa @@@
+Grandelius, Nils – Rapport, Richard @@@
 
