@@ -352,7 +352,7 @@ get_line_prediction.possible_outcomes = [
         (re.compile("\D1\s*[\\\/]\s*2($|\D)"), "X"), # 1/2
         (re.compile("\D0\.5($|\D)"), "X"), # 0.5
         (re.compile("\D0\,5($|\D)"), "X"), # 0,5
-        (re.compile("\spatta($|\s)"), "X"), # patta
+        (re.compile("\s[Pp]atta($|\s)"), "X"), # patta
         (re.compile("\s½($|\s)"), "X"), # patta
         (re.compile("\s1\s*0($|\s)"), "1"), # 1 0
         (re.compile("\s0\s*1($|\s)"), "2"), # 0 1
@@ -387,7 +387,7 @@ def get_line_ranking(line, masters_appellatives, author_name):
 
 # One optional numer at the beginning,
 # followed by 1-3 words
-get_line_ranking.line_re = re.compile("^\s*\d*[).ªº\W]*(\S+\s?){1,3}$")
+get_line_ranking.line_re = re.compile("^\s*\d*[).ªº\W]*(\S+\s?){1,3}(\s)*$")
 
 ##############################################
 
