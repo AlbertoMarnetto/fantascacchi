@@ -1,29 +1,23 @@
 {
-	"reminder" : "fix classifica di Zugzwang",
-	"last_checked_post" : "\nGiammy\n\n\n            27 gennaio 2022 -\n            04:55          \n"
-	,
-	"games_per_round" : 7,
+	"reminder" : "",
+	"last_checked_post" : "\nchicco\n\n\n            27 giugno 2022 -\n            09:56          \n",
+	"games_per_round" : 4,
 	"scoring_system" : "3_1_4",
-	"expected_ranking_length": 5,
+	"expected_ranking_length": 3,
 	"bonus_for_perfect_round_prediction": 4,
-	"negate_bonus_if_all_draws": false,
+	"negate_bonus_if_all_draws": true,
 	"enable_default_draw_prediction": 1,
 	"masters_names" :
 	[
-		"Magnus Carlsen",
 		"Richard Rapport",
-		"Sergej Karjakin",
-		"Anish Giri",
-		"Shakhriyar Mamedyarov",
-		"Andrey Esipenko",
-		"Vidit Gujrathi",
 		"Fabiano Caruana",
-		"Jorden Van Foreest",
-		"Daniil Dubov",
-		"Samuel Shankland",
-		"Nils Grandelius",
-		"Rameshbabu Praggnanandhaa",
+		"Alireza Firouzja",
+		"Ian Nepomniachtchi",
+		"Ding Liren",
+		"Hikaru Nakamura",
+		"Teimour Radjabov",
 		"Jan-Krzysztof Duda"
+
 	]
 	,
 	"masters_scoring_bonuses" :
@@ -36,11 +30,11 @@
 	"masters_nicknames" :
 	{
 		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher" ],
-		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi"],
+		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi",  "Nepomnjaščij", "Nepomnjashchij", "Nepomnjascin", "Nepo" ],
 		"Fabiano Caruana" : [ "Caru", "Cariana" ],
 		"Viswanathan Anand" : [ "Andand" ],
 		"Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
-		"Hikaru Nakamura" : [ "Naka" ],
+		"Hikaru Nakamura" : [ "Naka", "nakaruma" ],
 		"Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish", "Grisc", "Grischuck"],
 		"Vladimir Kramnik" : ["KRAM", "Kraminik"],
 		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov", "Memedyarov"],
@@ -48,10 +42,10 @@
 		"Ding Liren" : [ "DingLiren" ],
 		"Meier" : ["Meijer"],
 		"Kirill Alekseenko" : ["Alex", "Aleks", "Aleksenko"],
-		"Ian Nepomniachtchi" : [ "Nepomnjaščij", "Nepomnjashchij", "Nepomnjascin", "Nepo" ],
 		"Magnus Carlsen" : [ "Carlen", "Carlseb", "Carlse"],
-		"Alireza Firouzja" : [ "Firojuza", "Firouzjia" ],
+		"Alireza Firouzja" : [ "Firojuza", "Firouzjia", "Firoujza", "Firo"],
 		"Nils Grandelius"  : [ "Grendelius" ],
+		"Teimour Radjabov"  : [ "Radiabov", "Radja", "Radjabo" ],
 		"dummy" : []
 	}
 	,
@@ -59,20 +53,16 @@
 	,
 	"official_ranking" :
 	{
-		"1" : ["Magnus Carlsen"],
-		"2" : ["Shakhriyar Mamedyarov"],
-		"3" : ["Richard Rapport"],
-		"4" : ["Anish Giri"],
-		"5" : ["Sergej Karjakin"]
+		"1" : [],
+		"2" : [],
+		"3" : []
 	}
 	,
 	"ranking_scoring" :
 	{
-		"1" : 4,
+		"1" : 6,
 		"2" : 3,
 		"3" : 3,
-		"4" : 2,
-		"5" : 2,
 		"ranked_incorrect" : 1
 	}
 	,
@@ -81,7 +71,6 @@
 		"paolo58" : "Ari.Lor.Iso.",
 		"zed" : "Quarta Nazionale",
 		"falk17" : "Sissa Leonforte",
-		"chicco" : "Chicco",
 		"antoniobg1982" : "Bobby Fischer",
 		"Luigi Orlando" : "Tini’s",
 		"mike" : "Mike",
@@ -89,23 +78,25 @@
 		"Angelmann" : "Neanderthal Boys",
 		"StefanoBellincampi" : "Maggica",
 		"prof73" : "Nova Gorica",
-		"Jas Fasola" : "Fasolowa"
+		"Jas Fasola" : "Fasolowa",
+		"mago" : "Il Vecchio Lonfo Ammargelluto",
+		"Arsenio_Lupin" : "lupin"
 	}
 	,
 	"corrections" :
 	[
 		{
-			"author" : "danni.50",
+			"author" : "danni",
 			"text" :
 			[
-				"Praggnanandhaa – Grandelius X"
+				"Caruana – Radjabov X"
 			]
 		},
 		{
 			"author" : "ettorerusso",
 			"text" :
 			[
-				"Dubov -Duda X"
+				"Ding – Duda 1"
 			]
 		}
 	]
@@ -127,9 +118,8 @@
 	,
 	"posts_string_blacklist" :
 	[
-		"22 gennaio 2022 -\n            23:00"
-
+		"\nettorerusso\n\n\n            27 giugno 2022 -\n            12:52          \n"
 	],
 	"posts_author_blacklist" :
-	[ "Zeitnot" ]
+	[ "Decoverto", "stef-borg", "Sissa Leonforte" ]
 }
