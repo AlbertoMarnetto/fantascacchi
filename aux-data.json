@@ -1,7 +1,7 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nchicco\n\n\n            27 giugno 2022 -\n            09:56          \n",
-	"games_per_round" : 4,
+	"last_checked_post" : "\nLARACROFT\n\n\n            9 settembre 2022 -\n            00:03          \n",
+	"games_per_round" : 5,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
 	"bonus_for_perfect_round_prediction": 4,
@@ -9,22 +9,24 @@
 	"enable_default_draw_prediction": 1,
 	"masters_names" :
 	[
-		"Richard Rapport",
 		"Fabiano Caruana",
 		"Alireza Firouzja",
 		"Ian Nepomniachtchi",
-		"Ding Liren",
-		"Hikaru Nakamura",
-		"Teimour Radjabov",
-		"Jan-Krzysztof Duda"
-
+		"Magnus Carlsen",
+		"Shakhriyar Mamedyarov",
+		"Levon Aronian",
+		"Maxime Vachier-Lagrave",
+		"Hans Moke Niemann",
+		"Wesley So",
+		"Leinier Dominguez Perez"
 	]
 	,
 	"masters_scoring_bonuses" :
 	{
 		"Magnus Carlsen" : [ -1, 1 ],
 		"Nils Grandelius" : [ 1, -1 ],
-		"Rameshbabu Praggnanandhaa" : [ 1, -1 ]
+		"Rameshbabu Praggnanandhaa" : [ 1, -1 ],
+		"Hans Moke Niemann" : [ 1, -1 ]
 	}
 	,
 	"masters_nicknames" :
@@ -49,18 +51,18 @@
 		"dummy" : []
 	}
 	,
-	"official_ranking_source" : "https://candidates.fide.com/crosstable"
+	"official_ranking_source" : "https://www.scacchierando.it/supertornei/sinquefield-cup-2022/"
 	,
 	"official_ranking" :
 	{
-		"1" : ["Ian Nepomniachtchi"],
-		"2" : ["Ding Liren"],
-		"3" : ["Teimour Radjabov"]
+		"1" : ["Alireza Firouzja"],
+		"2" : ["Ian Nepomniachtchi"],
+		"3" : ["Wesley So"]
 	}
 	,
 	"ranking_scoring" :
 	{
-		"1" : 6,
+		"1" : 5,
 		"2" : 3,
 		"3" : 3,
 		"ranked_incorrect" : 1
@@ -86,17 +88,24 @@
 	"corrections" :
 	[
 		{
-			"author" : "danni",
+			"author" : "Pilgrimanto",
 			"text" :
 			[
-				"Caruana – Radjabov X"
+				"Dominguez Perez Leinier – Firouzja Alireza 1"
 			]
 		},
 		{
-			"author" : "ettorerusso",
+			"author" : "LARACROFT",
 			"text" :
 			[
-				"Ding – Duda 1"
+				"Caruana Fabiano – Vachier-Lagrave Maxime X"
+			]
+		},
+		{
+			"author" : "Giammy",
+			"text" :
+			[
+				"Caruana Fabiano – Vachier-Lagrave Maxime X"
 			]
 		}
 	]
@@ -121,5 +130,5 @@
 		"\nettorerusso\n\n\n            27 giugno 2022 -\n            12:52          \n"
 	],
 	"posts_author_blacklist" :
-	[ "Decoverto", "stef-borg", "Sissa Leonforte" ]
+	[ "prof73" ]
 }

@@ -365,6 +365,7 @@ get_line_prediction.possible_outcomes = [
         (re.compile("\D2A($|\s)"), "2A"), # 2A (special for rapid+armageddon format)
         (re.compile("\D1($|[^0-9.])"), "1"), # 1
         (re.compile("\D2($|[^0-9.])"), "2"), # 2
+        (re.compile("X\s*$"), "X"), # X (end of line)
         (re.compile("@@@"), "@") # @ (still to be played)
         ]
 
