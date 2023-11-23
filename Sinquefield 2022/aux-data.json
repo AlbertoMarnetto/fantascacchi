@@ -1,6 +1,6 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nIrishGambit\n\n\n            23 novembre 2023 -\n            00:55  ",
+	"last_checked_post" : "\nLARACROFT\n\n\n            9 settembre 2022 -\n            00:03          \n",
 	"games_per_round" : 5,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
@@ -12,17 +12,21 @@
 		"Fabiano Caruana",
 		"Alireza Firouzja",
 		"Ian Nepomniachtchi",
-		"Jan-Krzysztof Duda",
-		"Richard Rapport",
+		"Magnus Carlsen",
+		"Shakhriyar Mamedyarov",
 		"Levon Aronian",
 		"Maxime Vachier-Lagrave",
-		"Anish Giri",
+		"Hans Moke Niemann",
 		"Wesley So",
 		"Leinier Dominguez Perez"
 	]
 	,
 	"masters_scoring_bonuses" :
 	{
+		"Magnus Carlsen" : [ -1, 1 ],
+		"Nils Grandelius" : [ 1, -1 ],
+		"Rameshbabu Praggnanandhaa" : [ 1, -1 ],
+		"Hans Moke Niemann" : [ 1, -1 ]
 	}
 	,
 	"masters_nicknames" :
@@ -47,13 +51,13 @@
 		"dummy" : []
 	}
 	,
-	"official_ranking_source" : "https://www.scacchierando.it/supertornei/sinquefield-cup-2023/"
+	"official_ranking_source" : "https://www.scacchierando.it/supertornei/sinquefield-cup-2022/"
 	,
 	"official_ranking" :
 	{
-		"1" : [],
-		"2" : [],
-		"3" : []
+		"1" : ["Alireza Firouzja"],
+		"2" : ["Ian Nepomniachtchi"],
+		"3" : ["Wesley So"]
 	}
 	,
 	"ranking_scoring" :
@@ -78,12 +82,32 @@
 		"prof73" : "Nova Gorica",
 		"Jas Fasola" : "Fasolowa",
 		"mago" : "Il Vecchio Lonfo Ammargelluto",
-		"Arsenio_Lupin" : "lupin",
-		"Vincenzo" : "V come Vittoria"
+		"Arsenio_Lupin" : "lupin"
 	}
 	,
 	"corrections" :
 	[
+		{
+			"author" : "Pilgrimanto",
+			"text" :
+			[
+				"Dominguez Perez Leinier – Firouzja Alireza 1"
+			]
+		},
+		{
+			"author" : "LARACROFT",
+			"text" :
+			[
+				"Caruana Fabiano – Vachier-Lagrave Maxime X"
+			]
+		},
+		{
+			"author" : "Giammy",
+			"text" :
+			[
+				"Caruana Fabiano – Vachier-Lagrave Maxime X"
+			]
+		}
 	]
 	,
 	"corrections_sample" :
@@ -103,7 +127,8 @@
 	,
 	"posts_string_blacklist" :
 	[
+		"\nettorerusso\n\n\n            27 giugno 2022 -\n            12:52          \n"
 	],
 	"posts_author_blacklist" :
-	[  ]
+	[ "prof73" ]
 }

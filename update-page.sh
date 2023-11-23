@@ -1,1 +1,1 @@
-wget https://www.scacchierando.it/fantascacchi/fantasinquefield-2022 -O thread.html
+wget https://www.scacchierando.it/fantascacchi/fantasinquefield-2023 -O thread.html
