@@ -1,10 +1,22 @@
 # Sinquefield Cup 2023
-# https://www.scacchierando.it/torneo-dei-candidati/torneo-dei-candidati-2022-2/
 
-2. Turno 
-Nepomniachtchi-Dominguez @@@
-Firouzja-Giri @@@
-Caruana-Aronian @@@
-So-Vachier-Lagrave @@@
-Duda-Rapport @@@
- 
+Turno 2
+
+Nepomniachtchi – Dominguez ½ – ½
+Firouzja – Giri ½ – ½
+Caruana – Aronian ½ – ½
+So – Vachier-Lagrave ½ – ½
+
+Turno 3
+
+Aronian – Nepomniachtchi ½ – ½
+Rapport – Firouzja ½ – ½
+Vachier-Lagrave – Caruana ½ – ½
+Giri – So ½ – ½
+
+Turno 4
+
+Giri - Vachier-Lagrave @@@
+Nepomniachtchi - Caruana @@@
+So - Rapport @@@
+Firouzja - Dominguez @@@

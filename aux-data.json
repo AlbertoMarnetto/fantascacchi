@@ -1,7 +1,7 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nIrishGambit\n\n\n            23 novembre 2023 -\n            00:55  ",
-	"games_per_round" : 5,
+	"last_checked_post" : "\nAngelmann\n\n\n            23 novembre 2023 -\n            17:41          \n",
+	"games_per_round" : 4,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
 	"bonus_for_perfect_round_prediction": 4,
@@ -12,7 +12,6 @@
 		"Fabiano Caruana",
 		"Alireza Firouzja",
 		"Ian Nepomniachtchi",
-		"Jan-Krzysztof Duda",
 		"Richard Rapport",
 		"Levon Aronian",
 		"Maxime Vachier-Lagrave",
@@ -41,7 +40,7 @@
 		"Meier" : ["Meijer"],
 		"Kirill Alekseenko" : ["Alex", "Aleks", "Aleksenko"],
 		"Magnus Carlsen" : [ "Carlen", "Carlseb", "Carlse"],
-		"Alireza Firouzja" : [ "Firojuza", "Firouzjia", "Firoujza", "Firo"],
+		"Alireza Firouzja" : [ "Firojuza", "Firouzjia", "Firoujza", "Firo", "Firuzja"],
 		"Nils Grandelius"  : [ "Grendelius" ],
 		"Teimour Radjabov"  : [ "Radiabov", "Radja", "Radjabo" ],
 		"dummy" : []
