@@ -1,6 +1,6 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nAngelmann\n\n\n            23 novembre 2023 -\n            17:41          \n",
+	"last_checked_post" : "\nmichele\n\n\n            27 novembre 2023 -\n            22:44          \n",
 	"games_per_round" : 4,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
@@ -35,7 +35,7 @@
 		"Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish", "Grisc", "Grischuck"],
 		"Vladimir Kramnik" : ["KRAM", "Kraminik"],
 		"Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov", "Memedyarov"],
-		"Levon Aronian" : ["ARON"],
+		"Levon Aronian" : ["ARON", "Aronien"],
 		"Ding Liren" : [ "DingLiren" ],
 		"Meier" : ["Meijer"],
 		"Kirill Alekseenko" : ["Alex", "Aleks", "Aleksenko"],
@@ -76,7 +76,7 @@
 		"StefanoBellincampi" : "Maggica",
 		"prof73" : "Nova Gorica",
 		"Jas Fasola" : "Fasolowa",
-		"mago" : "Il Vecchio Lonfo Ammargelluto",
+		"xmago" : "Il Vecchio Lonfo Ammargelluto",
 		"Arsenio_Lupin" : "lupin",
 		"Vincenzo" : "V come Vittoria"
 	}
@@ -104,5 +104,5 @@
 	[
 	],
 	"posts_author_blacklist" :
-	[  ]
+	[ "piedone99", "falk17" , "Sissa Leonforte" ]
 }

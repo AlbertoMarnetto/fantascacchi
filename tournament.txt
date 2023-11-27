@@ -2,21 +2,49 @@
 
 Turno 2
 
-Nepomniachtchi – Dominguez ½ – ½
+Nepomnjaščij – Dominguez ½ – ½
 Firouzja – Giri ½ – ½
 Caruana – Aronian ½ – ½
 So – Vachier-Lagrave ½ – ½
 
 Turno 3
 
-Aronian – Nepomniachtchi ½ – ½
+Aronian – Nepomnjaščij ½ – ½
 Rapport – Firouzja ½ – ½
 Vachier-Lagrave – Caruana ½ – ½
 Giri – So ½ – ½
 
 Turno 4
 
-Giri - Vachier-Lagrave @@@
-Nepomniachtchi - Caruana @@@
-So - Rapport @@@
-Firouzja - Dominguez @@@
+Giri - Vachier-Lagrave ½ – ½
+Nepomnjaščij - Caruana ½ – ½ 
+So - Rapport 1 - 0
+Firouzja - Dominguez ½ – ½ 
+
+Turno 5
+
+Dominguez Perez – So ½ – ½
+Aronian – Firouzja 1 – 0
+Rapport – Giri ½ – ½
+Vachier-Lagrave – Nepomnjaščij ½ – ½
+
+Turno 6
+
+So – Aronian 1 – 0
+Firouzja – Caruana 0 – 1
+Rapport – Vachier-Lagrave ½ – ½
+Giri – Dominguez Perez 0 – 1
+
+Turno 7
+
+Caruana – So 1 – 0
+Nepomnjaščij – Firouzja ½ – ½
+Dominguez Perez – Rapport 1 – 0
+Aronian – Giri ½ – ½
+
+Turno 8
+
+So – Nepomnjaščij ½ – ½
+Giri – Caruana ½ – ½
+Dominguez – Vachier-Lagrave ½ – ½
+Rapport – Aronian ½ – ½
