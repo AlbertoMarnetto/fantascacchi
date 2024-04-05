@@ -1,6 +1,6 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nIrishGambit\n\n\n            30 novembre 2023 -\n            00:27          \n",
+	"last_checked_post" : "\nIrishGambit\n\n\n            5 aprile 2024 -\n            23:11          \n",
 	"games_per_round" : 4,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
@@ -12,16 +12,16 @@
 		"Fabiano Caruana",
 		"Alireza Firouzja",
 		"Ian Nepomniachtchi",
-		"Richard Rapport",
-		"Levon Aronian",
-		"Maxime Vachier-Lagrave",
-		"Anish Giri",
-		"Wesley So",
-		"Leinier Dominguez Perez"
+		"Hikaru Nakamura",
+		"Nijat Abasov",
+		"Rameshbabu Praggnanandhaa",
+		"Gukesh Dommaraju",
+		"Vidit Santos Gujrathi"
 	]
 	,
 	"masters_scoring_bonuses" :
 	{
+		"Nijat Abasov" : [ 1, -1 ]
 	}
 	,
 	"masters_nicknames" :
@@ -41,23 +41,29 @@
 		"Kirill Alekseenko" : ["Alex", "Aleks", "Aleksenko"],
 		"Magnus Carlsen" : [ "Carlen", "Carlseb", "Carlse"],
 		"Alireza Firouzja" : [ "Firojuza", "Firouzjia", "Firoujza", "Firo", "Firuzja"],
-		"Nils Grandelius"  : [ "Grendelius" ],
-		"Teimour Radjabov"  : [ "Radiabov", "Radja", "Radjabo" ],
+		"Nils Grandelius" : [ "Grendelius" ],
+		"Teimour Radjabov" : [ "Radiabov", "Radja", "Radjabo" ],
+		"Rameshbabu Praggnanandhaa" : [ "Pragg", "Prag", "Praggna" ],
+		"Vidit Santos Gujrathi"  : [],
+		"Anish Giri" : [],
+		"Leinier Dominguez Perez" : [],
+		"Wesley So" : [],
+
 		"dummy" : []
 	}
 	,
-	"official_ranking_source" : "https://www.scacchierando.it/supertornei/sinquefield-cup-2023/"
+	"official_ranking_source" : ""
 	,
 	"official_ranking" :
 	{
-		"1" : ["Fabiano Caruana"],
-		"2" : ["Leinier Dominguez Perez"],
-		"3" : ["Wesley So"]
+		"1" : [""],
+		"2" : [""],
+		"3" : [""]
 	}
 	,
 	"ranking_scoring" :
 	{
-		"1" : 5,
+		"1" : 6,
 		"2" : 3,
 		"3" : 3,
 		"ranked_incorrect" : 1
