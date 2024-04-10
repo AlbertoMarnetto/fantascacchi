@@ -89,6 +89,16 @@
 	,
 	"corrections" :
 	[
+		{
+			"author" : "prof73",
+			"text" :
+			[
+				"Podio:",
+				"1. Caruana",
+				"2. Nepo",
+				"3. Vidit"
+			]
+		}
 	]
 	,
 	"corrections_sample" :
