@@ -1,6 +1,6 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nIrishGambit\n\n\n            5 aprile 2024 -\n            23:11          \n",
+	"last_checked_post" : "\nManujam\n\n\n            9 aprile 2024 -\n            14:19          \n",
 	"games_per_round" : 4,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
@@ -80,7 +80,7 @@
 		"orcoisback" : "tuttiacasapersempre",
 		"Angelmann" : "Neanderthal Boys",
 		"StefanoBellincampi" : "Maggica",
-		"prof73" : "Nova Gorica",
+		"QQQ_prof73" : "Nova Gorica",
 		"Jas Fasola" : "Fasolowa",
 		"xmago" : "Il Vecchio Lonfo Ammargelluto",
 		"Arsenio_Lupin" : "lupin",
@@ -110,5 +110,5 @@
 	[
 	],
 	"posts_author_blacklist" :
-	[ "piedone99", "falk17" , "Sissa Leonforte" ]
+	["Decoverto", "Fabrizio Bimbociccione", "LARACROFT" ]
 }
