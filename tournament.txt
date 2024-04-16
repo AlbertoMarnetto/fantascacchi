@@ -1,5 +1,5 @@
 # Candidates 2024
-# https://candidates2024.fide.com/pairings
+https://candidates2024.fide.com/pairings
 
 Turno 1
 
@@ -42,3 +42,38 @@ Gukesh D ½-½- Hikaru Nakamura
 Vidit Santosh Gujrathi 1-0 Alireza Firouzja
 Praggnanandhaa R 1-0 Nijat Abasov 
 Ian Nepomniachtchi ½-½- Fabiano Caruana 
+
+Turno 7
+
+Hikaru Nakamura ½-½ Ian Nepomniachtchi
+Fabiano Caruana ½-½ Praggnanandhaa R
+Nijat Abasov ½-½ Vidit Santosh Gujrathi
+Alireza Firouzja 1-0 Gukesh D
+
+Turno 8
+
+Hikaru Nakamura 1-0 Fabiano Caruana
+Ian Nepomniachtchi ½-½ Nijat Abasov
+Praggnanandhaa R ½-½ IAlireza Firouzja
+Vidit Santosh Gujrathi 0-1 Gukesh D
+
+Turno 9
+
+Vidit Santosh Gujrathi 1-0 Hikaru Nakamura
+Gukesh D ½-½ Praggnanandhaa R
+Alireza Firouzja ½-½ Ian Nepomniachtchi
+Nijat Abasov ½-½ Fabiano Caruana
+
+Turno 10
+
+Hikaru Nakamura 1-0 Nijat Abasov
+Fabiano Caruana 1-0 Alireza Firouzja
+Ian Nepomniachtchi ½-½ Gukesh D
+Praggnanandhaa R ½-½ Vidit Santosh Gujrathi
+
+Turno 11
+
+Praggnanandhaa R - Hikaru Nakamura @@@
+Vidit Santosh Gujrathi - Ian Nepomniachtchi @@@
+Gukesh D - Fabiano Caruana @@@
+Alireza Firouzja - Nijat Abasov @@@

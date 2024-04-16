@@ -1,6 +1,6 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nManujam\n\n\n            9 aprile 2024 -\n            14:19          \n",
+	"last_checked_post" : "\nIrishGambit\n\n\n            13 aprile 2024 -\n            22:39          \n",
 	"games_per_round" : 4,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
@@ -27,7 +27,7 @@
 	"masters_nicknames" :
 	{
 		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher" ],
-		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi",  "Nepomnjaščij", "Nepomnjashchij", "Nepomnjascin", "Nepo" ],
+		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi",  "Nepomnjaščij", "Nepomnjashchij", "Nepomnjascin", "Nepo", "Nepomniatchichi" ],
 		"Fabiano Caruana" : [ "Caru", "Cariana" ],
 		"Viswanathan Anand" : [ "Andand" ],
 		"Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
@@ -120,5 +120,5 @@
 	[
 	],
 	"posts_author_blacklist" :
-	["Decoverto", "Fabrizio Bimbociccione", "LARACROFT" ]
+	["Decoverto", "Fabrizio Bimbociccione", "LARACROFT", "Giu_Lorenzo", "mauroro"]
 }
