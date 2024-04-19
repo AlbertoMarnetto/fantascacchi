@@ -73,7 +73,28 @@ Praggnanandhaa R ½-½ Vidit Santosh Gujrathi
 
 Turno 11
 
-Praggnanandhaa R - Hikaru Nakamura @@@
-Vidit Santosh Gujrathi - Ian Nepomniachtchi @@@
-Gukesh D - Fabiano Caruana @@@
-Alireza Firouzja - Nijat Abasov @@@
+Praggnanandhaa R 0-1 Hikaru Nakamura
+Vidit Santosh Gujrathi 0-1 Ian Nepomniachtchi
+Gukesh D ½-½ Fabiano Caruana
+Alireza Firouzja 1-0 Nijat Abasov
+
+Turno 12
+
+Hikaru Nakamura 1-0 Alireza Firouzja
+Nijat Abasov 0-1 Gukesh D
+Fabiano Caruana 1-0 Vidit Santosh Gujrathi
+Ian Nepomniachtchi ½-½ Praggnanandhaa R
+
+Turno 13
+
+Ian Nepomniachtchi - Hikaru Nakamura @@@
+Praggnanandhaa R - Fabiano Caruana @@@
+Vidit Santosh Gujrathi - Nijat Abasov @@@
+Gukesh D - Alireza Firouzja @@@
+
+Turno 14
+
+Hikaru Nakamura - Gukesh D @@@
+Alireza Firouzja - Vidit Santosh Gujrathi @@@
+Nijat Abasov - Praggnanandhaa R @@@
+Fabiano Caruana - Ian Nepomniachtchi @@@
