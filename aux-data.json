@@ -1,7 +1,7 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nTalia\n\n\n            19 aprile 2024 -\n            15:25          \n",
-	"games_per_round" : 4,
+	"last_checked_post" : "\nchicco\n\n\n            28 giugno 2024 -\n            19:49          \nOttima scelta, dimenticarmi di pronosticare il terzo turno….😂😂😂\n",
+	"games_per_round" : 5,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
 	"bonus_for_perfect_round_prediction": 4,
@@ -10,23 +10,25 @@
 	"masters_names" :
 	[
 		"Fabiano Caruana",
-		"Alireza Firouzja",
 		"Ian Nepomniachtchi",
-		"Hikaru Nakamura",
-		"Nijat Abasov",
+		"Alireza Firouzja",
+		"Nodirbek Abdusattorov",
+		"Wesley So",
+		"Maxime Vachier-Lagrave",
 		"Rameshbabu Praggnanandhaa",
+		"Anish Giri",
 		"Gukesh Dommaraju",
-		"Vidit Santos Gujrathi"
+		"Daniel-Bogdan Deac"
 	]
 	,
 	"masters_scoring_bonuses" :
 	{
-		"Nijat Abasov" : [ 1, -1 ]
+		"Daniel-Bogdan Deac" : [ 1, -1 ]
 	}
 	,
 	"masters_nicknames" :
 	{
-		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher" ],
+		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher", "Vachiere" ],
 		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi",  "Nepomnjaščij", "Nepomnjashchij", "Nepomnjascin", "Nepo", "Nepomniatchichi" ],
 		"Fabiano Caruana" : [ "Caru", "Cariana" ],
 		"Viswanathan Anand" : [ "Andand" ],
@@ -52,18 +54,18 @@
 		"dummy" : []
 	}
 	,
-	"official_ranking_source" : "https://candidates2024.fide.com/crosstable"
+	"official_ranking_source" : "https://grandchesstour.org/tours/2024/tournaments/2024-superbet-romania-chess-classic/results/"
 	,
 	"official_ranking" :
 	{
-		"1" : ["Gukesh Dommaraju"],
-		"2" : ["Hikaru Nakamura"],
-		"3" : ["Ian Nepomniachtchi"]
+		"1" : [""],
+		"2" : [""],
+		"3" : [""]
 	}
 	,
 	"ranking_scoring" :
 	{
-		"1" : 6,
+		"1" : 5,
 		"2" : 3,
 		"3" : 3,
 		"ranked_incorrect" : 1
@@ -84,21 +86,12 @@
 		"Jas Fasola" : "Fasolowa",
 		"xmago" : "Il Vecchio Lonfo Ammargelluto",
 		"Arsenio_Lupin" : "lupin",
-		"Vincenzo" : "V come Vittoria"
+		"Vincenzo" : "V come Vittoria",
+		"Giammy" : "MitoDubov"
 	}
 	,
 	"corrections" :
 	[
-		{
-			"author" : "prof73",
-			"text" :
-			[
-				"Podio:",
-				"1. Caruana",
-				"2. Nepo",
-				"3. Vidit"
-			]
-		}
 	]
 	,
 	"corrections_sample" :
@@ -120,5 +113,5 @@
 	[
 	],
 	"posts_author_blacklist" :
-	["Decoverto", "Fabrizio Bimbociccione", "LARACROFT", "Giu_Lorenzo", "mauroro"]
+	[]
 }
