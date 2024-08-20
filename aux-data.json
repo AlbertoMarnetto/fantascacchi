@@ -10,20 +10,19 @@
 	"masters_names" :
 	[
 		"Fabiano Caruana",
-		"Ian Nepomniachtchi",
 		"Alireza Firouzja",
-		"Nodirbek Abdusattorov",
 		"Wesley So",
 		"Maxime Vachier-Lagrave",
 		"Rameshbabu Praggnanandhaa",
 		"Anish Giri",
 		"Gukesh Dommaraju",
-		"Daniel-Bogdan Deac"
+        "Ding Liren",
+        "Ian Nepomniachtchi",
+        "Nodirbek Abdusattorov"
 	]
 	,
 	"masters_scoring_bonuses" :
 	{
-		"Daniel-Bogdan Deac" : [ 1, -1 ]
 	}
 	,
 	"masters_nicknames" :
@@ -93,28 +92,6 @@
 	,
 	"corrections" :
 	[
-		{
-			"author" : "Ari.Lor.Iso.",
-			"text" :
-			[
-                "Giri - Caruana 2",
-                "So - Gukesh 2",
-                "Deac - Vachier-Lagrave X",
-                "Nepomniachtchi - Abdusattorov 1",
-                "Praggnanadhaa - Firouzja 1"
-			]
-		},
-		{
-			"author" : "Quarta Nazionale",
-			"text" :
-			[
-                "Giri - Caruana X",
-                "So - Gukesh X",
-                "Deac - Vachier-Lagrave X",
-                "Nepomniachtchi - Abdusattorov 1",
-                "Praggnanadhaa - Firouzja 2"
-			]
-		}
 	]
 	,
 	"corrections_sample" :
@@ -133,8 +110,8 @@
 	]
 	,
 	"posts_string_blacklist" :
-	[ "7 turno 3 luglio 2024", "Caruana – Gukesh 1/2", "Getto la spugna e pronostico sperando", "4 luglio 2024 -\n            20:31", "4 luglio 2024 -\n            20:49"
+	[ "It's Ding vs. Gukesh", "19 agosto 2024", "Txb7"
 	],
 	"posts_author_blacklist" :
-	[ "Alghero"]
+	[]
 }

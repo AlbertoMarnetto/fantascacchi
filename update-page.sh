@@ -1,1 +1,1 @@
-curl https://www.scacchierando.it/evidenza/fantasuperbet-2024/ > thread.html
+curl https://www.scacchierando.it/fantascacchi/fantasinquefield-2024/ > thread.html
