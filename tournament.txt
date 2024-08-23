@@ -3,8 +3,32 @@ https://candidates2024.fide.com/pairings
 
 Turno 2
 
-So – Caruana @@@
-Vachier-Lagrave – Praggnanandhaa @@@
-Gukesh – Nepomniachtchi @@@
-Giri – Ding @@@
-Abdusattorov – Firouzja @@@
+So – Caruana X
+Vachier-Lagrave – Praggnanandhaa X
+Gukesh – Nepomniachtchi X
+Giri – Ding X
+Abdusattorov – Firouzja X
+
+Turno 3
+
+Caruana – Abdusattorov 1
+Praggnanandhaa – Gukesh X
+Nepomniachtchi – Giri 1
+Ding – So X
+Firouzja – Vachier-Lagrave X
+
+Turno 4
+
+Ding – Caruana X
+Giri – Praggnanandhaa X
+So – Nepomniachtchi 1
+Gukesh – Firouzja X
+Vachier-Lagrave – Abdusattorov X
+
+Turno 5
+
+Caruana – Vachier-Lagrave @@@
+Praggnanandhaa – So @@@
+Nepomniachtchi – Ding @@@
+Firouzja – Giri @@@
+Abdusattorov – Gukesh @@@

@@ -1,6 +1,6 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nIrishGambit\n\n\n            4 luglio 2024 -\n            10:08          \n“Le buone azioni non restano impunite” (cit. Clare Both Luce)\n",
+	"last_checked_post" : "\nIrishGambit\n\n\n            22 agosto 2024 -\n            22:44          \n",
 	"games_per_round" : 5,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
@@ -29,7 +29,7 @@
 	{
 		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher", "Vachiere" ],
 		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi",  "Nepomnjaščij", "Nepomnjashchij", "Nepomnjascin", "Nepo", "Nepomniatchichi", "Nepomniachi" ],
-		"Fabiano Caruana" : [ "Caru", "Cariana" ],
+		"Fabiano Caruana" : [ "Caru", "Cariana", "Fabi" ],
 		"Viswanathan Anand" : [ "Andand" ],
 		"Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
 		"Hikaru Nakamura" : [ "Naka", "nakaruma", "Hikaru" ],
@@ -45,7 +45,7 @@
 		"Nils Grandelius" : [ "Grendelius" ],
 		"Teimour Radjabov" : [ "Radiabov", "Radja", "Radjabo" ],
 		"Rameshbabu Praggnanandhaa" : [ "Pragg", "Prag", "Praggna", "Praggnananda", "Praggnanadhaa" ],
-		"Nodirbek Abdusattorov" : [ "Abdu" ],
+		"Nodirbek Abdusattorov" : [ "Abdu", "Abdosattorov" ],
 		"Vidit Santos Gujrathi"  : [],
 		"Anish Giri" : [],
 		"Leinier Dominguez Perez" : [],
