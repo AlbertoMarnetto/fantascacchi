@@ -27,8 +27,24 @@ Vachier-Lagrave – Abdusattorov X
 
 Turno 5
 
-Caruana – Vachier-Lagrave @@@
-Praggnanandhaa – So @@@
-Nepomniachtchi – Ding @@@
-Firouzja – Giri @@@
-Abdusattorov – Gukesh @@@
+Caruana – Vachier-Lagrave X
+Praggnanandhaa – So X
+Nepomniachtchi – Ding X
+Firouzja – Giri 1
+Abdusattorov – Gukesh X
+
+Turno 6
+
+Nepomniachtchi – Caruana 2
+Ding – Praggnanandhaa X
+So – Firouzja X
+Giri – Abdusattorov X
+Gukesh – Vachier-Lagrave X
+
+Turno 7
+
+Vachier-Lagrave – Giri @@@
+Abdusattorov – So @@@
+Praggnanandhaa – Nepomniachtchi @@@
+Firouzja – Ding Liren @@@
+Caruana – Gukesh @@@

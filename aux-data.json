@@ -28,7 +28,7 @@
 	"masters_nicknames" :
 	{
 		"Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher", "Vachiere" ],
-		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi",  "Nepomnjaščij", "Nepomnjashchij", "Nepomnjascin", "Nepo", "Nepomniatchichi", "Nepomniachi" ],
+		"Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi",  "Nepomnjaščij", "Nepomnjashchij", "Nepomnjascin", "Nepo", "Nepomniatchichi", "Nepomniachi", "Nepomniaščij" ],
 		"Fabiano Caruana" : [ "Caru", "Cariana", "Fabi" ],
 		"Viswanathan Anand" : [ "Andand" ],
 		"Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
@@ -113,5 +113,5 @@
 	[ "It's Ding vs. Gukesh", "19 agosto 2024", "Txb7"
 	],
 	"posts_author_blacklist" :
-	[]
+	["piedone99"]
 }
