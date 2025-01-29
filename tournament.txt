@@ -32,10 +32,61 @@ Giri – Fedoseev X
 
 Turno 4
 
-Erigaisi – Fedoseev @@@
-Caruana – Giri @@@
-Sarana – Gukesh @@@
-Keymer – Van Foreest @@@
-Abdusattorov – Wei @@@
-Harikrishna – Warmerdam @@@
-Praggnanandhaa – Mendonca @@@
+Erigaisi – Fedoseev 2
+Caruana – Giri X
+Sarana – Gukesh X
+Keymer – Van Foreest X
+Abdusattorov – Wei X
+Harikrishna – Warmerdam 1
+Praggnanandhaa – Mendonca 1
+
+Turno 5
+
+Mendonca – Erigaisi X
+Warmerdam – Praggnanandhaa X
+Wei Yi – Harikrishna X
+Van Foreest – Abdusattorov 2
+Gukesh – Keymer 1
+Giri – Sarana X
+Fedoseev – Caruana 1
+
+Turno 6
+
+Erigaisi – Caruana X
+Sarana – Fedoseev 1
+Keimer – Giri X
+Abdusattorov – Gukesh X
+Harikrishna – Van Foreest X
+Praggnanandhaa – Wei Yi X
+Mendonca – Warmerdam X
+
+Turno 7
+
+Warmerdam – Erigaisi 1
+Wei – Mendonca X
+Van Foreest – Praggnanandhaa X
+Gukesh – Harikrishna 1
+Giri – Abdusattorov X
+Fedoseev – Keymer 1
+Caruana – Sarana X
+
+
+Turno 8
+
+Erigaisi – Sarana X
+Keymer – Caruana 2
+Abdusattorov – Fedoseev X
+Harikrishna – Giri X
+Praggnanandhaa – Gukesh X
+Mendonca – Van Foreest X
+Warmerdam – Wei 2
+
+Turno 9
+
+Wei, Yi     – Erigaisi, Arjun x
+Van Foreest, Jorden     – Warmerdam, Max x
+Gukesh, D     – Mendonca, Leon Luke 1
+Giri, Anish     – Praggnanandhaa, R x
+Fedoseev, Vladimir     – Harikrishna, Pentala 1
+Caruana, Fabiano    – Abdusattorov, Nodirbek x
+Sarana, Alexey     – Keymer, Vincent 1

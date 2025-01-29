@@ -1,6 +1,6 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nIrishGambit\n\n\n            21 gennaio 2025 -\n            02:00          \n",
+	"last_checked_post" : "\nIrishGambit\n\n\n            24 gennaio 2025 -\n            11:37          \n",
 	"games_per_round" : 7,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
@@ -60,7 +60,7 @@
 		"Alireza Firouzja" : [ "Firojuza", "Firouzjia", "Firoujza", "Firo", "Firuzja", "Firou"],
 		"Nils Grandelius" : [ "Grendelius" ],
 		"Teimour Radjabov" : [ "Radiabov", "Radja", "Radjabo" ],
-		"Rameshbabu Praggnanandhaa" : [ "Pragg", "Prag", "Praggna", "Praggnananda", "Praggnanadhaa" ],
+		"Rameshbabu Praggnanandhaa" : [ "Pragg", "Prag", "Praggna", "Praggnananda", "Praggnanadhaa", "Praggnanhanda" ],
 		"Nodirbek Abdusattorov" : [ "Abdu", "Abdosattorov" ],
 		"Vidit Santos Gujrathi"  : [],
 		"Anish Giri" : [],
@@ -68,9 +68,9 @@
 		"Wesley So" : [],
 		"Leon Luke Mendonca" : [ "Mendoca" ],
 		"Vladimir Fedoseev" : [ "Fedosev" ],
-		"Jorden van Foreest" : [ "Van Forrest" ],
+		"Jorden van Foreest" : [ "Van Forrest", "Van_Foreest" ],
 		"Vincent Keymer" : [ "Keimer" ],
-		"Pentala Harikrishna" : [ "Harikrshna" ],
+		"Pentala Harikrishna" : [ "Harikrshna", "Harikrisna" ],
 
 		"dummy" : []
 	}
@@ -108,7 +108,8 @@
 		"xmago" : "Il Vecchio Lonfo Ammargelluto",
 		"Arsenio_Lupin" : "lupin",
 		"Vincenzo" : "V come Vittoria",
-		"Giammy" : "MitoDubov"
+		"Giammy" : "MitoDubov",
+		"dummy" : "dummy"
 	}
 	,
 	"corrections" :
@@ -131,8 +132,7 @@
 	]
 	,
 	"posts_string_blacklist" :
-	[ "It's Ding vs. Gukesh", "19 agosto 2024", "Txb7"
-	],
+	[ "essendo Hari uno dei giocatori" ],
 	"posts_author_blacklist" :
 	[]
 }
