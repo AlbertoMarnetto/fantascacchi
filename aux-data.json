@@ -1,10 +1,10 @@
 {
 	"reminder" : "",
 	"last_checked_post" : "\nIrishGambit\n\n\n            31 gennaio 2025 -\n            16:50          \n",
-	"games_per_round" : 7,
+	"games_per_round" : 3,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
-	"bonus_for_perfect_round_prediction": 5,
+	"bonus_for_perfect_round_prediction": 3,
 	"negate_bonus_if_all_draws": true,
 	"enable_default_draw_prediction": 1,
 	"masters_names" :
@@ -12,8 +12,21 @@
 		"Fabiano Caruana",
 		"Arjun Erigaisi",
 		"Gukesh Dommaraju",
-        "Nodirbek Abdusattorov",
 		"Wei Yi",
+        "Hikaru Nakamura",
+        "Magnus Carlsen" 
+	]
+	,
+	"masters_scoring_bonuses" :
+	{
+		"Magnus Carlsen" : [ -1, +1 ]
+	}
+	,
+	"masters_archive" :
+	[
+        "Ding Liren",
+        "Ian Nepomniachtchi",
+        "Nodirbek Abdusattorov",
 		"Rameshbabu Praggnanandhaa",
 		"Vincent Keymer",
 		"Anish Giri",
@@ -22,23 +35,7 @@
 		"Jorden van Foreest",
 		"Alexey Sarana",
 		"Max Warmerdam",
-		"Leon Luke Mendonca"
-	]
-	,
-	"masters_scoring_bonuses" :
-	{
-		"Vladimir Fedoseev" : [ 1, -1 ],
-		"Pentala Harikrishna" : [ 1, -1 ],
-		"Jorden van Foreest" : [ 1, -1 ],
-		"Alexey Sarana" : [ 1, -1 ],
-		"Max Warmerdam" : [ 1, -1 ],
-		"Leon Luke Mendonca" : [ 1, -1 ]
-	}
-	,
-	"masters_archive" :
-	[
-        "Ding Liren",
-        "Ian Nepomniachtchi",
+		"Leon Luke Mendonca",
 		"End"
 	],
 	"masters_nicknames" :
@@ -79,9 +76,9 @@
 	,
 	"official_ranking" :
 	{
-		"1" : ["Rameshbabu Praggnanandhaa"],
-		"2" : ["Gukesh Dommaraju"],
-		"3" : ["Nodirbek Abdusattorov"]
+		"1" : [],
+		"2" : [],
+		"3" : []
 	}
 	,
 	"ranking_scoring" :
@@ -109,6 +106,8 @@
 		"Arsenio_Lupin" : "lupin",
 		"Vincenzo" : "V come Vittoria",
 		"Giammy" : "MitoDubov",
+        "Hartree Fock" : "Richard Bader",
+        "alexandro2010" : "Dele Bashiru",
 		"dummy" : "dummy"
 	}
 	,

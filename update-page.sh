@@ -1,1 +1,1 @@
-curl https://www.scacchierando.it/fantascacchi/fantatata-2025/ > thread.html
+wget https://www.scacchierando.it/fantascacchi/fantanorway-2025 -O thread.html
