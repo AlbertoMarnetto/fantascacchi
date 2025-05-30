@@ -1,6 +1,6 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nIrishGambit\n\n\n            31 gennaio 2025 -\n            16:50          \n",
+	"last_checked_post" : "\nTalia\n\n\n            28 maggio 2025 -\n            22:20          \n",
 	"games_per_round" : 3,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
@@ -19,7 +19,7 @@
 	,
 	"masters_scoring_bonuses" :
 	{
-		"Magnus Carlsen" : [ -1, +1 ]
+		"Magnus Carlsen" : [ -1, 1 ]
 	}
 	,
 	"masters_archive" :
