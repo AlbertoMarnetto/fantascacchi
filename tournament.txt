@@ -26,6 +26,24 @@ Nakamura – Wei Yi X
 
 Turno 5
 
-Erigaisi – Nakamura @@@
-Wei – Gukesh @@@
-Caruana – Carlsen @@@
+Erigaisi – Nakamura X
+Wei – Gukesh X
+Caruana – Carlsen X
+
+Turno 6
+
+Erigaisi – Wei Yi X
+Nakamura – Caruana X
+Gukesh – Carlsen 1
+
+Turno 7
+
+Gukesh – Erigaisi 1
+Carlsen – Nakamura X
+Caruana – Wei 1
+
+Turno 8
+
+Erigaisi – Caruana @@@
+Wei – Carlsen @@@
+Nakamura – Gukesh @@@
