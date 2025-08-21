@@ -1,6 +1,6 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nchicco\n\n\n            21 agosto 2025 -\n            00:44          \n",
+	"last_checked_post" : "\nIrishGambit\n\n\n            22 agosto 2025 -\n            16:10          \n",
 	"games_per_round" : 5,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
@@ -65,7 +65,7 @@
 		"Nils Grandelius" : [ "Grendelius" ],
 		"Teimour Radjabov" : [ "Radiabov", "Radja", "Radjabo" ],
 		"Rameshbabu Praggnanandhaa" : [ "Pragg", "Prag", "Praggna", "Praggnananda", "Praggnanadhaa", "Praggnanhanda" ],
-		"Nodirbek Abdusattorov" : [ "Abdu", "Abdosattorov" ],
+		"Nodirbek Abdusattorov" : [ "Abdu", "Abdosattorov", "Absusattorov"],
 		"Vidit Santos Gujrathi"  : [],
 		"Anish Giri" : [],
 		"Leinier Dominguez Perez" : [],
@@ -139,5 +139,5 @@
 	"posts_string_blacklist" :
 	["Insomma, sono molto incerto"],
 	"posts_author_blacklist" :
-	[]
+	["Zugzwang"]
 }

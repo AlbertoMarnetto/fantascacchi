@@ -26,8 +26,24 @@ Duda – So X
 
 Turno 4
 
-So – Firouzja @@@
-Aronian – Duda @@@
-Gukesh – Vachier-Lagrave @@@
-Praggnanandhaa – Sevian @@@
-Abdusattorov – Caruana @@@
+So – Firouzja X
+Aronian – Duda X
+Gukesh – Vachier-Lagrave X
+Praggnanandhaa – Sevian X
+Abdusattorov – Caruana 2
+
+Turno 5
+
+Duda – Gukesh X
+Caruana – So X
+Sevian – Abdusattorov X
+Firouzja – Aronian X
+Vachier-Lagrave – Praggnanandhaa X
+
+Turno 6
+
+Absusattorov – Vachier Lagrave @@@
+Gukesh – Firouzja @@@
+Praggnanandhaa – Duda @@@
+Sevian – Caruana @@@
+Aronian – So @@@
