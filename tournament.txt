@@ -47,3 +47,28 @@ Gukesh – Firouzja X
 Praggnanandhaa – Duda X
 Sevian – Caruana X
 Aronian – So X
+
+Turno 7
+
+Caruana – Aronian X
+Vachier-Lagrave – Sevian X
+So – Gukesh 1
+Duda – Abdusattorov 1
+Firouzja – Praggnanandhaa 2
+
+Turno 8
+
+Abdusattorov – Firouzja 1
+Praggnanandhaa – So X
+Sevian – Duda X
+Vachier-Lagrave – Caruana X
+Gukesh – Aronian X
+
+Turno 9
+
+Duda – Vachier-Lagrave X
+Caruana – Gukesh X
+Aronian – Praggnanandhaa X
+So – Abdusattorov 1
+Firouzja – Sevian X
+

@@ -1,6 +1,6 @@
 {
 	"reminder" : "",
-	"last_checked_post" : "\nTalia\n\n\n            24 agosto 2025 -\n            21:28          \n",
+	"last_checked_post" : "\nTalia\n\n\n            24 agosto 2024 -\n            21:28          \n",
 	"games_per_round" : 5,
 	"scoring_system" : "3_1_4",
 	"expected_ranking_length": 3,
@@ -79,13 +79,13 @@
 		"dummy" : []
 	}
 	,
-	"official_ranking_source" : ""
+	"official_ranking_source" : "https://saintlouischessclub.org/event/2025-sinquefield-cup/"
 	,
 	"official_ranking" :
 	{
-		"1" : [],
-		"2" : [],
-		"3" : []
+		"1" : ["Wesley So"],
+		"2" : ["Fabiano Caruana", "Rameshbabu Praggnanandhaa"],
+		"3" : ["Fabiano Caruana", "Rameshbabu Praggnanandhaa"]
 	}
 	,
 	"ranking_scoring" :
