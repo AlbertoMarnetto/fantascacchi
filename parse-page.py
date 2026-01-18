@@ -220,38 +220,38 @@ def get_line_round(line):
     return None
 
 get_line_round.ordinal_replacements = [
-    ("(^|\W)primo(:|$|\W)", " 1 "),
-    ("(^|\W)secondo(:|$|\W)", " 2 "),
-    ("(^|\W)terzo(:|$|\W)", " 3 "),
-    ("(^|\W)quarto(:|$|\W)", " 4 "),
-    ("(^|\W)quinto(:|$|\W)", " 5 "),
-    ("(^|\W)sesto(:|$|\W)", " 6 "),
-    ("(^|\W)settimo(:|$|\W)", " 7 "),
-    ("(^|\W)ottavo(:|$|\W)", " 8 "),
-    ("(^|\W)nono(:|$|\W)", " 9 "),
-    ("(^|\W)decimo(:|$|\W)", " 10 "),
-    ("(^|\W)undicesimo(:|$|\W)", " 11 "),
-    ("(^|\W)dodicesimo(:|$|\W)", " 12 "),
-    ("(^|\W)tredicesimo(:|$|\W)", " 13 "),
-    ("(^|\W)quattordicesimo(:|$|\W)", " 14 "),
-    ("(^|\W)quindicesimo(:|$|\W)", " 15 "),
-    ("(^|\W)sedicesimo(:|$|\W)", " 16 "),
-    ("(^|\W)I(:|$|\W)", " 1 "),
-    ("(^|\W)II(:|$|\W)", " 2 "),
-    ("(^|\W)III(:|$|\W)", " 3 "),
-    ("(^|\W)IV(:|$|\W)", " 4 "),
-    ("(^|\W)V(:|$|\W)", " 5 "),
-    ("(^|\W)VI(:|$|\W)", " 6 "),
-    ("(^|\W)VII(:|$|\W)", " 7 "),
-    ("(^|\W)VIII(:|$|\W)", " 8 "),
-    ("(^|\W)IX(:|$|\W)", " 9 "),
-    ("(^|\W)X(:|$|\W)", " 10 "),
-    ("(^|\W)XI(:|$|\W)", " 11 "),
-    ("(^|\W)XII(:|$|\W)", " 12 "),
-    ("(^|\W)XIII(:|$|\W)", " 13 "),
-    ("(^|\W)XIV(:|$|\W)", " 14 "),
-    ("(^|\W)XV(:|$|\W)", " 15 "),
-    ("(^|\W)XVI(:|$|\W)", " 16 "),
+    (r"(^|\W)primo(:|$|\W)", " 1 "),
+    (r"(^|\W)secondo(:|$|\W)", " 2 "),
+    (r"(^|\W)terzo(:|$|\W)", " 3 "),
+    (r"(^|\W)quarto(:|$|\W)", " 4 "),
+    (r"(^|\W)quinto(:|$|\W)", " 5 "),
+    (r"(^|\W)sesto(:|$|\W)", " 6 "),
+    (r"(^|\W)settimo(:|$|\W)", " 7 "),
+    (r"(^|\W)ottavo(:|$|\W)", " 8 "),
+    (r"(^|\W)nono(:|$|\W)", " 9 "),
+    (r"(^|\W)decimo(:|$|\W)", " 10 "),
+    (r"(^|\W)undicesimo(:|$|\W)", " 11 "),
+    (r"(^|\W)dodicesimo(:|$|\W)", " 12 "),
+    (r"(^|\W)tredicesimo(:|$|\W)", " 13 "),
+    (r"(^|\W)quattordicesimo(:|$|\W)", " 14 "),
+    (r"(^|\W)quindicesimo(:|$|\W)", " 15 "),
+    (r"(^|\W)sedicesimo(:|$|\W)", " 16 "),
+    (r"(^|\W)I(:|$|\W)", " 1 "),
+    (r"(^|\W)II(:|$|\W)", " 2 "),
+    (r"(^|\W)III(:|$|\W)", " 3 "),
+    (r"(^|\W)IV(:|$|\W)", " 4 "),
+    (r"(^|\W)V(:|$|\W)", " 5 "),
+    (r"(^|\W)VI(:|$|\W)", " 6 "),
+    (r"(^|\W)VII(:|$|\W)", " 7 "),
+    (r"(^|\W)VIII(:|$|\W)", " 8 "),
+    (r"(^|\W)IX(:|$|\W)", " 9 "),
+    (r"(^|\W)X(:|$|\W)", " 10 "),
+    (r"(^|\W)XI(:|$|\W)", " 11 "),
+    (r"(^|\W)XII(:|$|\W)", " 12 "),
+    (r"(^|\W)XIII(:|$|\W)", " 13 "),
+    (r"(^|\W)XIV(:|$|\W)", " 14 "),
+    (r"(^|\W)XV(:|$|\W)", " 15 "),
+    (r"(^|\W)XVI(:|$|\W)", " 16 "),
     ]
 
 get_line_round.ordinal_replacements_regexps = [
@@ -259,8 +259,8 @@ get_line_round.ordinal_replacements_regexps = [
 ]
 
 get_line_round.round_regexps = [
-    re.compile("(Round|Turno)\W*(?P<round_number>\d+)", re.IGNORECASE | re.ASCII),
-    re.compile("(?P<round_number>\d+)\W*(Round|Turno)", re.IGNORECASE | re.ASCII)
+    re.compile(r"(Round|Turno)\W*(?P<round_number>\d+)", re.IGNORECASE | re.ASCII),
+    re.compile(r"(?P<round_number>\d+)\W*(Round|Turno)", re.IGNORECASE | re.ASCII)
 ]
 
 def get_masters_names_in_line(line, masters_appellatives):
@@ -346,27 +346,27 @@ def get_line_prediction(line, masters_appellatives, author_name):
 # e.g. "0 - 1" matches both the 2nd and the 6th regexp,
 # but the former has priority
 get_line_prediction.possible_outcomes = [
-        (re.compile("\D1\s*[-–\\\/]\s*0($|\D)"), "1"), # 1 - 0
-        (re.compile("\D0\s*[-–\\\/]\s*1($|\D)"), "2"), # 0 - 1
-        (re.compile("\D½\s*[-–\\\/]\s*½($|\D)"), "X"), # ½ - ½
-        (re.compile("\D1\s*[\\\/]\s*2($|\D)"), "X"), # 1/2
-        (re.compile("\D0\.5($|\D)"), "X"), # 0.5
-        (re.compile("\D0\,5($|\D)"), "X"), # 0,5
-        (re.compile("\s[Pp]atta($|\s)"), "X"), # patta
-        (re.compile("\s½($|\s)"), "X"), # patta
-        (re.compile("\s1\s*0($|\s)"), "1"), # 1 0
-        (re.compile("\s0\s*1($|\s)"), "2"), # 0 1
-        (re.compile("\s[хxX]($|\s)"), "X"), # X (la prima è una "ha" cirillica!
-        (re.compile("\D1\s*$"), "1"), # 1 (end of line)
-        (re.compile("\D2\s*$"), "2"), # 2 (end of line)
-        (re.compile("\D1R($|\s)"), "1R"), # 1R (special for rapid+armageddon format)
-        (re.compile("\D2R($|\s)"), "2R"), # 2R (special for rapid+armageddon format)
-        (re.compile("\D1A($|\s)"), "1A"), # 1A (special for rapid+armageddon format)
-        (re.compile("\D2A($|\s)"), "2A"), # 2A (special for rapid+armageddon format)
-        (re.compile("\D1($|[^0-9.])"), "1"), # 1
-        (re.compile("\D2($|[^0-9.])"), "2"), # 2
-        (re.compile("X\s*$"), "X"), # X (end of line)
-        (re.compile("@@@"), "@") # @ (still to be played)
+        (re.compile(r"\D1\s*[-–\\\/]\s*0($|\D)"), "1"), # 1 - 0
+        (re.compile(r"\D0\s*[-–\\\/]\s*1($|\D)"), "2"), # 0 - 1
+        (re.compile(r"\D½\s*[-–\\\/]\s*½($|\D)"), "X"), # ½ - ½
+        (re.compile(r"\D1\s*[\\\/]\s*2($|\D)"), "X"), # 1/2
+        (re.compile(r"\D0\.5($|\D)"), "X"), # 0.5
+        (re.compile(r"\D0\,5($|\D)"), "X"), # 0,5
+        (re.compile(r"\s[Pp]atta($|\s)"), "X"), # patta
+        (re.compile(r"\s½($|\s)"), "X"), # patta
+        (re.compile(r"\s1\s*0($|\s)"), "1"), # 1 0
+        (re.compile(r"\s0\s*1($|\s)"), "2"), # 0 1
+        (re.compile(r"\s[хxX]($|\s)"), "X"), # X (la prima è una "ha" cirillica!
+        (re.compile(r"\D1\s*$"), "1"), # 1 (end of line)
+        (re.compile(r"\D2\s*$"), "2"), # 2 (end of line)
+        (re.compile(r"\D1R($|\s)"), "1R"), # 1R (special for rapid+armageddon format)
+        (re.compile(r"\D2R($|\s)"), "2R"), # 2R (special for rapid+armageddon format)
+        (re.compile(r"\D1A($|\s)"), "1A"), # 1A (special for rapid+armageddon format)
+        (re.compile(r"\D2A($|\s)"), "2A"), # 2A (special for rapid+armageddon format)
+        (re.compile(r"\D1($|[^0-9.])"), "1"), # 1
+        (re.compile(r"\D2($|[^0-9.])"), "2"), # 2
+        (re.compile(r"X\s*$"), "X"), # X (end of line)
+        (re.compile(r"@@@"), "@") # @ (still to be played)
         ]
 
 def get_line_ranking(line, masters_appellatives, author_name):
@@ -388,7 +388,7 @@ def get_line_ranking(line, masters_appellatives, author_name):
 
 # One optional numer at the beginning,
 # followed by 1-3 words
-get_line_ranking.line_re = re.compile("^\s*\d*[).ªº\W]*(\S+\s?){1,3}(\s)*$")
+get_line_ranking.line_re = re.compile(r"^\s*\d*[).ªº\W]*(\S+\s?){1,3}(\s)*$")
 
 ##############################################
 
