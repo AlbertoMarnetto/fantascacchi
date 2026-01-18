@@ -1,74 +1,31 @@
-# Sinquefield Cup 2025
+# Tata Steel 2026
 
 Turno 1
 
-Sevian – So @@@
-Vachier-Lagrave – Firouzja @@@
-Abdusattorov – Aronian @@@
-Praggnanandhaa – Gukesh @@@
-Caruana – Duda @@@
+Yagiz Kaan Erdogmus – Nodirbek Abdusattorov @@@
+Aravindh Chithambaram – Matthias Bluebaum @@@
+Hans Niemann – Vladimir Fedoseev @@@
+Vincent Keymer – Anish Giri @@@
+Javokhir Sindarov – Gukesh Dommaraju @@@
+Jorden van Foreest – Thai Dai Van Nguyen @@@
+Arjun Erigaisi – R Praggnanandhaa @@@
 
 Turno 2
 
-Praggnanandhaa – Caruana X
-Aronian – Sevian X
-So – Vachier-Lagrave X
-Firouzja – Duda 1
-Gukesh – Abdusattorov 1
+Abdusattorov – Praggnanandhaa 1
+Nguyen – Erigaisi X
+Gukesh – Van Foreest X
+Giri – Sindarov X
+Fedoseev – Keymer 1
+Bluebaum – Niemann X
+Erdogmus – Aravindh X
 
 Turno 3
 
-Sevian – Gukesh X
-Vachier-Lagrave – Aronian X
-Abdusattorov – Praggnanandhaa X
-Caruana – Firouzja 1
-Duda – So X
-
-Turno 4
-
-So – Firouzja X
-Aronian – Duda X
-Gukesh – Vachier-Lagrave X
-Praggnanandhaa – Sevian X
-Abdusattorov – Caruana 2
-
-Turno 5
-
-Duda – Gukesh X
-Caruana – So X
-Sevian – Abdusattorov X
-Firouzja – Aronian X
-Vachier-Lagrave – Praggnanandhaa X
-
-Turno 6
-
-Absusattorov – Vachier Lagrave X
-Gukesh – Firouzja X
-Praggnanandhaa – Duda X
-Sevian – Caruana X
-Aronian – So X
-
-Turno 7
-
-Caruana – Aronian X
-Vachier-Lagrave – Sevian X
-So – Gukesh 1
-Duda – Abdusattorov 1
-Firouzja – Praggnanandhaa 2
-
-Turno 8
-
-Abdusattorov – Firouzja 1
-Praggnanandhaa – So X
-Sevian – Duda X
-Vachier-Lagrave – Caruana X
-Gukesh – Aronian X
-
-Turno 9
-
-Duda – Vachier-Lagrave X
-Caruana – Gukesh X
-Aronian – Praggnanandhaa X
-So – Abdusattorov 1
-Firouzja – Sevian X
-
+GM Aravindh, Chithambaram Vr. – GM Abdusattorov, Nodirbek @@@
+GM Niemann, Hans Moke – GM Erdogmus, Yagiz Kaan @@@
+GM Keymer, Vincent – GM Bluebaum, Matthias @@@
+GM Sindarov, Javokhir – GM Fedoseev, Vladimir @@@
+GM Van Foreest, Jorden – GM Giri, Anish @@@
+GM Erigaisi, Arjun – GM Gukesh, D @@@
+GM Praggnanandhaa, R – GM Nguyen, Thai Dai Van @@@
