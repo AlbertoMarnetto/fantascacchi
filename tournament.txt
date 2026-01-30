@@ -22,10 +22,101 @@ Erdogmus – Aravindh X
 
 Turno 3
 
-GM Aravindh, Chithambaram Vr. – GM Abdusattorov, Nodirbek @@@
-GM Niemann, Hans Moke – GM Erdogmus, Yagiz Kaan @@@
-GM Keymer, Vincent – GM Bluebaum, Matthias @@@
-GM Sindarov, Javokhir – GM Fedoseev, Vladimir @@@
-GM Van Foreest, Jorden – GM Giri, Anish @@@
-GM Erigaisi, Arjun – GM Gukesh, D @@@
-GM Praggnanandhaa, R – GM Nguyen, Thai Dai Van @@@
+GM Aravindh, Chithambaram Vr. – GM Abdusattorov, Nodirbek X
+GM Niemann, Hans Moke – GM Erdogmus, Yagiz Kaan X
+GM Keymer, Vincent – GM Bluebaum, Matthias 2
+GM Sindarov, Javokhir – GM Fedoseev, Vladimir X
+GM Van Foreest, Jorden – GM Giri, Anish 1
+GM Erigaisi, Arjun – GM Gukesh, D X
+GM Praggnanandhaa, R – GM Nguyen, Thai Dai Van X
+
+
+Turno 4
+
+Abdusattorov – Nguyễn 1
+Gukesh – Praggnanandhaa X
+Giri – Erigaisi X
+Fedoseev – Van Foreest X
+Blübaum – Sindarov 2
+Erdoğmuş – Keymer X
+Aravindh – Niemann 2
+
+Turno 5
+
+Niemann – Abdusattorov X
+Keymer – Aravindh 1
+Sindarov – Erdoğmuş 1
+Van Foreest – Blübaum X
+Erigaisi – Fedoseev 2 
+Praggnanandhaa – Giri X
+Nguyễn – Gukesh 2
+
+Turno 6
+
+GM Abdusattorov, Nodirbek GM Gukesh, D 1
+GM Giri, Anish GM Nguyen, Thai Dai Van X
+GM Fedoseev, Vladimir GM Praggnanandhaa, R X
+GM Bluebaum, Matthias GM Erigaisi, Arjun X
+GM Erdogmus, Yagiz Kaan GM Van Foreest, Jorden 1
+GM Aravindh, Chithambaram Vr. GM Sindarov, Javokhir X
+GM Niemann, Hans Moke GM Keymer, Vincent 2
+
+Turno 7
+
+Keymer – Abdusattorov 2
+Sindarov – Niemann X
+Van Foreest – Aravindh 1
+Erigaisi – Erdoğmuş 2
+Praggnanandhaa – Blübaum X
+Nguyễn – Fedoseev X
+Gukesh – Giri 2
+
+Turno 8
+
+Abdusattorov – Giri 2
+Fedoseev – Gukesh 2
+Blübaum – Nguyễn X
+Erdoğmuş – Praggnanandhaa X
+Aravindh – Erigaisi X
+Niemann – Van Foreest X
+Keymer – Sindarov X
+
+Turno 9
+
+Sindarov – Abdusattorov X
+Van Foreest – Keymer 1
+Erigaisi – Niemann X
+Praggnanandhaa – Aravindh 1
+Nguyễn – Erdoğmuş 2
+Gukesh – Blübaum 2
+Giri – Fedoseev X
+
+Turno 10:
+
+Abdusattorov – Fedoseev X
+Blübaum – Giri 1
+Erdoğmuş – Gukesh 2
+Aravindh – Nguyễn 1
+Niemann – Praggnanandhaa X
+Keymer – Erigaisi 1
+Sindarov – Van Foreest X
+
+Turno 11
+
+Van Foreest – Abdusattorov X
+Erigaisi – Sindarov 2
+Praggnanandhaa – Keymer 2
+Nguyễn – Niemann 2
+Gukesh – Aravindh X
+Giri – Erdoğmuş 1
+Fedoseev – Blübaum X
+
+Turno 12
+
+Abdusattorov – Bluebaum @@@
+Erdogmus – Fedoseev @@@
+Aravindh – Giri @@@
+Niemann – Gukesh @@@
+Keymer – Nguyen @@@
+Sindarov – Praggnanandhaa @@@
+Van Foreest – Erigaisi @@@

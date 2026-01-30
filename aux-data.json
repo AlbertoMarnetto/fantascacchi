@@ -1,6 +1,6 @@
 {
     "reminder" : "",
-    "last_checked_post" : "\nTalia\n\n\n            24 agosto 2024 -\n            21:28          \n",
+    "last_checked_post" : "\nTalia\n\n\n            20 gennaio 2026 -\n            13:56          \n",
     "games_per_round" : 7,
     "scoring_system" : "3_1_4",
     "expected_ranking_length": 3,
@@ -28,11 +28,11 @@
     "masters_scoring_bonuses" :
     {
         "Vladimir Fedoseev": [ 1, -1 ],
-        "Jorden van Foreest": [ 1, -1 ],
+        "Jorden Foreest": [ 1, -1 ],
         "Aravindh Chithambaram": [ 1, -1 ],
         "Matthias Bluebaum": [ 1, -1 ],
         "Yagiz Kaan Erdogmus": [ 1, -1 ],
-        "Thai Dai Van Nguyen": [ 1, -1 ]
+        "Thai Dai Nguyen": [ 1, -1 ]
     }
     ,
     "masters_archive" :
@@ -69,6 +69,7 @@
         "Anish Giri" : [],
         "Ding Liren" : [ "DingLiren" ],
         "Fabiano Caruana" : [ "Caru", "Cariana", "Fabi" ],
+        "Hans Niemann" : ["Nieman"],
         "Hikaru Nakamura" : [ "Naka", "nakaruma", "Hikaru" ],
         "Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi",  "Nepomnjaščij", "Nepomnjashchij", "Nepomnjascin", "Nepo", "Nepomniatchichi", "Nepomniachi", "Nepomniaščij" ],
         "Jorden van Foreest" : [ "Van Forrest", "Van_Foreest" ],
@@ -94,7 +95,7 @@
         "Vladimir Fedoseev" : [ "Fedosev" ],
         "Vladimir Kramnik" : ["KRAM", "Kraminik"],
         "Wesley So" : [],
-        "Yagiz Kaan Erdogmus" : [ "Erdoğmuş" ],
+        "Yagiz Kaan Erdogmus" : [ "Erdoğmuş", "Erdogmuş" ],
 
         "dummy" : []
     }
@@ -118,14 +119,14 @@
     ,
     "team_names" :
     {
-        "paolo58" : "Ari.Lor.Iso.",
+        "paolo58" : "Ari.Lor.Iso.Mat.",
         "zed" : "Quarta Nazionale",
         "falk17" : "Sissa Leonforte",
         "antoniobg1982" : "Bobby Fischer",
         "Luigi Orlando" : "Tini’s",
         "mike" : "Mike",
         "orcoisback" : "tuttiacasapersempre",
-        "Angelmann" : "Neanderthal Boys",
+        "Angelmann" : "Rino and friends",
         "StefanoBellincampi" : "Maggica",
         "QQQ_prof73" : "Nova Gorica",
         "Jas Fasola" : "Fasolowa",
