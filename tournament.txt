@@ -113,10 +113,21 @@ Fedoseev – Blübaum X
 
 Turno 12
 
-Abdusattorov – Bluebaum @@@
-Erdogmus – Fedoseev @@@
-Aravindh – Giri @@@
-Niemann – Gukesh @@@
-Keymer – Nguyen @@@
-Sindarov – Praggnanandhaa @@@
-Van Foreest – Erigaisi @@@
+Abdusattorov – Bluebaum 1
+Erdogmus – Fedoseev 1
+Aravindh – Giri X
+Niemann – Gukesh X
+Keymer – Nguyen 1
+Sindarov – Praggnanandhaa X
+Van Foreest – Erigaisi X
+
+Turno 13
+
+Erigaisi – Abdusattorov 2
+Praggnanandhaa – Van Foreest X
+Nguyễn – Sindarov 2
+Gukesh – Keymer X
+Giri – Niemann X
+Fedoseev – Aravindh 1
+Blübaum – Erdoğmuş X
+

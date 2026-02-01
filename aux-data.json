@@ -66,6 +66,7 @@
     {
         "Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish", "Grisc", "Grischuck"],
         "Alireza Firouzja" : [ "Firojuza", "Firouzjia", "Firoujza", "Firo", "Firuzja", "Firou"],
+        "Arjun Erigaisi" : ["Erigais"], 
         "Anish Giri" : [],
         "Ding Liren" : [ "DingLiren" ],
         "Fabiano Caruana" : [ "Caru", "Cariana", "Fabi" ],
@@ -78,13 +79,13 @@
         "Leon Luke Mendonca" : [ "Mendoca" ],
         "Levon Aronian" : ["ARON", "Aronien"],
         "Magnus Carlsen" : [ "Carlen", "Carlseb", "Carlse"],
-        "Matthias Bluebaum" : [ "Blübaum" ],
+        "Matthias Bluebaum" : [ "Blübaum", "Blubaum"],
         "Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher", "Vachiere" ],
         "Meier" : ["Meijer"],
         "Nils Grandelius" : [ "Grendelius" ],
         "Nodirbek Abdusattorov" : [ "Abdu", "Abdosattorov", "Absusattorov", "bdusattorov"],
         "Pentala Harikrishna" : [ "Harikrshna", "Harikrisna" ],
-        "Rameshbabu Praggnanandhaa" : [ "Pragg", "Prag", "Praggna", "Praggnananda", "Praggnanadhaa", "Praggnanhanda" ],
+        "Rameshbabu Praggnanandhaa" : [ "Pragg", "Prag", "Praggna", "Praggnananda", "Praggnanadhaa", "Praggnanhanda", "Praggnanandha" ],
         "Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
         "Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov", "Memedyarov"],
         "Teimour Radjabov" : [ "Radiabov", "Radja", "Radjabo" ],
@@ -95,18 +96,18 @@
         "Vladimir Fedoseev" : [ "Fedosev" ],
         "Vladimir Kramnik" : ["KRAM", "Kraminik"],
         "Wesley So" : [],
-        "Yagiz Kaan Erdogmus" : [ "Erdoğmuş", "Erdogmuş" ],
+        "Yagiz Kaan Erdogmus" : [ "Erdoğmuş", "Erdogmuş", "Ergdomus" ],
 
         "dummy" : []
     }
     ,
-    "official_ranking_source" : "https://tatasteelchess.com/en/masters/game-results"
+    "official_ranking_source" : "https://tatasteelchess.com/en/masters/standings"
     ,
     "official_ranking" :
     {
-        "1" : [],
-        "2" : [],
-        "3" : []
+        "1" : ["Nodirbek Abdusattorov"],
+        "2" : ["Javokhir Sindarov"],
+        "3" : ["Jorden Foreest"]
     }
     ,
     "ranking_scoring" :
