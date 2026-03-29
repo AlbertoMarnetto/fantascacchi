@@ -2,132 +2,94 @@
 
 Turno 1
 
-Yagiz Kaan Erdogmus – Nodirbek Abdusattorov @@@
-Aravindh Chithambaram – Matthias Bluebaum @@@
-Hans Niemann – Vladimir Fedoseev @@@
-Vincent Keymer – Anish Giri @@@
-Javokhir Sindarov – Gukesh Dommaraju @@@
-Jorden van Foreest – Thai Dai Van Nguyen @@@
-Arjun Erigaisi – R Praggnanandhaa @@@
+Sindarov – Esipenko 1
+Bluebaum – Wei X
+Praggnanandhaa – Giri 1
+Caruana – Nakamura 1
 
 Turno 2
 
-Abdusattorov – Praggnanandhaa 1
-Nguyen – Erigaisi X
-Gukesh – Van Foreest X
-Giri – Sindarov X
-Fedoseev – Keymer 1
-Bluebaum – Niemann X
-Erdogmus – Aravindh X
+Esipenko – Nakamura @@@
+Giri – Caruana @@@
+Wei Yi – Praggnanandhaa @@@
+Sindarov – Bluebaum @@@
 
-Turno 3
+### Round 3 — March 31
+Bluebaum – Esipenko @@@
+Praggnanandhaa – Sindarov @@@
+Caruana – Wei Yi @@@
+Nakamura – Giri @@@
 
-GM Aravindh, Chithambaram Vr. – GM Abdusattorov, Nodirbek X
-GM Niemann, Hans Moke – GM Erdogmus, Yagiz Kaan X
-GM Keymer, Vincent – GM Bluebaum, Matthias 2
-GM Sindarov, Javokhir – GM Fedoseev, Vladimir X
-GM Van Foreest, Jorden – GM Giri, Anish 1
-GM Erigaisi, Arjun – GM Gukesh, D X
-GM Praggnanandhaa, R – GM Nguyen, Thai Dai Van X
+### Round 4 — April 1
+Esipenko – Giri @@@
+Wei Yi – Nakamura @@@
+Sindarov – Caruana @@@
+Bluebaum – Praggnanandhaa @@@
 
+*Rest day — April 2*
 
-Turno 4
+### Round 5 — April 3
+Praggnanandhaa – Esipenko @@@
+Caruana – Bluebaum @@@
+Nakamura – Sindarov @@@
+Giri – Wei Yi @@@
 
-Abdusattorov – Nguyễn 1
-Gukesh – Praggnanandhaa X
-Giri – Erigaisi X
-Fedoseev – Van Foreest X
-Blübaum – Sindarov 2
-Erdoğmuş – Keymer X
-Aravindh – Niemann 2
+### Round 6 — April 4
+Caruana – Esipenko @@@
+Nakamura – Praggnanandhaa @@@
+Giri – Bluebaum @@@
+Wei Yi – Sindarov @@@
 
-Turno 5
+### Round 7 — April 5
+Esipenko – Wei Yi @@@
+Sindarov – Giri @@@
+Bluebaum – Nakamura @@@
+Praggnanandhaa – Caruana @@@
 
-Niemann – Abdusattorov X
-Keymer – Aravindh 1
-Sindarov – Erdoğmuş 1
-Van Foreest – Blübaum X
-Erigaisi – Fedoseev 2 
-Praggnanandhaa – Giri X
-Nguyễn – Gukesh 2
+*Rest day — April 6*
 
-Turno 6
+### Round 8 — April 7
+Esipenko – Sindarov @@@
+Wei Yi – Bluebaum @@@
+Giri – Praggnanandhaa @@@
+Nakamura – Caruana @@@
 
-GM Abdusattorov, Nodirbek GM Gukesh, D 1
-GM Giri, Anish GM Nguyen, Thai Dai Van X
-GM Fedoseev, Vladimir GM Praggnanandhaa, R X
-GM Bluebaum, Matthias GM Erigaisi, Arjun X
-GM Erdogmus, Yagiz Kaan GM Van Foreest, Jorden 1
-GM Aravindh, Chithambaram Vr. GM Sindarov, Javokhir X
-GM Niemann, Hans Moke GM Keymer, Vincent 2
+### Round 9 — April 8
+Nakamura – Esipenko @@@
+Caruana – Giri @@@
+Praggnanandhaa – Wei Yi @@@
+Bluebaum – Sindarov @@@
 
-Turno 7
+### Round 10 — April 9
+Esipenko – Bluebaum @@@
+Sindarov – Praggnanandhaa @@@
+Wei Yi – Caruana @@@
+Giri – Nakamura @@@
 
-Keymer – Abdusattorov 2
-Sindarov – Niemann X
-Van Foreest – Aravindh 1
-Erigaisi – Erdoğmuş 2
-Praggnanandhaa – Blübaum X
-Nguyễn – Fedoseev X
-Gukesh – Giri 2
+*Rest day — April 10*
 
-Turno 8
+### Round 11 — April 11
+Giri – Esipenko @@@
+Nakamura – Wei Yi @@@
+Caruana – Sindarov @@@
+Praggnanandhaa – Bluebaum @@@
 
-Abdusattorov – Giri 2
-Fedoseev – Gukesh 2
-Blübaum – Nguyễn X
-Erdoğmuş – Praggnanandhaa X
-Aravindh – Erigaisi X
-Niemann – Van Foreest X
-Keymer – Sindarov X
+### Round 12 — April 12
+Esipenko – Praggnanandhaa @@@
+Bluebaum – Caruana @@@
+Sindarov – Nakamura @@@
+Wei Yi – Giri @@@
 
-Turno 9
+*Rest day — April 13*
 
-Sindarov – Abdusattorov X
-Van Foreest – Keymer 1
-Erigaisi – Niemann X
-Praggnanandhaa – Aravindh 1
-Nguyễn – Erdoğmuş 2
-Gukesh – Blübaum 2
-Giri – Fedoseev X
+### Round 13 — April 14
+Wei Yi – Esipenko @@@
+Giri – Sindarov @@@
+Nakamura – Bluebaum @@@
+Caruana – Praggnanandhaa @@@
 
-Turno 10:
-
-Abdusattorov – Fedoseev X
-Blübaum – Giri 1
-Erdoğmuş – Gukesh 2
-Aravindh – Nguyễn 1
-Niemann – Praggnanandhaa X
-Keymer – Erigaisi 1
-Sindarov – Van Foreest X
-
-Turno 11
-
-Van Foreest – Abdusattorov X
-Erigaisi – Sindarov 2
-Praggnanandhaa – Keymer 2
-Nguyễn – Niemann 2
-Gukesh – Aravindh X
-Giri – Erdoğmuş 1
-Fedoseev – Blübaum X
-
-Turno 12
-
-Abdusattorov – Bluebaum 1
-Erdogmus – Fedoseev 1
-Aravindh – Giri X
-Niemann – Gukesh X
-Keymer – Nguyen 1
-Sindarov – Praggnanandhaa X
-Van Foreest – Erigaisi X
-
-Turno 13
-
-Erigaisi – Abdusattorov 2
-Praggnanandhaa – Van Foreest X
-Nguyễn – Sindarov 2
-Gukesh – Keymer X
-Giri – Niemann X
-Fedoseev – Aravindh 1
-Blübaum – Erdoğmuş X
-
+### Round 14 — April 15
+Esipenko – Caruana @@@
+Praggnanandhaa – Nakamura @@@
+Bluebaum – Giri @@@
+Sindarov – Wei Yi @@@

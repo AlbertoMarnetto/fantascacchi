@@ -1,7 +1,7 @@
 {
     "reminder" : "",
     "last_checked_post" : "\nTalia\n\n\n            20 gennaio 2026 -\n            13:56          \n",
-    "games_per_round" : 7,
+    "games_per_round" : 4,
     "scoring_system" : "3_1_4",
     "expected_ranking_length": 3,
     "bonus_for_perfect_round_prediction": 5,
@@ -9,39 +9,31 @@
     "enable_default_draw_prediction": 1,
     "masters_names" :
     [
-        "Yagiz Kaan Erdogmus",
-        "Nodirbek Abdusattorov",
-        "Aravindh Chithambaram",
         "Matthias Bluebaum",
-        "Hans Niemann",
-        "Vladimir Fedoseev",
-        "Vincent Keymer",
         "Anish Giri",
         "Javokhir Sindarov",
-        "Gukesh Dommaraju",
-        "Jorden Foreest",
-        "Thai Dai Nguyen",
-        "Arjun Erigaisi",
-        "Rameshbabu Praggnanandhaa"
+        "Rameshbabu Praggnanandhaa",
+        "Andrey Esipenko",
+        "Hikaru Nakamura",
+        "Wei Yi",
+        "Fabiano Caruana"
     ]
     ,
     "masters_scoring_bonuses" :
     {
-        "Vladimir Fedoseev": [ 1, -1 ],
-        "Jorden Foreest": [ 1, -1 ],
-        "Aravindh Chithambaram": [ 1, -1 ],
         "Matthias Bluebaum": [ 1, -1 ],
-        "Yagiz Kaan Erdogmus": [ 1, -1 ],
-        "Thai Dai Nguyen": [ 1, -1 ]
+        "Andrey Esipenko": [ 1, -1 ]
     }
     ,
     "masters_archive" :
     [
         "Alexey Sarana",
+        "Andrey Esipenko",
         "Anish Giri",
         "Aravindh Chithambaram",
         "Arjun Erigaisi",
         "Ding Liren",
+        "Fabiano Caruana",
         "Gukesh Dommaraju",
         "Hans Niemann",
         "Hikaru Nakamura",
@@ -66,20 +58,22 @@
     {
         "Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish", "Grisc", "Grischuck"],
         "Alireza Firouzja" : [ "Firojuza", "Firouzjia", "Firoujza", "Firo", "Firuzja", "Firou"],
+        "Andrey Esipenko" : ["Esipneko", "Esipnenko", "Espienko", "Esip"],
         "Arjun Erigaisi" : ["Erigais"], 
         "Anish Giri" : [],
         "Ding Liren" : [ "DingLiren" ],
-        "Fabiano Caruana" : [ "Caru", "Cariana", "Fabi" ],
+        "Fabiano Caruana" : [ "Caru", "Cariana", "Fabi", "Caruano" ],
         "Hans Niemann" : ["Nieman"],
-        "Hikaru Nakamura" : [ "Naka", "nakaruma", "Hikaru" ],
+        "Hikaru Nakamura" : [ "Naka", "nakaruma", "Hikaru", "Nalamura" ],
         "Ian Nepomniachtchi" : [ "Nepo", "Nepomniachtc", "Nepomniatchi",  "Nepomnjaščij", "Nepomnjashchij", "Nepomnjascin", "Nepo", "Nepomniatchichi", "Nepomniachi", "Nepomniaščij" ],
+        "Javokhir Sindarov" : ["Sindarow"],
         "Jorden van Foreest" : [ "Van Forrest", "Van_Foreest" ],
         "Kirill Alekseenko" : ["Alex", "Aleks", "Aleksenko"],
         "Leinier Dominguez Perez" : [],
         "Leon Luke Mendonca" : [ "Mendoca" ],
         "Levon Aronian" : ["ARON", "Aronien"],
         "Magnus Carlsen" : [ "Carlen", "Carlseb", "Carlse"],
-        "Matthias Bluebaum" : [ "Blübaum", "Blubaum"],
+        "Matthias Bluebaum" : [ "Blübaum", "Blubaum", "Bludaum"],
         "Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher", "Vachiere" ],
         "Meier" : ["Meijer"],
         "Nils Grandelius" : [ "Grendelius" ],
@@ -95,6 +89,7 @@
         "Viswanathan Anand" : [ "Andand" ],
         "Vladimir Fedoseev" : [ "Fedosev" ],
         "Vladimir Kramnik" : ["KRAM", "Kraminik"],
+        "Wei Yi": ["WeiYi"],
         "Wesley So" : [],
         "Yagiz Kaan Erdogmus" : [ "Erdoğmuş", "Erdogmuş", "Ergdomus" ],
 
@@ -105,17 +100,17 @@
     ,
     "official_ranking" :
     {
-        "1" : ["Nodirbek Abdusattorov"],
-        "2" : ["Javokhir Sindarov"],
-        "3" : ["Jorden Foreest"]
+        "1" : [""],
+        "2" : [""],
+        "3" : [""]
     }
     ,
     "ranking_scoring" :
     {
         "1" : 6,
-        "2" : 4,
-        "3" : 4,
-        "ranked_incorrect" : 2
+        "2" : 3,
+        "3" : 3,
+        "ranked_incorrect" : 1
     }
     ,
     "team_names" :
@@ -134,7 +129,7 @@
         "xmago" : "Il Vecchio Lonfo Ammargelluto",
         "Arsenio_Lupin" : "lupin",
         "Vincenzo" : "V come Vittoria",
-        "Giammy" : "MitoDubov",
+        "qGiammy" : "MitoDubov",
         "qHartree Fock" : "Richard Bader",
         "alexandro2010" : "Dele Bashiru",
         "dummy" : "dummy"
@@ -142,6 +137,30 @@
     ,
     "corrections" :
     [
+        {
+            "author" : "svista",
+            "text" :
+            [
+                "Bluebaum - Wei X"
+            ]
+        },
+        {
+            "author" : "alexandro2010",
+            "text" :
+            [
+                "Bluebaum - Wei X"
+            ]
+        },
+        {
+            "author" : "svista",
+            "text" :
+            [
+                "Esipenko – Nakamura X",
+                "Giri – Caruana X",
+                "Wei Yi – Praggnanandhaa 2",
+                "Sindarov – Bluebaum X"
+            ]
+        }
     ]
     ,
     "corrections_sample" :
