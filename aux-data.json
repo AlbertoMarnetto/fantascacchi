@@ -1,6 +1,6 @@
 {
     "reminder" : "",
-    "last_checked_post" : "\nTalia\n\n\n            20 gennaio 2026 -\n            13:56          \n",
+    "last_checked_post" : "\nsvista\n\n\n            30 marzo 2026 -\n            12:12          \n",
     "games_per_round" : 4,
     "scoring_system" : "3_1_4",
     "expected_ranking_length": 3,
@@ -58,7 +58,7 @@
     {
         "Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish", "Grisc", "Grischuck"],
         "Alireza Firouzja" : [ "Firojuza", "Firouzjia", "Firoujza", "Firo", "Firuzja", "Firou"],
-        "Andrey Esipenko" : ["Esipneko", "Esipnenko", "Espienko", "Esip"],
+        "Andrey Esipenko" : ["Esipneko", "Esipnenko", "Espienko", "Esip", "Espenko"],
         "Arjun Erigaisi" : ["Erigais"], 
         "Anish Giri" : [],
         "Ding Liren" : [ "DingLiren" ],
@@ -119,10 +119,10 @@
         "zed" : "Quarta Nazionale",
         "falk17" : "Sissa Leonforte",
         "antoniobg1982" : "Bobby Fischer",
-        "Luigi Orlando" : "Tini’s",
+        "Luigi Orlando" : "Gigi8",
         "mike" : "Mike",
         "orcoisback" : "tuttiacasapersempre",
-        "Angelmann" : "Rino and friends",
+        "Angelmann" : "Neanderthal Boys",
         "StefanoBellincampi" : "Maggica",
         "QQQ_prof73" : "Nova Gorica",
         "Jas Fasola" : "Fasolowa",
@@ -141,7 +141,8 @@
             "author" : "svista",
             "text" :
             [
-                "Bluebaum - Wei X"
+                "Bluebaum - Wei X",
+                "Praggnanandhaa – Giri 1"
             ]
         },
         {
@@ -160,7 +161,22 @@
                 "Wei Yi – Praggnanandhaa 2",
                 "Sindarov – Bluebaum X"
             ]
+        },
+        {
+            "author" : "piedone99",
+            "text" :
+            [
+                "Anish Giri — Fabiano Caruana X"
+            ]
+        },
+        {
+            "author" : "Bucky Gatt",
+            "text" :
+            [
+                "Anish Giri — Fabiano Caruana X"
+            ]
         }
+
     ]
     ,
     "corrections_sample" :
@@ -178,7 +194,7 @@
     ]
     ,
     "posts_string_blacklist" :
-    [],
+    ["IrishGambit\n\n\n            30 marzo 2026 -\n            01:32          \n"],
     "posts_author_blacklist" :
     []
 }
