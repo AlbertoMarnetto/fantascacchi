@@ -33,7 +33,8 @@ RoundEntry = namedtuple("RoundEntry", [
     "author",
     "author_predictions_count",
     "author_score",
-    "author_cumulated_score"])
+    "author_cumulated_score",
+    "is_default_draw_entry"])
 
 ######################################
 
@@ -723,6 +724,7 @@ def calculate_round_entries(all_predictions, tournament_data):
                 if prediction.author == author
                     and prediction.round == round]
 
+            is_default_draw_entry = False
             if len(author_predictions_for_this_round) > 0:
                 authors_with_predictions.add(author)
             else:    
@@ -736,6 +738,7 @@ def calculate_round_entries(all_predictions, tournament_data):
                         for prediction in official_results
                         if prediction.round == round
                         and prediction.outcome == "X"]
+                    is_default_draw_entry = True
                     
             author_score_for_this_round = sum(
                 prediction.score
@@ -764,9 +767,24 @@ def calculate_round_entries(all_predictions, tournament_data):
                 author = author,
                 author_predictions_count = len(author_predictions_for_this_round),
                 author_score = author_score_for_this_round,
-                author_cumulated_score = author_cumulated_score))
+                author_cumulated_score = author_cumulated_score,
+                is_default_draw_entry = is_default_draw_entry))
 
     return round_entries
+
+def detect_abandoning_authors(round_entries):
+    authors = set(round_entry.author for round_entry in round_entries)
+
+    author_presences = []
+    for author in authors:
+        author_presence_days = sum(
+            1
+            for round_entry in round_entries
+            if round_entry.author == author and round_entry.is_default_draw_entry == False)
+        author_presences.append((author, author_presence_days))
+
+    author_presences = sorted(author_presences, key = lambda entry: entry[1])
+    write_err(f"{author_presences}")
 
 def calculate_grand_total_entries(round_entries, ranking_scores):
     authors = set(round_entry.author for round_entry in round_entries)
@@ -953,6 +971,7 @@ all_predictions = scoring_function(all_predictions,
 
 round_entries = calculate_round_entries(all_predictions, tournament_data)
 ranking_scores = assign_ranking_scores(all_rankings, tournament_data)
+detect_abandoning_authors(round_entries)
 grand_total_entries = calculate_grand_total_entries(round_entries, ranking_scores)
 
 sorted_rankings = sorted(all_rankings, key = lambda ranking: (ranking.author.lower()))
