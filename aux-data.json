@@ -79,7 +79,7 @@
         "Nils Grandelius" : [ "Grendelius" ],
         "Nodirbek Abdusattorov" : [ "Abdu", "Abdosattorov", "Absusattorov", "bdusattorov"],
         "Pentala Harikrishna" : [ "Harikrshna", "Harikrisna" ],
-        "Rameshbabu Praggnanandhaa" : [ "Pragg", "Prag", "Praggna", "Praggnananda", "Praggnanadhaa", "Praggnanhanda", "Praggnanandha" ],
+        "Rameshbabu Praggnanandhaa" : [ "Pragg", "Prag", "Praggna", "Praggnananda", "Praggnanadhaa", "Praggnanhanda", "Praggnanandha", "Praggnanandh", "Praggnanandaa" ],
         "Sergey Karjakin" : [ "Karhakin", "Karijakin", "KARJ" ],
         "Shakhriyar Mamedyarov" : ["Mamedjarov", "MAME", "Mamediarov", "Memedyarov"],
         "Teimour Radjabov" : [ "Radiabov", "Radja", "Radjabo" ],
@@ -146,13 +146,6 @@
             ]
         },
         {
-            "author" : "alexandro2010",
-            "text" :
-            [
-                "Bluebaum - Wei X"
-            ]
-        },
-        {
             "author" : "svista",
             "text" :
             [
@@ -167,6 +160,20 @@
             "text" :
             [
                 "Anish Giri — Fabiano Caruana X"
+            ]
+        },
+        {
+            "author" : "Bobby Fischer",
+            "text" :
+            [
+                "Wei — Nakamura X"
+            ]
+        },
+        {
+            "author" : "runner55",
+            "text" :
+            [
+                "Esipenko – Wei X"
             ]
         },
         {
@@ -196,5 +203,5 @@
     "posts_string_blacklist" :
     ["IrishGambit\n\n\n            30 marzo 2026 -\n            01:32          \n"],
     "posts_author_blacklist" :
-    []
+    ["Dele Bashiru", "Sissa Leonforte", "Pilgrimanto", "alexandro2010", "jackdan", "michelettrik", "Gigi8", "FabioMor"]
 }
