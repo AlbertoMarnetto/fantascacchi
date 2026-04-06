@@ -15,36 +15,37 @@ Wei Yi – Praggnanandhaa X
 Sindarov – Bluebaum X
 
 ### Round 3 — March 31
-Bluebaum – Esipenko @@@
-Praggnanandhaa – Sindarov @@@
-Caruana – Wei Yi @@@
-Nakamura – Giri @@@
+Bluebaum – Esipenko X
+Praggnanandhaa – Sindarov 2
+Caruana – Wei Yi 1
+Nakamura – Giri X 
 
 ### Round 4 — April 1
-Esipenko – Giri @@@
-Wei Yi – Nakamura @@@
-Sindarov – Caruana @@@
-Bluebaum – Praggnanandhaa @@@
+Esipenko – Giri 2
+Wei Yi – Nakamura X 
+Sindarov – Caruana 1
+Bluebaum – Praggnanandhaa X
+
 
 *Rest day — April 2*
 
 ### Round 5 — April 3
-Praggnanandhaa – Esipenko @@@
-Caruana – Bluebaum @@@
-Nakamura – Sindarov @@@
-Giri – Wei Yi @@@
+Praggnanandhaa – Esipenko X 
+Caruana – Bluebaum 1
+Nakamura – Sindarov 2
+Giri – Wei Yi X 
 
 ### Round 6 — April 4
-Caruana – Esipenko @@@
-Nakamura – Praggnanandhaa @@@
-Giri – Bluebaum @@@
-Wei Yi – Sindarov @@@
+Caruana – Esipenko X 
+Nakamura – Praggnanandhaa X 
+Giri – Bluebaum X 
+Wei Yi – Sindarov 2
 
 ### Round 7 — April 5
-Esipenko – Wei Yi @@@
-Sindarov – Giri @@@
-Bluebaum – Nakamura @@@
-Praggnanandhaa – Caruana @@@
+Esipenko – Wei Yi 2
+Sindarov – Giri X 
+Bluebaum – Nakamura X 
+Praggnanandhaa – Caruana X 
 
 *Rest day — April 6*
 
