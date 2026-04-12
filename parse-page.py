@@ -781,10 +781,14 @@ def detect_abandoning_authors(round_entries):
             1
             for round_entry in round_entries
             if round_entry.author == author and round_entry.is_default_draw_entry == False)
-        author_presences.append((author, author_presence_days))
+        author_last_round = max(
+            round_entry.round
+            for round_entry in round_entries
+            if round_entry.author == author and round_entry.is_default_draw_entry == False)
+        author_presences.append((author, author_presence_days, author_last_round))
 
-    author_presences = sorted(author_presences, key = lambda entry: entry[1])
-    write_err(f"{author_presences}")
+    author_presences = sorted(author_presences, key = lambda entry: entry[2])
+    write_out(f"{author_presences}")
 
 def calculate_grand_total_entries(round_entries, ranking_scores):
     authors = set(round_entry.author for round_entry in round_entries)
