@@ -1,10 +1,10 @@
 {
     "reminder" : "",
-    "last_checked_post" : "\nsvista\n\n\n            30 marzo 2026 -\n            12:12          \n",
+    "last_checked_post" : "\nAtari37\n\n\n            15 aprile 2026 -\n            14:56          \n",
     "games_per_round" : 4,
     "scoring_system" : "3_1_4",
     "expected_ranking_length": 3,
-    "bonus_for_perfect_round_prediction": 5,
+    "bonus_for_perfect_round_prediction": 4,
     "negate_bonus_if_all_draws": true,
     "enable_default_draw_prediction": 1,
     "masters_names" :
@@ -58,7 +58,7 @@
     {
         "Alexander Grischuk" : ["Grishuk", "GRIS", "Grishuck", "Grish", "Grisc", "Grischuck"],
         "Alireza Firouzja" : [ "Firojuza", "Firouzjia", "Firoujza", "Firo", "Firuzja", "Firou"],
-        "Andrey Esipenko" : ["Esipneko", "Esipnenko", "Espienko", "Esip", "Espenko"],
+        "Andrey Esipenko" : ["Esipneko", "Esipnenko", "Espienko", "Esip", "Espenko", "Esjpenko" ],
         "Arjun Erigaisi" : ["Erigais"], 
         "Anish Giri" : [],
         "Ding Liren" : [ "DingLiren" ],
@@ -73,7 +73,7 @@
         "Leon Luke Mendonca" : [ "Mendoca" ],
         "Levon Aronian" : ["ARON", "Aronien"],
         "Magnus Carlsen" : [ "Carlen", "Carlseb", "Carlse"],
-        "Matthias Bluebaum" : [ "Blübaum", "Blubaum", "Bludaum"],
+        "Matthias Bluebaum" : [ "Blübaum", "Blubaum", "Bludaum", "Bluedau"],
         "Maxime Vachier-Lagrave" : [ "MVL", "Vachier", "VLM", "MLV", "Vacher", "Vachiere" ],
         "Meier" : ["Meijer"],
         "Nils Grandelius" : [ "Grendelius" ],
@@ -100,9 +100,9 @@
     ,
     "official_ranking" :
     {
-        "1" : [""],
-        "2" : [""],
-        "3" : [""]
+        "1" : ["Javokhir Sindarov"],
+        "2" : ["Anish Giri"],
+        "3" : ["Fabiano Caruana"]
     }
     ,
     "ranking_scoring" :
@@ -177,13 +177,26 @@
             ]
         },
         {
+            "author" : "simoneargo",
+            "text" :
+            [
+                "Wei - Esipenko ½-½"
+            ]
+        },
+        {
             "author" : "Bucky Gatt",
             "text" :
             [
                 "Anish Giri — Fabiano Caruana X"
             ]
+        },
+        {
+            "author" : "Atari37",
+            "text" :
+            [
+                "Sindarov – Wei 1"
+            ]
         }
-
     ]
     ,
     "corrections_sample" :
@@ -203,5 +216,6 @@
     "posts_string_blacklist" :
     ["IrishGambit\n\n\n            30 marzo 2026 -\n            01:32          \n"],
     "posts_author_blacklist" :
-    ["Dele Bashiru", "Sissa Leonforte", "Pilgrimanto", "alexandro2010", "jackdan", "michelettrik", "Gigi8", "FabioMor"]
+    ["Dele Bashiru", "Sissa Leonforte", "Pilgrimanto", "alexandro2010", "jackdan", "michelettrik", "Gigi8", "FabioMor", "Marschall93", "ettorerusso", "robortu", "mago",
+     "blac.11", "Ari.Lor.Iso.Mat."]
 }
