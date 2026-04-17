@@ -788,7 +788,7 @@ def detect_abandoning_authors(round_entries):
         author_presences.append((author, author_presence_days, author_last_round))
 
     author_presences = sorted(author_presences, key = lambda entry: entry[2])
-    write_out(f"{author_presences}")
+    write_out(f"num_pres, last_round: {author_presences}")
 
 def calculate_grand_total_entries(round_entries, ranking_scores):
     authors = set(round_entry.author for round_entry in round_entries)
